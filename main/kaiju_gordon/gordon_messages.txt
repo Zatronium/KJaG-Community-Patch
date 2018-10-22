@@ -1,0 +1,2094 @@
+Message {
+	Identifier: msg_Year1
+	Comment: At the end of the appropriate year. (Gordon version)
+	DisplayText: Huzzah! It's our first-year anniversary! I'm a modern man, of course, so I decided to go with a clock as your anniversary gift--it's atomic, naturally. 
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year2
+	Comment: At the end of the appropriate year. (Gordon version)
+	DisplayText: Happy Armagordon Day, Professor Wyrdstrom! Today marks the second anniversary of your project. The usual gift for a second anniversary is China, apparently, but the Kaiju Defense Forces were looking for our Lair nearby. All those guns make a country rather hard to steal! I hope some Chinese plutonium will suffice. 
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year3
+	Comment: At the end of the appropriate year. (Gordon version)
+	DisplayText: Happy anniversary, Professor. I know you're very busy, what with the Kaiju Defense Forces searching high and low for our Lair, but...I do have a gift for you. It's a crystal statue of the Creature--I carved it myself.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year4
+	Comment: At the end of the appropriate year. (Gordon version)
+	DisplayText: *ahem* You've probably forgotten, Ivo, but I just thought I would remind you that today is our fourth anniversary. The usual gift would be an appliance of some kind, so I bought you a pocket cyclotron. I hope you like it.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year5
+	Comment: At the end of the appropriate year. (Gordon version)
+	DisplayText: What? Is it our anniversary already? I've been so worried about the whole world joining forces against us that it completely slipped my mind. Five years together--and you finally bought me a present! A silver syringe full of mutagens? Oh Ivo, you shouldn't have... 
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuArrives
+	Comment: Kaiju arrives at some city.
+	DisplayText: [kaiju] is on the ouskirts of [city], Professor.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_KaijuArrivesLair
+	Comment: Kaiju returns home.
+	DisplayText: [kaiju] has returned to [city].
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuDamageWarning
+	Comment: Will accept [kaiju].
+	DisplayText: They're hurting my glorious Creature! Flee! Flee, [kaiju], before it's too late! Run to the edge of the map and escape!
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_KaijuDefeated
+	DisplayText: [kaiju] must return to [city] to be resurrected, Master.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRebuilt
+	DisplayText: [kaiju] resurrection complete, Master.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRepaired
+	DisplayText: [kaiju] healing is finished, Master.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+Message {
+	Identifier: msg_Invasion
+	Comment: Every time an invasion fleet is sent to attack you.
+	DisplayText: An invasion fleet has been launched, Professor Wyrdstrom!
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_CitySurrenders
+	DisplayText: Outstanding! [city] has surrendered. All of their income will go to us from now on.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RegionSurrenders
+	DisplayText: Region [region] has surrendered! This is an immense achievement, Professor. You've conquered one-sixth of the world!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingCompleteDefault
+	DisplayText: Training complete, Professor.  [kaiju] has acquired [ability].
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingFacilityShutdown
+	DisplayText: Insufficient resources to support [zone], Master.  [kaiju] training for [ability] aborted.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ClearingComplete
+	DisplayText: Brush clearing complete, Master.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_NewAbilities
+	DisplayText: New Kaiju abilities are available, Professor Wyrdstrom.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: msg_invasion
+	Comment: Every time an invasion fleet is sent to attack you.
+	DisplayText: An invasion fleet has been launched!
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_success
+	Comment: when you successfully threaten a city
+	DisplayText: [city] has sent a large sum of money and a lovely plate of schnitzel, Professor. 
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail
+	Comment: when you unsuccessfully threaten a city
+	DisplayText: [city] chooses to ignore my threats?  Then let us get their attention, my Creature!
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail01
+	Comment: when you unsuccessfully threaten a city with "Pay you"
+	DisplayText: [city] has refused to pay tribute!  My Atomic Ubermensch should obliterate at least 30% of the city this month, to encourage more generosity.
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail02
+	Comment: when you unsuccessfully threaten a city with "Opt out"
+	DisplayText: [city] doesn't take me seriously!  I must pummel at least 15% of the metropolis this month, to convey my displeasure.
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_fail03
+	Comment: when you unsuccessfully threaten a city with "Disable Alarms"
+	DisplayText: [city] refuses to cease their irritating racket!  Fine--Armagordon will sing them a lullaby. I must destroy at least 25 of [city] defense units this month to quiet things down.
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail04
+	Comment: when you unsuccessfully threaten a city with "Surrender"
+	DisplayText: [city] declines to listen to reason? Very well. Let's try violence, shall we?
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Djibouti
+	Comment: When you click on a city for the first time (Gordon version)
+	DisplayText: Djibouti! A nice strategic city on the Horn of Africa, and a signatory of the African Nuclear-Weapon-Free-Zone Treaty. Of course, they haven't RATIFIED the treaty yet. I take that as an invitation to visit, don't you?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_Ulaanbaatar
+	Comment: When you click on a city for the first time (Gordon version)
+	DisplayText: Ulaanbataar, Mongolia! In 1992, the whole country became a nuclear-weapon-free zone! Guess Armagordon will be raining fall-out on THAT little parade, won't we? Tough break, Mongolia.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_Moscow
+	Comment: When you click on a city for the first time
+	DisplayText: Moscow. I've always wanted to go there. They have a lovely replica of the Soviet An-602, the most powerful nuclear bomb ever detonated! Can we snag it for the trophy room, Professor?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_MexicoCity
+	Comment: When you click on a city for the first time
+	DisplayText: Mexico City! A sprawling, smog-shrouded, brawling metropolis in the shadow of the Xitle volcano. Armagordon is going to fit right in.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+
+
+Message {
+	Identifier: citymsg_NewYork
+	Comment: When you click on a city for the first time
+	DisplayText: New York? Yes! YES! Start spreading the news...I'm cleaving today...I want to beat a part of it... *cough* Sorry, Professor. My inner Sinatra couldn't resist.  
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Albuquerque
+	Comment: When you click on a city for the first time
+	DisplayText: Albuquerque, New Mexico! Home to the National Museum of Nuclear Science and History. Your portrait will go up next to Einstein and Curie! Armagordon will get his own commemorative keychain!   
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Anchorage
+	Comment: When you click on a city for the first time
+	DisplayText: Anchorage, Alaska. While we're in the area, can we visit the old Nike Hercules Missile silos? See a little atomic history, teach Armagordon to ski--? 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Barcelona
+	Comment: When you click on a city for the first time
+	DisplayText: Barcelona, Spain. They ARE working hard on the ITER reactor at Cadarache, Professor. How can you stay mad at people who help to build the largest fusion reactor in history? Let's hope they surrender quickly.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Cairo
+	Comment: When you click on a city for the first time
+	DisplayText: Cairo, Egypt. They're building a nuclear facility at Dabaa, Professor! Wasn't that thoughtful of them? Just in time for our arrival!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Calgary
+	Comment: When you click on a city for the first time
+	DisplayText: Calgary, Alberta. Bah, more Canadians. Monitoring Iodine isotopes, complaining about radioactive fish--you can stomp them all, as far as I'm concerned!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_CapeTown
+	Comment: When you click on a city for the first time
+	DisplayText: Cape Town, South Africa. A modern, forward-thinking city nicely supplied with power by the nearby Koeberg nuclear facility. They should definitely bow down to you, Professor!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Dubai
+	Comment: When you click on a city for the first time
+	DisplayText: Dubai, United Arab Emirates! This city is the most popular tourist destination on Earth, but there are surprisingly few kaiju attacks on record. We should remedy this immediately.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Halifax
+	Comment: When you click on a city for the first time
+	DisplayText: Halifax, Nova Scotia. Great harbor, but the docks are sometimes a little clumsy while unloading cylinders of Uranium Hexflouride! Note to self: once we conquer them, don't let them handle Purpletonium shipments... 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_TarmagantIsland
+	Comment: When you click on your home base for the first time
+	DisplayText: Not everyone could look at a frozen crag in the middle of a stormy sea and think "this looks like a nice place to settle down". You're a man of vision, Professor!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_London
+	Comment: When you click on a city for the first time
+	DisplayText: London, England! A jolly old place for a nuclear showdown. They've already been breeding giant mutant rats in the sewers! Maybe we can get the Creature a little creature for a pet?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_PanamaCity
+	Comment: When you click on a city for the first time
+	DisplayText: Panama City, Panama. A nice strategic location, with an excellent waterfront for Kaiju exercise. Also, apparently a fine place to purchase a hat? Will investigate.  
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Paris
+	Comment: When you click on a city for the first time
+	DisplayText: Paris, France. The capitol city of a country that runs on FIFTY-EIGHT nuclear power plants!? Yes please! I've always wanted to try cheese that glows.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_QuebecCity
+	Comment: When you click on a city for the first time
+	DisplayText: Quebec City, Quebec. Do you remember that hotel we stayed in during the World Uranium Symposium? The one that wouldn't give us extra towels?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_RioDeJaneiro
+	Comment: When you click on a city for the first time
+	DisplayText: Rio de Janeiro, Brazil. If we attack now, we may control the city in time for the 2016 Olympics! There should be more event categories for Kaiju competitors, don't you think? 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Santiago
+	Comment: When you click on a city for the first time
+	DisplayText: Santiago, Chile. A useful city to control, but it is rather prone to earthquakes. Once we conquer the city, they should investigate options for seismic architecture!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Seoul
+	Comment: When you click on a city for the first time
+	DisplayText: Seoul, capital of South Korea. World's fastest internet connections! World's best transportation network! World's spiciest cabbage and tentacle dishes! Once we conquer the planet, we should make it our new capitol.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Stockholm
+	Comment: When you click on a city for the first time
+	DisplayText: Stockholm, Sweden. I think we both deserve a Nobel prize or two, don't you Professor? We should have a lock on chemistry, physics, medicine AND peace--Armagordon has it all!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Sydney
+	Comment: When you click on a city for the first time
+	DisplayText: Sydney, Australia. Did you know that Australia has 31% of the world's uranium deposits, and no working nuclear reactors? Some people just don't appreciate Our Friend the Atom, Professor.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Toronto
+	Comment: When you click on a city for the first time
+	DisplayText: Toronto, Ontario. I hope that some of it is left standing when we're through. I have a soft spot in my heart for any city that would name a nuclear power plant "Bruce".
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Vancouver
+	Comment: When you click on a city for the first time
+	DisplayText: Vancouver, British Columbia. A very boring city from the nuclear perspective, although they do make a lot of movies about mutants!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Wellington
+	Comment: When you click on a city for the first time
+	DisplayText: Wellington, New Zealand. The entire island is a nuclear-free zone, Professor! No nuclear-powered or armed ships are allowed within twelve nautical miles, no radioactive dumping...we're going to get letters. I'm just sayin'.   
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_BuenosAires
+	Comment: When you click on a city for the first time
+	DisplayText: Buenos Aires, Argentina. The Paris of the Americas. This is the top tourist destination in South America, Professor. We've got to paint this town purple!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Tokyo
+	Comment: When you click on a city for the first time
+	DisplayText: Tokyo, Japan! We should send Armagordon just to say hello. 22 nuclear power plants in 378 square kilometers has GOT to be a record!  
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Detroit
+	Comment: When you click on a city for the first time
+	DisplayText: Detroit, Michigan! The largest city on the US-Canada border, supplied by the Enrico Fermi Nuclear Generating Station. Did you ever read "We Almost Lost Detroit", Professor? Maybe we could inspire a sequel!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vientiane
+	Comment: When you click on a city for the first time
+	DisplayText: Vientiane, Laos! The city of sandalwood, located on a bend of the Mekong River. As soon as we conquer it, we can visit whatever monuments are still standing and enjoy some of the local catfish, which are as big as dolphins.  
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vladivostok
+	Comment: When you click on a city for the first time
+	DisplayText: Vladivostok, Russia! The name literally means "the ruler of the east". Armagordon will be the most exciting nuclear incident in that town since the K-431 cooked off in Chazhma Bay!    
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_HongKong
+	Comment: When you click on a city for the first time
+	DisplayText: Hong Kong, China! Home of the world's highest levels of background radiation. Armagordon should be really comfortable there. It'll be like basking in a sauna.   
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Dakar
+	Comment: When you click on a city for the first time
+	DisplayText: Dakar, Senegal! A lovely Atlantic port on the Cap-Vert peninsula. Just the place for our glorious Creature to make landfall in Africa! 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Manila
+	Comment: When you click on a city for the first time
+	DisplayText: Manila, capitol of the Philippines! They went to all the trouble of building the Bataan nuclear facility and then never fired it up. Seems a shame, doesn't it Professor? Perhaps we should give them a big purple hand with that. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_NewDelhi
+	Comment: When you click on a city for the first time
+	DisplayText: New Delhi? Yes! They just built a Hall of Nuclear Power at the Babha Atomic Research Centre. I am DYING to see it! Could you try and stomp around it, please?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Seattle
+	Comment: When you click on a city for the first time
+	DisplayText: Seattle, Washington! The largest metropolis in a state with a noble history of atomic research and proliferation, AND the home of lots of important tech companies. At least one of which ignored my resume.    
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Lisbon
+	Comment: When you click on a city for the first time
+	DisplayText: Lisbon. Ever noticed how Lisbon is always the place people go to make diplomatic agreements that take away everyone's toys? We'd better conquer the place before they whip up the Lisbon Kaiju Accords!  
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Caracas
+	Comment: When you click on a city for the first time
+	DisplayText:  Caracas. The largest city of Venezuela, and one of the most violent cities on the planet! Every year, a strong contender for the Murder Capitol of the World. I'm a little scared to send Armagordon in there, Professor. What if they mug our Kaiju?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Johannesburg
+	Comment: When you click on a city for the first time
+	DisplayText: Johannesburg. A hub of the mining industry, and the world's largest city that ISN'T built on a lake, river or coastline! We should take the city just for access to all the diamonds and gold. The Creature needs some bling.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Fukuoka
+	Comment: When you click on a city for the first time
+	DisplayText: Fukuoka. One of the most livable cities in the world, and a huge industrial center on the Bay of Genkai. Strange that the city is so seldom attacked by kaiju! 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: eventmsg_CivilUnrest
+	DisplayText: Citizens are losing faith in their governments and violent protests break out across [city].  People doing the kaiju's work for them?! Surely things cannot get any darker!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Drought
+	DisplayText: With the city water reserves at an all time low in [city], a fire ban is in effect.  Only you can prevent city-wide conflagrations!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Earthquake
+	DisplayText: Earthquakes have hit [city]; even Chuck Heston can't be everywhere at once. Be prepared for a lot of city damage.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_ElectricalStorm
+	DisplayText: There is never a founding father around when you need one. No kite flying during the storms in [city].
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_LaborUnrest
+	DisplayText: Workers angry at the poor performance of the KDF in [city] go on strike and drive reconstruction costs through the roof.  Which will also have to be fixed.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_MeteorShower
+	DisplayText: Professor, there's going to be a meteor shower in [city]! We have a month to collect fragments and knock some heads together.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PatrioticSurge
+	DisplayText: The citizenry of [city] stand tall and in full support of the KDF in this struggle.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PerfectWeather
+	DisplayText: Scientists are claiming that this recent run of good weather in [city] is not good weather at all; it's perfect weather. The impact of this discovery on the scientific community remains to be seen.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Rainstorms
+	DisplayText: Forecast for [city] the this week: rain, rain, then rain, followed by rain, and finally some rain.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_SevereStorms
+	DisplayText: In what is being called one of the worst storm seasons of the decade, people of [city] are left with only one question: Can it possibly get worse?
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Tornadoes
+	DisplayText: Tornadoes have been spotted touching down near [city]. People are being reminded that the land of Oz does not, in fact, exist; do not approach the tornadoes.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_KaijuSympathizers
+	DisplayText: People in [city] have requested a visit from Armagordon! We shouldn't let them down, Professor. Every Mad Scientist needs a fan club.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_CivilDefenceWatch
+	DisplayText: The civilian population of [city] has stepped up in this time of crisis, standing ready to do their part for the war effort.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_VolunteerLabour
+	DisplayText: In [city] news, people have been signing up by the thousands for a new volunteer labour force! These brave men and women stand ready to rebuild this city at a moment's notice. 
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KDFOverwatch
+	DisplayText: The KDF is committed to protecting [city], and to make this clear we have permanently stationed extra attack aircraft here. 
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KaijuProof
+	DisplayText: In the face of upcoming re-elections, the Mayor of [city] has declared it Kaiju proof! I suspect we'll find out if that's true or not soon enough.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_TrafficCongestion
+	DisplayText: Defence analysts are saying that congestion problems in [city] have gotten so bad, we wont be able to respond properly in case of a kaiju attack.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_RollingBlackouts
+	DisplayText: It looks like Kerberos Productions has released another hit game. In [city] this game is so popular that the extra power consumption is causing rolling blackouts. We're calling it the "Kerpocalypse."
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_DonationArmy
+	DisplayText: I'd personally like to thank the dutiful people of [city]. With their generous donations and fund-raising we have been able to significantly bolster our military ground presence in that area.  
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_NavalObsolescence
+	DisplayText: Here in [city] I would like to announce our new "Soldiers, not Boats" program. Why? because people belong on land, not Kaiju! Let that monster splash around in the sea like a namby-pamby sea monkey, this land is OURS!
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_EconomicBoom
+	DisplayText: In their latest issue Furbs magazine referred to [city] as an "Economic powerhouse" and an "Investor's paradise". No one can say for sure how long this economic boom will last, but I for one say SPEND SPEND SPEND!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_MilitaryWithdrawal
+	DisplayText: It's important that the people of [city] realize that our military withdrawal isn't so much about "abandoning them to their terrible fate" as it is a tactical redeployment of forces. The chances of a kaiju attack here are slim, at best.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+
+Message {
+	Identifier: eventmsg_RefugeeFlood
+	DisplayText: Refugees have been flooding in to [city] for days now, straining our resources and flooding our shelters. However many of these brave souls have enlisted in the city's defence and hopefully, in time, this city can become their home.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_InspiredLeadership
+	DisplayText: Today. Today... At the edge of our hope, at the end of our time, we find time for hope. I hope, in time, that time will give us hope. Today we are renewing our subscription... to a cancelled apocalypse.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_ResistanceCollapse
+	DisplayText: In disturbing news, morale in [city] is at an all time low. When interviewed, on man was quoted saying "What's the point man, that monster is totally OP." We at channel 5 news are inclined to agree with him. Kaiju OP. Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_Panic
+	DisplayText: I'm here in [city] with a special report. This just in: WE'RE DOOMED. WE'RE ALL DOOMED! THE ABOMINATION WILL RISE FROM THE SEA AND END OUR PITIFUL LIVES! SAVE YOURSELF! RUN! RUN! THE TIME FOR MASS HYSTARIA HAS COME. *ahem* Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+
+
+Message {
+	Identifier: msg_BuildingComplete
+	DisplayText: Construction complete for [zone].
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteTrees
+	DisplayText: Trees finished growing.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteCommunicationsArray
+	DisplayText: [zone] construction complete.  Now we can make threats, Professor! 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompletePropaganda
+	Comment: play when you first build a propaganda satellite.
+	DisplayText: Our new "Creature Feature" is ready for broadcast! Just launch the propaganda satellite over the zone of your choice, and we will crush their will to resist with every passing month of re-runs!
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteMindControl
+	Comment: play when you first build a mind control satellite.
+	DisplayText: The mind control satellite is finished! Launch this satellite to get an edge when threatening a city. It's got the power of a hundred after-school specials!
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteECM
+	Comment: play when you first build a ECM satellite.
+	DisplayText: We've arranged a surprise for the KDF! This satellite will disrupt a region's surveillance and intelligence systems, giving the Creature a nice extra edge when "sneaking" up on a city. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteDropShip
+	Comment: play when you first build a DropShip satellite.
+	DisplayText: These new Drop Ships are going to be very useful in the struggle, Professor. When attacking a city, we'll attach this to the Creature and speed up the journey to the target.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteLaunchPad
+	Comment: play when you finish building your first launch pad.
+	DisplayText: You have a Launch Pad, Master! Now you can build and launch a variety of satellites. Left click on the launch pad and select "build" to begin.
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAssignAbilities
+	Comment: Play this the first time you enter the Assign Abilities screen.
+	DisplayText: This panel shows all the abilities that we have unlocked, Master. Click and drag active icons into the bar below to fit the Creature for combat.
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack01
+	Comment: This pops up at the very beginning. I Deleted the old IntroAttack message, hope that doesn't break anything.
+	DisplayText: The Wireless Overwatch and Remote Leadership Device is finally on line, Professor Wyrdstrom! [kaiju] has bearing his first target. Take a look through the W.O.R.L.D. viewer and see!
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack02
+	Comment: Immediately after IntroAttack01
+	DisplayText: Excellent! My quest for world domination begins with [city].  Attack, Armagordon! Let the Atomic Age begin!
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding
+	Comment: Play this the first time you enter the building screen.
+	DisplayText: From here you can lay out plans for new buildings, Master. There are four categories of buildings that you can choose from, and many buildings will unlock new and improved buildings when you construct them. The training facility is especially important, because it lets you upgrade [kaiju].
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding02
+	Comment: After introBuilding
+	DisplayText: When we have the necessary resources, click on the build button to construct a new building. To place it, click on the highlighted building image, move it to a clear location, and click confirm. It will then begin construction.
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity01
+	Comment: Pops up as soon as you enter anchorage.
+	DisplayText: [city] may not surrender on his maiden voyage, but any resources I capture will be useful back at my base for building new structures and developing [kaiju]'s abilities. He uses both organic matter and electrical power to run his abilities, so I'll be sure to collect those first.
+	Speaker: MadScientist_Large
+	Sound: babble_ivo_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity02
+	Comment: immediately after IntroCity01
+	DisplayText: All systems go, Master Wyrdstrom! Left click where you want [kaiju] to go; you will automatically attack anything that gets in your path. When it's time to leave, just walk to any edge of the map. If you right click on a unit you can target it so that your aimed abilities will automatically fire in that direction. 
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity03
+	Comment: when gino is at 75% Health.
+	DisplayText: Hmm...very nice performance, but I think it needs more...muscle. Write that down, will you Julius? 
+	Speaker: MadScientist_Large
+	Sound: babble_ivo_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity04
+	Comment: The first time you get a city down to 90% morale
+	DisplayText: Stupendous! If we can get this city's Morale down below 40%, there's a good chance they'll surrender, Professor. A city that surrenders is basically your property, a permanent donor to the cause! If they don't surrender right away, we'll simply continue the assault. They'll come around to your way of thinking eventually.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_CityReminder
+	Comment: If after 3 months, you have not yet conquered a city.
+	DisplayText: Professor, we have to pursue our goals aggressively if we really want to dominate the globe. We need to conquer some of these cities. No disrespect intended. I'm sure if we keep attacking, one of them will surrender!
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+
+Message {
+	Identifier: tutmsg_IntroClearing
+	Comment: When you first click on the clearing button
+	DisplayText: Need more space, Master? Click on the area you want to clear, and we'll clear the snow and ice in that area.
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroDeath
+	Comment: Play the first time your monster dies
+	DisplayText: Ach, the humiliation! Call me when you've resuurected [kaiju]... I'm going to my Lair and listen to Wagner until I stop wanting to kill you all.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_ivo_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroKaiju
+	Comment: Play this the first time you enter the Kaiju screen.
+	DisplayText: Status update for your Kaiju, Master Wyrdstrom.
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat
+	Comment: Play this the first time you successfully retreat from a city.
+	DisplayText: Don't get comfortable, [city]. I'll be back, bigger and more radioactive than ever. I'll build up my base, upgrade my Kaiju, and crush you all!
+	Speaker: MadScientist_Large
+	Sound: babble_ivo_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat02
+	Comment: Play this the first time you successfully retreat from a city, after IntroRetreat.
+	DisplayText: It's going to take a while for [kaiju] to return to base, Professor. You can use the arrows in the top left corner, beside the clock, to advance time faster or slower. You can do that in your base as well! A man of your talents has better things to do then stare at this screen all day.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSecretBase
+	Comment: Play this the first time you enter your base.
+	DisplayText: Our glorious lair! This mysterious crag was dismissed as a worthless hunk of ice and gravel, but we can make it world-famous. Click on any clear-cut tile to assign a work crew to clear away the snow and prepare the ground for construction.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroSecretBase02
+	Comment: Play after IntroSecretBase
+	DisplayText: You can also build facilities, heal, and train [kaiju] here; because Armagordon is a cybernetic hybrid, both repair facilities and healing vats will work for him. If you want to expedite things, don't forget you can speed up the clock by pressing the arrows in the top left hand corner. Patience is a virtue, but who has time for virtue?
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSummary
+	Comment: Play this the first time you enter the Summary screen.
+	DisplayText: I've completed my report, Professor! This is the latest scoop on the Morale, GDP, and destruction level of every region of the globe.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroTraining
+	Comment: Play this the first time you enter the training screen.
+	DisplayText: Master, this is where you tell me and the rest of your worthless slaves how to upgrade [kaiju]. To get more upgrades, you will need to build new training facilities in your base. Loyal as we are, advancements in nuclear medicine are not free.
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_MonthlyUpdate
+	Comment: Play this the first time there is a monthly update.
+	DisplayText: Your accountants have prepared a monthly report of all resources, gains, and losses, Boss. Base buildings can produce resources, but they also cost money to maintain. Also, cities will repair the damage we've done over time, so don't expect cities to stay ruined for long.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_AttackGroup
+	Comment: play the first time that a city generates an invasion group
+	DisplayText: KDF has launched invasion forces against me?! The gall! The hubris! Let them set one foot on this island and I will unleash the Creature on them like an angry fat man at a buffet!
+	Speaker: MadScientistRage_Large
+	Sound: babble_ivo_angry
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_PatrolGroup
+	Comment: play the first time that a city generates a patrol group
+	DisplayText: So KDF has sent out a patrol, to catch the Creature in transit? Never! You cannot stop the Atomic Menace!
+	Speaker: MadScientist_Large
+	Sound: babble_ivo_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_SearchGroup
+	Comment: play the first time that a city generates a search group
+	DisplayText: KDF is searching for my Lair? The fools! They'll never find us. If they did, of course, it might be useful to have some defensive structures around this base. A welcome mat, so to speak.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_ivo_angry
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_LairDiscovered
+	Comment: play this when a search group discovers the island.
+	DisplayText: Our base has been discovered! Now it's only a matter of time before the KDF comes to call. We should prepare a nice WARM welcome for them, Professor...if you catch my drift.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: tutmsg_PatrolCombat
+	Comment: play the first time that Gino is detected by a patrol group, before they enter combat.
+	DisplayText: Breaking news! [kaiju] has been intercepted. Will the monster be turned away, Or will it push forward through the K.D.F. line? Stay tuned to find out.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_PatrolCombat02
+	Comment: play the first time that Gino enters combat with a patrol group.
+	DisplayText: We don't have to fight these numbskulls unless you want to, Professor. Walk [kaiju] to the red line if you want to go back to base, walk to the green line if you want to move forward, or just break all their machines and laugh maniacally.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat
+	Comment: play the first time the player attempts to threaten a city.
+	DisplayText: Excellent effort, Professor! Threats are an important part of world domination. If they don't listen to reason, you can always send the Creature to make your point more...firmly.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat02
+	Comment: play five days before a failed threat is going to expire.
+	DisplayText: The citizens of [city] are calling you a "crazed megalomaniac with a purpletonium fetish", Professor. I think that's just hurtful and uncalled-for. 
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroUpgrade
+	Comment: play when you first train all teir 1 abilities.
+	DisplayText: Professor, we're out of plans for new upgrades. If we build an Advanced Training Facility, we can help Armagordon reach his higher potential! 
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_IntroUpkeep
+	Comment: play each month one of your buildings can no longer be maintained.
+	DisplayText: I'm sorry master, but we are short on supplies! It's impossible to support all our buildings this month. You must bring home more resources. 
+	Speaker: Engineer_Large
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_LaunchDropShip
+	Comment: play when you try to launch a drop ship via the launch button.
+	DisplayText: You can't launch from here, Master. Go to the map, select a city, and attack via Drop Ship. The Creature will be delivered in 30 minutes or less, like American pizza, ja? 
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_SuperTank
+	Comment: play the first time a Super Tank is built.
+	DisplayText: Breaking News! The Kaiju Defense Force has unveiled its newest anti-kaiju weapon, the aptly-named SUPER TANK, in [city]. The KDF thanks everyone whose homes will be crushed under its massive treads, and promises that their sacrifices will not be in vain.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Planto
+	Comment: play the first time a Planto is built.
+	DisplayText: Breaking news! The Kaiju Defense Force scientists have created a new anti kaiju weapon in [city], a bipedal mutant plant creature called Planto. Planto is fully under the control of the KDF, and absolutely, definitely, probably, won't go crazy and wreak havoc on it's own masters.  
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Helicarrier
+	Comment: Play the first time a Helicarrier is built.
+	DisplayText: Breaking news! The newest anti-kaiju weapon has been announced in [city] by the Kaiju Defense Force, The KDF Helicarrier! This new weapon will be used as a "Shield around the world, to avenge those who have fallen." Or at least that's what they said in the press release.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Ultrasan
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! "The Ultimate Hero" has been created in [city] by the Kaiju Defence Force, known only as Ultrasan! KDF scientists credit an "out of this world discovery" for their success with this program, but refuse to say more.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RockMonster
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! A gigantic stone guardian has appeared in [city] today, but is showing no signs of hostility. The Kaiju Defense Force is claiming responsibility for this creature, saying only that ancient forces and unconventional "sciences" have made this possible.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_MiniMechs
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! The Kaiju Defense Force has announced a new anti-kaiju Mecha Task Force in [city]. The pilots of this force may seem young, but the KDF assures us that these teenagers have what it takes to fight monsters, defeat evil, and make it back in time for class.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_NuclearSurge
+	DisplayText:  We have finished the research, Master! The Creature can now be equipped with a Nuclear Surge, which will boost its speed and reduce the cool-down period by ten percent!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomicPunch
+	DisplayText: The new training regimen has produced an Atomic Punch, Master! With it, the Creature can knock back its enemies. If they are driven into buildings by the Punch, they cause more destruction! It is like bowling, ja?
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_RadBeam
+	DisplayText:  The new RadBeam is at your disposal, Master. It will not be useful against structures, but it is devastating against flesh!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_NuclearPulse
+	DisplayText:  The new Nuclear Pulse is complete, Master Wyrdstrom! Trigger it and the Creature will release a wave of atomic energy, dealing damage to everything within a range of 100 meters.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_ForcePunch
+	DisplayText:  We followed your instructions, Master, and have increased the power of the Creature's punch. The new Force Punch is a wave of kinetic destruction that follows a line from the point of impact--double damage to the primary target! The first domino is hit the hardest, ja?
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Leap
+	DisplayText:  Your mighty Atomic Ubermensch will Leap tall buildings in a single bound! And deal magnificent damage when it lands, as well. All without a silly cape or red underpants, Master.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_FocusRads
+	DisplayText:  We took your advice and fitted the Creature with a new crystal lens, Master! Focused Rads will unleash a more powerful flesh-obliterating beam at great range--but it remains harmless to buildings.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_PulsedRads
+	DisplayText:  We've developed a variant beam weapon for the Creature, Master. The Pulsed Rad beam will fire in three bursts in sequence, pew-pew-pew! Like a cowboy, ja?  
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_DeathArc
+	DisplayText:  We've developed a new splitter to spread the rads of the Creature's deadly gaze! The Death Arc attack will unleash a wide beam which deals damage over time, although planes and tanks have partial immunity.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_BlastZone
+	DisplayText:  Mua-ha-ha-ha! We have increased the magnitude of the Nuclear Pulse, Master! The new Blast Zone will be 200 meters of pure pain and suffering!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_FirePunch
+	DisplayText: I've been working on a new mutation for the Creature, Professor. Essentially I've amped the thermal output of the flesh on his hands and arms. His new Fire Punch should unleash a heat wave, and set all targets in his path on fire.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+Message {
+	Identifier: msg_gordon_Pummel
+	DisplayText:  I was looking at the Creature's reflexes and tracking, Professor, and I realized that some of his nerve bundles were a little...rotten. I replaced them, and installed a command to unleash a Pummel attack of rapid-fire punches when you're in the mood. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+Message {
+	Identifier: msg_gordon_SuperLeap
+	DisplayText:  The new training regimen is a success, Master! The Creature's squatting exercises have developed the gluteus to the maximus. The new Super Leap will cover whole city blocks in a single bound!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Toss
+	DisplayText:  Since I had nothing better to do, I decided to try to teach Armagordon to play baseball, Professor. So far he can pick up chunks of rubble and Toss them at enemy targets. He's got a pretty good arm, too!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_PiercingBeam
+	DisplayText:  We've increased the intensity of the Creature's deadly gaze, Master! The new Piercing Beam will skewer anything in Armagordon's path, like a shish-ka-bob!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Destabilizer
+	DisplayText:  I decided to have a look at Armagordon's internal particle accelerator, Professor. It turns out that with a little tinkering, he can produce mesons! I've created a new Destabilizer attack which should make your enemies nicely explosive. Good for a laugh, right? 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_BeamSweep
+	DisplayText:  The new wide array lenses we've installed are wunderbar, Master! With the new Beam Sweep, Armagordon can fire six times in an arc of forty-five degrees.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Bolter
+	DisplayText:  We've made some improvements to the Creature's weaponry. The Bolter is a slow-moving projectile which will track its target, detonate and shut down its systems for five seconds.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_IgnitionZone
+	DisplayText:  The new thermal enhancement is working nicely, Master! You can now fire a wide beam  Ignition Zone, which will set all targets within range on fire. As always, tanks and planes will have partial immunity.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_ReactorLeak
+	DisplayText:  Bad news? We had a little...accident down at the Training Facility. Good news? We only lost the swingshift workers, and we figured out how to weaponize the boo-boo: you can now trigger a Reactor Leak on command!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_HarmonicOverload
+	DisplayText:  You will love the new Harmonic Overload, Master! Armagordon unleashes destruction like a chain of thermonuclear firecrackers, five detonations in a row!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Shockwave
+	DisplayText:  I was thinking about how to boost the output of the explosive attacks, and I think I've had a breakthrough. Three words: purpletonium fusion reaction. The new Shockwave is pretty impressive, if I do say so myself! 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_TripleAtomicPunch
+	DisplayText:  I was working a bit on Armagordon's Fire Punch, Professor, and decided to turn up the heat. The new Triple Atomic Punch unleashes three waves of thermal radiation, and should set most of his targets ablaze. Float like a butterfly, sting like World War Three! 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomicCyclone
+	DisplayText:  Wow! I just finished the upgrade to the old Pummel attack, Professor. Armagordon lets fly with a rapid-fire barrage of punches in a full 360-degree arc--he's an Atomic Cyclone!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Skyfall
+	DisplayText:  At last, the ultimate refinement of the Leap attack! When the Creature commits its Skyfall, it can leap over mountains, and deal triple damage to buildings when it lands!  
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomicFastball
+	DisplayText: I just finished my last coaching session with Armagordon, Professor. He could pitch for any major league team now--his new Atomic Fastball is a real humdinger. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_IgnitionBeam
+	DisplayText:  At last we have perfected the Creature's piercing gaze! The new Ignition Beam will slice through anything in Armagordon's path, and set it on fire as well!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_MesonBeam
+	DisplayText:  The new upgrades to the particle accelerator are complete, Professor! Armagordon is producing enough mesons now to fire a solid Meson Beam. He can destabilize the atoms of an enemy unit and make them blow up REAL good.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Radnado
+	DisplayText:  Twelve beams of ionizing radiation in a full 360-degree arc! It is perfect, Master! As beautiful as Laser-Floyd! A wonderful RADNADO!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomoBolt
+	DisplayText:  We've made an improvement to the Creature's projectile attack, Master. The new AtomoBolt has a much longer range, and will shut down the enemy's systems for at least five seconds.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Meltdown
+	DisplayText:  I realize that Creature isn't supposed to be defeated, Professor, but on the off-chance it should ever happen, I decided to set a failsafe device in the reactor core. If Armagordon's health ever goes to zero, his Meltdown will leave our enemies a lovely parting gift.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_RadioactiveCloud
+	DisplayText:  Once we learned to weaponize a reactor leak, it was only a matter of time before we perfected the attack. This Radioactive Cloud will surround Armagordon with gaseous fall-out, and will damage any enemy within its sphere. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_HavocOverload
+	DisplayText:  Finally we have unleashed the ultimate chain reaction! The new Havoc Overload will detonate five times, at greater power and range than ever before!  
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Shutdown
+	DisplayText:  I was fiddling a bit with the creature's explosive tendencies, and realized that he was capable of releasing an electro-magnetic pulse! Using the new Shutdown attack should let Armagordon suppress enemy units for about ten seconds, but unfortunately he won't be able to use his own range attacks while it's operational. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+Message {
+	Identifier: msg_gordon_WarFighter
+	DisplayText:  I've done a little work on the Creature's reflexes, Professor, conditioning him to respond like a Warfighter in the field. From now on he should have a 10% chance to evade enemy attacks. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_BodyArmor
+	DisplayText:  We have obeyed your command, Master! The Creature's flesh has been laced with a new layer of high-tensile woven fiber mesh, to protect it from harm!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_PersonalShield
+	DisplayText:  We have successfully diverted power from the reactor to generate a Personal Shield for the Creature! It will absorb damage for twenty seconds, Master. 
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Camo
+	DisplayText:  I've been thinking, Professor--Armagordon is basically a giant soldier on the battlefield. Why not give him a little warpaint to make him harder to see? The new Camo we've painted on him should give him a better chance to dodge enemy fire.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_HeavyArmor
+	DisplayText:  As you requested, Master, we have fitted the Creature with a full suit of subdermal Heavy Armor. This should make Armagordon much more difficult to destroy.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Duck
+	DisplayText:  I was watching my favorite cartoons the other day and I got to thinking--why couldn't Armagordon learn to crouch down a bit for protection? One thing led to another, and I managed to teach him to Duck on the battlefield. He takes less damage when he's small!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_ImprovedShield
+	DisplayText:  We've made some refinements in the shield generator, Master. The Improved Shield will be more effective in combat.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_DispersalField
+	DisplayText:  A slight variation in the shield generator allows Armagordon to disperse harmful energy, Master. Activate the Dispersal Field to reduce the damage of energy attacks by fifty percent.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_CombatColors
+	DisplayText:  The serfs and I decided to give Armagordon a new paint job, Professor. His new Combat Colors seem to make him happy--he's dodging better, and hitting harder too! 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Cratering
+	DisplayText:  I got the idea while I was watching an old war movie, Professor--a crater looks a lot like a foxhole! Armagordon will use his new Cratering ability to enjoy a little cover after he destroys a building--should give him a boost in evading all attacks, including missiles.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_HeavierArmor
+	DisplayText:  A full-scale revision of the Creature's muscular system has been completed, Master! Now Armagordon will enjoy even Heavier Armor versus his opponents.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_ScoutArmor
+	DisplayText:  We have replaced the creature's steel-laced skeleton with a lighter titanium frame. His new Scout Armor will make him swifter and more likely to dodge in battle.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Roll
+	DisplayText:  One of the serfs taught Armagordon a new trick, Professor! Now he can curl up and Roll into the enemy, like a giant purple boulder.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Rabbit
+	DisplayText:  We have enhanced the Creature's jumping ability, Master. Now he will hop his enemies to death, like a giant atomic Rabbit! He is the LITTLE BUNNY FOO-FOO OF RAGNAROK!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_ImpenetrableShield
+	DisplayText:  Further refinement of the Creature's defences, Master. For the first five seconds, Armagordon will have a truly Impenetrable Shield.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AbsorptionModule
+	DisplayText:  The new Absorption Module works, Master! When you activate it, the Creature will convert a portion of the harmful energies directed at his body into power for his own systems. 
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_ScatteringField
+	DisplayText:  The serfs and I have developed a new variation of the Dispersal Field, Professor. the new Scattering Field should deflect light as well as energy, and greatly reduce the damage of laser weapons.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_RadioactiveField
+	DisplayText:  Your brilliance is never-ending, Master! Your new Radioactive Field emitter creates a corrosive area of effect, and slows the enemy's erate of fire by fifty percent!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_WarPaint
+	DisplayText:  I think the Creature is really developing a sense of pride in its appearance, Professor. The new coat of War Paint we gave him has increased his dodge ability, and upped the damage on all his attacks, across the board!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_WarFace
+	DisplayText:  We had the brilliant idea of making the Creature more intimidating by giving his face a coat of cosmetics, Professor. Now all enemy units have a 25 percent chance to run from Armagordon's War Face...and all the engineers are having nightmares about purple clowns. Good news, bad news, right?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Creeping
+	DisplayText:  We spent a little extra time with the Creature, teaching him to study the buildings around him more carefully. He should be pretty good at Creeping now--if you have him move more slowly, he can evade some of the fire from enemy buildings.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_DustUp
+	DisplayText:  I've been working on Armagordon's landings, to make them a little more...atomic. When he hits the ground he should throw up a nice cloud of covering dust, and have a better chance to dodge enemy fire and missile attacks.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_HeaviestArmor
+	DisplayText:  We have fitted the Creature with a magnificent skeleton laced with adamantium, Master! Nothing but the best and Heaviest Armor for your glorious atomic ubermensch.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_StealthArmor
+	DisplayText:  We've made some adjustments to the Creature's armor, Master. A small sacrifice of overall durability allows us to fit Armagordon with Stealth Armor, which will make him much more difficult to detect via radar, both on the world map and on the battlefield at night.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_DuckAndCover
+	DisplayText:  Your friend Reddy Kilowatt says Duck and Cover, kids! When you trigger this defense, Armagordon is completely invulnerable for five whole seconds!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_WreckingBall
+	DisplayText:  When you trigger the Wrecking Ball attack, Armagordon rolls up and bounces around the battlefield like a superball of atomic mayhem. Five bounces, five blasts of nuclear energy--one happy supervillain.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_EternalShield
+	DisplayText:  The final refinement of the shield generator is complete, Master. Armagordon's reactors have become so powerful that his shield is now permanent, and will recharge automatically.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AbsorptionInfusion
+	DisplayText:  Your absorption module has reached the pinnacle of perfection, Master! Armagordon's absorption of energy attacks has become automatic. Absorption Infusion is now  a passive property of the Creature.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Iridescence
+	DisplayText:  The final refinement of the Dispersal Field is complete! Armagordon now carries a permanent aura of defense against light and energy-based attacks. The Creature's Iridescence is a passive property.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_ReactorBreach
+	DisplayText:  Armagordon takes a pounding in the field, Professor, so I've added another failsafe to his reactor core. If his health drops below 75 percent, his emergency venting systems will trigger a Reactor Breach. Should give him a chance to break missile lock, and evade some enemy fire.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_DressedForDestruction
+	DisplayText:  We decided to give the Creature one last coat of paint for good luck, Professor. Armagordon loves it! He's Dressed for Destruction, his attack damage is increased, and any enemy unit that misses a shot against him is just turning tail and running like rabbits.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Terrorize
+	DisplayText:  Put a few last touches on the Creature's face paint, and I've got to say--I've really outdone myself. The enemy units are running from him about half the time, and I think I may have given myself PTSD.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Sneaking
+	DisplayText:  We've finished the training sequence for city combat, Professor. Armagordon is now capable of Sneaking when you toggle a reduction in his speed. It really lowers the chance that buildings will fire on him.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Chaos
+	DisplayText:  The final refinement of the cratering tactic, Professor! In the Chaos after Armagordon destroys a building, he'll have a big bonus to dodge enemy fire and evade missiles. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_OMAK
+	DisplayText:  The metabolic control booster is working, Master. The boosts to damage and maximum health will make Armagordon a One-Man Army Kaiju--OMAK for short.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_CombatManeuvers
+	DisplayText: We have trained the Creature in Combat Maneuvers, Master Wyrdstrom. Triggering the sequence will grant a large boost in Speed, and a smaller increase in Dodge ability.  
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_MilitaryTactics
+	DisplayText:  The new training sequence is a success, Master! The use of Military Tactics mode will increase the damage of Armagordon's attacks, and speed his recovery and cool-down in battle.  
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_gordon_AtomicHalfLife
+	DisplayText:  I decided that the Big Guy needed a panic button, Professor. If things get hairy out there, you can trigger his Atomic Half-Life for a burst of Speed, Damage and Cool-down reduction. It'll use up about half the Creature's health, but...nothing is perfect!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_NuclearInfusion
+	DisplayText: We've fitted Armagordon with the metabolic boosters you ordered, Professor. Now you can trigger a quick Nuclear Infusion whenever you want to increase Speed and Cool-down. I think I'd like to have one of those installed myself! 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomicReaction
+	DisplayText: We have boosted reactivity to every fiber of the Creature's muscles, Master! Armagordon's instant Atomic Reaction will greatly increase the distance of all his jumping abilities, from now on. 
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_BattlePlanning
+	DisplayText: Did a little more work on Armagordon's brain, Professor. His increased intelligence has improved his Battle Planning, and reduced the recharge time for both his offensive and defensive abilities.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomicBoost
+	DisplayText: We installed the new adrenal injector in the Creature's heart, Professor, as ordered. The new Atomic Boost should send a surge of power to Armagordon's attack systems, and boost the damage of any weapon he uses next.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomSmasher
+	DisplayText: We have completed the refit of the Creature's muscular system, Master. The new tissue will greatly increase Armagordon's strength in melee combat--truly, he has become an Atom Smasher!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_UtilityBelt
+	DisplayText: We've been looking at the storage problem, Professor, and we designed the Creature a handy new Utility Belt. It'll increase the Creature's carrying capacity by 20 percent, give him an extra power slot, and his resemblance to Batmensch by 30 percent.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_RedZone
+	DisplayText:  Red Zone is a failsafe mechanism, Professor. You can use it when you need a big burst of Speed and Damage. It'll cost the Creature some health, but sometimes you need to take out your enemies in a hurry. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_NanoMachinesSon
+	DisplayText:  We have injected the new Nano Machines as ordered, Master. From now on they will work as tirelessly as we do, healing the Creature's meat, bone and onboard systems--both in combat and at home.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_DangerousReaction
+	DisplayText:  The new limbic system is installed and active, Master! The Creature now has a Dangerous Reaction when harmed. If you wound Armagordon, he becomes angry...and you will not like him, when he's angry. His bonus to damage is equal to the health he has lost!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Catalyst
+	DisplayText: The team and I have installed a few vats of healing solution into the Creature's torso, Professor, to give you a boost in health when you need it. Trigger the Catalyst to get 90 seconds of increased healing.  
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_QuickThinking
+	DisplayText: I've re-routed a few power conduits to the Creature's skull, Professor, which should allow it to be a little more Quick Thinking on command. If you use this boost, Armagordon's next Ability will take only half as long to recharge. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Anticipation
+	DisplayText:  I managed to add a few wrinkles to the Creature's brain, Professor. Armagordon's memory and grasp of military tactics are good enough to allow some Anticipation! From now on he'll be a lot less likely to get caught by ambushes and patrols when travelling on the world map.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Enhancement
+	DisplayText:  We have followed the plans you provided for an Enhancement option, Master. You can use this to route extra power to the Creature's next attack, doubling its damage.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_BreederReactor
+	DisplayText: We have installed the new Breeder Reactor, Master. Armagordon should be able to generate his own power in the field from now on. We were greatly relieved to discover that a "Breeder Reactor" had nothing to do with the Creature's schwanzstucker!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_FieldMastery
+	DisplayText:  We made a huge breakthrough with the Creature's shield generator, Professor! And by that, I mean...we cleaned it. With soap. All of Armagordon's shields should take more damage and recharge a lot faster, now that we've cleared all the Purpletonium crud out of the works.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_AtomBuster
+	DisplayText:  We have refitted the Creature's limbs as you commanded, Master! The new Atom Buster protocol will unleash a flood of atomic energy to Armagordon's extremities, increasing the damage of its fists and feet.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_PocketTesseract
+	DisplayText: The new storage system is complete, Master. Our Pocket Tesseract design is based on the adorable fanny pack which you wear on hiking excursions. It will increase the Creature's carrying capacity by 25 percent. 
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_GrabATron
+	DisplayText:  The possibilities of the nanite swarm are truly endless, Master! We have designed a Grab-A-Tron function which will collect all the unclaimed resources on the battlefield and deposit them within the Creature. Now if only we could teach them to vacuum the lab!
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Failsafe
+	DisplayText:  This is the failsafe that I've cleverly called...Failsafe! It's a massive boost to Speed and Cool-down efficiency for 30 seconds. The only problem is that if Armagordon doesn't manage to escape the enemy city and reach the sea to cool down...he explodes. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_SelfDestruct
+	DisplayText:  Self-Destruct mode is a little surprise for the enemy, Professor. If the Creature is ever about to be destroyed, we can detonate his atomic core, do them some damage, and still send his collected resources back to base in a delivery capsule. Pretty spiffy, eh?
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Overload
+	DisplayText:  Just another failsafe mechanism, Professor. The new Overload ability will cause Armagordon to have a panic attack, basically--for every percentage of health that he's lost, he'll receive another point of Speed. He steps lively when he's scared!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_CatalyticConverter
+	DisplayText: Turns out you were right, Professor. Mutation is always the answer! Thanks to the new gene-splicing we've done, Armagordon's own body is a Catalytic Converter. He produces his own healing solution as just another bodily fluid. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Aim
+	DisplayText:  We have replaced the Creature's eyes with the new models you constructed, Master! Armagordon's Aim has increased the range of all attacks, with only a slight increase in cool-down times.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Predict
+	DisplayText:  As per your instructions, we've been teaching the Creature to record and project patterns of data. He's gained some talent for the Prediction of troop movements and patrol patterns. He's dodging the KDF on land and sea, and getting the drop on cities more often. 
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Optimization
+	DisplayText:  The final Optimization pass is complete, Master! We have tweaked and injected everything we can, and Armagordon's power is at an all-time high! The damage of every attack has been increased.
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Efficiency
+	DisplayText: The serfs and I have completed the final Efficiency pass, Professor. Everything is as clean, as small, and as devoid of wasted energy as we can make it. We've managed to reduce the cost of all abilities by a significant margin.
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_NuclearMuscle
+	DisplayText:  The hanky you recovered from Desert Base was swimming with useful DNA, Master! We've refitted the Creature with gamma-infused Nuclear Muscle which greatly increases his jump range, and ability to destroy buildings. Armagordon smash! 
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_Atomonihilation
+	DisplayText: We've whipped up something special, Professor--an attack that allows the Creature to convert all the buildings in his melee range from matter to energy. Really impressive explosion! i think you'll like it.  
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_PortableHole
+	DisplayText:  Another solution to the problem of cargo capacity! We've fitted Armagordon with a Portable Wormhole Generator. With the addition of the Portable Hole, ten percent of all resources picked up by the Creature are transported directly to base. Pretty nifty!
+	Speaker: Intern
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_gordon_MASHUnit
+	DisplayText:  Our final attempt at a solution to the problem of injuries in the field, Master. The MASH Unit is a portable mechanized field hospital with the capacity to restore the Creature to full health two times. Think of it is as the world's biggest first aid kit, for kaiju-sized boo-boos! 
+	Speaker: Engineer
+	Sound: babble_ivo-engineer_normal
+	IsTutorial: false

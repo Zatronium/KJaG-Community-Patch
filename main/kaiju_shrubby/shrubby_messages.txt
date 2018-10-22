@@ -1,0 +1,2105 @@
+
+Message {
+	Identifier: msg_Year1
+	Comment: At the end of the appropriate year. (Shrubby version)
+	DisplayText: Hard to believe it's been a full year of mean green world domination, Boss. It's really been a year, right? You're not just messing with me?
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year2
+	Comment: At the end of the appropriate year. (Shrubby version)
+	DisplayText: Wooo! Two full ears of Green Revolution! The crew and I whipped up some KILLER vegan brownies using the buds off the Shrubmeister, Boss. We should invite the Kaiju Defense Forces over for a party! What do you mean they'll find us? That's why I made brownies! 
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year3
+	Comment: At the end of the appropriate year. (Shrubby version)
+	DisplayText: Happy Anniversary, Boss! You and the Shrubster have been large and in charge for three solid years now. Those KDF suckers can search the world all they want--our groovy crash pad is safe and sound. We got nothing to worry about.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year4
+	Comment: At the end of the appropriate year. (Shrubby version)
+	DisplayText: Wow, four years of all-out war on the Man and his Plan! That's amazing, Boss. Yeah, we should totally whip up some tofu surprise and reminisce. Ahm... Oh, sorry, just a little distracted by all these KDF ambush patrols.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year5
+	Comment: At the end of the appropriate year. (Shrubby version)
+	DisplayText: Wow. It really has been five years, hasn't it? It's amazing that we've held out this long, what with the world ganging up on the Shrubmeister. I'm not sure we can still win this, Boss, but we should definitely try to go down in a blaze of glory! ... Heh, blaaaaaze. Such a funny word.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+
+
+Message {
+	Identifier: msg_KaijuArrives
+	Comment: Kaiju arrives at some city.
+	DisplayText: [kaiju] arrives at [city].
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_KaijuArrivesLair
+	Comment: Kaiju returns home.
+	DisplayText: [kaiju] has returned to [city].
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuDamageWarning
+	Comment: Will accept [kaiju].
+	DisplayText: They're destroying my beautiful creation! I need [kaiju] to evacuate, before it's too late! If I can just get to the edge of the map I'll be scott free!
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_KaijuDefeated
+	DisplayText: [kaiju] returns to [city] to be regrown.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRebuilt
+	DisplayText: [kaiju] rebirth complete.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRepaired
+	DisplayText: [kaiju] healing completed.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+Message {
+	Identifier: msg_Invasion
+	Comment: Every time an invasion fleet is sent to attack you.
+	DisplayText: An invasion fleet has been launched!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_CitySurrenders
+	DisplayText: Fantastic work! [city] surrendered. All of their income will go to us from now on.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RegionSurrenders
+	DisplayText: Region [region] has surrendered! This is a huge milestone, Doctor Belladonna. You've officially conquered one-sixth of the world!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingCompleteDefault
+	DisplayText: Training complete.  [kaiju] acquires [ability].
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingFacilityShutdown
+	DisplayText: Insufficient resources to support [zone].  [kaiju] training for [ability] aborted.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ClearingComplete
+	DisplayText: Brush clearing complete.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_NewAbilities
+	DisplayText: New Kaiju abilities are available.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: msg_invasion
+	Comment: Every time an invasion fleet is sent to attack you.
+	DisplayText: An invasion fleet has been launched!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_success
+	Comment: when you successfully threaten a city
+	DisplayText: [city] sent a nice note and a suitable bribe.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail
+	Comment: when you unsuccessfully threaten a city
+	DisplayText: [city] doesn't take me seriously!  Time for a little guerilla land-scaping!
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail01
+	Comment: when you unsuccessfully threaten a city with "Pay you"
+	DisplayText: [city] has refused to make a donation!  I should really flatten at least 30% of [city] this month, if I want to be properly respected.
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail02
+	Comment: when you unsuccessfully threaten a city with "Opt out"
+	DisplayText: [city] doesn't take me seriously!  I really should crush at least 15% of [city] this month, just for the sake of appearances.
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_fail03
+	Comment: when you unsuccessfully threaten a city with "Disable Alarms"
+	DisplayText: [city] refuses to reduce their noise pollution!  I hate those stupid alarms. I should destroy at least 25 of [city] defense units this month, just to make my position clear.
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail04
+	Comment: when you unsuccessfully threaten a city with "Surrender"
+	DisplayText: [city] rejects my non-violent solution? Then they'll join the Green Revolution by force. I should force [city] to surrender this month, for their own good--not to mention mine.
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Djibouti
+	Comment: When you click on a city for the first time (Shrubby version)
+	DisplayText: Djibouti! Nature's already been pretty mean to that place, Boss. Not enough potable water, not enough arable land, deforestation, loss of endangered species...they might actually be happy to see a little unexpected greenery around there!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+
+Message {
+	Identifier: msg_Ulaanbaatar
+	Comment: When you click on a city for the first time (Shrubby version)
+	DisplayText: Ulaanbaatar, Mongolia! Man, these people really know how to deliver the pollution, Boss. New-fangled cars with low emission standards on streets--plus old-fashioned wood and coal stoves in the shanty towns, and people using mercury in the mines. Hey, let's party like it's 1899!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_Moscow
+	Comment: When you click on a city for the first time
+	DisplayText: Moscow. 22 million tons of solid waste a year, crippled by gridlock and nasty fossil fuel cars, and the deforestation of Russia is a disgrace! I say we shrubbify the capitol just on general principles. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_MexicoCity
+	Comment: When you click on a city for the first time
+	DisplayText: Mexico City! Air pollution so bad that it sent a million people to the hospital in 1999. Almost twelve thousand tons of trash generated per day. Chronic water shortages. If we attack with a giant plant monster, will anyone even notice?
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+
+
+Message {
+	Identifier: citymsg_NewYork
+	Comment: When you click on a city for the first time
+	DisplayText: New York. America's Dirtiest City, with 12,000 tons of residential trash per day. Yeah, this burg is going DOWN.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Albuquerque
+	Comment: When you click on a city for the first time
+	DisplayText: Albuquerque, New Mexico! Home to Kirkland Air Force Base, and a 24-million-gallon spill of jet fuel which went on for 45 years, the biggest in human history. Boom! They've gotta go. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Anchorage
+	Comment: When you click on a city for the first time
+	DisplayText: Anchorage, Alaska. One of the worst air pollution records in the USA. Time to go green, losers!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Barcelona
+	Comment: When you click on a city for the first time
+	DisplayText: Barcelona, Spain. Air pollution, noise pollution, sewage overflowing right onto the beach? This city needs some SERIOUS Shrubbification!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Cairo
+	Comment: When you click on a city for the first time
+	DisplayText: Cairo, Egypt. Between the dams and traffic jams, I don't know what you should stomp first, boss. Free the Nile, baby! FREE THE NILE!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Calgary
+	Comment: When you click on a city for the first time
+	DisplayText: Calgary, Alberta. They were world's top Eco-City in 2010! I say we go easy on 'em. Crush them softly.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_CapeTown
+	Comment: When you click on a city for the first time
+	DisplayText: Cape Town, South Africa. Whew. You get some REAL nasty air pollution from burning tires.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Dubai
+	Comment: When you click on a city for the first time
+	DisplayText: Dubai, United Arab Emirates! One of the fastest-growing, least sustainable cities on the planet. I think they need a little more 'green space', Boss!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Halifax
+	Comment: When you click on a city for the first time
+	DisplayText: Halifax, Nova Scotia. Geez, these people were dumping raw sewage into the harbour for 250 years before they cleaned up their act. We gotta get justice for those fish. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_ParadiseIsland
+	Comment: When you click on your home base for the first time
+	DisplayText: Our sweet revolutionary crash pad! This island paradise was nearly destroyed by illegal logging, but we can make it live again.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_London
+	Comment: When you click on a city for the first time
+	DisplayText: London, England! Home to over 13 million, and the worst air pollution in Europe. Heck, that city's been an eco-mess for 2000 years. Time for a clean sweep!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_PanamaCity
+	Comment: When you click on a city for the first time
+	DisplayText: Panama City, Panama. Since they can't seem to preserve the rain forests that keep their Canal full of fresh water, maybe we should help 'em out? 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Paris
+	Comment: When you click on a city for the first time
+	DisplayText: Paris, France. Art, architecture, history. And life-threatening pollution. I think we need to build them a few more city parks, Boss. By force.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_QuebecCity
+	Comment: When you click on a city for the first time
+	DisplayText: Quebec City, Quebec. I got nothing on these guys. The worst environmental problem this place seems to have is that everybody smokes. Can we stomp them for speaking French? Is that allowed?
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_RioDeJaneiro
+	Comment: When you click on a city for the first time
+	DisplayText: Rio de Janeiro, Brazil. Two words: Amazon Basin. It's time for some Mean Green payback.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Santiago
+	Comment: When you click on a city for the first time
+	DisplayText: Santiago, Chile. The most polluted air in Chile, home to the El Teniente copper mine, and the Mapocho River is just a disgrace. For shame.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Seoul
+	Comment: When you click on a city for the first time
+	DisplayText: Seoul, capital of South Korea. Deforestation, soil erosion, flooding, chloroflouro-whatsi-carbons...sheesh, no wonder they've got their own kaiju growing in the sewers.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Stockholm
+	Comment: When you click on a city for the first time
+	DisplayText: Stockholm, Sweden. Home of the Stockholm Declaration of 1972. It's a very, very fine place to destroy with a giant plant monster! Because irony, man!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Sydney
+	Comment: When you click on a city for the first time
+	DisplayText: Sydney, Australia. They're working so hard to make this a green city, Boss. The fact that they're carbon neutral is just adorable. We should just send Shrubby to give everyone a big leafy hug.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Toronto
+	Comment: When you click on a city for the first time
+	DisplayText: Toronto, Ontario. Funny, the Toronto Environmental Alliance isn't returning our calls! Even though we have an elegant solution to so many of their concerns.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Vancouver
+	Comment: When you click on a city for the first time
+	DisplayText: Vancouver, British Columbia. They say they're going to try to be the greenest city in Canada by 2020. I say we give 'em a little help.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Wellington
+	Comment: When you click on a city for the first time
+	DisplayText: Wellington, New Zealand. These guys have actually been doing pretty well since they gave indigenous lands some legal protection. Way to go, hobbits! 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_BuenosAires
+	Comment: When you click on a city for the first time
+	DisplayText: Buenos Aires, Argentina. You should see them flushing heavy metals and garbage into the Riachuelo River Basin, Boss. It'll curl your hair.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Tokyo
+	Comment: When you click on a city for the first time
+	DisplayText: Tokyo, Japan! Home of nuclear meltdowns, over-fishing and whaling, and diseases named after places that dump industrial waste on the population. No wonder there are so many Kaiju attacks. Who could resist? 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Detroit
+	Comment: When you click on a city for the first time
+	DisplayText: Detroit, Michigan! Once the world's automotive center, now a toxic wasteland of lead, chrome, nickel and PCB's. 40,000 contaminated parcels of industrial land that need reclamation! They NEED you, Boss. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vientiane
+	Comment: When you click on a city for the first time
+	DisplayText: Vientiane, Laos! It's all about deforestation and illegal mineral extraction in this part of the world. Some mighty fine forests to save, too. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vladivostok
+	Comment: When you click on a city for the first time
+	DisplayText: Vladivostok, Russia! The most polluted port in the Russian Far East. Since 1950, these cats have taken the pristine Pacific coastline and reduced it to a hell-zone. Boom!    
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_HongKong
+	Comment: When you click on a city for the first time
+	DisplayText: Hong Kong, China! Oh man, those poor pink dolphins. What kind of barbarian could drive a PINK DOLPHIN to extinction? We gotta kick this city in the pants, Boss. For Pinkie.   
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Dakar
+	Comment: When you click on a city for the first time
+	DisplayText: Dakar, Senegal! Deforestation, overgrazing, overfishing, and very poor protections for wildlife in these parts. Maybe Shrubby will enjoy the sandy soil. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Manila
+	Comment: When you click on a city for the first time
+	DisplayText: Manila, capitol of the Philippines! Twenty million people packed into one place, overfishing, damage to the rivers and the bay...yeah, I say it needs some peace, love and kaiju!  
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_NewDelhi
+	Comment: When you click on a city for the first time
+	DisplayText: New Delhi. The most populated city on the planet, and one of the most polluted in India--which is really saying something. There's no city that needs a Green Revolution more, Boss.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Seattle
+	Comment: When you click on a city for the first time
+	DisplayText: Seattle! We should squash this city for three reasons: Puget Sound, Logging, and Logging. Plus that jerk from Evil Science Quarterly who was hitting on you. Dude. So inappropriate! 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Lisbon
+	Comment: When you click on a city for the first time
+	DisplayText: Lisbon. Ever heard of the Lisbon Principles, Doc? I mean, we still have to conquer them, but I've got a soft place in my heart for this town.  
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Caracas
+	Comment: When you click on a city for the first time
+	DisplayText: Caracas. Capitol of Venezuela, one of the top ten most ecologically diverse countries on earth--and the third highest rate of deforestation in South America. No way, Jose. Target acquired!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Johannesburg
+	Comment: When you click on a city for the first time
+	DisplayText: Johannesburg. Poor sanitation, air and water pollution, bad solid waste disposal, and unequally distributed resources? Sha-bam! Shrubbify 'em!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Fukuoka
+	Comment: When you click on a city for the first time
+	DisplayText: Fukuoka. The sixth largest city in Japan, suffering from drastic air pollution and the urban island heat effect. I say we cool them down. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: eventmsg_CivilUnrest
+	DisplayText: Citizens are losing faith in their governments and violent protests break out across [city].  People doing the kaiju's work for them?! Surely things cannot get any darker!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Drought
+	DisplayText: With the city water reserves at an all time low in [city], a fire ban is in effect.  Only you can prevent city-wide conflagrations!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Earthquake
+	DisplayText: Earthquakes have hit [city]; even Chuck Heston can't be everywhere at once. Be prepared for a lot of city damage.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_ElectricalStorm
+	DisplayText: There is never a founding father around when you need one. No kite flying during the storms in [city].
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_LaborUnrest
+	DisplayText: Workers angry at the poor performance of the KDF in [city] go on strike and drive reconstruction costs through the roof.  Which will also have to be fixed.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_MeteorShower
+	DisplayText: Boss, we've got to make it to [city]! There are going to be meteor showers all month long, and I'm dying for some Purple Haze!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PatrioticSurge
+	DisplayText: The citizenry of [city] stand tall and in full support of the KDF in this struggle.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PerfectWeather
+	DisplayText: Scientists are claiming that this recent run of good weather in [city] is not good weather at all; it's perfect weather. The impact of this discovery on the scientific community remains to be seen.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Rainstorms
+	DisplayText: Forecast for [city] the this week: rain, rain, then rain, followed by rain, and finally some rain.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_SevereStorms
+	DisplayText: In what is being called one of the worst storm seasons of the decade, people of [city] are left with only one question: Can it possibly get worse?
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Tornadoes
+	DisplayText: Tornadoes have been spotted touching down near [city]. People are being reminded that the land of Oz does not, in fact, exist; do not approach the tornadoes.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_KaijuSympathizers
+	DisplayText: People in [city] have been sending us all kinds of fan letters, asking us to visit their city! I'd hate to disappoint our fans.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_CivilDefenceWatch
+	DisplayText: The civilian population of [city] has stepped up in this time of crisis, standing ready to do their part for the war effort.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_VolunteerLabour
+	DisplayText: In [city] news, people have been signing up by the thousands for a new volunteer labour force! These brave men and women stand ready to rebuild this city at a moment's notice. 
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KDFOverwatch
+	DisplayText: The KDF is committed to protecting [city], and to make this clear we have permanently stationed extra attack aircraft here. 
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KaijuProof
+	DisplayText: In the face of upcoming re-elections, the Mayor of [city] has declared it Kaiju proof! I suspect we'll find out if that's true or not soon enough.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_TrafficCongestion
+	DisplayText: Defence analysts are saying that congestion problems in [city] have gotten so bad, we wont be able to respond properly in case of a kaiju attack.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_RollingBlackouts
+	DisplayText: It looks like Kerberos Productions has released another hit game. In [city] this game is so popular that the extra power consumption is causing rolling blackouts. We're calling it the "Kerpocalypse."
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_DonationArmy
+	DisplayText: I'd personally like to thank the dutiful people of [city]. With their generous donations and fund-raising we have been able to significantly bolster our military ground presence in that area.  
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_NavalObsolescence
+	DisplayText: Here in [city] I would like to announce our new "Soldiers, not Boats" program. Why? because people belong on land, not Kaiju! Let that monster splash around in the sea like a namby-pamby sea monkey, this land is OURS!
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_EconomicBoom
+	DisplayText: In their latest issue Furbs magazine referred to [city] as an "Economic powerhouse" and an "Investor's paradise". No one can say for sure how long this economic boom will last, but I for one say SPEND SPEND SPEND!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_MilitaryWithdrawal
+	DisplayText: It's important that the people of [city] realize that our military withdrawal isn't so much about "abandoning them to their terrible fate" as it is a tactical redeployment of forces. The chances of a kaiju attack here are slim, at best.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+
+Message {
+	Identifier: eventmsg_RefugeeFlood
+	DisplayText: Refugees have been flooding in to [city] for days now, straining our resources and flooding our shelters. However many of these brave souls have enlisted in the city's defence and hopefully, in time, this city can become their home.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_InspiredLeadership
+	DisplayText: Today. Today... At the edge of our hope, at the end of our time, we find time for hope. I hope, in time, that time will give us hope. Today we are renewing our subscription... to a cancelled apocalypse.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_ResistanceCollapse
+	DisplayText: In disturbing news, morale in [city] is at an all time low. When interviewed, on man was quoted saying "What's the point man, that monster is totally OP." We at channel 5 news are inclined to agree with him. Kaiju OP. Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_Panic
+	DisplayText: I'm here in [city] with a special report. This just in: WE'RE DOOMED. WE'RE ALL DOOMED! THE ABOMINATION WILL RISE FROM THE SEA AND END OUR PITIFUL LIVES! SAVE YOURSELF! RUN! RUN! THE TIME FOR MASS HYSTARIA HAS COME. *ahem* Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+
+
+Message {
+	Identifier: msg_BuildingComplete
+	DisplayText: Construction complete for [zone].
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteTrees
+	DisplayText: Trees finished growing.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteCommunicationsArray
+	DisplayText: [zone] construction complete.  Now we can threaten cities! Woo!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompletePropaganda
+	Comment: play when you first build a propaganda satellite.
+	DisplayText: My new movie "More Paradise, Fewer Parking Lots" is ready for broadcast! Just launch the propaganda satellite over the zone of your choice, and their will to resist your rule will erode with every passing month!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteMindControl
+	Comment: play when you first build a mind control satellite.
+	DisplayText: We've got control satellites! Launch this satellite for a distinct political edge when threatening a city. It's got the power of a hundred Green Day concerts!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteECM
+	Comment: play when you first build a ECM satellite.
+	DisplayText: We cooked up a little surprise for the KDF! This satellite will disrupt a region's surveillance and intelligence systems, giving [kaiju] a nice extra edge when "sneaking" up on a city. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteDropShip
+	Comment: play when you first build a DropShip satellite.
+	DisplayText: These new Drop Ships are going to speed up the Revolution something fierce. When attacking a city, we just strap this baby onto our Kaiju, and boom! Fast track to destruction.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteLaunchPad
+	Comment: play when you finish building your first launch pad.
+	DisplayText: Now that you have a Launch Pad, we can build and launch a variety of satellites. Left click on the launch pad and select "build" to get started.
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAssignAbilities
+	Comment: Play this the first time you enter the Assign Abilities screen.
+	DisplayText: This panel shows all the abilities that we have unlocked, Ma'am. Click and drag active icons into the bar below to fit Shrubby for battle.
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack01
+	Comment: This pops up at the very beginning. I Deleted the old IntroAttack message, hope that doesn't break anything.
+	DisplayText: The Wireless Overwatch and Remote Leadership Device is finally on line Doctor Belladonna! [kaiju] has almost arrived at her first target. Take a look through the W.O.R.L.D. viewer and see!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack02
+	Comment: Immediately after IntroAttack01
+	DisplayText: Excellent! Our quest for world domination begins with [city].  Attack, ShrubZiggurath! Let the Green Revolution begin!
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding
+	Comment: Play this the first time you enter the building screen.
+	DisplayText: From here you can lay out plans for new buildings. There are four categories of buildings that you can choose from, and many buildings will unlock new and improved buildings when you construct them. The training facility is especially important, 'cause it lets you upgrade [kaiju]. Ma'am.
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding02
+	Comment: After introBuilding
+	DisplayText: When you can afford to, click on the build button to construct a new building. To place it, click on the highlighted building image, move it to a clear location, and click confirm. It will then begin construction.
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity01
+	Comment: Pops up as soon as you enter anchorage.
+	DisplayText: [city] may not surrender on our maiden voyage, but any resources we can capture will be useful back at my base for building new structures and developing [kaiju]'s abilities.
+	Speaker: MadScientist_Large
+	Sound: babble_bella_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity02
+	Comment: immediately after IntroCity01
+	DisplayText: All systems go, Doctor Belladonna! Left click where you want [kaiju] to go; you will automatically attack anything that gets in your path. When it's time to leave, just walk to any edge of the map. If you right click on a unit you can target it so that your aimed abilities will automatically fire in that direction. 
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity03
+	Comment: when gino is at 75% Health.
+	DisplayText: Hmm...very nice foliage, but I think it needs more...acid. Write that down, will you Berkenstock? 
+	Speaker: MadScientist_Large
+	Sound: babble_bella_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity04
+	Comment: The first time you get a city down to 90% morale
+	DisplayText: Boom shaka laka! If we can get this burg's Morale down below 40%, there's a good chance they'll surrender. A city that surrenders is basically your property, a permanent donor to the cause! If they don't surrender right away, just keep stomping on them. They're bound to get the hint eventually.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_CityReminder
+	Comment: If after 3 months, you have not yet conquered a city.
+	DisplayText: Boss, if you don't want this to be The Man's World, you've got to conquer The Man's cities. No mansplaining intended. I'm sure if you keep hitting 'em, one of them will surrender!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+
+Message {
+	Identifier: tutmsg_IntroClearing
+	Comment: When you first click on the clearing button
+	DisplayText: Need more space? Click on the area you want to clear, and we'll re-locate the forest in that area.
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroDeath
+	Comment: Play the first time your monster dies
+	DisplayText: Oh, this is just humiliating. Call me when you've regenerated [kaiju]... I'm going to finish that Edward Abbey novel.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_bella_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroKaiju
+	Comment: Play this the first time you enter the Kaiju screen.
+	DisplayText: Status update for your Kaiju, Miz Belladonna.
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat
+	Comment: Play this the first time you successfully retreat from a city.
+	DisplayText: Don't get comfortable, [city]. I'll be back, greener and meaner than ever. I'll build up my base, upgrade my Kaiju, and take you down!
+	Speaker: MadScientist_Large
+	Sound: babble_bella_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat02
+	Comment: Play this the first time you successfully retreat from a city, after IntroRetreat.
+	DisplayText: It's going to take a while for [kaiju] to return to base. You can use the arrows in the top left corner, beside the clock, to advance time faster or slower. You can do that in your base as well! You've got better things to do then stare at this screen all day.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSecretBase
+	Comment: Play this the first time you enter your base.
+	DisplayText: Our sweet revolutionary crash pad! This island paradise was nearly destroyed by illegal logging, but we can make it live again. Click on any clear-cut tile to assign a work crew to clear away the brush and prepare the ground for construction.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroSecretBase02
+	Comment: Play after IntroSecretBase
+	DisplayText: You can also build facilities, heal, and train [kaiju] here. If you want things to get trippy, don't forget you can speed up the clock by pressing the arrows in the top left hand corner. Wooo, colors...
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSummary
+	Comment: Play this the first time you enter the Summary screen.
+	DisplayText: I typed up a report for you, Boss! 100 percent recycled paper. This is the latest data on the Morale, GDP, and destruction level of every region of the globe.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroTraining
+	Comment: Play this the first time you enter the training screen.
+	DisplayText: Ma'am, this is where you tell me and your Constant Gardeners how to upgrade [kaiju]. To get more upgrades, you need to build new training facilities in your base. Advancements in Mad Botany don't come cheap.
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_MonthlyUpdate
+	Comment: Play this the first time there is a monthly update.
+	DisplayText: The Bean Counters have prepared a monthly report of all resources, gains, and losses, Boss. Base buildings can produce resources, but they also cost money to maintain. Also, cities will repair the damage we've done over time, so don't expect cities to stay ruined for long.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_AttackGroup
+	Comment: play the first time that a city generates an invasion group
+	DisplayText: KDF has launched invasion forces against me! If they dare set one foot on my island I will hit them harder than Hurricane Katrina. [kaiju] will be spitting out helmets for a week!
+	Speaker: MadScientistRage_Large
+	Sound: babble_bella_angry
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_PatrolGroup
+	Comment: play the first time that a city generates a patrol group
+	DisplayText: So KDF has sent out a patrol, to catch the Mean Green Mother in transit? Ha! You can't hold back Mother Earth!
+	Speaker: MadScientist_Large
+	Sound: babble_bella_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_SearchGroup
+	Comment: play the first time that a city generates a search group
+	DisplayText: KDF is searching for my hide-out? Good luck, goons! They'll never find us. But if they do, I might want to have some defensive structures around my base. For decoration.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_bella_angry
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_LairDiscovered
+	Comment: play this when a search group discovers the island.
+	DisplayText: Our base has been discovered! Now it's only a matter of time before The Man comes a' knocking. Bummer.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: tutmsg_PatrolCombat
+	Comment: play the first time that Gino is detected by a patrol group, before they enter combat.
+	DisplayText: Breaking news! [kaiju] has been intercepted. Will the monster be turned away, Or will it push forward through the K.D.F. line? Stay tuned to find out.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_PatrolCombat02
+	Comment: play the first time that Gino enters combat with a patrol group.
+	DisplayText: We don't have to fight these fascists unless you want to, Boss. Walk [kaiju] to the red line if you want to go back to base, walk to the green line if you want to move forward, or just break all their machines and teach 'em a lesson.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat
+	Comment: play the first time the player attempts to threaten a city.
+	DisplayText: Way to go, Boss! Lay the non-violence on those jerks! After all, if they don't listen, violence is always an option. Wouldn't want them to think we're all bark and no bite.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat02
+	Comment: play five days before a failed threat is going to expire.
+	DisplayText: Those folks in [city] are calling us a "bunch of jumped-up hippies", Boss. I say we lay some GREEN on those Philistines!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroUpgrade
+	Comment: play when you first train all teir 1 abilities.
+	DisplayText: Boss, the Revolution is stalled. We're out of plans for new upgrades. If we build an Advanced Training Facility, we can start laying down the LAW like Hammurabi! 
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_IntroUpkeep
+	Comment: play each month one of your buildings can no longer be maintained.
+	DisplayText: I'm sorry Ma'am, we're short on supplies, and can't support all our buildings this month. You gotta bring home the bacon before I can fry it. 
+	Speaker: Engineer_Large
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_LaunchDropShip
+	Comment: play when you try to launch a drop ship via the launch button.
+	DisplayText: You can't launch from here, Ma'am. Go to the map, select a city, and attack via Drop Ship. Giant plant monster delivered in 30 minutes or less, or your money back! 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_SuperTank
+	Comment: play the first time a Super Tank is built.
+	DisplayText: Breaking News! The Kaiju Defense Force has unveiled its newest anti-kaiju weapon, the aptly-named SUPER TANK, in [city]. The KDF thanks everyone whose homes will be crushed under its massive treads, and promises that their sacrifices will not be in vain.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Planto
+	Comment: play the first time a Planto is built.
+	DisplayText: Breaking news! The Kaiju Defense Force scientists have created a new anti kaiju weapon in [city], a bipedal mutant plant creature called Planto. Planto is fully under the control of the KDF, and absolutely, definitely, probably, won't go crazy and wreak havoc on it's own masters.  
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Helicarrier
+	Comment: Play the first time a Helicarrier is built.
+	DisplayText: Breaking news! The newest anti-kaiju weapon has been announced in [city] by the Kaiju Defense Force, The KDF Helicarrier! This new weapon will be used as a "Shield around the world, to avenge those who have fallen." Or at least that's what they said in the press release.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Ultrasan
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! "The Ultimate Hero" has been created in [city] by the Kaiju Defence Force, known only as Ultrasan! KDF scientists credit an "out of this world discovery" for their success with this program, but refuse to say more.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RockMonster
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! A gigantic stone guardian has appeared in [city] today, but is showing no signs of hostility. The Kaiju Defense Force is claiming responsibility for this creature, saying only that ancient forces and unconventional "sciences" have made this possible.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_MiniMechs
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! The Kaiju Defense Force has announced a new anti-kaiju Mecha Task Force in [city]. The pilots of this force may seem young, but the KDF assures us that these teenagers have what it takes to fight monsters, defeat evil, and make it back in time for class.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Roots
+	DisplayText:  We've trained [kaiju] to throw out some fairly aggressive surface Roots on command, Doctor. She'll make quite a mess of things around Her!
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SpikedVines
+	DisplayText:  Our Mean Green Momma just got Meaner! Her new iron-spiked vines will make all Her attacks armor-piercing. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Feed
+	DisplayText:  We took your advice, Doc, and "forgot" to water [kaiju] for a while. Turns out She *was* capable of sending out aerial roots to forage for liquid! She'll be drawing health from enemy units from now on. And, uh...we need to hire more techs.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Bite
+	DisplayText:  The treatment worked, Doctor Belladonna. [kaiju] is much more effective at foliar feeding now! Her Bite is worse than Her bark by a mile.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_StrangleVine
+	DisplayText:  The techs made [kaiju] some toys shaped like enemy units. Worked like a charm--if you tell Her to grab one, She'll hug it and squeeze it and call it George.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_VineSweeper
+	DisplayText:  We've taught the plant monster to throw out a vine which sweeps the ground in front of Her trunk! It works nicely to trigger any traps that are put in Her path, and also does a lot of damage.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Chomp
+	DisplayText:  We've improved the tensile strength of Shrubby's foliar feeding heads and fitted them with razor sharp teeth! The new Chomp attack should leave some interesting dental patterns in the skyline of any city.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Shredder
+	DisplayText:  We caught Berkenstock giving [kaiju] another one of his "special feedings", Doctor Belladonna! He's given Her a case of the "munchies" and a new rapid-fire feeding attack. We decided to call it "Shredder" rather than "Tweeker", for PR reasons... 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Devour
+	DisplayText:  [kaiju] was watching the nature video stream you ordered, boss, and learned a new attack. She wraps Her leaves and foliage around Her target like a strangler fig and sucks the life right out of 'em! Just like my ex-girlfriend, Kundalini. Brr, scary. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_VineWave
+	DisplayText:  The techs have taught [kaiju] to send out the explosive burst of attack vines that you ordered. We got damage, we got knock-back, and a nice wide field of effect. This is state-of-the-art mad botany.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Feast
+	DisplayText:  [kaiju] has reached the pinnacle of foliar feeding, boss. She can swallow enemy units whole now, and half their health goes straight into Her biomass. We call it the Feast attack, because it reminded me of my relatives at holiday dinners.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_FangStrike
+	DisplayText:  We've fitted [kaiju] with a long-range armor-piercing retrieval vine which punctures an enemy target and drags it closer to the central trunk. Should give Her a chance to capture and crush enemy units that get too close! 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_VineStrike
+	DisplayText:  We took your advice and adapted [kaiju] to use Her aerial vines as a defense against aerial targets. Her new Vine Strike behavior will target the nearest airborne enemy automatically.  
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Creeper
+	DisplayText:  The new Creeper roots are great! They tunnel through the ground and then burst up toward the enemy and stab 'em all sneaky-like. Bam! Jeep on a stick!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Piercer
+	DisplayText:  We sent a tech with a chainsaw into Shrubby's pen to trim the tip of a long-range attack vine. It definitely worked, and the vine is much stabbier and more likely to pierce armor. We call it the Piercer! Please remember to notify that tech's next of kin.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Tunneler
+	DisplayText:  The underground roots can be coordinated now to shatter the foundations of buildings! Shrubby's Tunneler attack will wreck things in a straight line ahead of the Kaiju. Who's plowing now, fascists!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Entangle
+	DisplayText:  Shrubby likes to grab things, boss. The new Entangle attack lets Her use Her surface roots to spring up under a distant target and hold it there until She arrives.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Impale
+	DisplayText:  We liked the anti-aircraft attack of the aerial vines so much that we trained Shrubby to attack several airborne targets at once! The techs outvoted me and called it "Impale", but I still think She looks just like a lolly-pop tree.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_AirSpike
+	DisplayText:  I just saw the new Air Spike attack, boss. Shrubby stabs one air target and the piercing vine just keeps on going to the next, and the next! It's like She's stringing popcorn for a Christmas tree. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Underminer
+	DisplayText:  [kaiju] has developed a new propagative root which travels underground. The root bursts up out of the soil and does a great deal of damage to its target and a large area around the eruption zone. We call it the Underminer!
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Thorns
+	DisplayText:  [kaiju] will be maximizing Her natural defenses from now on! This wall of thorns will entangle enemy units and tear them up with razor-sharp, venomous spikes. Just the thing to keep away unwanted guests.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BloodVine
+	DisplayText:  The Blood Vine is your basic aerial root, boss. It just happens to be parasitic. It'll shoot out ahead of [kaiju] and drain the life from whatever it touches. Think Dracula, if he worked in PR.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Hydra
+	DisplayText:  Boom! Three airspikes at the same time. The new Hydra attack is like watching a chef make three helicopter shish-kabobs at once. Lovin' it!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_PoisonPlume
+	DisplayText:  Thanks to the purpletonium, Shrubby's spores are completely toxic, and cause a violent allergic reaction in any enemy made of meat. You can use the Poison Plume as an attack right away. It's like hay fever on steroids.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SporeCloud
+	DisplayText:  We've trained the monster to target a cloud of spores at a distant target! Once the Spore Cloud hits it will drift in the wind, but it arrives with a nice lethal density.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Seedling
+	DisplayText:  [kaiju] has a new reproductive strategy! She can throw a seedling from a long distance, and produce a mini-monster that attacks anything in melee range! It's completely adorable. We call it a Seedling.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Feeders
+	DisplayText:  We've successfully implanted a new symbiont for into ShrubZiggurath. The Feeders are not as violent as the true Shrubby strain, but when Shrubby casts them, they will heal friendly plant creatures nearby. Very helpful!
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SeedlingCloud
+	DisplayText:  Big Green has got a new trick! It's a cloud of spores that drops three to five seedlings in the space around Her. There goes the neighborhood! 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ToxicCloud
+	DisplayText:  Oh man. The new Toxic Cloud attack is so foul that it actually burns through the protection on enemy units, boss. It's worse than that time that Agnes put too much kale in the burritos. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_CorrosiveSpores
+	DisplayText:  When I heard that the techs were going to incorporate acid into Shrubby's spores, I was kinda excited. Turns out it wasn't the fun kind of acid. Corrosive Spores will slow down enemy units and eat through their armor, though. So that's not bad.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Corrupters
+	DisplayText:  We got some bad-ass new seedlings for you, boss! These Corrupters have a large radius of effect and should do more damage to buildings and stuff.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Detonators
+	DisplayText:  The techs and I got tired of those KDP jerks killing all the seedlings. I grafted a nitro fertilizer chamber into the new batch. The little dudes may still get destroyed, but when they do, they'll take some enemies with them. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ToxicFog
+	DisplayText:  We cranked up the purpletonium poison on Shrubby to the max, boss. She's got a constant envelope of Toxic Fog surrounding Her body, which slows down pretty much anything made of meat and kinda...melts it. Radius is 100 meters. The ultimate restraining order!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_InfectiousPlume
+	DisplayText:  We've developed the ultimate spore attack, Doctor! The Infectious Plume is not only toxic, but contagious--the spores poison any enemy unit they touch, and that poison can be passed on to other enemies! It spreads faster than a picture of kittens on the Internet. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_NaturalGrowth
+	DisplayText:  I mixed up some new plant food for the Mean Green Momma! The Secret Sauce should speed up Her ability to move those trunks and reduce Her cool-down time permanently. It's only about 10% better, though. My stash was kinda low.  
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SwiftRoots
+	DisplayText:  Boom shaka-laka! Another successful metabolic boost. Shrubby will have about 15% more speed, and She'll heal faster too. We got no time to bleed!  
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_GreenBrain
+	DisplayText:  Took your advice and started Shrubby listening to some audiobooks, boss. She's using Her weapons a lot more effectively now! We're seeing 20% increased damage across the board--Green Brain is good. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_HealthyGrowth
+	DisplayText:  If you can't beat 'em, outgrow 'em. That's what my fat aunt Martha always used to say. This new metabolic boost will speed Shrubby's healing rate by 20%--should help to keep Her in the fight a bit longer. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RootShuffle
+	DisplayText:  We took a closer look at Shrubby's walking roots and we've made some improvements, Doctor Belladonna, particularly to tensile strength and flexibility. The new Root Shuffle will increase Her speed over both short and long distances. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Flow
+	DisplayText:  Shrubby was getting a little too easy to detect with electronic surveillance, so we taught Her some stealth behaviors. The new Flow ability should make Her harder to detect while She's in transit, and enemy units won't be able to home in on Her as easily. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_GreenThumb
+	DisplayText:  We've finished the work on Shrubby's system of tuberous roots, Doctor. Now that we've given Her the Green thumb treatment, everything She sprouts should have 25% more health. A strong Seedling is a happy Seedling! 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Efficiency
+	DisplayText:  I sent the techs crawling into the central biomass to check on the filtration systems as you asked, Doctor, and found that several of the last batch of techs were still stuck in Shrubby's taproot. We've cleaned out the mess and all ability costs should be down 10% from now on. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RegenCatalyst
+	DisplayText:  Spent some time playing with the healing enzymes. If you use this command, Shrubby should be able to devote 100% of Her energy to healing for a while. It'll slow Her movement and other abilities, though, so maybe save until you've got a breather in combat. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SolarShield
+	DisplayText:  Been looking at some ideas for kaiju defense, boss. Turns out Shrubby can convert some stored energy into a protective force field. This new Solar Shield gives Her some protection, but its strength is only about 25% of Her current health--the weaker the kaiju is, the weaker the shield will be. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_NaturalHigh
+	DisplayText:  I kajiggered Shrubby's biofeedback! So long as Shrubby's healthy, She'll be experiencing a Natural High from now on. 20% increase in speed and recharge times! If She gets hurt, though, those endorphins will get re-routed to pain management. Just FYI.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_WildVines
+	DisplayText:  We gave Shrubby the new feeding treatment, and She's started growing some pretty crazy Wild Vines inside the central biomass. They store energy and release it at random! Any time She uses a power now, there's a chance it will be recharged immediately.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Glitter
+	DisplayText:  Our experiments with reflective bark structures are paying off! Shrubby now sheds constant metallic chaff, which reduces the damage from laser weapons by 50%. Also, the Glitter makes Her look just like a pretty, pretty princess. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Stimulant
+	DisplayText:  Been looking for some way to give Shrubby an active metabolic boost. I rigged Her with an artificial pod that collects and refines the Stimulant chemicals in Her system. If you activate the pod, it'll dump some go-juice into Her and give you a burst of speed and healing for 10 seconds. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_GreenSoul
+	DisplayText:  Shrubby's biofeedback and self-awareness is increasing, Doctor, and She's become more conscious of when Her central core in threatened. This new Green Soul response will increase Her damage to enemy units as Her own health decreases. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_TakeRoot
+	DisplayText:  We've been looking at the healing issue, Doctor Belladonna. Shrubby can drop her taproot now and temporarily Take Root in combat, taking on the attributes of a real tree temporarily. She won't be able to attack, but She can draw health and organics directly from the soil. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Adaptability
+	DisplayText:  Shrubby is getting smarter! The new grafts are active, and She can remember how to do more things in combat now. Adaptability is now Her middle name. Good to have more options, don't you think? 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Compost
+	DisplayText:  Been looking at the way Shrubby heals Herself, and I figured that there was a lot of waste in the system. I routed some tubes to dump all the extra waste material into Her organic bins as Compost from now on. We'll just call it Soylent Green when it hits the cafeteria. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_NoPainNoGain
+	DisplayText:  We looked at the storage issue, Doctor, and realized that we could activate more of the sacs that Shrubby presently uses to store metabolic energy. She'll move a bit more slowly, but She'll carry much more cargo. No Pain, No Gain! 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RegenSprouts
+	DisplayText: The poor little seedlings needed a boost, boss. I rigged the Mean Green Mother with some plant food for Her babies, which should speed up their healing. Her new Regen Sprouts formula should help them hang in there a bit longer in battle. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SolarRays
+	DisplayText:  Shrubby constantly collects solar energy, Doctor. When you activate the Solar Rays, She'll release some of the energy She's collected. The glow will absorb some damage from enemies, and increase the healing rate of the kaiju. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_VitaRays
+	DisplayText:  Big Green Momma needs to take care of Her babies! I've rigged Shrubby with a Vita-Ray generator, which should let Her bring all of Her minions back to full health. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_WildGrowth
+	DisplayText:  This last batch of my secret sauce was the best. Shrubby is going to have some Wild Growth from now on! So long as She's got plenty of organics in storage, She'll see a 25% reduction in cool-down times. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_NaturesBounty
+	DisplayText: We've installed a new injector packet for growth formula. When you trigger the Nature's Bounty booster, Shrubby will receive an injection of highly concentrated stimulant. Her abilities will have no organic cost, and all cool-downs will have 25% faster recovery.  
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ShroudSpores
+	DisplayText: Been working on the Spores. These new ones absorb radar! Makes it a little harder to track Mean Green when She's approaching a city, and should also give Her a chance to evade a missile lock in combat. Shroud of Spores! The ultimate kaiju fashion statement!  
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Survival
+	DisplayText: Life is growth for ShrubZiggurath! We've optimized Her health regeneration as a combat strategy. Survival protocol will respond to heavy damage and reductions in speed by speeding growth--if Shrubby drops below 50% health or speed, She'll grow 50% faster from now on.  
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_GreenFeast
+	DisplayText: Did a little optimization of combat protocol. This new Green Feast training program will let Shrubby take advantage of full health to lay 30% more hurt on buildings and enemy units. Gotta make hay while the sun is a-shining!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_DigDeep
+	DisplayText: New strategy for power management! Basically we take advantage of the tap root. If Shrubby Digs Deep, She's immobilized, but She can draw power from the earth to recharge Her abilities instantly. Heck, She can do it indefinitely so long as She stays rooted.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Supremacy
+	DisplayText: Um...minor accident. It seems that one of the techs was experimenting with some purpletonium and Shrubby...ate him. The upside is that Shrubby is much smarter now, and able to remember how to do more things in combat! She's achieved Supremacy.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Fertilizer
+	DisplayText: Minor tweak to the organic collection system, Doctor. When Shrubby is at full organic storage, She will now be able to pick up extra organics and convert them instantly to health. Essentially, it's all Fertilizer to Her...
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Rebirth
+	DisplayText: I've been feeding Shrubby so much growth formula that She's getting really hard to kill, boss. As of now, if She's destroyed in combat, She'll likely regenerate in Her Tier One form right there on the battlefield. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BigGreen
+	DisplayText: Spent some time with the tuber system, and managed to tweak the production of seedlings. The new sprouts should be way tougher and hit harder. I call the new super-potatoes Big Green! 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SolarProminence
+	DisplayText: We've rigged a shield generator for the kaiju which will convert the excess solar energy in Her foliage into a defense system. The Solar Prominence shield not only absorbs damage, but generates so much waste heat that it will actually burn nearby enemies! 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_MotherNature
+	DisplayText: A final twist on healing as a defense, Doctor. Mother Nature is the ultimate physician. If Shrubby needs to generate emergency health, this recycling system will allow Her to rapidly convert organics directly into health for a full 10 seconds. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_DynamicGrowth
+	DisplayText: Shrubby grows so rapidly, I figured She might as well learn to twist and form macrame knots with Her vines. Dynamic Growth makes it harder for enemies to get a bead on Her, or hit anything vital.  
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_IronBark
+	DisplayText: Boosted the metals in Shrubby's growth formula as ordered, boss. Her bark is much more thicker and denser now, which should offer some protection. Slows Her down a bit, though.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_AuraOfEarth
+	DisplayText: We've taught the kaiju some defensive maneuvers for Her surface root system. Shrubby can now throw up an Aura of Earth defensive structure to shield Herself in combat.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ConcealingGrowth
+	DisplayText: Looking at Shrubby's leaf structures, and thought we might tweak 'em a little bit to get more radar reflection. Mean Green Momma should be a little more stealthy from now on, at least to anything with electronic eyes.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SteelBark
+	DisplayText: Steel Bark! I wish we could give every tree on Earth some of this. Slows Shrubby down a little, but it's a permanent boost to durability and health. And man, does it bounce a chainsaw!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Brambles
+	DisplayText: This is the same defense system that plants the world over use to protect their purty flowers and delicious berries. Shrubby just makes Her Brambles a little more like swords. Stabbalicious!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_TitaniumBark
+	DisplayText: Another upgrade to the protective layer, Doctor. Shrubby has learned to produce Titanium Bark, which increases Her armor and durability. Unfortunately the bark is a bit stiff, and reduces mobility.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Entrench
+	DisplayText: A new defensive behavior, Doctor! ShrubZiggurath can embed Herself in the soil and harden Her structure into a solid mass, nearly as dense as stone. She will be immobilized, but have much greater armor for a few seconds' worth of serious punishment.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_AdamantiumBark
+	DisplayText: Adamantium Bark is the best armor money can buy, boss. This is the hardest alloy known to humankind. Slows Her down a bit, but She's hella tough now.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Fortify
+	DisplayText: We've created a defensive behavior to help cope with ballistics and enemy fire, Doctor. Trigger the Fortify command, and Shrubby will draw power from the soil and harden Her body. It slows Her down significantly, but She'll be much harder to damage.
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Thornweave
+	DisplayText: Heh. Been working on the thorn defenses, boss, and I've got Shrubby producing some real big ones now--armor-piercing, too. If you trigger the Thorn Weave defense, She'll pop 'em like claws. Boom-stabbity!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ThornPatch
+	DisplayText: Hey, did you know that Shrubby could drop a patch of Her surface growth and walk away from it? What if She just happened to drop a big tangle of nasty stabbity thorns? Try the new Thorn Patch command, boss, it's a hoot.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Briarskin
+	DisplayText: The thorns were an excellent idea, Doctor. We've adapted Shrubby to grow a coat of Briar Skin, which causes significant damage to all adjacent buildings and enemy units with no speed penalty. Perhaps the best defense is to be offensive!
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Briarwire
+	DisplayText: The new Briar Wire command will generate intersecting walls of thorns to engage enemy units, Doctor. This is truly cutting edge mad botany! 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ShieldOfEarth
+	DisplayText: An active defense that throws up a wall of mud and roots to block enemy fire. Shield of Earth slows down the kaiju, but should offer some protection. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_HealingSun
+	DisplayText: Hey! The techs have taught Shrubby to release a burst of stored photons to heal Herself faster in combat. Healing Sun is fun around the lab, too--personal tanning booth, woo! 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_WallOfEarth
+	DisplayText: Been looking at the surface root system and how Shrubby moves dirt around. I've taught Her to build a Wall of Earth that should really mess with KDP defense units, especially vehicles that need roads or open ground! 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Sandstorm
+	DisplayText: Oh man. Agnes has really outdone herself this time, boss. Shrubby can raise a Sandstorm now that really messes with enemy units. Ground attackers will find it hard to aim, and air units actually take damage--it's just beautiful. I cried a little.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_EarthStorm
+	DisplayText: The techs and I have given Shrubby a personal tornado of rocks, earth and boulders to attack adjacent units, Doctor. The Earth Storm will damage everything in its wake, and may destroy air units completely--real wrath-of-goddess power. Vive la Revolution!
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_DirtNap
+	DisplayText: Last adjustments to Shrubby's entrenchment behavior, boss. Use this and She'll bury Herself in a cocoon of protective stone until She's fully healed or ready to move again. I call it the Dirt Nap, because when Shrubby wakes up, everyone's gonna run like it's Judgment Day!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RisingSun
+	DisplayText: There's a great deal of solar energy locked up in Shrubby's foliage, Doctor. We've created a converter that will generate a miniature sun for Her, to speed movement and healing for a few seconds. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BlindingLight
+	DisplayText: Found another application for stored solar energy. Blinded by the light, harder to hit and blow up missiles left and right! No, seriously, try the Blinding Light. It's way better than karaoke.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Nova
+	DisplayText: You were right, boss--we could push the solar energy converter a little further. This Nova command will let fly with everything Shrubby's got, just an explosion of flares like a star goin' Nova. Blinds the enemy, does damage, and destroys incoming missiles! You. Are. A. Genius. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_NewDawn
+	DisplayText: Berkenstock and the techs were trying to teach Shrubby to generate a light show for recreational purposes, and stumbled upon a stable plasma sphere. Shrubby can release the New Dawn globe on the battlefield, and it will cast healing light on all the kaiju within range. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_JungleGrowth
+	DisplayText: Keep it complicated, that's my motto. Jungle Growth makes the natural movement of Shrubby's vines a little harder to track. Makes it harder to target the kaiju. 
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Blossoms
+	DisplayText: We did it! We got Shrubby to bloom! The flowers are just beautiful, and a little bit bullet proof. You can use a burst of Blossoms to evade enemy attacks. 
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Undulation
+	DisplayText: I put a little more jiggle in Shrubby's wiggle, doc. Undulation makes Her harder to target and harder to hit. Slows Her down a bit, though.  
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_LeafOnTheWind
+	DisplayText: Finally nailed the ultimate evasive pattern of movement for Shrubby's vines, boss. She's like a giant one-kaiju dance party now! Leaf on the Wind behavior increases Her speed and makes Her harder to hit, too. I made us some special brownies to celebrate.   
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Sway
+	DisplayText: We've been working on defensive behaviors, Doctor. The new Sway command will give Shrubby the ability to dodge the next three incoming attacks, which may prove quite useful against certain opponents.   
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BendingWillow
+	DisplayText: Bending Willow is the ultimate evasive behavior, Doctor Belladonna. When you issue the command, Shrubby should evade all incoming attacks for a full ten seconds!
+	Speaker: Engineer
+	Sound: babble_bella-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Purification
+	DisplayText: Mean Green has been running into some pretty toxic enemy fire in the field, boss. I mixed Her up a formula that should flush away all that poison and negativity in combat. Purification is like a 30-day cleanse that only takes a few seconds.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_WaterBlossom
+	DisplayText: Hydration is important boss, especially if you're a Giant Green Mulch Machine like Shrubby. Her new water storing buds should help her beat the heat. The heat of being on fire, that is.
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ChaffBlossom
+	DisplayText: Wow, purty flowers! And when Shrubby fires a burst of thousands at once, the Chaff Blossom attack will blind all tracking weapons until the cloud disperses. I love this job!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SakuraStorm
+	DisplayText: The ultimate floral bombardment! Unleash the Sakura Storm and for thirty seconds no one will be able to get a missile lock on the Mean Green Mother. She's harder to hit with conventional weapons too. It's win-win!
+	Speaker: Intern
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+

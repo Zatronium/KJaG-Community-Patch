@@ -1,0 +1,14 @@
+require 'scripts/common'
+--This is my crude attempt at a continuous light effect. Apologies to the programmer that actually has to do this right. ~Rowen
+--delay = 1.0; 
+--
+--function onHeartbeat(a)
+--	delay = delay - 0.5;
+--	if delay <= 0.0 then
+--		--reset the delay
+--		delay = 1.0;
+--		
+--		createAttachedEffect(self, "effects/fireGlowLayer.plist", pos, 5);
+--		end
+--	end
+--end

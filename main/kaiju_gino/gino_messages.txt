@@ -1,0 +1,2186 @@
+
+Message {
+	Identifier: msg_Year1
+	Comment: At the end of the appropriate year. (Gino version)
+	DisplayText: Happy New Gear, Uncle Norman! Today is the anniversary of your first attack on an unsuspecting world. We baked you a cake! With sprinkles! 
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year2
+	Comment: At the end of the appropriate year. (Gino version)
+	DisplayText: Happy Ginormasaurus Day, Uncle Norman! It's hard to believe the Great Machine has battled against the entire world for two whole years. The Kaiju Defense Forces also find it hard to believe - they've searched everywhere on the mainland for your secret base. Ha ha!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year3
+	Comment: At the end of the appropriate year. (Gino version)
+	DisplayText: Happy Mechaversary, Uncle Norman! Your campaign for world domination is three years old today. The Kaiju Defense Forces are taking you very seriously, now. They're sending a huge number of search and attack patrols. That's a good thing, right?
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year4
+	Comment: At the end of the appropriate year. (Gino version)
+	DisplayText: Yay, Ginormausaurus Day! We've been rampaging around the globe with a cool robot dinosaur for four whole years today! It's a pity these KDF guys are getting so well organized. Well, only one thing to do: crush them all!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year5
+	Comment: At the end of the appropriate year. (Gino version)
+	DisplayText: Happy Mechaversary, Uncle Norman! A few of the staff are busy updating their resumes today, given that the whole world is unified against us, but... I still baked cupcakes for you. It's just like the old days--you and me against the world!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Invasion
+	Comment: Every time an invasion fleet is sent to attack you.
+	DisplayText: An invasion fleet has been launched!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_success
+	Comment: when you successfully threaten a city
+	DisplayText: [city] has given into our threat!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail
+	Comment: when you unsuccessfully threaten a city
+	DisplayText: [city] has refused my threat!  They will soon regret their decision!
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail01
+	Comment: when you unsuccessfully threaten a city with "Pay you"
+	DisplayText: [city] has refused my threat!  They will soon regret their decision! I should destroy at least 30% of [city] this month, if I want to save face.
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail02
+	Comment: when you unsuccessfully threaten a city with "Opt out"
+	DisplayText: [city] has refused my threat!  They will soon regret their decision! I should destroy at least 15% of [city] this month, if I want to save face.
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_fail03
+	Comment: when you unsuccessfully threaten a city with "Disable Alarms"
+	DisplayText: [city] has refused my threat!  They will soon regret their decision! I should destroy at least 25 of [city] defense units this month, if I want to save face.
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail04
+	Comment: when you unsuccessfully threaten a city with "Surrender"
+	DisplayText: [city] has refused my threat!  They will soon regret their decision! I should force [city] to surrender this month, if I want to save face.
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Djibouti
+	Comment: When you click on a city for the first time (Gino version)
+	DisplayText: Djibouti! The whole nation on the Horn of Africa is named for this famous city. Strategically located at a critical point on the world's shipping lanes, full of embassies and the headquarters of various corporations, charities and NGO's! Plus it's very flammable... 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_Ulaanbaatar
+	Comment: When you click on a city for the first time (Gino version)
+	DisplayText: Ulaanbataar! The capitol and the largest city in Mongolia. Between 1639 and 1778, the city was mobile, and changed location twenty-eight times! Good thing they finally settled down, so we could attack them.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_Moscow
+	Comment: When you click on a city for the first time
+	DisplayText: Moscow. Twelve million residents, a thousand years of history, and the place hasn't been burned all the way to the ground since the Mongols. Let's go for it, Uncle Norman! 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_MexicoCity
+	Comment: When you click on a city for the first time
+	DisplayText: Mexico City! Capitol of Mexico, largest metropolitan area in the western hemisphere, and one of the most important financial centers in North America! We should conquer it for the food alone. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_NewYork
+	Comment: When you click on a city for the first time
+	DisplayText: New York. The city so nice you have to crush it twice.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Albuquerque
+	Comment: When you click on a city for the first time
+	DisplayText: Albuquerque, New Mexico! Home to Kirkland Air Force Base, Sandia National Laboraties, and many fine chicken restaurants! The city is rumored to be a large repository of purpletonium as well. Well worth a visit!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Anchorage
+	Comment: When you click on a city for the first time
+	DisplayText: Anchorage, Alaska. The third busiest cargo airport in the world, and a major hub of the northern petroleum industry. It should be nicely flammable.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Barcelona
+	Comment: When you click on a city for the first time
+	DisplayText: Barcelona, Spain. A lively city on the Mediterranean, and a major cultural and economic center. Its annual GDP makes it a most attractive target.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Cairo
+	Comment: When you click on a city for the first time
+	DisplayText: Cairo, Egypt. The largest metropolitan area in Africa and in the Near East. Relics of the ancient Egyptian past are close by, ready to be pummeled!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Calgary
+	Comment: When you click on a city for the first time
+	DisplayText: Calgary, Alberta. Home to over a million Canadians and a booming center of industry. We'll show them a "stampede", won't we!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_CapeTown
+	Comment: When you click on a city for the first time
+	DisplayText: Cape Town, South Africa. The second-largest city in South Africa. Important site for control of the Cape of Good Hope.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Dubai
+	Comment: When you click on a city for the first time
+	DisplayText: Dubai, United Arab Emirates! The 7th most visited city on the planet, the shopping capital of the Middle East and a showcase for experiments in modern architecture. Anyone who says they don't want to visit Dubai with a remote-controlled Kaiju is lying.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Halifax
+	Comment: When you click on a city for the first time
+	DisplayText: Halifax, Nova Scotia. Important to the Canadian Department of National defence, and home to the famous Halifax Shipyard, which hasn't been blown up since 1917.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_IslandX
+	Comment: When you click on your home base for the first time
+	DisplayText: Home sweet home! This is our new secret island base. As you can see, it's a little overgrown, but it has a lot of potential. Click on any jungle tile to assign a work crew to clear away the forest and prepare the ground for construction.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_London
+	Comment: When you click on a city for the first time
+	DisplayText: London, England! Home to over 13 million, it is a critically important center of world politics and commerce. Plus it always looks great getting blown up in movies.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_PanamaCity
+	Comment: When you click on a city for the first time
+	DisplayText: Panama City, Panama. Located at the Pacific Entrance of the Panama Canal, and possibly they insulted your girlfriend.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Paris
+	Comment: When you click on a city for the first time
+	DisplayText: Paris, France. A world-renowned center of art and culture, it welcomes over 29 million tourists a year. The city is a treasure trove of great art and architecture. They really should surrender to you, don't you think?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_QuebecCity
+	Comment: When you click on a city for the first time
+	DisplayText: Quebec City, Quebec. The capitol of the province and one of the oldest European settlements in North America. 400 years of history to demolish here.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_RioDeJaneiro
+	Comment: When you click on a city for the first time
+	DisplayText: Rio de Janeiro, Brazil. One of the most visited cities in the southern hemisphere! Time to ruin everyone's vacation plans.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Santiago
+	Comment: When you click on a city for the first time
+	DisplayText: Santiago, Chile. Home to the tallest building in Latin America, the Gran Torre Santiago.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Seoul
+	Comment: When you click on a city for the first time
+	DisplayText: Seoul, capital of South Korea. Heart of the world's second-largest metropolis. With any luck you could wipe out UNESCO World Heritage Sites, the birthplace of K-pop and a tourist center with over 12 million international visitors a year.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Stockholm
+	Comment: When you click on a city for the first time
+	DisplayText: Stockholm, Sweden. The capital of Sweden and the most populous city of Scandinavia, it is a very, very fine place to burn to the ground. Repeatedly.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Sydney
+	Comment: When you click on a city for the first time
+	DisplayText: Sydney, Australia. Built on one of the world's largest natural harbours, the GDP of the city is larger than that of many countries. It really should be visited by Kaiju more often.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Toronto
+	Comment: When you click on a city for the first time
+	DisplayText: Toronto, Ontario. Commercial capitol of the nation. Wiping out the banks and Stock Exchange will doubtless make you a hero of the Occupy Movement.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Vancouver
+	Comment: When you click on a city for the first time
+	DisplayText: Vancouver, British Columbia. An important Pacific seaport, widely considered one of the most "livable" cities on Earth. We'll see about that, won't we?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Wellington
+	Comment: When you click on a city for the first time
+	DisplayText: Wellington, New Zealand. The national capital and home of Parliament, home to over 300,000 hobbits.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_BuenosAires
+	Comment: When you click on a city for the first time
+	DisplayText: Buenos Aires, Argentina! Capitol and largest city of Argentina, and known world-wide as the Paris of South America. All it needs is a statue of you to be complete!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Tokyo
+	Comment: When you click on a city for the first time
+	DisplayText: Tokyo, Japan! The most populous metropolitan area on the planet. A must-see city for any kaiju world tour. Until you've attacked Tokyo at least once, are you REALLY a kaiju at all?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Detroit
+	Comment: When you click on a city for the first time
+	DisplayText: Detroit, Michigan! The world's automotive center, a key city in the Arsenal of Democracy. Anyone who would let Detroit be destroyed, especially by kaiju, has no business ruling the world. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vientiane
+	Comment: When you click on a city for the first time
+	DisplayText: Vientiane, Laos! A beautiful capitol on the banks of the Mekong River, it is a popular tourist destination and EXACTLY the last place in the world that one would expect a kaiju attack! 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vladivostok
+	Comment: When you click on a city for the first time
+	DisplayText: Vladivostok, Russia! The largest Russian port on the Pacific Ocean, and home to the Russian Pacific fleet. When you conquer it, maybe you could rename it "Kaiju's Landing".   
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_HongKong
+	Comment: When you click on a city for the first time
+	DisplayText: Hong Kong, China! The world's most vertical city, it is also a major trade and financial hub. The Hong Kong dollar is the 13th most traded currency in the world. Let's grab some cash!   
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Dakar
+	Comment: When you click on a city for the first time
+	DisplayText: Dakar, Senegal! The western-most city of the Old World. The first supervillains to land here in 1444 were thrown back into the sea. Hope they like kaiju!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Manila
+	Comment: When you click on a city for the first time
+	DisplayText: Manila, capitol city of the Philippines! The Pearl of the Orient sits at the center of many sea trade routes and has been the site of many great battles. Now with more kaiju!  
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_NewDelhi
+	Comment: When you click on a city for the first time
+	DisplayText: New Delhi. The capitol of India since 1911, it is a planned city full of glorious architecture, magnificent monuments, great museums, and screaming civilians.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Seattle
+	Comment: When you click on a city for the first time
+	DisplayText: Seattle! Home of Boeing, Microsoft, Amazon, and the editorial offices of Evil Science Quarterly. Didn't they misspell your name once? Maybe it's time for another Great Seattle Fire... 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Lisbon
+	Comment: When you click on a city for the first time
+	DisplayText: Lisbon. The capitol city of Portugal, a major economic center since before Roman times, but seldom visited by kaiju! We should do something about that.  
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Caracas
+	Comment: When you click on a city for the first time
+	DisplayText: Caracas. Capitol of Venezuela, birthplace of the great revolutionary Simon Bolivar. Maybe they can erect your statue in Bolivar Square, riding your kaiju to victory!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Johannesburg
+	Comment: When you click on a city for the first time
+	DisplayText: Johannesburg! Largest city in South Africa and the largest economy in sub-Saharan Africa, its economy is fueled by gold and diamonds. Do you need a nice crown? A tiara, perhaps?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Fukuoka
+	Comment: When you click on a city for the first time
+	DisplayText: Fukuoka. The sixth largest city in Japan, this port was protected in 1274 and 1281 by Divine Winds that sank Kublai Khan's fleets. Fortunately, kaiju are typhoon-resistant! 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: eventmsg_CivilUnrest
+	DisplayText: Citizens are losing faith in their governments and violent protests break out across [city].  People doing the kaiju's work for them?! Surely things cannot get any darker!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Drought
+	DisplayText: With the city water reserves at an all time low in [city], a fire ban is in effect.  Only you can prevent city-wide conflagrations!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Earthquake
+	DisplayText: Earthquakes have hit [city]; even Chuck Heston can't be everywhere at once. Be prepared for a lot of city damage.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_ElectricalStorm
+	DisplayText: There is never a founding father around when you need one. No kite flying during the storms in [city].
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_LaborUnrest
+	DisplayText: Workers angry at the poor performance of the KDF in [city] go on strike and drive reconstruction costs through the roof.  Which will also have to be fixed.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_MeteorShower
+	DisplayText: Oh! Oh! Can we go to [city]? Pleeease? There are going to be meteor showers all month long, and my pet purpletonium rock needs a pal!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PatrioticSurge
+	DisplayText: The citizenry of [city] stand tall and in full support of the KDF in this struggle.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PerfectWeather
+	DisplayText: Scientists are claiming that this recent run of good weather in [city] is not good weather at all; it's perfect weather. The impact of this discovery on the scientific community remains to be seen.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Rainstorms
+	DisplayText: Forecast for [city] the this week: rain, rain, then rain, followed by rain, and finally some rain.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_SevereStorms
+	DisplayText: In what is being called one of the worst storm seasons of the decade, people of [city] are left with only one question: Can it possibly get worse?
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Tornadoes
+	DisplayText: Tornadoes have been spotted touching down near [city]. People are being reminded that the land of Oz does not, in fact, exist; do not approach the tornadoes.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_KaijuSympathizers
+	DisplayText: People in [city] have been sending us all kinds of fan letters, asking us to visit their city! I'd hate to disappoint our fans.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_CivilDefenceWatch
+	DisplayText: The civilian population of [city] has stepped up in this time of crisis, standing ready to do their part for the war effort.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_VolunteerLabour
+	DisplayText: In [city] news, people have been signing up by the thousands for a new volunteer labour force! These brave men and women stand ready to rebuild this city at a moment's notice. 
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KDFOverwatch
+	DisplayText: The KDF is committed to protecting [city], and to make this clear we have permanently stationed extra attack aircraft here. 
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KaijuProof
+	DisplayText: In the face of upcoming re-elections, the Mayor of [city] has declared it Kaiju proof! I suspect we'll find out if that's true or not soon enough.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_TrafficCongestion
+	DisplayText: Defence analysts are saying that congestion problems in [city] have gotten so bad, we wont be able to respond properly in case of a kaiju attack.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_RollingBlackouts
+	DisplayText: It looks like Kerberos Productions has released another hit game. In [city] this game is so popular that the extra power consumption is causing rolling blackouts. We're calling it the "Kerpocalypse."
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_DonationArmy
+	DisplayText: I'd personally like to thank the dutiful people of [city]. With their generous donations and fund-raising we have been able to significantly bolster our military ground presence in that area.  
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_NavalObsolescence
+	DisplayText: Here in [city] I would like to announce our new "Soldiers, not Boats" program. Why? because people belong on land, not Kaiju! Let that monster splash around in the sea like a namby-pamby sea monkey, this land is OURS!
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_EconomicBoom
+	DisplayText: In their latest issue Furbs magazine referred to [city] as an "Economic powerhouse" and an "Investor's paradise". No one can say for sure how long this economic boom will last, but I for one say SPEND SPEND SPEND!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_MilitaryWithdrawal
+	DisplayText: It's important that the people of [city] realize that our military withdrawal isn't so much about "abandoning them to their terrible fate" as it is a tactical redeployment of forces. The chances of a kaiju attack here are slim, at best.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+
+Message {
+	Identifier: eventmsg_RefugeeFlood
+	DisplayText: Refugees have been flooding in to [city] for days now, straining our resources and flooding our shelters. However many of these brave souls have enlisted in the city's defence and hopefully, in time, this city can become their home.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_InspiredLeadership
+	DisplayText: Today. Today... At the edge of our hope, at the end of our time, we find time for hope. I hope, in time, that time will give us hope. Today we are renewing our subscription... to a cancelled apocalypse.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_ResistanceCollapse
+	DisplayText: In disturbing news, morale in [city] is at an all time low. When interviewed, on man was quoted saying "What's the point man, that monster is totally OP." We at channel 5 news are inclined to agree with him. Kaiju OP. Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_Panic
+	DisplayText: I'm here in [city] with a special report. This just in: WE'RE DOOMED. WE'RE ALL DOOMED! THE ABOMINATION WILL RISE FROM THE SEA AND END OUR PITIFUL LIVES! SAVE YOURSELF! RUN! RUN! THE TIME FOR MASS HYSTARIA HAS COME. *ahem* Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+
+
+
+
+
+
+Message {
+	Identifier: msg_AcidSpray
+	DisplayText: We've got the [ability] working, Uncle Norman! [kaiju] will spray a cone of acid from his mouth when you trigger this in combat. The weapon is shorter range than most breath weapons, but highly corrosive. Should be pretty nasty!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ActiveCamo
+	DisplayText: We decided to paint a layer of photoactive polymers onto [kaiju]! It was originally going to be a practical joke on Mister Greaseworth, but it turned out to reduce the accuracy of all incoming enemy fire. We call it Active Camo. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_AdamantiumPlating
+	DisplayText: The hull of [kaiju] has been upgraded to Adamantium Plating. This is the most marvellous alloy known to Mad Science. The Great Machine has the best armor we can give it.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ArmorPolarization
+	DisplayText: We've developed another possible defence system, Doctor. Armor Polarization will create an intense EM field, which will protect [kaiju] from all damage for about ten seconds. The Great Machine will be frozen, of course--but completely invulnerable.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_AttackDrones
+	DisplayText: We built a set of Attack Drones, Uncle. They launch from the robot's back and carry a light laser. They're delicate and have a short life span, but [kaiju] seems to like having its own mini-robot pets.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_AuxiliaryReactor
+	DisplayText: This little mini-reactor is a real breakthrough! The Auxiliary Reactor will allow [kaiju] to recharge more quickly from now on.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Blackout
+	DisplayText: We're really proud of this new defence system, Uncle. [kaiju] can use it to draw power from any buildings from a four-block radius, and convert all the power it draws into the hitpoints of the Blackout shield. Pretty cool!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_BlastAbsorbtion
+	DisplayText: We've developed a new Blast Absorption defence for [kaiju], sir. When the robot is hit with explosive or ballistic attacks, the robot will convert 50 percent of the damage into power for its own use.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Blasters
+	DisplayText: Finally, the primary Blasters are ready for action! Unfortunately we didn't have room for the phasers, mazers, or bobazers.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Blink
+	DisplayText: This is an experimental device, Uncle Norman. If you activate it, [kaiju] will actually shift out of phase with this universe slightly, and teleport to a random nearby location! While the robot phases back into reality, it's also invisible for a couple of seconds. Super Mad Science!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Boosters
+	DisplayText: I wasn't sure where you wanted to put the boosters, Uncle Norman, so I just put them on everything. Also, we need to buy more boosters.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Brimstone
+	DisplayText: Work is finished on the Brimstone missile attack, sir. [kaiju] can carry a high-altitude airburst which will rain fire over a whole city. It's very Old Testament! I think you'll like it.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_BuildingComplete
+	DisplayText: Construction complete for [zone].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteTrees
+	DisplayText: Trees finished growing.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteCommunicationsArray
+	DisplayText: [zone] construction complete.  Now you can threaten cities!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompletePropaganda
+	Comment: play when you first build a propaganda satellite.
+	DisplayText: Our educational special, "How I stopped worrying and learned to love the Kaiju" is ready for broadcast! Just launch the propaganda satellite over the zone of your choice, and their will to resist your rule will erode with every passing month!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteMindControl
+	Comment: play when you first build a mind control satellite.
+	DisplayText: Finally we have what any good "Hearts and Minds" campaign needs. Control satellites! Launch this satellite for a distinct political edge when threatening a city.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteECM
+	Comment: play when you first build a ECM satellite.
+	DisplayText: This little satellite doesn't play well with the other kids. In fact, it will go out of it's way to disrupt a region's surveillance and intelligence systems, giving [kaiju] that extra edge when "sneaking" up on a city. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteDropShip
+	Comment: play when you first build a DropShip satellite.
+	DisplayText: ICBMs are sooo 1980. Introducing the ICBK. Inter-Continental Ballistic Kaiju! When attacking a city, just strap this baby on to your Kaiju, and boom! Fast track to destruction.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteLaunchPad
+	Comment: play when you finish building your first launch pad.
+	DisplayText: Now that you have a Launch Pad, you can build and launch a variety of satellites. Left click on the launch pad and select "build" to get started.
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_ChaffLauncher
+	DisplayText: We've built a Chaff Launcher to help [kaiju] evade missile fire. If you trigger it, the robot will release foil packets to throw off enemy missiles, and give them a chance to go haywire and crash.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Charge
+	DisplayText: We've built an afterburner for the robot's legs, sir. If you trigger a Charge, [kaiju] should be able to double its speed for two seconds, moving in a straight line.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_CitySurrenders
+	DisplayText: Fantastic work! [city] surrendered. All of their income will go to us from now on.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ClearingComplete
+	DisplayText: Forest clearing complete.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_CombatCapacitor
+	DisplayText: The bad news? The world's top ten largest capacitors have mysteriously gone missing. The good news? Our new Combat Capacitor for [kaiju] is the largest in history! It should improve our maximum energy 100 percent. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_CoreShield
+	DisplayText: We've designed a new defense system, sir. If you trigger the Core Shield, [kaiju] will draw power from its own reactor to deflect physical damage. The system will continue to protect the robot until you turn it off, or until [kaiju] runs out of power.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_DeathStare
+	DisplayText: Our Death Stare radioactive-eye-beam tests have gone well! We lost a few test subjects, but serious upside--one of them grew an extra toe. I would say it's ready for the field.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Deflectors
+	DisplayText: The experimental Deflector field is actually working, Doctor! Well.. at least half the time. Half the bullets is still better than all the bullets.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_DistortionField
+	DisplayText: Just a reminder, sir: your new Distortion Field will need to have its smoke replaced weekly, and its mirrors replaced at least every six months. When you trigger it in combat, it will reduce the accuracy of any non-tracking weapon against the Great Machine.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_DoubleCrush
+	DisplayText: We've had a lobster hooked up to motion capture for days, and we've finally isolated the essence of ambidexterity. I present to you....the Double Crush attack!
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_DrillFist
+	DisplayText: The minions have made another list of clever attack puns for the new armor-penetrating Drill Fist, sir. *ahem* Now you're SCREWED! Excuse me, am I BORING you? This doesn't AUGER well...!
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_EMJammer
+	DisplayText: The EM missile jammer you asked for is ready! However, it only works on missiles running Microshaft MissileOS 10. It was nice of Microshaft to build in those exploits.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_EMPBlast
+	DisplayText: Training complete. [kaiju] acquires [ability].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_EfficiencySystems
+	DisplayText: Our latest testing revealed four memory leaks, two oil leaks, and a dozen Welsh leeks. We've patched all the holes and removed the vegetables, sir.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_EnergyAbsorber
+	DisplayText: The Energy Absorber is an active defence system, sir. If you trigger it, [kaiju] will absorb all energy-based attacks and convert some of the energy into power for its own use.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_EnergyPrism
+	DisplayText: All right! I think I've finally created the perfect reflection defence system, Uncle Norman. The Energy Prism not only deflects 75 percent of all energy and laser attacks, it bounces the attacks into all surrounding targets, buildings and enemy units alike. [kaiju] becomes the star of his own laser light show! Cool, eh? 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Evasion
+	DisplayText: That new Evasion regimen of stretching, freight-lifting, and joint lubrication has really paid off for [kaiju]. The robot takes a lot less damage. Robot Health Monthly would like an interview!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ExposeWeakness
+	DisplayText: I reprogrammed the targeting computers, Uncle. [kaiju] will gather data from every successful hit, and automatically Expose Weakness in the armor of the target. This is a passive ability; the robot should just fire a bit more accurately from now on. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_EyeBeams
+	DisplayText: [kaiju] can be fitted with eye beam lasers now! EYE BEAM LASERS! We might as well just stop right now, this robot is perfect!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_FireStorm
+	DisplayText: We've built a Firestorm weapon, Uncle Norman. It creates a cloud of fireballs with [kaiju] in the center. Everything within the cloud radius will be bombarded with napalm, basically. It's like Kissinger in a can!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Fireball
+	DisplayText: The Fireball launcher is complete, with an added feature! If you just yell FIREBALL... FIREBALL... in to the communicator it fires for you! Pretty cool huh?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_FlickerShield
+	DisplayText: The new Flicker Shield we built is a little shaky, but it blocks 50 percent of all incoming damage for 20 seconds. Half a kaiju is better than none, right?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ForceShield
+	DisplayText: I don't really know what "Force" is, but you better believe we managed to make a shield out of it. It will absorb plenty of damage before it shuts down. If this doesn't get you the Ignoble Prize, I don't know what will!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ForcedPriority
+	DisplayText: We've worked out a method to rapidly refresh the weapons that have a long time delay, sire. If you install the Forced Priority mechanism, the next system in line should get an immediate surge to full power. Might come in handy!
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_GigaBlast
+	DisplayText: We've done it, Uncle Norman! The GigaBlast is the ultimate Eye Beam weapon for [kaiju]. It has really long range and it hits HARD. Can't wait to see it in action!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_GigaClaw
+	DisplayText: We've done it, Uncle Norman! The new Giga Claw weapon is incredibly powerful. [kaiju] will have the best manicure Mad Science can offer if you equip them. Let's try them out!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_GuidedMissile
+	DisplayText: Training complete. [kaiju] acquires [ability].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_HardenedArmor
+	DisplayText: The advanced polymers we've developed are working, sir. [kaiju] now has a layer of Hardened Armor which will reduce the damage of any armor-piercing weapons the enemy brings to bear.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_HeavyArms
+	DisplayText: The team has done a full redesign and refit of the upper body, Doctor. [kaiju] now has Heavy Arms which do significantly more damage with any physical attack.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_HeavyFoot
+	DisplayText: We've fitted the feet of the Great Machine with seismic hammers to increase the damage to surrounding structures as it moves through a city, sir. [kaiju] now has a nice Heavy Foot.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_HeavyMetal
+	DisplayText: The Heavy Metal Structural Lock-down system can now be deployed to protect Gino's weak points. Unfortunately, those weak points are her joints. Don't expect to move very quickly while this system is deployed.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_HeuristicAlgorithms
+	DisplayText: Aaaand Heuristic Algorithms are done! Do you think we could stop by my old school and offer a demonstration, Uncle? Every time we hit the same target, [kaiju] will do 10 percent more damage. And I never did turn in my last math assignment.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_HullPlating
+	DisplayText: So, it turns out putting armor on your armor was a pretty good idea! The new Hull Plating is done, Doctor Farious.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_HyCapUnits
+	DisplayText: The Hy Cap Units are a specialized active defence system. If you trigger the Hyper Capacitors laced through the hull, [kaiju] will absorb all energy-based attacks for a few seconds, and shunt the energy into recharging its own special weapons and abilities. 
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_IFFScrambler
+	DisplayText: We made a new toy for [kaiju], Uncle. This IFF Scrambler is a radio system. When you trigger it, it redirects enemy missiles. Pretty good chance that they'll end up targeting their own friendly units rather than our robot!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_IceBreath
+	DisplayText: I've prepared a series of combat puns for you to unleash when using the new Ice Breath, sir. *Ahem* There's SNOW where to run! Have an ICE day! Shall I continue...?
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_IceStorm
+	DisplayText: I think you'll like the Ice Storm once you try it, Uncle Norman. [kaiju] generates a cloud of ice shards around its body, and everything within the cloud gets hit! Pretty cool, huh?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Ignition
+	DisplayText: The new Ignition attack creates a circular blast wave, centered on the Great Machine. [kaiju] will set everything in the attack radius on fire, as well as doing kinetic damage.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_InfinityPulse
+	DisplayText: The final testing of the new Infinity Pulse booster is complete, Doctor. When [kaiju] carries it, we can flood the system with so much energy that all energy weapon costs will be reduced to zero fora full twenty seconds.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuArrives
+	Comment: Kaiju arrives at some city.
+	DisplayText: [kaiju] arrives at [city].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuArrivesLair
+	Comment: Kaiju returns home.
+	DisplayText: [kaiju] has returned to [city].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuDamageWarning
+	Comment: Will accept [kaiju].
+	DisplayText: They're destroying my beautiful creation! I need [kaiju] to evacuate, before it's too late! If I can just get to the edge of the map I'll be scott free!
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_KaijuDefeated
+	DisplayText: [kaiju] returns to [city] for rebuilding.
+	Speaker: Engineer
+	Sound: babble_farious_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRebuilt
+	DisplayText: [kaiju] reconstruction complete.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRepaired
+	DisplayText: [kaiju] repairs complete.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KineticLayering
+	DisplayText: This new Kinetic Layering system has some real potential! It turns kinetic impacts into power. I suggest we start a "bullets for batteries" program. People always seem to have lots of free bullets for [kaiju]...
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_MatterTransmission
+	DisplayText: I finished the Matter Transmission device you designed, Uncle Norman. It really works! If we shunt momentum into the Matter Transmission device, we can actually teleport [kaiju] for short distances! Mad Science is the coolest.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_MegaClaw
+	DisplayText: I managed to increase the power of the old Plasma Claws, Uncle Norman! The new Mega Claws run so hot that [kaiju] should set your target on fire! Cool, huh?
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_MirrorShield
+	DisplayText: Mirror Shield, or as I like to call it the Deadly Disco Dance Deflector, is ready! Laser Tanks? HAH. Forget 'em.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_MissileStorm
+	DisplayText: The Missile Storm system is ready, Uncle. I still think you should call it the Giant Robot Missile Barf system, though. It would be more accurate.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Momentum
+	DisplayText: The Momentum upgrade is pretty cool, Uncle Norman! If [kaiju] moves in one direction for 5 seconds, the robot's speed increases. It can keep accelerating up to a 25 percent speed boost!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_NewAbilities
+	DisplayText: New Kaiju abilities are available.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_NovaMortar
+	DisplayText: We've finished work on the Nova Mortar, sir. [kaiju] should be able to fire a ballistic round that splits into multiple warheads on detonation.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_NuclearWinter
+	DisplayText: The area effect missile you requested is complete, Doctor. Launch the Nuclear Winter attack and [kaiju] will fire a skyburst that rains ice shards onto the whole region. Brrr.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Omnigears
+	DisplayText: So, in an effort to spend the rest of our annual budget, we coated all Gino's gearing systems with purpletonium plating. Turns out it was actually highly effective! With the new Omnigears, [kaiju] gets a 15 percent increase to speed. Genius!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Overclock
+	DisplayText: We have developed a powerful Overclock system for the Great Machine, sir. When you trigger it, [kaiju] should be able to refresh all its other weapon systems at once, without any time delay. 
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PDMBattery
+	DisplayText: The PDM Battery is a small set of rapid anti-aircraft missiles, Doctor. If you fire it, [kaiju] will target enemy planes and incoming enemy missiles.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PhaseShift
+	DisplayText: The new Phase Shift device is super high tech Mad Sciencey stuff. Not for amateurs! If you turn it on in combat, [kaiju] will shift out of phase with this universe and become an immaterial phantom for about ten seconds, immune to all attacks. The robot will also be able to move at double speed, as an added bonus. Don't you just love purpletonium? 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PlasmaClaw
+	DisplayText: The new Plasma-Heated Claws are ready! They cut through butter like...um...a hot knife. Through butter. Didn't have time to test them on steel, but...it'll be fine.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PlasmaFire
+	DisplayText: The Plasma Fire breath weapon you ordered is ready for ignition! It should create a pretty wide cone of flame. Giving the robot lungs makes so much more sense now!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PointDefenseArray
+	DisplayText: I made some improvements to the Point defense Array for [kaiju], Uncle. The robot should shoot down about twice as many incoming missiles, and it should down some damage to any enemy planes that come into range, as well.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PointDefenseCannon
+	DisplayText: I couldn't figure out the targeting for this system, so I decided to hook the new Point defence cannons to a mini-game on Crush TV. Crush Players Missile defence has over 200 thousand viewers, and [kaiju] will shoot down about 15 percent of all missiles from now on!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PowerDrain
+	DisplayText: The power inverters you requested are finished, Uncle! [kaiju] can now use its Power Drain attack to steal energy from surrounding buildings and units. You can even use it to shut down the energy weapons of an enemy unit for ten seconds!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PowerOptimizers
+	DisplayText: You were right, Uncle. The new Power Optimizers should reduce all energy costs by a full 20 percent! This is a passive ability, too. [kaiju] will just run better from now on. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PredictiveAlgorithms
+	DisplayText: We've made some improvements to the combat computers for [kaiju], Uncle Norman. The robot should gain some short-term memory of how to evade attacks from now on. If the Machine does get hit, the system will just reset to zero. This is a passive ability, so it will be active all the time.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_PrismaticBlast
+	DisplayText: We've done it, Uncle Norman! The new [ability] will give [kaiju] a cone of plasma, ice and acid that fire all at once! It's the Neapolitan ice cream of destruction!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_QPR
+	DisplayText: The QPR is a Quantum Power Reactor, sir. Now that we've installed it, [kaiju] will have 100 percent greater maximum energy, and will regenerate energy faster in the field.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RamCharge
+	DisplayText: We've tweaked the old Charge system to make some improvements, sir. If you trigger the new Ram Charge, [kaiju] should not only give you a burst of speed for two seconds, but it will also shrug off quite a bit of damage.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Rampage
+	DisplayText: I made a tweak to the motivational circuits, Uncle Norman. From now on, [kaiju] will actually enjoy demolishing cities, and increase its damage output a bit immediately after it destroys a building for you. A little Rampage makes a kaiju happy!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RazorArmor
+	DisplayText: The best defence is a brutal offence, Doctor! We've fitted [kaiju] with Razor Armor which will cause damage to any enemy units that come too close to the robot.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ReactiveArmor
+	DisplayText: We've fitted [kaiju] with the new Reactive Armor you requested, Doctor. Armor-piercing weapons will be less effective against the robot from now on.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ReactiveThrusters
+	DisplayText: The new Reactive Thrusters should improve the robot's defensive ability, sir. [kaiju] is slightly less likely to take a hit from now on.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Reboot
+	DisplayText: The Reboot option is risky, but very powerful. If you trigger it, [kaiju] will shut down completely for 5 seconds, and heal all damage. Then the Great Machine will reboot, with systems at 50 percent reduction of maximum energy while it recovers.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Recycle
+	DisplayText: We've built a small recycling facility into the legs of the robot, sir. [kaiju] will automatically collect debris from crushed vehicles in the vicinity and use it to make minor repairs from now on. Should increase durability in the field.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Redlining
+	DisplayText: We've rigged the reactor to drop containment on command, Doctor. [kaiju] can ignore reactor safety protocols and double its energy production for a short burst, but there will be a cost: Redlining will cause some minor damage to the robot.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ReflectorShield
+	DisplayText: The new improved Reflector Shield is even better than the old Mirror Shield! [kaiju] can bounce back 100 percent of all laser attacks for 15 seconds. Pchew! Pchew! 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RegionSurrenders
+	DisplayText: Region [region] has surrendered! This is a huge milestone, Uncle Norman. You've officially conquered one-sixth of the world!
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RepairBots
+	DisplayText: Training complete. [kaiju] acquires [ability].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RepairCycle
+	DisplayText: I've programmed a Repair Cycle for [kaiju], Uncle Norman. If you trigger it, the robot will trade power for health repairs, for about ten seconds.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_SaturationField
+	DisplayText: The Saturation Field is a pretty crazy absorbing energy field. if you trigger it, [kaiju] will be able to absorb a ton of damage. If it overloads, of course, it'll detonate into a spectacular EMP. Even [kaiju] will shut down for at least 5 seconds, and surrounding mechanical units will be out for at least 25 seconds.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ShrapnelStorm
+	DisplayText: We've created a suit of explosive armor for [kaiju]! Basically we line the outer hull plating with claymore directional mines, and then detonate them when we're surrounded by enemies. Boom! The robot is the center of a Shrapnel Storm! Of course, the downside is that if we run out of armor, [kaiju] shuts down for the rest of the battle...
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Siphonizer
+	DisplayText: We've upgraded the old Drill Fist weapon with a leeching mechanism as you requested, Doctor. [kaiju] should be able to drill into the target, pin it down, and drain energy for its own use. We call it the Siphonizer!
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_StackOverflow
+	DisplayText: As you suspected, it IS possible to trigger a Stack Overflow on purpose. If you overload the buffer for [kaiju], you'll lose control of the Machine for a short period of time, but it will do 100 percent more damage to surrounding targets. Of course, the robot will also take 20 percent more damage! It basically goes berserk for 5 seconds.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_StarCannon
+	DisplayText: We've created the Star Cannon mortar round as directed, Doctor. It's a long-range, high-explosive ballistic weapon. 
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_StructuralReinforcement
+	DisplayText: The infamous Frank Bearden sold us some of his new Bearden steel to make a Structural Reinforcement pass on [kaiju]. He says he's a big fan of how we wreak havoc on the civilized world!
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_SuperconductorSpikes
+	DisplayText: We've installed Superconductor Spikes throughout the infrastructure and armor of the Great Machine, Doctor. [kaiju] will gain a full 20 percent to all energy gain effects from now on.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TacNuke
+	DisplayText: We've built the Tac Nuke you requested, Doctor. [kaiju] can now launch a fully operational nuclear warhead on your command. You are Shiva, destroyer of suburbs.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TailBlaster
+	DisplayText: We built the Tail Blaster you asked for, Uncle! [kaiju] now fires a pretty fiery blast from the rear. The minions asked if we could rename it Montezuma's Revenge, but I said no.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TailFury
+	DisplayText: I fitted the rear Blaster with a special Turbo mechanism, Uncle! [kaiju] can unleash some serious Tail Fury now, and pulse-fire in three-round bursts.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TailSmash
+	DisplayText: I've designed a new coupling mechanism for the tail, sir. [kaiju] should be able to sweep the tail from side to side and destroy targets in an arc behind it.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TailThump
+	DisplayText: Did you know we could use the tail as a weapon against things directly behind us? I didn't know that. We...uh...turned on the Tail Thump controls, Doctor.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TargetingScan
+	DisplayText: I decided to calibrate the new Targeting Scan computer on-line yesterday, and guess what? I'm now banned on over forty different Counter-Snipe servers! Ten out of ten, would borrow again. [kaiju] should have a 10 percent greater chance of making a critical hit from now on.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ThunderSmash
+	DisplayText: We've increased the mass of the tail section as ordered, Doctor. [kaiju] should hit a wide arc of targets with the new Thunder Smash attack. They'll regret trying to backstab the Great Machine!
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TitaniumPlating
+	DisplayText: It wasn't easy, but we've carved out solid titanium plate armor for [kaiju]. The durability of the Great Machine will be permanently improved.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingCompleteDefault
+	DisplayText: Training complete.  [kaiju] acquires [ability].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingFacilityShutdown
+	DisplayText: Insufficient resources to support [zone].  [kaiju] training for [ability] aborted.
+	Speaker: Engineer
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TurboBlasters
+	DisplayText: I think I've worked out the trick for the Turbo Blasters you wanted, Uncle Norman. [kaiju] should be able to pulse out fire in three-round bursts, when you equip them.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Unrelenting
+	DisplayText: It's a major improvement in aggressor circuits and recovery rate, sir. [kaiju] will be truly Unrelenting from now on, with a 15 percent reduction in cooldown time across the board.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_VanadiumPlating
+	DisplayText: The armor of the Great Machine has been upgraded to Vanadium Plating. [kaiju] will be significantly more durable from now on.
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Vanish
+	DisplayText: These new holographic projectors are amazing, Uncle Norman! When you turn them on, [kaiju] will actually Vanish for a few seconds. The robot can't be targeted, and all incoming missiles will lose their tracking data.
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Volcano
+	DisplayText: Training complete. [kaiju] acquires [ability].
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_XenoGearing
+	DisplayText: We implemented a more advanced Xeno Gearing system, Uncle. [kaiju] will gain an additional 25 percent combat movement speed from now on. 
+	Speaker: Intern
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAssignAbilities
+	Comment: Play this the first time you enter the Assign Abilities screen.
+	DisplayText: This panel shows all the abilities that we have unlocked. Click and drag active icons into the bar below to fit your Kaiju for battle.
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack01
+	Comment: This pops up at the very beginning. I Deleted the old IntroAttack message, hope that doesn't break anything.
+	DisplayText: The Wireless Overwatch and Remote Leadership Device is finally on line Uncle Norman! [kaiju] has almost arrived at our target. Take a look through the W.O.R.L.D. viewer and see!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack02
+	Comment: Immediately after IntroAttack01
+	DisplayText: Excellent! Our quest for world domination begins with [city].  Attack, My Creation! Let the world witness your power, and tremble!
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding
+	Comment: Play this the first time you enter the building screen.
+	DisplayText: From here you can lay out plans for new buildings. There are four categories of buildings that you can choose from, and many buildings will unlock new and improved buildings when you construct them. The training facility is especially important, 'cause it lets you upgrade [kaiju]. Sir.
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding02
+	Comment: After introBuilding
+	DisplayText: When you can afford to, click on the build button to construct a new building. To place it, click on the highlighted building image, move it to a clear location, and click confirm. It will then begin construction.
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity01
+	Comment: Pops up as soon as you enter anchorage.
+	DisplayText: [city] may not fall on our maiden voyage, but any resources we can capture will be useful back at my base for building new structures and developing [kaiju]' abilities.
+	Speaker: MadScientist_Large
+	Sound: babble_farious_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity02
+	Comment: immediately after IntroCity01
+	DisplayText: All systems go, Doctor Farious! Left click where you want [kaiju] to go; you will automatically attack anything that gets in your path. When it's time to go just walk to any edge of the map. If you right click on a unit you can target it so that your aimed abilities will automatically fire in that direction. 
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity03
+	Comment: when gino is at 75% Health.
+	DisplayText: Hmm. Yes... Yes... This is going well. And yet? Something is missing. More Armor! Or perhaps... Boosters. I can't forget Eye Beams though, definitely needs Eye Beams. I should add those back at the base.
+	Speaker: MadScientist_Large
+	Sound: babble_farious_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity04
+	Comment: The first time you get a city down to 90% morale
+	DisplayText: Ants! Crush them like ants! *ahem* I mean, if you can reduce the cities morale to below 40% there is a good chance they will surrender. A city that surrenders is basically your vassal state, just like the olden days! If they don't surrender right away, just keep stomping on them. They're bound to get the hint eventually.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_CityReminder
+	Comment: If after 3 months, you have not yet conquered a city.
+	DisplayText: If you want to conquer the world uncle, conquering a city is a good place to start. I mean, not that it's my place or anything. Just keep beating them down, they gotta give up some time!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+
+Message {
+	Identifier: tutmsg_IntroClearing
+	Comment: When you first click on the clearing button
+	DisplayText: Need more space? Click on the area you want to clear, and we'll defoliate that area for you.
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroDeath
+	Comment: Play the first time your monster dies
+	DisplayText: I'm going to be the laughing stock of the mad science community. Call me when you've fixed [kaiju]... I should have been a dentist.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_farious_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroKaiju
+	Comment: Play this the first time you enter the Kaiju screen.
+	DisplayText: Status update for your Kaiju, Doctor Farious.
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat
+	Comment: Play this the first time you successfully retreat from a city.
+	DisplayText: Do not think you have won, [city]. I shall return. I will build up my base, upgrade My Creation, and destroy you all!
+	Speaker: MadScientist_Large
+	Sound: babble_farious_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat02
+	Comment: Play this the first time you successfully retreat from a city, after IntroRetreat.
+	DisplayText: It's going to take a while for [kaiju] to return to base. You can use the arrows in the top left corner, beside the clock, to advance time faster or slower. You can do that in your base as well! You've got better things to do then stare at this screen all day.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSecretBase
+	Comment: Play this the first time you enter your base.
+	DisplayText: Home sweet home! This is our new secret island base. As you can see, it's a little overgrown, but it has a lot of potential. Click on the bulldozer button, then click on any jungle tile to assign a work crew to clear away the forest and prepare the ground for construction. Clearing costs money, and gets more expensive each time.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSecretBase02
+	Comment: Play after IntroSecretBase
+	DisplayText: You can also build facilities, repair, and upgrade [kaiju] here. Try pressing buttons at random, That's what I do! Oh yeah, don't forget you can speed up the clock by pressing the arrows in the top left hand corner.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSummary
+	Comment: Play this the first time you enter the Summary screen.
+	DisplayText: I've updated my report, Uncle Norman! This is the latest scoop on the Morale, GDP, and destruction level of every region of the globe.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroTraining
+	Comment: Play this the first time you enter the training screen.
+	DisplayText: Sir! This is where you tell me, and the other Evil Engineers, how to upgrade [kaiju] next. To get more upgrades you will need to build new training facilities in your base; advancements in Mad Engineering always have a price.
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_MonthlyUpdate
+	Comment: Play this the first time there is a monthly update.
+	DisplayText: Your Evil Accountants have prepared a monthly report of all resources, gains, and losses. Base buildings can produce resources, but also cost money to maintain. Remember though, cities will repair "progress" made against them over time, so don't expect cities to stay ruined for long.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_AttackGroup
+	Comment: play the first time that a city generates a search group
+	DisplayText: What is this?! KDF has launched invasion forces against me! If they dare land on my sovereign shores I will teach them their place. [kaiju] will be the instrument of their education...
+	Speaker: MadScientistRage_Large
+	Sound: babble_farious_angry
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_PatrolGroup
+	Comment: play the first time that a city generates a patrol group
+	DisplayText: It appears KDF has sent out a patrol, to catch My Creation off guard. No matter, they will not hold me back!
+	Speaker: MadScientist_Large
+	Sound: babble_farious_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_SearchGroup
+	Comment: play the first time that a city generates a search group
+	DisplayText: KDF has sent out forces to look for me? Fools! I am far too clever for that. However I might want to build some defensive structures around my base, just in case.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_farious_angry
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_LairDiscovered
+	Comment: play this when a search group discovers the island.
+	DisplayText: Our base has been discovered! Batten down the battle-stations! They're bound to send invaders.
+	Speaker: Intern
+	Sound: babble_intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_PatrolCombat
+	Comment: play the first time that Gino is detected by a patrol group, before they enter combat.
+	DisplayText: Breaking news! [kaiju] has been intercepted. Will the monster be turned away, Or will it push forward through the K.D.F. line? Stay tuned to find out.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_PatrolCombat02
+	Comment: play the first time that Gino enters combat with a patrol group.
+	DisplayText: You don't have to fight these clowns if you don't want to Uncle, your choice. Walk [kaiju] to the red line if you want to return to base, walk to the green line if you want to move forward, or just break all their toys and send them home squalling.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat
+	Comment: play the first time the player attempts to threaten a city.
+	DisplayText: That's the way, Uncle! Tell them who's boss! If they don't listen, you're going to have to show them, or they'll think you're soft. Just saying.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat02
+	Comment: play five days before a failed threat is going to expire.
+	DisplayText: The people of [city] think they can thumb their noses at your threats, Uncle. If you don't rough em' up soon, they'll think your full of hot air!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroUpgrade
+	Comment: play when you first train all teir 1 abilities.
+	DisplayText: We.. um, seem to have run out of plans for new upgrades, Uncle. It's embarrassing, really. If you could build us an Advanced Training Facility, I'm SURE we could come up with something good! 
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_IntroUpkeep
+	Comment: play each month one of your buildings can no longer be maintained.
+	DisplayText: I'm sorry boss, we're short on resources, and can't support all our buildings this month. May I suggest a "shopping trip"? 
+	Speaker: Engineer_Large
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_LaunchDropShip
+	Comment: play when you try to launch a drop ship via the launch button.
+	DisplayText: You can't launch from here, boss. Go to the map, select a city, and attack via Drop Ship. Giant monster delivered in 30 minutes or less, or your money back! 
+	Speaker: Engineer
+	Sound: babble_engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_SuperTank
+	Comment: play the first time a Super Tank is built.
+	DisplayText: Breaking News! The Kaiju Defense Force has unveiled its newest anti-kaiju weapon, the aptly-named SUPER TANK, in [city]. The KDF thanks everyone whose homes will be crushed under its massive treads, and promises that their sacrifices will not be in vain.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Planto
+	Comment: play the first time a Planto is built.
+	DisplayText: Breaking news! The Kaiju Defense Force scientists have created a new anti kaiju weapon in [city], a bipedal mutant plant creature called Planto. Planto is fully under the control of the KDF, and absolutely, definitely, probably, won't go crazy and wreak havoc on it's own masters.  
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Helicarrier
+	Comment: Play the first time a Helicarrier is built.
+	DisplayText: Breaking news! The newest anti-kaiju weapon has been announced in [city] by the Kaiju Defense Force, The KDF Helicarrier! This new weapon will be used as a "Shield around the world, to avenge those who have fallen." Or at least that's what they said in the press release.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Ultrasan
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! "The Ultimate Hero" has been created in [city] by the Kaiju Defence Force, known only as Ultrasan! KDF scientists credit an "out of this world discovery" for their success with this program, but refuse to say more.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RockMonster
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! A gigantic stone guardian has appeared in [city] today, but is showing no signs of hostility. The Kaiju Defense Force is claiming responsibility for this creature, saying only that ancient forces and unconventional "sciences" have made this possible.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_MiniMechs
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! The Kaiju Defense Force has announced a new anti-kaiju Mecha Task Force in [city]. The pilots of this force may seem young, but the KDF assures us that these teenagers have what it takes to fight monsters, defeat evil, and make it back in time for class.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}

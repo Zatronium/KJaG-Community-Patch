@@ -1,0 +1,2754 @@
+Ability {
+	Identifier: 007e79666505cd7dcb54fd1f85b6aba1
+	Name: ability_FireStorm
+	DisplayName: Fire Storm
+	Description: A cloud of falling balls of fire centered on the Kaiju.
+	TrainingCompleteMessageId: msg_FireStorm
+	Script: kaiju_gino/scripts/fire_storm.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e54fc030
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 2
+	BulletPoint: Damage: 13-18 per fireball
+	BulletPoint: Duration: 10s
+	BulletPoint: Radius: 120m
+	Icon: kaiju_gino/ability_icons/attack/fireStorm.png
+	Cooldown: 50
+	ResourcePower: 50
+	IsPassive: false
+	CostTime: 36
+	CostMoney: 240000
+	CostPower: 240
+	CostKnow: 240
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 00ae87ae2e8e9e98df01f107d0c093d4
+	Name: ability_PredictiveAlgorithms
+	DisplayName: Predictive Algorithms
+	Description: For a few moments, massive amounts of processing power are rerouted to the Kaiju's manoeuvring routines making it slower but very hard to hit.
+	TrainingCompleteMessageId: msg_PredictiveAlgorithms
+	Script: kaiju_gino/scripts/predictive_algorithms.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 5bb70d921c23d26b244b16cf6e3fe76b
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 10
+	BulletPoint: Duration: 15s
+	BulletPoint: Evasion: + 25%
+	BulletPoint: Speed: -25%
+	Icon: kaiju_gino/ability_icons/metabolism/predictiveAlgorithms.png
+	Cooldown: 60
+	ResourcePower: 95
+	IsPassive: false
+	CostTime: 35
+	CostMoney: 1000000
+	CostPower: 1200
+	CostKnow: 1000
+	CostOrganic: 400
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 00f67a9bff26df2dec3f4528047beb5e
+	Name: ability_ShrapnelStorm
+	DisplayName: Shrapnel Storm
+	Description: Explosive layers weaved through the Kaiju's armor allow it to be blown off one layer at a time in an intense blast of shrapnel.
+	TrainingCompleteMessageId: msg_ShrapnelStorm
+	Script: kaiju_gino/scripts/shrapnel_storm.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 610d93af0f58c3e627678f7bffb4ed2e
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 4
+	BulletPoint: Armor: -1
+	BulletPoint: Radius: 200m
+	BulletPoint: Damage: 50
+	Icon: kaiju_gino/ability_icons/defense/shrapnelStorm.png
+	Cooldown: 2
+	ResourcePower: 30
+	IsPassive: false
+	CostTime: 45
+	CostMoney: 1300000
+	CostPower: 1200
+	CostKnow: 1000
+	CostOrganic: 700
+	CostPurple: 0
+}
+
+//**
+Ability {
+	Identifier: 0101f1cb4e531f7f0b31661e399f33b9
+	Name: ability_DeathStare
+	DisplayName: Death Stare
+	Description: Highly radioactive eye beams; deals damage in a line and deals damage over time.
+	TrainingCompleteMessageId: msg_DeathStare
+	Script: kaiju_gino/scripts/death_stare.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e54fa140
+	SkillTier: 2
+	SkillQuad: 2
+	SkillIndex: 2
+	BulletPoint: Damage: 20-25
+	BulletPoint: Shots: 10
+	BulletPoint: Range: 750m
+	BulletPoint: Chance to Ignite: 75%
+	Icon: kaiju_gino/ability_icons/attack/DeathStare.png
+	Cooldown: 10
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 9
+	CostMoney: 15000
+	CostPower: 40
+	CostKnow: 30
+	CostOrganic: 10
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 04f41adca7e410ccdcf1480863916858
+	Name: ability_TailSmash
+	DisplayName: Tail Smash
+	Description: A broad swing of the Kaiju's tail doing damage in a cone behind it.
+	TrainingCompleteMessageId: msg_TailSmash
+	Script: kaiju_gino/scripts/tail_smash.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e60fc040
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 12
+	BulletPoint: Damage: 45-60
+	BulletPoint: Range: 250m
+	Icon: kaiju_gino/ability_icons/attack/TailSmash.png
+	Cooldown: 8
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 17
+	CostMoney: 260000
+	CostPower: 200
+	CostKnow: 200
+	CostOrganic: 200
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 082ee9781c69ed523785657c46dbde09
+	Name: ability_InfinityPulse
+	DisplayName: Infinity Pulse
+	Description: Super advanced grav generators allow the Kaiju to open a microscopic white hole for a few moments.  This alternate power source means the Kaiju's powers require no energy from the regular reactor system for a time.
+	TrainingCompleteMessageId: msg_InfinityPulse
+	Script: kaiju_gino/scripts/infinity_pulse.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 2c1fc2014c4b2ac84e10f5f465dc74b3
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 6
+	BulletPoint: Duration: 20s
+	Icon: kaiju_gino/ability_icons/metabolism/infinityPulse.png
+	Cooldown: 150
+	ResourcePower: 100
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 09635e00a611faf1049a5d2fedf6e875
+	Name: ability_Evasion
+	DisplayName: Evasion
+	Description: Improvements in muscle tech allows the Kaiju increased ability to dodge for a short time, but only while moving.
+	TrainingCompleteMessageId: msg_Evasion
+	Script: kaiju_gino/scripts/evasion.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: aa0163ed4f15a6ea3b57ac61db1c8511
+	SkillTier: 3
+	SkillQuad: 0
+	SkillIndex: 5
+	BulletPoint: Enemy Accuracy: -75%
+	BulletPoint: Duration: 10s
+	Icon: kaiju_gino/ability_icons/metabolism/evasion.png
+	Cooldown: 15
+	ResourcePower: 30
+	IsPassive: false
+	CostTime: 24
+	CostMoney: 60000
+	CostPower: 60
+	CostKnow: 70
+	CostOrganic: 50
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 0a24d539f06856cdeea867024434a9c5
+	Name: ability_DistortionField
+	DisplayName: Distortion Field
+	Description: Holgraphic projectors distort the image of the Kaiju making it much harder to hit.
+	TrainingCompleteMessageId: msg_DistortionField
+	Script: kaiju_gino/scripts/distortion_field.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 579faf8771ee1876f05d39450d529607
+	SkillTier: 3
+	SkillQuad: 1
+	SkillIndex: 5
+	BulletPoint: Enemy Accuracy: -50%
+	BulletPoint: Duration: 20s
+	Icon: kaiju_gino/ability_icons/defense/distortionField.png
+	Cooldown: 40
+	ResourcePower: 45
+	IsPassive: false
+	CostTime: 24
+	CostMoney: 70000
+	CostPower: 70
+	CostKnow: 80
+	CostOrganic: 40
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 0d9e3c1dc92c178637e0d4062c37502b
+	Name: ability_RepairBots
+	DisplayName: Repair Bots
+	Description: These advanced robots swarm in and out of the Kaiju slowly, but constantly, repairing damage.
+	TrainingCompleteMessageId: msg_RepairBots
+	Script: kaiju_gino/scripts/repair_bots.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 84bfc8ec14831dd1410fc38e06392688
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 1
+	BulletPoint: Health: +2/s
+	Icon: kaiju_gino/ability_icons/metabolism/repairBots.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 20
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 105c74e4800a26edc5ddd02c0f92e7ff
+	Name: ability_MatterTransmission
+	DisplayName: Matter Transmission
+	Description: This short range teleporter transforms momentum into distance without having to cover the ground in between.  Damaging everything in your vicinity at your destination. 
+	TrainingCompleteMessageId: msg_MatterTransmission
+	Script: kaiju_gino/scripts/matter_transmission.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 33ebbfd9faedb5c74a1bc387095f4782
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 9
+	BulletPoint: Damage: 80-100
+	BulletPoint: Area: 100m
+	BulletPoint: Distance: 100/stage
+	Icon: kaiju_gino/ability_icons/metabolism/matterTransmission.png
+	Cooldown: 30
+	ResourcePower: 85
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1000000
+	CostPower: 1800
+	CostKnow: 1600
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 133107baba307c6694934fed8e1e89e9
+	Name: ability_RepairCycle
+	DisplayName: Repair Cycle
+	Description: A mode of directed repair that requires an investment of power over time.
+	TrainingCompleteMessageId: msg_RepairCycle
+	Script: kaiju_gino/scripts/repair_cycle.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 4369e224dcbbd7d4fac6b06923b5ae7a
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 2
+	BulletPoint: Health: +20/s
+	BulletPoint: Power: -20/s
+	BulletPoint: Duration: 10s
+	Icon: kaiju_gino/ability_icons/metabolism/repairCycle.png
+	Cooldown: 60
+	ResourcePower: 20
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 240000
+	CostPower: 240
+	CostKnow: 240
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 14279e0407cfcbfe517b368c8ef76424
+	Name: ability_Ignition
+	DisplayName: Ignition
+	Description: A circular energy blast that will set everything around the Kaiju on fire.
+	TrainingCompleteMessageId: msg_Ignition
+	Script: kaiju_gino/scripts/ignition.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e54fc030
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 1
+	BulletPoint: Damage: 10-15
+	BulletPoint: Range: 170
+	Icon: kaiju_gino/ability_icons/attack/ignition.png
+	Cooldown: 45
+	ResourcePower: 35
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 260000
+	CostPower: 300
+	CostKnow: 300
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 17295cb361db8b277aa420dd99e2c2a0
+	Name: ability_KineticLayering
+	DisplayName: Kinetic Layering
+	Description: This system, when activated, can turn kinetic weapon impacts into power for the Kaiju systems for a limited time.
+	TrainingCompleteMessageId: msg_KineticLayering
+	Script: kaiju_gino/scripts/kinetic_layering.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: bc516991f8c177f3c0dc4190e86ee8ad
+	SkillTier: 3
+	SkillQuad: 1
+	SkillIndex: 2
+	BulletPoint: Energy Per Hit: +2
+	BulletPoint: Duration: 15s
+	Icon: kaiju_gino/ability_icons/defense/kineticLayering.png
+	Cooldown: 25
+	ResourcePower: 5
+	IsPassive: false
+	CostTime: 8
+	CostMoney: 20000
+	CostPower: 20
+	CostKnow: 20
+	CostOrganic: 10
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 1a03c47298bdbdaaa0cd07c47cc77d96
+	Name: ability_FlickerShield
+	DisplayName: Flicker Shield
+	Description: An impenetrable shield that can only function by flickering on and off many times per second.  It has the ability to completely block half of incoming attacks for 20 seconds.
+	TrainingCompleteMessageId: msg_FlickerShield
+	Script: kaiju_gino/scripts/flicker_shield.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: ae6a35ead5d3c19fe04d6f9c681a1ba8
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 7
+	BulletPoint: Block Chance: 50%
+	BulletPoint: Duration: 20s
+	Icon: kaiju_gino/ability_icons/defense/flickerShield.png
+	Cooldown: 100
+	ResourcePower: 110
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 240000
+	CostPower: 340
+	CostKnow: 300
+	CostOrganic: 150
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 1fd79e692ac97e9a6631f12a2108abc6
+	Name: ability_TailFury
+	DisplayName: Tail Fury
+	Description: A rear firing turbolazer
+	TrainingCompleteMessageId: msg_TailFury
+	Script: kaiju_gino/scripts/tail_fury.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 8bc60bb4eea2e5362c8f03eadf604fb8
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 11
+	BulletPoint: Damage: 35-60
+	BulletPoint: Range: 800
+	Icon: kaiju_gino/ability_icons/attack/TailFury.png
+	Cooldown: 10
+	ResourcePower: 18
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 21c08921bebf56c18f13a751ac1c6fd1
+	Name: ability_StarCannon
+	DisplayName: Star Cannon
+	Description: A long range high explosive mortar shot
+	TrainingCompleteMessageId: msg_StarCannon
+	Script: kaiju_gino/scripts/star_cannon.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: a0b45c18344ae6cd4ea5bd04bb31eb89
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 5
+	BulletPoint: Damage: 50-65
+	BulletPoint: Range: 1200
+	Icon: kaiju_gino/ability_icons/attack/starCannon.png
+	Cooldown: 15
+	ResourcePower: 30
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 290000
+	CostPower: 220
+	CostKnow: 200
+	CostOrganic: 240
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 25c44c0f7ade680ffefa94295f083a51
+	Name: ability_Volcano
+	DisplayName: Volcano
+	Description: A Geothermic burrower that when launched, causes a small volcanic eruption.
+	TrainingCompleteMessageId: msg_Volcano
+	Script: kaiju_gino/scripts/volcano.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 14279e0407cfcbfe517b368c8ef76424
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 1
+	BulletPoint: Range: 800m
+	BulletPoint: Duration: 10s-15s
+	BulletPoint: Projectiles: 25-75
+	BulletPoint: Area: 400m-700m
+	BulletPoint: Damage: 20-40
+	Icon: kaiju_gino/ability_icons/attack/volcano.png
+	Cooldown: 60
+	ResourcePower: 100
+	IsPassive: false
+	CostTime: 24
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 26b1a247286430ffcdf4b6d6f1416de5
+	Name: ability_PointDefenseArray
+	DisplayName: Point Defense Array
+	Description: This advanced tracking and firing systems units all the Kaiju's point defence cannons into a unified and effective system, damaging air units and some tracking missiles.
+	TrainingCompleteMessageId: msg_PointDefenseArray
+	Script: kaiju_gino/scripts/point_defense_array.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 7c91b23a3ddce7c2842042f01fce10dc
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 11
+	BulletPoint: Range: 350
+	BulletPoint: Missile Intercept: 30%
+	BulletPoint: AA Damage: 15/s
+	Icon: kaiju_gino/ability_icons/defense/pointDefenseArray.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 290000
+	CostPower: 200
+	CostKnow: 230
+	CostOrganic: 220
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 27b51f01d69c29df28ec324826d97aab
+	Name: ability_ForcedPriority
+	DisplayName: Forced Priority
+	Description: Control overrides allow the Kaiju to reset a cooling down power to ready instantly.
+	TrainingCompleteMessageId: msg_ForcedPriority
+	Script: kaiju_gino/scripts/forced_priority.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 7222d1e36fc4c084813001391b692a15
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 5
+	BulletPoint: Reset Cooldown: Lowest Remaining
+	Icon: kaiju_gino/ability_icons/metabolism/forcedPriority.png
+	Cooldown: 60
+	ResourcePower: 50
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 200000
+	CostPower: 200
+	CostKnow: 220
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 2ad8e4f12f2c05f34ea7cf4abc2ff3d4
+	Name: ability_PlasmaClaw
+	DisplayName: Plasma Claw
+	Description: A claw attack supercharged by plasma energy; deals damage over time and lights things on fire.
+	TrainingCompleteMessageId: msg_PlasmaClaw
+	Script: kaiju_gino/scripts/plasma_claw.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e54fa140
+	SkillTier: 2
+	SkillQuad: 2
+	SkillIndex: 3
+	BulletPoint: Damage: Base
+	BulletPoint: DoT: 13-20
+	BulletPoint: Duration: 3s
+	BulletPoint: Chance to Ignite: 75%
+	Icon: kaiju_gino/ability_icons/attack/plasmaclaw.png
+	Cooldown: 5
+	ResourcePower: 8
+	IsPassive: false
+	CostTime: 9
+	CostMoney: 25000
+	CostPower: 30
+	CostKnow: 30
+	CostOrganic: 10
+	CostPurple: 0
+}
+
+//**
+Ability {
+	Identifier: 2ae950eabd6613ca5c0706442b1ac6b0
+	Name: ability_StackOverflow
+	DisplayName: Stack Overflow
+	Description: By deliberately driving the Kaiju's computer systems into overload, a state resembling berserker rage can be achieved. Increases damage output, but you lose control and the Kaiju takes more damage.
+	TrainingCompleteMessageId: msg_StackOverflow
+	Script: kaiju_gino/scripts/stack_overflow.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 4a4af014568aed084f19a51fb8abeda1
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 7
+	BulletPoint: Damage: +100%
+	BulletPoint: Damage Taken: +20%
+	BulletPoint: Duration: 18s
+	Icon: kaiju_gino/ability_icons/metabolism/stackOverflow.png
+	Cooldown: 90
+	ResourcePower: 45
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 240000
+	CostPower: 200
+	CostKnow: 240
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 2b945d1a0f6fba9662c3699b543bd2b5
+	Name: ability_MirrorShield
+	DisplayName: Mirror Shield
+	Description: This force field is designed specifically to deflect almost all laser based weaponry.
+	TrainingCompleteMessageId: msg_MirrorShield
+	Script: kaiju_gino/scripts/mirror_shield.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: c76d74024248fef482727f301bfda4e1
+	SkillTier: 3
+	SkillQuad: 1
+	SkillIndex: 3
+	BulletPoint: Laser Deflection: 75%
+	BulletPoint: Duration: 30s
+	Icon: kaiju_gino/ability_icons/defense/mirrorShield.png
+	Cooldown: 25
+	ResourcePower: 25
+	IsPassive: false
+	CostTime: 12
+	CostMoney: 70000
+	CostPower: 80
+	CostKnow: 90
+	CostOrganic: 30
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 2c1fc2014c4b2ac84e10f5f465dc74b3
+	Name: ability_PowerOptimizers
+	DisplayName: Power Optimizers
+	Description: Power use optimizations make all powers use 20% less power.  (applied during combat, not reflected in descriptions)
+	TrainingCompleteMessageId: msg_PowerOptimizers
+	Script: kaiju_gino/scripts/power_optimizers.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 7222d1e36fc4c084813001391b692a15
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 6
+	BulletPoint: Power Cost: - 20%
+	Icon: kaiju_gino/ability_icons/metabolism/powerOptimizers.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 60000
+	CostPower: 200
+	CostKnow: 280
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 30a6bb5e097dca886d4f52c2ec569820
+	Name: ability_CombatCapacitor
+	DisplayName: Combat Capacitor
+	Description: These high efficiency capacitors greatly increase the amount of energy the Kaiju can store and access in combat.
+	TrainingCompleteMessageId: msg_CombatCapacitor
+	Script: kaiju_gino/scripts/combat_capacitor.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: aed03a50efcc402893d0ba0ae4c59deb
+	SkillTier: 3
+	SkillQuad: 0
+	SkillIndex: 2
+	BulletPoint: Max Power: +100
+	Icon: kaiju_gino/ability_icons/metabolism/combatCapacitor.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 10
+	CostMoney: 70000
+	CostPower: 60
+	CostKnow: 80
+	CostOrganic: 40
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 32157c21ad944c7572f2a4f4f64a0643
+	Name: ability_AcidSpray
+	DisplayName: Acid Spray
+	Description: A cone shaped spray of acid.
+	TrainingCompleteMessageId: msg_AcidSpray
+	Script: kaiju_gino/scripts/acid_spray.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 80479ee0d697a48e24cb4099ac0678ad
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 4
+	BulletPoint: DoT: 18-22
+	BulletPoint: Duration: 5s
+	Icon: kaiju_gino/ability_icons/attack/AcidSpray.png
+	Cooldown: 20
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 240000
+	CostPower: 240
+	CostKnow: 240
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 32b159fcc0bc30efa9576a3c7c45e65a
+	Name: ability_BlastAbsorbtion
+	DisplayName: Blast Absorption
+	Description: An advanced kinetic absorption field that converts part of the energy of a ballistic or explosive impact into energy to be used by the Kaiju.
+	TrainingCompleteMessageId: msg_BlastAbsorbtion
+	Script: kaiju_gino/scripts/blast_absorbtion.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 17295cb361db8b277aa420dd99e2c2a0
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 3
+	BulletPoint: Energy Gain: 2
+	BulletPoint: Explosive Damage: -50%
+	BulletPoint: Duration: 5s
+	Icon: kaiju_gino/ability_icons/defense/blastAbsorbtion.png
+	Cooldown: 15
+	ResourcePower: 10
+	IsPassive: false
+	CostTime: 10
+	CostMoney: 70000
+	CostPower: 40
+	CostKnow: 80
+	CostOrganic: 40
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 33ebbfd9faedb5c74a1bc387095f4782
+	Name: ability_Momentum
+	DisplayName: Momentum
+	Description: Power accelerators allow the Kaiju to move faster the longer it stays moving.  Resets when the Kaiju stops moving.
+	TrainingCompleteMessageId: msg_Momentum
+	Script: kaiju_gino/scripts/momentum.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 09635e00a611faf1049a5d2fedf6e875
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 9
+	BulletPoint: Increase Speed: +25% max
+	Icon: kaiju_gino/ability_icons/metabolism/momentum.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 240000
+	CostPower: 240
+	CostKnow: 240
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+Ability {
+	Identifier: 364d0e1ec4db28f673adb9d9557281b5
+	Name: ability_HyCap
+	DisplayName: Hy-Cap Units
+	Description: Hyper Capacitors built into the frame of this Kaiju can temporarily absorb all energy weapon damage and uses it to recharge the Kaiju's abilities.
+	TrainingCompleteMessageId: msg_HyCapUnits
+	Script: kaiju_gino/scripts/hy-cap.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 7a1d753aa8410a7ec76aff0b39c1f74e
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 8
+	BulletPoint: Absorb Damage: Energy
+	BulletPoint: Reset on Absorb: 10 Damage
+	BulletPoint: Duration: 5s
+	Icon: kaiju_gino/ability_icons/defense/hyCap.png
+	Cooldown: 60
+	ResourcePower: 80
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 1200000
+	CostPower: 1000
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 37414f039bbadf3f4daa2d7672387549
+	Name: ability_ThunderSmash
+	DisplayName: Thunder Smash
+	Description: A heavy duty tail swipe, devastating everything in a wide arc
+	TrainingCompleteMessageId: msg_ThunderSmash
+	Script: kaiju_gino/scripts/thunder_smash.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 04f41adca7e410ccdcf1480863916858
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 12
+	BulletPoint: Damage: 60-95
+	BulletPoint: Range: 350m
+	Icon: kaiju_gino/ability_icons/attack/ThunderSmash.png
+	Cooldown: 15
+	ResourcePower: 20
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1300000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 3a01badd77200088fb15f9b51b0ca6a0
+	Name: ability_Unrelenting
+	DisplayName: Unrelenting
+	Description: An quantum leap in aggressor circuits decreases the amount of time the Kaiju's attacks need for recharging.
+	TrainingCompleteMessageId: msg_Unrelenting
+	Script: kaiju_gino/scripts/unrelenting.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 5811a7b7113a75fd68bfd67812cc2fdd
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 8
+	BulletPoint: Cooldown: -15%
+	Icon: kaiju_gino/ability_icons/metabolism/unrelenting.png
+	Cooldown: 0
+	ResourcePower: 0
+	IsPassive: true
+	CostTime: 18
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1300
+	CostOrganic: 800
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 3f5b448a65cdc77e4b49755ca994f71d
+	Name: ability_HeuristicAlgorithms
+	DisplayName: Heuristic Algorithms
+	Description: Improved targeting routines allow the Kaiju to do increased damage.
+	TrainingCompleteMessageId: msg_HeuristicAlgorithms
+	Script: kaiju_gino/scripts/heuristic_algorithms.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: bfb6a325ba149ee2ef489e506fc20c85
+	SkillTier: 2
+	SkillQuad: 0
+	SkillIndex: 2
+	BulletPoint: Damage Bonus: 10%
+	Icon: kaiju_gino/ability_icons/metabolism/heuristicAlgorithms.png
+	Cooldown: 0
+	ResourcePower: 0
+	IsPassive: true
+	CostTime: 7
+	CostMoney: 15000
+	CostPower: 10
+	CostKnow: 25
+	CostOrganic: 15
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 4369e224dcbbd7d4fac6b06923b5ae7a
+	Name: ability_StructuralReinforcement
+	DisplayName: Structural Reinforcement
+	Description: With better core materials comes a more durable Kaiju.
+	TrainingCompleteMessageId: msg_StructuralReinforcement
+	Script: kaiju_gino/scripts/structural_reinforcement.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: aed03a50efcc402893d0ba0ae4c59deb
+	SkillTier: 3
+	SkillQuad: 0
+	SkillIndex: 1
+	BulletPoint: Max Health: +150
+	Icon: kaiju_gino/ability_icons/metabolism/structuralReinforcement.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 10
+	CostMoney: 70000
+	CostPower: 40
+	CostKnow: 60
+	CostOrganic: 50
+	CostPurple: 0
+	MaxHealth: 50
+}
+
+
+Ability {
+	Identifier: 440e5170566fe8edfaed8fe552fb38a7
+	Name: ability_Rampage
+	DisplayName: Rampage
+	Description: The addition of motivational circuits for your Kaiju results in an short increase in damage output for a short time for every building you destroy.
+	TrainingCompleteMessageId: msg_Rampage
+	Script: kaiju_gino/scripts/rampage.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 2ae950eabd6613ca5c0706442b1ac6b0
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 7
+	BulletPoint: Bonus Damage: 5%/Building
+	BulletPoint: Max Bonus: 25%
+	BulletPoint: Duration: 5s
+	Icon: kaiju_gino/ability_icons/metabolism/rampage.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 18
+	CostMoney: 1300000
+	CostPower: 1100
+	CostKnow: 1200
+	CostOrganic: 700
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 46f4e942199b25952d5df86d4c7a5392
+	Name: ability_HeavyArms
+	DisplayName: Heavy Arms
+	Description: Massive reinforcing of the Kaiju's arms make its physical attacks more powerful.
+	TrainingCompleteMessageId: msg_HeavyArms
+	Script: kaiju_gino/scripts/heavy_arms.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f9e0032e27580c02889b9e38eca2d019
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 11
+	BulletPoint: Damage Bonus: +25%
+	Icon: kaiju_gino/ability_icons/metabolism/heavyArms.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 18
+	CostMoney: 1300000
+	CostPower: 1000
+	CostKnow: 1200
+	CostOrganic: 900
+	CostPurple: 0
+	PhysicalDamage: 25, true
+}
+
+
+Ability {
+	Identifier: 4949f0e2fbe92dc87edb2ec7c3e40a2c
+	Name: ability_Brimstone
+	DisplayName: Brimstone
+	Description: A mortar launch that detonates in atmosphere, raining down fire
+	TrainingCompleteMessageId: msg_Brimstone
+	Script: kaiju_gino/scripts/brimstone.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 007e79666505cd7dcb54fd1f85b6aba1
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 2
+	BulletPoint: Damage: 13-18
+	BulletPoint: AoE: Entire Map
+	BulletPoint: Duration: 20
+	Icon: kaiju_gino/ability_icons/attack/brimstone.png
+	Cooldown: 90
+	ResourcePower: 150
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 5
+}
+
+
+Ability {
+	Identifier: 4a4af014568aed084f19a51fb8abeda1
+	Name: ability_TargetingScan
+	DisplayName: Targeting Scan
+	Description: This targeting analysis computer allows a small chance of doing a double damage critical hit against any target.
+	TrainingCompleteMessageId: msg_TargetingScan
+	Script: kaiju_gino/scripts/targeting_scan.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 3f5b448a65cdc77e4b49755ca994f71d
+	SkillTier: 3
+	SkillQuad: 0
+	SkillIndex: 4
+	BulletPoint: Critical Chance: %10
+	Icon: kaiju_gino/ability_icons/metabolism/targetingScan.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 10
+	CostMoney: 60000
+	CostPower: 70
+	CostKnow: 60
+	CostOrganic: 40
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 50f12b5ddfc4008b3c9db6c0821e5931
+	Name: ability_MegaClaw
+	DisplayName: Mega Claw
+	Description: A very powerful energy claw attack that ignites the target
+	TrainingCompleteMessageId: msg_MegaClaw
+	Script: kaiju_gino/scripts/mega_claw.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 77faa0129caf40f6e989df6ad168741b
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 10
+	BulletPoint: Damage: Base
+	BulletPoint: DoT: 20-25/s
+	BulletPoint: Duration: 3s
+	Icon: kaiju_gino/ability_icons/attack/MegaClaw.png
+	Cooldown: 10
+	ResourcePower: 25
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 250000
+	CostPower: 280
+	CostKnow: 200
+	CostOrganic: 180
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 550f6033cbbe81f1e5656a2efa2cc83f
+	Name: ability_QPR
+	DisplayName: Q.P.R.
+	Description: The instillation of Quantum Power Reactors increase the Kaiju's ability to generate and store power.
+	TrainingCompleteMessageId: msg_QPR
+	Script: kaiju_gino/scripts/qpr.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 64fa24277aa0ddfecfbc51b81d40eedb
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 3
+	BulletPoint: Power Storage: +100
+	BulletPoint: Power Generation: +3/s
+	Icon: kaiju_gino/ability_icons/metabolism/qpr.png
+	Cooldown: 0
+	ResourcePower: 0
+	IsPassive: true
+	CostTime: 18
+	CostMoney: 1400000
+	CostPower: 1600
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 2
+}
+
+
+Ability {
+	Identifier: 555a36bdb8f4a5d7a1dc273104abb3d6
+	Name: ability_PrismaticBlast
+	DisplayName: Prismatic Blast
+	Description: A breath weapon with waves of fire, ice and acid
+	TrainingCompleteMessageId: msg_PrismaticBlast
+	Script: kaiju_gino/scripts/prismatic_blast.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 32157c21ad944c7572f2a4f4f64a0643
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 4
+	BulletPoint: Damage: 10-15/s
+	BulletPoint: Duration: 5s
+	Icon: kaiju_gino/ability_icons/attack/prismaticBlast.png
+	Cooldown: 25
+	ResourcePower: 30
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1300000
+	CostPower: 1400
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 3
+}
+
+
+Ability {
+	Identifier: 579faf8771ee1876f05d39450d529607
+	Name: ability_EMJammer
+	DisplayName: EM Jammer
+	Description: A jamming field that can block missiles targeting this Kaiju.
+	TrainingCompleteMessageId: msg_EMJammer
+	Script: kaiju_gino/scripts/em_jammer.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: af881bb3514296a2e0de5739019679f3
+	SkillTier: 2
+	SkillQuad: 1
+	SkillIndex: 3
+	BulletPoint: Success Rate: 35%
+	Icon: kaiju_gino/ability_icons/defense/EMJammer.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 7
+	CostMoney: 20000
+	CostPower: 25
+	CostKnow: 25
+	CostOrganic: 10
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 5811a7b7113a75fd68bfd67812cc2fdd
+	Name: ability_ExposeWeakness
+	DisplayName: Expose Weakness
+	Description: Targeting computers gain data from every successful hit allowing the Kaiju to aim for weak points in the targets armor.
+	TrainingCompleteMessageId: msg_ExposeWeakness
+	Script: kaiju_gino/scripts/expose_weakness.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 4a4af014568aed084f19a51fb8abeda1
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 8
+	BulletPoint: Armor Reduction: 1 per hit
+	Icon: kaiju_gino/ability_icons/metabolism/exposeWeakness.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 200000
+	CostPower: 200
+	CostKnow: 200
+	CostOrganic: 200
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 58446c1e37a58ce6bcd90d5d5daa435f
+	Name: ability_GigaClaw
+	DisplayName: Giga Claw
+	Description: An incredibly powerful claw attack that ignites the target
+	TrainingCompleteMessageId: msg_GigaClaw
+	Script: kaiju_gino/scripts/giga_claw.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 50f12b5ddfc4008b3c9db6c0821e5931
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 10
+	BulletPoint: Damage: Base
+	BulletPoint: DoT: 30-35/s
+	BulletPoint: Duration: 3s
+	Icon: kaiju_gino/ability_icons/attack/gigaClaw.png
+	Cooldown: 10
+	ResourcePower: 35
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1400000
+	CostPower: 1200
+	CostKnow: 1000
+	CostOrganic: 800
+	CostPurple: 12
+}
+
+
+Ability {
+	Identifier: 5a10987b34b5bb630b5e4da7f681ebed
+	Name: ability_VanadiumPlating
+	DisplayName: Vanadium Plating
+	Description: Advanced vanadium steel alloys are laced into this Kaiju's protective armor.
+	TrainingCompleteMessageId: msg_VanadiumPlating
+	Script: kaiju_gino/scripts/vanadium_plating.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 66448566a246c00f5f3b214602ed56b8
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 1
+	BulletPoint: Armor: +2
+	Icon: kaiju_gino/ability_icons/defense/VanadiumPlating.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 260000
+	CostPower: 200
+	CostKnow: 250
+	CostOrganic: 220
+	CostPurple: 0
+	Armor: 2
+}
+
+
+Ability {
+	Identifier: 5bb70d921c23d26b244b16cf6e3fe76b
+	Name: ability_ReactiveThrusters
+	DisplayName: Reactive Thrusters
+	Description: Automated boosting jets react to incoming fire by shifting the Kaiju out of the line of fire and making it harder to hit.
+	TrainingCompleteMessageId: msg_ReactiveThrusters
+	Script: kaiju_gino/scripts/reactive_thrusters.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 09635e00a611faf1049a5d2fedf6e875
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 10
+	BulletPoint: Evasion: +10%
+	Icon: kaiju_gino/ability_icons/metabolism/ReactiveThrusters.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 220000
+	CostPower: 210
+	CostKnow: 200
+	CostOrganic: 160
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 5c3724705bf735704360a59c42941d34
+	Name: ability_PlasmaFire
+	DisplayName: Plasma Fire
+	Description: A cone of intense flame; deals damage over time and lights things on fire.
+	TrainingCompleteMessageId: msg_PlasmaFire
+	Script: kaiju_gino/scripts/plasma_fire.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e54fa140
+	SkillTier: 2
+	SkillQuad: 2
+	SkillIndex: 1
+	BulletPoint: DoT: 13-15
+	BulletPoint: Duration: 4s
+	BulletPoint: Range: 200m
+	BulletPoint: Chance to Ignite: 90%
+	Icon: kaiju_gino/ability_icons/attack/PlasmaFire.png
+	Cooldown: 13
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 9
+	CostMoney: 35000
+	CostPower: 40
+	CostKnow: 40
+	CostOrganic: 15
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 5ca825f4c6dd90aec874ba47f9642563
+	Name: ability_SaturationField
+	DisplayName: Saturation Field
+	Description: This energy field can absorb an amazing amount of damage and if it is overloaded while active, it will unleash all that absorbed energy in a devastating EMP blast.
+	TrainingCompleteMessageId: msg_SaturationField
+	Script: kaiju_gino/scripts/saturation_field.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 1a03c47298bdbdaaa0cd07c47cc77d96
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 7
+	BulletPoint: Duration: 30s
+	BulletPoint: Range: 500
+	BulletPoint: Shield Health: 200
+	BulletPoint: Disable Duration: 25s
+	Icon: kaiju_gino/ability_icons/defense/saturationField.png
+	Cooldown: 160
+	ResourcePower: 150
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1200000
+	CostPower: 1400
+	CostKnow: 1300
+	CostOrganic: 500
+	CostPurple: 10
+}
+
+
+Ability {
+	Identifier: 5f7015d633293e1b6f2790d8d234aa7a
+	Name: ability_PowerDrain
+	DisplayName: Power Drain
+	Description: Power inverters are fitted so that the Kaiju can drain power from surrounding buildings and units and funnel directly into the Kaiju's energy reserves.
+	TrainingCompleteMessageId: msg_PowerDrain
+	Script: kaiju_gino/scripts/power_drain.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: a5cb5930d9a711694cc9e3090caf27f4
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 4
+	BulletPoint: Range: 400
+	Icon: kaiju_gino/ability_icons/metabolism/powerDrain.png
+	Cooldown: 90
+	ResourcePower: 50
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1100000
+	CostPower: 1400
+	CostKnow: 1400
+	CostOrganic: 500
+	CostPurple: 15
+}
+
+//** rework range/damage?
+Ability {
+	Identifier: 610d93af0f58c3e627678f7bffb4ed2e
+	Name: ability_RazorArmor
+	DisplayName: Razor Armor
+	Description: This outer layer of armor is covered in razor sharp spines and damages any enemy that comes too close.
+	TrainingCompleteMessageId: msg_RazorArmor
+	Script: kaiju_gino/scripts/razor_armor.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 17295cb361db8b277aa420dd99e2c2a0
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 4
+	BulletPoint: Damage: 5
+	BulletPoint: Range: 50
+	Icon: kaiju_gino/ability_icons/defense/razorArmor.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 240000
+	CostPower: 240
+	CostKnow: 240
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 61170247b1a8c846bc0b70365b14c087
+	Name: ability_PDMBattery
+	DisplayName: P.D.M. Battery
+	Description: A set of small, rapid fire anti-aircraft missiles.
+	TrainingCompleteMessageId: msg_PDMBattery
+	Script: kaiju_gino/scripts/pdm_battery.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 26b1a247286430ffcdf4b6d6f1416de5
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 11
+	BulletPoint: Range: 800m
+	Icon: kaiju_gino/ability_icons/defense/pdmBattery.png
+	Cooldown: 5
+	ResourcePower: 10
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1300000
+	CostPower: 1000
+	CostKnow: 1200
+	CostOrganic: 800
+	CostPurple: 5
+}
+
+
+Ability {
+	Identifier: 61f3a9652128c51e994b637af5cbea5e
+	Name: ability_PhaseShift
+	DisplayName: Phase Shift
+	Description: An advanced form of phase shift tech allows the Kaiju to go fully out of synch with this reality for 10 seconds, making it a double fast phantom.
+	TrainingCompleteMessageId: msg_PhaseShift
+	Script: kaiju_gino/scripts/phase_shift.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 76d8428a3473383e85d4536e812037be
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 10
+	BulletPoint: Intangible: 10s
+	BulletPoint: Speed: + 100%
+	Icon: kaiju_gino/ability_icons/defense/phaseShift.png
+	Cooldown: 100
+	ResourcePower: 150
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1600000
+	CostPower: 1600
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 25
+}
+
+
+Ability {
+	Identifier: 62cf377e1641e0b12b012543f41f6b23
+	Name: ability_GigaBlast
+	DisplayName: Giga Blast
+	Description: An incredibly powerful eye beam.
+	TrainingCompleteMessageId: msg_GigaBlast
+	Script: kaiju_gino/scripts/giga_blast.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: c14962f5eb64fb94378e9433ba1f622b
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 6
+	BulletPoint: Damage: 40-60
+	BulletPoint: Shots: 8
+	BulletPoint: Range: 1000m
+	Icon: kaiju_gino/ability_icons/attack/gigaBlast.png
+	Cooldown: 10
+	ResourcePower: 45
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1300000
+	CostPower: 1500
+	CostKnow: 1300
+	CostOrganic: 600
+	CostPurple: 30
+}
+
+
+Ability {
+	Identifier: 64fa24277aa0ddfecfbc51b81d40eedb
+	Name: ability_Redlining
+	DisplayName: Redlining
+	Description: Removal of reactor safety protocols, allows this Kaiju to double its energy production for a short time while causing minor damage to itself.
+	TrainingCompleteMessageId: msg_Redlining
+	Script: kaiju_gino/scripts/redlining.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 30a6bb5e097dca886d4f52c2ec569820
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 3
+	BulletPoint: Duration: 10s
+	BulletPoint: Health: -20
+	BulletPoint: Power Regen: +100%
+	Icon: kaiju_gino/ability_icons/metabolism/redlining.png
+	Cooldown: 60
+	ResourcePower: 25
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 250000
+	CostPower: 200
+	CostKnow: 200
+	CostOrganic: 150
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 66448566a246c00f5f3b214602ed56b8
+	Name: ability_TitaniumPlating
+	DisplayName: Titanium Plating
+	Description: A layer of reinforced titanium plating.
+	TrainingCompleteMessageId: msg_TitaniumPlating
+	Script: kaiju_gino/scripts/titanium_plating.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: bc516991f8c177f3c0dc4190e86ee8ad
+	SkillTier: 3
+	SkillQuad: 1
+	SkillIndex: 1
+	BulletPoint: Armor: +2
+	Icon: kaiju_gino/ability_icons/defense/TitaniumPlating.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 10
+	CostMoney: 60000
+	CostPower: 20
+	CostKnow: 40
+	CostOrganic: 60
+	CostPurple: 0
+	Armor: 2
+}
+
+
+Ability {
+	Identifier: 68dd647bb53423aabfbcaff8b656127f
+	Name: ability_AttackDrones
+	DisplayName: Attack Drones
+	Description: Emits 5 combat drones from back launchers.
+	TrainingCompleteMessageId: msg_AttackDrones
+	Script: kaiju_gino/scripts/attack_drones.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: e3d010154a5d80a61bb77640e143fd5a
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 7
+	BulletPoint: Duration: 30
+	Icon: kaiju_gino/ability_icons/attack/attackDrones.png
+	Cooldown: 45
+	ResourcePower: 25
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 270000
+	CostPower: 200
+	CostKnow: 260
+	CostOrganic: 160
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 6b0060e560cba2acd88f0bc4d49d04d4
+	Name: ability_TacNuke
+	DisplayName: Tac Nuke
+	Description: A devastating tactical nuclear warhead attack
+	TrainingCompleteMessageId: msg_TacNuke
+	Script: kaiju_gino/scripts/tac_nuke.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 84c9c03d16493197a2bb0cf28a495ae4
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 8
+	BulletPoint: Damage: 250-400
+	BulletPoint: Range: 1200m
+	BulletPoint: Area: 300m
+	Icon: kaiju_gino/ability_icons/attack/tacNuke.png
+	Cooldown: 120
+	ResourcePower: 78
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1500000
+	CostPower: 1200
+	CostKnow: 1400
+	CostOrganic: 800
+	CostPurple: 22
+}
+
+
+Ability {
+	Identifier: 6f17145da3e75a9afc9ec15cef036e9d
+	Name: ability_NuclearWinter
+	DisplayName: Nuclear Winter
+	Description: A mortar launch that detonates in atmosphere, altering the weather and causing it to rain ice.
+	TrainingCompleteMessageId: msg_NuclearWinter
+	Script: kaiju_gino/scripts/nuclear_winter.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: bcb0d21d91bdb1602cb8544f41bc1670
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 3
+	BulletPoint: Damage: 10-12
+	BulletPoint: Range: Entire map
+	BulletPoint: Duration: 20s
+	Icon: kaiju_gino/ability_icons/attack/nuclearWinter.png
+	Cooldown: 90
+	ResourcePower: 150
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1300000
+	CostPower: 1300
+	CostKnow: 1300
+	CostOrganic: 400
+	CostPurple: 30
+}
+
+
+Ability {
+	Identifier: 701de86e5653c5e8871ab0d6ddec9c22
+	Name: ability_ReflectorShield
+	DisplayName: Reflector Shield
+	Description: The improved mirror shield stops ALL laser based weapons for a short period of time.
+	TrainingCompleteMessageId: msg_ReflectorShield
+	Script: kaiju_gino/scripts/reflector_shield.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 2b945d1a0f6fba9662c3699b543bd2b5
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 6
+	BulletPoint: Duration: 15s
+	Icon: kaiju_gino/ability_icons/defense/reflectorShield.png
+	Cooldown: 35
+	ResourcePower: 30
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 250000
+	CostPower: 260
+	CostKnow: 250
+	CostOrganic: 100
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 7222d1e36fc4c084813001391b692a15
+	Name: ability_EfficiencySystems
+	DisplayName: Efficiency Systems
+	Description: An efficiency pass through the Kaiju's systems reduces the cooldown period for all attacks.
+	TrainingCompleteMessageId: msg_EfficiencySystems
+	Script: kaiju_gino/scripts/efficiency_systems.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 3f5b448a65cdc77e4b49755ca994f71d
+	SkillTier: 3
+	SkillQuad: 0
+	SkillIndex: 3
+	BulletPoint: Cooldown Reduction: 10%
+	Icon: kaiju_gino/ability_icons/metabolism/efficiencySystems.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 10
+	CostMoney: 60000
+	CostPower: 50
+	CostKnow: 60
+	CostOrganic: 40
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 76d8428a3473383e85d4536e812037be
+	Name: ability_ActiveCamo
+	DisplayName: Active Camo
+	Description: A layer of photonic polymers on the surface of the Kaiju allows it to better blend with the background. Makes enemy fire less accurate.
+	TrainingCompleteMessageId: msg_ActiveCamo
+	Script: kaiju_gino/scripts/active_camo.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 0a24d539f06856cdeea867024434a9c5
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 10
+	BulletPoint: Evasion: +30%
+	Icon: kaiju_gino/ability_icons/defense/activeCamo.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 240000
+	CostPower: 240
+	CostKnow: 200
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 7724a012161cb8f6cba4fa49e9f26927
+	Name: ability_HardenedArmor
+	DisplayName: Hardened Armor
+	Description: An advanced layer of polymers spread on the Kaiju's surface to make it resistant to armor piercing attacks.
+	TrainingCompleteMessageId: msg_HardenedArmor
+	Script: kaiju_gino/scripts/hardened_armor.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f995cbae4b466e7190ffd727a1369452
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 2
+	BulletPoint: Penetration: -33%
+	Icon: kaiju_gino/ability_icons/defense/HardenedArmor.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 18
+	CostMoney: 1300000
+	CostPower: 900
+	CostKnow: 1200
+	CostOrganic: 700
+	CostPurple: 10
+	APReductionPercent: 33
+}
+
+
+Ability {
+	Identifier: 77faa0129caf40f6e989df6ad168741b
+	Name: ability_DoubleCrush
+	DisplayName: Double Crush
+	Description: A claw attack from each arm in succesion.
+	TrainingCompleteMessageId: msg_DoubleCrush
+	Script: kaiju_gino/scripts/double_crush.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 2ad8e4f12f2c05f34ea7cf4abc2ff3d4
+	SkillTier: 3
+	SkillQuad: 2
+	SkillIndex: 5
+	BulletPoint: DoT: 15-28
+	BulletPoint: Duration: 3s
+	Icon: kaiju_gino/ability_icons/attack/DoubleCrush.png
+	Cooldown: 6
+	ResourcePower: 5
+	IsPassive: false
+	CostTime: 14
+	CostMoney: 65000
+	CostPower: 60
+	CostKnow: 50
+	CostOrganic: 45
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 7a1d753aa8410a7ec76aff0b39c1f74e
+	Name: ability_EnergyAbsorber
+	DisplayName: Energy Absorber
+	Description: Capacitor plates are nestled into the Kaiju's armor and while active, absorb all energy based attacks and direct some of that to the Kaiju's power stores.
+	TrainingCompleteMessageId: msg_EnergyAbsorber
+	Script: kaiju_gino/scripts/energy_absorber.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: ae6a35ead5d3c19fe04d6f9c681a1ba8
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 8
+	BulletPoint: Energy Converted: 50%
+	BulletPoint: Duration: 15s
+	Icon: kaiju_gino/ability_icons/metabolism/energyAbsorber.png
+	Cooldown: 45
+	ResourcePower: 50
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 240000
+	CostPower: 300
+	CostKnow: 300
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 7c91b23a3ddce7c2842042f01fce10dc
+	Name: ability_PointDefenseCannon
+	DisplayName: Point Defense Cannon
+	Description: Small automated rapid fire cannons are mounted on the Kaiju and give it a chance to shoot down incoming enemy missiles.
+	TrainingCompleteMessageId: msg_PointDefenseCannon
+	Script: kaiju_gino/scripts/point_defense_cannon.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 579faf8771ee1876f05d39450d529607
+	SkillTier: 3
+	SkillQuad: 1
+	SkillIndex: 6
+	BulletPoint: Missile Intercept: 15%
+	Icon: kaiju_gino/ability_icons/defense/pointDefenseCannon.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 10
+	CostMoney: 80000
+	CostPower: 50
+	CostKnow: 60
+	CostOrganic: 50
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 80479ee0d697a48e24cb4099ac0678ad
+	Name: ability_Icefire
+	DisplayName: Ice Breath
+	Description: A breath weapon that pulses with waves of ice.
+	TrainingCompleteMessageId: msg_IceBreath
+	Script: kaiju_gino/scripts/icefire.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 5c3724705bf735704360a59c42941d34
+	SkillTier: 3
+	SkillQuad: 2
+	SkillIndex: 2
+	BulletPoint: Range: 200m
+	BulletPoint: DoT: 8-13
+	BulletPoint: Duration: 4s
+	Icon: kaiju_gino/ability_icons/attack/icefire.png
+	Cooldown: 10
+	ResourcePower: 18
+	IsPassive: false
+	CostTime: 12
+	CostMoney: 70000
+	CostPower: 60
+	CostKnow: 60
+	CostOrganic: 60
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 84bfc8ec14831dd1410fc38e06392688
+	Name: ability_Recycle
+	DisplayName: Recycle
+	Description: Leg based crushing maws allows the Kaiju to recycle nearby destroyed vehicles for repair purposes.
+	TrainingCompleteMessageId: msg_Recycle
+	Script: kaiju_gino/scripts/recycle.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 4369e224dcbbd7d4fac6b06923b5ae7a
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 1
+	BulletPoint: Health Per Vehicle: 3
+	Icon: kaiju_gino/ability_icons/metabolism/recycle.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 260000
+	CostPower: 220
+	CostKnow: 220
+	CostOrganic: 160
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 84c9c03d16493197a2bb0cf28a495ae4
+	Name: ability_GuidedMissiles
+	DisplayName: Guided Missile
+	Description: A vertically launched guided missile, effective vs aircraft
+	TrainingCompleteMessageId: msg_GuidedMissile
+	Script: kaiju_gino/scripts/guided_missile.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: e3d010154a5d80a61bb77640e143fd5a
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 8
+	BulletPoint: Damage: 16 - 24
+	BulletPoint: Range: 1200m
+	Icon: kaiju_gino/ability_icons/attack/guidedMissile.png
+	Cooldown: 4
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 260000
+	CostPower: 200
+	CostKnow: 260
+	CostOrganic: 220
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 8a6054cf6cfa7bbbee465ade9472d789
+	Name: ability_Blink
+	DisplayName: Blink
+	Description: A powerful and highly experimental phase shift device allows this Kaiju to teleport to a random nearby location, and renders it invisible for 2 seconds.
+	TrainingCompleteMessageId: msg_Blink
+	Script: kaiju_gino/scripts/blink.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: aabe0acba9af3eba87c2dde7932c6939
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 9
+	BulletPoint: Duration: 2
+	Icon: kaiju_gino/ability_icons/defense/blink.png
+	Cooldown: 100
+	ResourcePower: 100
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1400000
+	CostPower: 1500
+	CostKnow: 1600
+	CostOrganic: 400
+	CostPurple: 30
+}
+
+
+Ability {
+	Identifier: 8b064ff34fffa6502de79ceb121bbddc
+	Name: ability_IFFScrambler
+	DisplayName: IFF Scrambler
+	Description: This advanced radio system convinces incoming enemy missiles that friends are foes and often causes them to attack their own units.
+	TrainingCompleteMessageId: msg_IFFScrambler
+	Script: kaiju_gino/scripts/iff_scrambler.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: c049768522fe45d3b91e30355fafe379
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 12
+	BulletPoint: Duration: 5s
+	Icon: kaiju_gino/ability_icons/defense/iffScrambler.png
+	Cooldown: 30
+	ResourcePower: 60
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1250000
+	CostPower: 1000
+	CostKnow: 1000
+	CostOrganic: 500
+	CostPurple: 5
+}
+
+
+Ability {
+	Identifier: 8bc60bb4eea2e5362c8f03eadf604fb8
+	Name: ability_TailBlaster
+	DisplayName: Tail Blaster
+	Description: A rear firing blaster
+	TrainingCompleteMessageId: msg_TailBlaster
+	Script: kaiju_gino/scripts/tail_blaster.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e60fc040
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 11
+	BulletPoint: Damage: 25-40
+	BulletPoint: Range: 600
+	Icon: kaiju_gino/ability_icons/attack/TailBlaster.png
+	Cooldown: 5
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 240000
+	CostPower: 270
+	CostKnow: 260
+	CostOrganic: 110
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: 93b8b2375347894a781542a4ef98144b
+	Name: ability_Reboot
+	DisplayName: Reboot
+	Description: This repair mode requires a full shutdown of the Kaiju for 5 seconds but will repair it comepletly at the cost of half his current power reserves.
+	TrainingCompleteMessageId: msg_Reboot
+	Script: kaiju_gino/scripts/reboot.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 133107baba307c6694934fed8e1e89e9
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 2
+	BulletPoint: Disabled Duration: 5s
+	BulletPoint: Health Heal: 100%
+	BulletPoint: Power Lost: -50%
+	Icon: kaiju_gino/ability_icons/metabolism/reboot.png
+	Cooldown: 120
+//	ResourcePower: 50
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1000000
+	CostPower: 1200
+	CostKnow: 1400
+	CostOrganic: 600
+	CostPurple: 10
+}
+
+
+Ability {
+	Identifier: a0b45c18344ae6cd4ea5bd04bb31eb89
+	Name: ability_Blasters
+	DisplayName: Blasters
+	Description: Shoulder mounted dual energy weapons.
+	TrainingCompleteMessageId: msg_Blasters
+	Script: kaiju_gino/scripts/blasters.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 0101f1cb4e531f7f0b31661e399f33b9
+	SkillTier: 3
+	SkillQuad: 2
+	SkillIndex: 3
+	BulletPoint: Range: 600
+	BulletPoint: Damage: 25-40
+	BulletPoint: Shots: 2
+	Icon: kaiju_gino/ability_icons/attack/blasters.png
+	Cooldown: 5
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 14
+	CostMoney: 70000
+	CostPower: 90
+	CostKnow: 80
+	CostOrganic: 60
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: a38863e7692729adb960be3d4e873fa0
+	Name: ability_Charge
+	DisplayName: Charge
+	Description: Leg upgrades allow for short bursts of speed in a straight line.
+	TrainingCompleteMessageId: msg_Charge
+	Script: kaiju_gino/scripts/charge.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: aa0163ed4f15a6ea3b57ac61db1c8511
+	SkillTier: 3
+	SkillQuad: 0
+	SkillIndex: 6
+	BulletPoint: Speed: +50%
+	BulletPoint: Duration: 2s
+	Icon: kaiju_gino/ability_icons/metabolism/charge.png
+	Cooldown: 25
+	ResourcePower: 20
+	IsPassive: false
+	CostTime: 12
+	CostMoney: 70000
+	CostPower: 60
+	CostKnow: 40
+	CostOrganic: 50
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: a5cb5930d9a711694cc9e3090caf27f4
+	Name: ability_SuperconductorSpikes
+	DisplayName: Superconductor Spikes
+	Description: Superconductor posts arranged throughout the skin of this Kaiju and improves its ability to generate energy.
+	TrainingCompleteMessageId: msg_SuperconductorSpikes
+	Script: kaiju_gino/scripts/superconductor_spikes.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 30a6bb5e097dca886d4f52c2ec569820
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 4
+	BulletPoint: Power Gain: +20%
+	Icon: kaiju_gino/ability_icons/metabolism/superconductorSpikes.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 240000
+	CostPower: 260
+	CostKnow: 240
+	CostOrganic: 160
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: a868714924574530d6876d2259fc1ef5
+	Name: ability_Overclock
+	DisplayName: Overclock
+	Description: Hacking the computer control systems allows the Kaiju push all its powers into overdrive and set all abilities to ready.
+	TrainingCompleteMessageId: msg_Overclock
+	Script: kaiju_gino/scripts/overclock.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 27b51f01d69c29df28ec324826d97aab
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 5
+	Icon: kaiju_gino/ability_icons/metabolism/overclock.png
+	Cooldown: 140
+	ResourcePower: 150
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 35
+}
+
+
+Ability {
+	Identifier: aa0163ed4f15a6ea3b57ac61db1c8511
+	Name: ability_Omnigears
+	DisplayName: Omnigears
+	Description: High performance purpletonium laced gears increase the Kaiju's speed permanently.
+	TrainingCompleteMessageId: msg_Omnigears
+	Script: kaiju_gino/scripts/omnigears.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: bfb6a325ba149ee2ef489e506fc20c85
+	SkillTier: 2
+	SkillQuad: 0
+	SkillIndex: 3
+	BulletPoint: Speed: +15%
+	Icon: kaiju_gino/ability_icons/metabolism/Omnigears.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 7
+	CostMoney: 35000
+	CostPower: 10
+	CostKnow: 20
+	CostOrganic: 20
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: aabe0acba9af3eba87c2dde7932c6939
+	Name: ability_Vanish
+	DisplayName: Vanish
+	Description: Highly advanced holographic projectors that render the Kaiju invisible for a few moments.
+	TrainingCompleteMessageId: msg_Vanish
+	Script: kaiju_gino/scripts/vanish.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 0a24d539f06856cdeea867024434a9c5
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 9
+	BulletPoint: Duration: 5s
+	Icon: kaiju_gino/ability_icons/defense/vanish.png
+	Cooldown: 90
+	ResourcePower: 100
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 260000
+	CostPower: 290
+	CostKnow: 300
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: ability_Plasmoid
+	Name: ability_Plasmoid
+	DisplayName: Plasmoid
+	Description: An offensive venting of reactor plasma.
+	Script: kaiju_gino/scripts/plasmoid.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	UIElementName: innate_ability
+	SkillTier: 0
+	SkillQuad: 2
+	SkillIndex: 0
+	BulletPoint: Damage: 6-8
+	BulletPoint: Range: 450m
+	Icon: kaiju_gino/ability_icons/attack/plasmoid.png
+	Cooldown: 5
+	ResourcePower: 3
+	IsPassive: false
+	CostTime: 36
+	CostMoney: 0
+	CostPower: 0
+	CostKnow: 0
+	CostOrganic: 0
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: ae6a35ead5d3c19fe04d6f9c681a1ba8
+	Name: ability_ForceShield
+	DisplayName: Force Shield
+	Description: A powerful energy shield that will absorb serious damage before fading.
+	TrainingCompleteMessageId: msg_ForceShield
+	Script: kaiju_gino/scripts/force_shield.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: c76d74024248fef482727f301bfda4e1
+	SkillTier: 3
+	SkillQuad: 1
+	SkillIndex: 4
+	BulletPoint: Shield Health: 200
+	Icon: kaiju_gino/ability_icons/defense/forceShield.png
+	Cooldown: 60
+	ResourcePower: 40
+	IsPassive: false
+	CostTime: 12
+	CostMoney: 60000
+	CostPower: 80
+	CostKnow: 80
+	CostOrganic: 20
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: aed03a50efcc402893d0ba0ae4c59deb
+	Name: ability_AuxiliaryReactor
+	DisplayName: Auxiliary Reactor
+	Description: This back up reactor will allow your Kaiju to recharge more quickly.
+	TrainingCompleteMessageId: msg_AuxiliaryReactor
+	Script: kaiju_gino/scripts/auxiliary_reactor.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: bfb6a325ba149ee2ef489e506fc20c85
+	SkillTier: 2
+	SkillQuad: 0
+	SkillIndex: 1
+	BulletPoint: Power Recharge: +2
+	Icon: kaiju_gino/ability_icons/metabolism/auxiliaryReactor.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 7
+	CostMoney: 20000
+	CostPower: 20
+	CostKnow: 20
+	CostOrganic: 10
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: af881bb3514296a2e0de5739019679f3
+	Name: ability_HullPlating
+	DisplayName: Hull Plating
+	Description: Alloy breakthroughs allow for increased protection.
+	TrainingCompleteMessageId: msg_HullPlating
+	Script: kaiju_gino/scripts/hull_plating.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	SkillTier: 1
+	SkillQuad: 1
+	SkillIndex: 1
+	BulletPoint: Armor Bonus: 2
+	Icon: kaiju_gino/ability_icons/defense/HeavyMetal.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 4
+	CostMoney: 20000
+	CostPower: 5
+	CostKnow: 10
+	CostOrganic: 15
+	CostPurple: 0
+	Armor: 2
+}
+
+
+Ability {
+	Identifier: b7af34030ecc696de70bdeaed08a965e
+	Name: ability_Blackout
+	DisplayName: Blackout
+	Description: Energy condensers draw power from all surrounding buildings and use it to generate a damage absorbing field.
+	TrainingCompleteMessageId: msg_Blackout
+	Script: kaiju_gino/scripts/blackout.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: e18c3b02b58e5ab04913ce22940d3833
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 5
+	BulletPoint: Range: 500
+	Icon: kaiju_gino/ability_icons/defense/blackout.png
+	Cooldown: 150
+	ResourcePower: 30
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1300000
+	CostPower: 1300
+	CostKnow: 1300
+	CostOrganic: 600
+	CostPurple: 25
+}
+
+
+Ability {
+	Identifier: bc516991f8c177f3c0dc4190e86ee8ad
+	Name: ability_HeavyMetal
+	DisplayName: Heavy Metal
+	Description: Armor shields slide into place for 10 seconds adding armor to the Kaiju but slowing it down.
+	TrainingCompleteMessageId: msg_HeavyMetal
+	Script: kaiju_gino/scripts/heavy_metal.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: af881bb3514296a2e0de5739019679f3
+	SkillTier: 2
+	SkillQuad: 1
+	SkillIndex: 1
+	BulletPoint: Armor: +5
+	BulletPoint: Speed: -50%
+	BulletPoint: Duration: 10s
+	Icon: kaiju_gino/ability_icons/Defense/HullPlating.png
+	Cooldown: 30
+	ResourcePower: 5
+	IsPassive: false
+	CostTime: 7
+	CostMoney: 20000
+	CostPower: 10
+	CostKnow: 20
+	CostOrganic: 20
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: bcb0d21d91bdb1602cb8544f41bc1670
+	Name: ability_IceStorm
+	DisplayName: Ice Storm
+	Description: A cloud of falling ice shards, centered on the Kaiju
+	TrainingCompleteMessageId: msg_IceStorm
+	Script: kaiju_gino/scripts/ice_storm.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 80479ee0d697a48e24cb4099ac0678ad
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 3
+	BulletPoint: Damage: 10-12
+	BulletPoint: Duration: 10s
+	Icon: kaiju_gino/ability_icons/attack/iceStorm.png
+	Cooldown: 50
+	ResourcePower: 40
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 240000
+	CostPower: 240
+	CostKnow: 240
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: bfb6a325ba149ee2ef489e506fc20c85
+	Name: ability_Boosters
+	DisplayName: Boosters
+	Description: This tech sends extra power into the Kaiju's systems, increasing speed and recharging of attacks.
+	TrainingCompleteMessageId: msg_Boosters
+	Script: kaiju_gino/scripts/boosters.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	SkillTier: 1
+	SkillQuad: 0
+	SkillIndex: 1
+	BulletPoint: Speed Bonus: 30%
+	BulletPoint: Cooldown Timers: -20%
+	BulletPoint: Duration: 30s
+	Icon: kaiju_gino/ability_icons/metabolism/Boosters.png
+	Cooldown: 40
+	ResourcePower: 10
+	IsPassive: false
+	CostTime: 4
+	CostMoney: 15000
+	CostPower: 5
+	CostKnow: 5
+	CostOrganic: 5
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: c049768522fe45d3b91e30355fafe379
+	Name: ability_ChaffLauncher
+	DisplayName: Chaff Launcher
+	Description: These small launchers send out packets of foil to confuse radar guided missiles, causing some to lose track and crash.
+	TrainingCompleteMessageId: msg_ChaffLauncher
+	Script: kaiju_gino/scripts/chaff_launcher.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 7c91b23a3ddce7c2842042f01fce10dc
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 12
+	BulletPoint: Redirect Incoming Missiles: 25%
+	Icon: kaiju_gino/ability_icons/defense/chaffLauncher.png
+	Cooldown: 5
+	ResourcePower: 10
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 220000
+	CostPower: 180
+	CostKnow: 200
+	CostOrganic: 160
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: c14962f5eb64fb94378e9433ba1f622b
+	Name: ability_TurboBlasters
+	DisplayName: Turbo Blasters
+	Description: Rapid fire blasters
+	TrainingCompleteMessageId: msg_TurboBlasters
+	Script: kaiju_gino/scripts/turbo_blasters.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: a0b45c18344ae6cd4ea5bd04bb31eb89
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 6
+	BulletPoint: Damage: 35-60
+	BulletPoint: Shots: 6
+	BulletPoint: Range: 800m
+	Icon: kaiju_gino/ability_icons/attack/turboBlasters.png
+	Cooldown: 8
+	ResourcePower: 25
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 290000
+	CostPower: 280
+	CostKnow: 260
+	CostOrganic: 130
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: c76d74024248fef482727f301bfda4e1
+	Name: ability_Deflectors
+	DisplayName: Deflectors
+	Description: A set of powerful localized force fields that have a chance of getting between the Kaiju and incoming fire.
+	TrainingCompleteMessageId: msg_Deflectors
+	Script: kaiju_gino/scripts/deflectors.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: af881bb3514296a2e0de5739019679f3
+	SkillTier: 2
+	SkillQuad: 1
+	SkillIndex: 2
+	BulletPoint: Chance to Block: 50%
+	BulletPoint: Duration: 5s.
+	Icon: kaiju_gino/ability_icons/defense/Deflectors.png
+	Cooldown: 45
+	ResourcePower: 15
+	IsPassive: false
+	CostTime: 7
+	CostMoney: 20000
+	CostPower: 20
+	CostKnow: 20
+	CostOrganic: 10
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: ca8bef216ac6faf9307e935a9db77eea
+	Name: ability_ArmorPolarization
+	DisplayName: Armor Polarization
+	Description: An intense EM field locks the Kaiju into an invulnerable armored statue for a few moments; Invulnerable but immobile for 10 seconds.
+	TrainingCompleteMessageId: msg_ArmorPolarization
+	Script: kaiju_gino/scripts/armor_polarization.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 32b159fcc0bc30efa9576a3c7c45e65a
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 3
+	BulletPoint: Duration: 10s
+	Icon: kaiju_gino/ability_icons/defense/armorPolarization.png
+	Cooldown: 60
+	ResourcePower: 70
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 1100000
+	CostPower: 1300
+	CostKnow: 1300
+	CostOrganic: 600
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: d26e81df2e6312fbfd92b836619dc8a1
+	Name: ability_AdamantiumPlating
+	DisplayName: Adamantium Plating
+	Description: Armor plating made from the most marvellous metal known to humanity.
+	TrainingCompleteMessageId: msg_AdamantiumPlating
+	Script: kaiju_gino/scripts/adamantium_plating.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 5a10987b34b5bb630b5e4da7f681ebed
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 1
+	BulletPoint: Armor: +3
+	Icon: kaiju_gino/ability_icons/defense/AdamantiumPlating.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 1300000
+	CostPower: 1000
+	CostKnow: 1300
+	CostOrganic: 800
+	CostPurple: 0
+	Armor: 15
+}
+
+
+Ability {
+	Identifier: d747dd669943a4b4214436b56f84cd53
+	Name: ability_EMPBlast
+	DisplayName: EMP Blast
+	Description: A blast wave of energy that shuts down any electrical machine/device for a short time.
+	TrainingCompleteMessageId: msg_EMPBlast
+	Script: kaiju_gino/scripts/emp_blast.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 68dd647bb53423aabfbcaff8b656127f
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 7
+	BulletPoint: Range: 1000m
+	BulletPoint: Disable Duration: 30s
+	Icon: kaiju_gino/ability_icons/attack/empBlast.png
+	Cooldown: 60
+	ResourcePower: 60
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1200000
+	CostPower: 1200
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 40
+}
+
+
+Ability {
+	Identifier: e18c3b02b58e5ab04913ce22940d3833
+	Name: ability_CoreShield
+	DisplayName: Core Shield
+	Description: This shield draws power directly from the Kaiju's reactor in order to counter enemy fire.  This shield will function until turned off or until the Kaiju's energy reserves reach zero.
+	TrainingCompleteMessageId: msg_CoreShield
+	Script: kaiju_gino/scripts/core_shield.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 2b945d1a0f6fba9662c3699b543bd2b5
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 5
+	BulletPoint: Generates Shield: 
+	BulletPoint: Powered By: Energy
+	Icon: kaiju_gino/ability_icons/defense/coreShield.png
+	Cooldown: 120
+	ResourcePower: 50
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 240000
+	CostPower: 320
+	CostKnow: 280
+	CostOrganic: 120
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: e3d010154a5d80a61bb77640e143fd5a
+	Name: ability_MissileStorm
+	DisplayName: Missile Storm
+	Description: A burst of dumbfire missiles from the Kaiju's mouth.
+	TrainingCompleteMessageId: msg_MissileStorm
+	Script: kaiju_gino/scripts/missile_storm.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 0101f1cb4e531f7f0b31661e399f33b9
+	SkillTier: 3
+	SkillQuad: 2
+	SkillIndex: 4
+	BulletPoint: Range: 600
+	BulletPoint: Damage: 5-8
+	BulletPoint: Shots: 5
+	Icon: kaiju_gino/ability_icons/attack/missileStorm.png
+	Cooldown: 15
+	ResourcePower: 5
+	IsPassive: false
+	CostTime: 14
+	CostMoney: 75000
+	CostPower: 40
+	CostKnow: 50
+	CostOrganic: 55
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: e53db7e82d8dc2f1974e464e1582cd0c
+	Name: ability_XenoGearing
+	DisplayName: Xeno Gearing
+	Description: Advanced gear systems let the Kaiju move 25% faster in combat.
+	TrainingCompleteMessageId: msg_XenoGearing
+	Script: kaiju_gino/scripts/xeno_gearing.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f235fdfac649a530091ed36f9339eaab
+	SkillTier: 5
+	SkillQuad: 0
+	SkillIndex: 12
+	BulletPoint: Speed: +25%
+	Icon: kaiju_gino/ability_icons/metabolism/xenoGearing.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 18
+	CostMoney: 1300000
+	CostPower: 1000
+	CostKnow: 1000
+	CostOrganic: 700
+	CostPurple: 30
+	Speed: 25, true
+}
+
+
+Ability {
+	Identifier: e5dcc83854f46e41fc3975bdad2917a3
+	Name: ability_NovaMortar
+	DisplayName: Nova Mortar
+	Description: A heavy mortar shot that splits into multiple warheads.
+	TrainingCompleteMessageId: msg_NovaMortar
+	Script: kaiju_gino/scripts/nova_mortar.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 21c08921bebf56c18f13a751ac1c6fd1
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 5
+	BulletPoint: Damage: 60-65
+	BulletPoint: Shots: 10
+	BulletPoint: Range: 1800
+	Icon: kaiju_gino/ability_icons/attack/novaMortar.png
+	Cooldown: 28
+	ResourcePower: 40
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1200000
+	CostPower: 1600
+	CostKnow: 1200
+	CostOrganic: 600
+	CostPurple: 35
+}
+
+
+Ability {
+	Identifier: e9460574246e37ba2e99fdc2958dd7f0
+	Name: ability_Siphonizer
+	DisplayName: Siphonizer
+	Description: A drill punch attack that drains the target of energy and transfers it to the Kaiju.
+	TrainingCompleteMessageId: msg_Siphonizer
+	Script: kaiju_gino/scripts/siphonizer.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: f86a976392316ed3f22de942e54fc040
+	SkillTier: 5
+	SkillQuad: 2
+	SkillIndex: 9
+	BulletPoint: Power: +15/hit
+	BulletPoint: Damage: 36-44
+	Icon: kaiju_gino/ability_icons/attack/siphonizer.png
+	Cooldown: 18
+	ResourcePower: 25
+	IsPassive: false
+	CostTime: 22
+	CostMoney: 1200000
+	CostPower: 1000
+	CostKnow: 1200
+	CostOrganic: 900
+	CostPurple: 10
+}
+
+
+Ability {
+	Identifier: f235fdfac649a530091ed36f9339eaab
+	Name: ability_RamCharge
+	DisplayName: Ram Charge
+	Description: The ability to overcharge a Kaiju's muscles gives it the ability to do a powerful head down charge, during which it can only go in a straight line but it takes very little damage.
+	TrainingCompleteMessageId: msg_RamCharge
+	Script: kaiju_gino/scripts/ram_charge.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: a38863e7692729adb960be3d4e873fa0
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 12
+	BulletPoint: Speed: +50%
+	BulletPoint: Resist Damage: 75%
+	BulletPoint: Charge Direction: Straight
+	Icon: kaiju_gino/ability_icons/metabolism/ramCharge.png
+	Cooldown: 45
+	ResourcePower: 60
+	IsPassive: false
+	CostTime: 16
+	CostMoney: 250000
+	CostPower: 200
+	CostKnow: 200
+	CostOrganic: 150
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: f4ad0d3cd1f121181fd4dbd8cb5c2184
+	Name: ability_EnergyPrism
+	DisplayName: Energy Prism
+	Description: This energy shield refracts laser beams and redirects them into nearby enemy units and buildings.
+	TrainingCompleteMessageId: msg_EnergyPrism
+	Script: kaiju_gino/scripts/energy_prism.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 701de86e5653c5e8871ab0d6ddec9c22
+	SkillTier: 5
+	SkillQuad: 1
+	SkillIndex: 6
+	BulletPoint: Duration: 20s
+	BulletPoint: Redirect Laser: 75%
+	Icon: kaiju_gino/ability_icons/defense/energyPrism.png
+	Cooldown: 40
+	ResourcePower: 150
+	IsPassive: false
+	CostTime: 20
+	CostMoney: 1200000
+	CostPower: 1500
+	CostKnow: 1300
+	CostOrganic: 600
+	CostPurple: 35
+}
+
+
+Ability {
+	Identifier: f86a976392316ed3f22de942e54fa140
+	Name: ability_EyeBeams
+	DisplayName: Eye Beams
+	Description: Powerful Lasers that emerge from ginos eyes.
+	TrainingCompleteMessageId: msg_EyeBeams
+	Script: kaiju_gino/scripts/eye_beam.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	SkillTier: 1
+	SkillQuad: 2
+	SkillIndex: 1
+	BulletPoint: Damage: 10-15
+	BulletPoint: Shots: 8
+	BulletPoint: Range: 500m
+	BulletPoint: Chance to Ignite: 75%
+	Icon: kaiju_gino/ability_icons/attack/EyeBlast.png
+	Cooldown: 7
+	ResourcePower: 5
+	IsPassive: false
+	CostTime: 5
+	CostMoney: 10000
+	CostPower: 20
+	CostKnow: 10
+	CostOrganic: 0
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: f86a976392316ed3f22de942e54fc030
+	Name: ability_FireBall
+	DisplayName: Fireball
+	Description: An explosive ball of fire, launched from Gino's mouth.
+	TrainingCompleteMessageId: msg_Fireball
+	Script: kaiju_gino/scripts/fireball.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 5c3724705bf735704360a59c42941d34
+	SkillTier: 3
+	SkillQuad: 2
+	SkillIndex: 1
+	BulletPoint: Range: 575m
+	BulletPoint: Damage: 45-50
+	BulletPoint: Area: 75m
+	Icon: kaiju_gino/ability_icons/attack/FireBall.png
+	Cooldown: 7
+	ResourcePower: 22
+	IsPassive: false
+	CostTime: 14
+	CostMoney: 70000
+	CostPower: 70
+	CostKnow: 60
+	CostOrganic: 30
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: f86a976392316ed3f22de942e54fc040
+	Name: ability_DrillFist
+	DisplayName: Drill Fist
+	Description: A drill attack that bores into the target.
+	TrainingCompleteMessageId: msg_DrillFist
+	Script: kaiju_gino/scripts/drill_fist.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 77faa0129caf40f6e989df6ad168741b
+	SkillTier: 4
+	SkillQuad: 2
+	SkillIndex: 9
+	BulletPoint: Armor Penetration: 8
+	Icon: kaiju_gino/ability_icons/attack/Drillfist.png
+	Cooldown: 15
+	ResourcePower: 20
+	IsPassive: false
+	CostTime: 18
+	CostMoney: 280000
+	CostPower: 200
+	CostKnow: 250
+	CostOrganic: 220
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: f86a976392316ed3f22de942e60fc040
+	Name: ability_TailThump
+	DisplayName: Tail Thump
+	Description: A small area tail attack, made to strike units and buildings behind the Kaiju.
+	TrainingCompleteMessageId: msg_TailThump
+	Script: kaiju_gino/scripts/tail_thump.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 2ad8e4f12f2c05f34ea7cf4abc2ff3d4
+	SkillTier: 3
+	SkillQuad: 2
+	SkillIndex: 6
+	BulletPoint: Damage: 25-40
+	BulletPoint: Area: 100m
+	Icon: kaiju_gino/ability_icons/attack/TailThump.png
+	Cooldown: 5
+	ResourcePower: 8
+	IsPassive: false
+	CostTime: 12
+	CostMoney: 70000
+	CostPower: 70
+	CostKnow: 60
+	CostOrganic: 50
+	CostPurple: 0
+}
+
+
+Ability {
+	Identifier: f995cbae4b466e7190ffd727a1369452
+	Name: ability_ReactiveArmor
+	DisplayName: Reactive Armor
+	Description: An explosive armor layer designed to reduce the penetration of enemy.
+	TrainingCompleteMessageId: msg_ReactiveArmor
+	Script: kaiju_gino/scripts/reactive_armor.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: 66448566a246c00f5f3b214602ed56b8
+	SkillTier: 4
+	SkillQuad: 1
+	SkillIndex: 2
+	BulletPoint: Enemy Penetration: -33%
+	Icon: kaiju_gino/ability_icons/defense/ReactiveArmor.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 250000
+	CostPower: 200
+	CostKnow: 220
+	CostOrganic: 220
+	CostPurple: 0
+	APReductionPercent: 33
+}
+
+
+Ability {
+	Identifier: f9e0032e27580c02889b9e38eca2d019
+	Name: ability_HeavyFoot
+	DisplayName: Heavy Foot
+	Description: Seismic hammers placed in the feet of the Kaiju cause damage to surrounding buildings with every step.
+	TrainingCompleteMessageId: msg_HeavyFoot
+	Script: kaiju_gino/scripts/heavy_foot.lua
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573
+	Requires: a38863e7692729adb960be3d4e873fa0
+	SkillTier: 4
+	SkillQuad: 0
+	SkillIndex: 11
+	BulletPoint: Stomp Damage: +10
+	Icon: kaiju_gino/ability_icons/metabolism/heavyFoot.png
+	Cooldown: 0
+	IsPassive: true
+	CostTime: 14
+	CostMoney: 230000
+	CostPower: 200
+	CostKnow: 200
+	CostOrganic: 200
+	CostPurple: 0
+}
+
+

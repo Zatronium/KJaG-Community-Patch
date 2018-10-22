@@ -1,0 +1,3370 @@
+Weapon {
+	Identifier: nullweapon
+	DisplayName: nullweapon
+	Description: Dummy weapon for decorative turrets.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 0
+	Speed: 100
+	MinDamage: 0
+	MaxDamage: 0
+	ROF: 3600
+	DumbFire: 0
+	FireIgniteOdds: 0
+}
+
+Weapon {
+	Identifier: default_melee_attack
+	DisplayName: default melee attack weapon
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 125
+	Speed: 0
+	MinDamage: 0
+	MaxDamage: 0
+}
+
+Weapon {
+	Identifier: weapon_Skitter
+	DisplayName: Skitter
+	Description: Skitter Explosion
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/fireball_core.plist
+	ImpactEffect: effects/fireball_fireRingBack.plist
+	ImpactEffect: effects/impact_glow.plist
+	ImpactEffect: effects/impact_sparks.plist
+	ImpactEffect: effects/impact_sparksChunky.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/fireball_impactBoom.plist
+	ImpactEffect: effects/fireball_fireRingFront.plist
+	WeaponAspect: Fire
+	Deviation: 0
+	Range: 1
+	Speed: 300
+	MinDamage: 40
+	MaxDamage: 80
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 0.75
+	EXP: 30, 0
+}
+
+Weapon {
+	Identifier: weapon_GlobalMortar
+	DisplayName: GlobalMortar
+	Description: shell for nuclear winter and brimestone
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/tracerBullet.plist
+	MuzzleSound: fire_cannon
+	MuzzleEffect: effects/muzzleFlash.plist
+	ImpactEffect: effects/impact_glow.plist
+	ImpactEffect: effects/impact_sparks.plist
+	ImpactEffect: effects/impact_sparksChunky.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	Deviation: 0.0
+	Range: 1000
+	Speed: 550
+	MinDamage: 0
+	MaxDamage: 0
+	ROF:0
+	DumbFire: 0
+}
+
+
+Weapon {
+	Identifier: weapon_fireShard
+	DisplayName: FireShard
+	Description: Flaming embers rain from the sky.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/fireball_core.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_dustCloud_small.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+}
+
+
+Weapon {
+	Identifier: weapon_iceShard
+	DisplayName: iceShard
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/iceDebris.plist
+	Effect: effects/iceStorm_muzzleCloud.plist
+	Effect: effects/iceDebris_fire.plist
+	Effect: effects/iceDebris_smokeTrail.plist
+	ImpactEffect: effects/ice_BoomLayer.plist
+	ImpactEffect: effects/ice_SmokeLayer.plist
+	ImpactEffect: effects/ice_SparkLayer.plist
+	ImpactEffect: effects/ice_SparkFireLayer.plist
+	ImpactEffect: effects/ice_dustCloud_small.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+}
+
+
+Weapon {
+	Identifier: weapon_electricShard
+	DisplayName: electricShard
+	Description: Power Stolen from a building.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/electricShard_muzzleCloud.plist
+	Effect: effects/electricShard_core.plist
+	Effect: effects/electricShard_fire.plist
+	Effect: effects/electricShard_smokeTrail.plist
+	Range: 800	
+	Speed: 550
+}
+
+
+
+Weapon {
+	Identifier: weapon_AirborneLaser
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	Effect: effects/unit_AirborneLaser.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 20
+	MaxDamage: 40
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 35, 0
+}
+
+Weapon {
+	Identifier: weapon_AirUnitDebris
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	Effect: effects/chopperReconBody.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_dustCloud_small.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 30
+	MaxDamage: 45
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 60, 0
+}
+
+Weapon {
+	Identifier: weapon_bomber
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_bomber.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 50
+	MaxDamage: 86
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 100, 0
+}
+
+Weapon {
+	Identifier: weapon_bomberJet
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_bomberJet.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 70
+	MaxDamage: 100
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 120, 0
+}
+
+Weapon {
+	Identifier: weapon_carrier
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_carrier.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 70
+	MaxDamage: 95
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 120, 0
+}
+
+Weapon {
+	Identifier: weapon_chopperAssault
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_chopperAssault.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 30
+	MaxDamage: 45
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 55, 0
+}
+
+Weapon {
+	Identifier: weapon_chopperAttack
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_chopperAttack.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 30
+	MaxDamage: 45
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 50, 0
+}
+
+Weapon {
+	Identifier: weapon_chopperRecon
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_chopperRecon.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 30
+	MaxDamage: 40
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 45, 0
+}
+
+Weapon {
+	Identifier: weapon_fighter
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_fighter.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 30
+	MaxDamage: 55
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 50, 0
+}
+
+Weapon {
+	Identifier: weapon_fighterAttack
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_fighterAttack.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 40
+	MaxDamage: 55
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 60, 0
+}
+
+Weapon {
+	Identifier: weapon_fighterJet
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_fighterJet.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 50
+	MaxDamage: 65
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 70, 0
+}
+
+Weapon {
+	Identifier: weapon_gunshipHeavy
+	DisplayName: Debris
+	Description: Debris from downed aircraft.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/unit_gunshipHeavy.plist
+	Effect: effects/debrisFireTrail.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	Deviation: 0
+	Range: 800
+	Speed: 550
+	MinDamage: 70
+	MaxDamage: 95
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 80, 0
+}
+
+
+
+Weapon {
+	Identifier: weapon_chaff
+	DisplayName: chaff
+	Description: chaff for the chaff launcher.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/chaff_core.plist
+	Effect: effects/chaff_fireTrail.plist
+	Effect: effects/chaff_smokeGlowTrail.plist
+	Effect: effects/chaff_smokeTrail.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_dustCloud_small.plist
+	Deviation: 0
+	Range: 800
+	Speed: 250
+	DumbFire: 5
+	MinDamage: 0
+	MaxDamage: 0
+	ROF: 6
+}
+
+
+Weapon {
+	Identifier: weapon_AutoCannon
+	DisplayName: AutoCannon
+	Description: A light cannon with a high rate of fire.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/tankShellBullet_autocannon.plist
+	Effect: effects/bulletTank_smokeTrail_small.plist
+	MuzzleEffect: effects/cannonMuzzle_Boom.plist
+	MuzzleEffect: effects/cannonMuzzle_Pow.plist
+	MuzzleEffect: effects/muzzleSmoke_large.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/impactFire_medium.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	Deviation: 0.2
+	Range: 350
+	Speed: 450
+	MinDamage: 3
+	MaxDamage: 5
+	ROF: 4
+	DumbFire: 0
+	FireIgniteOdds: 0
+	AP: 2, 0
+	BURST: 3, 0.15
+}
+
+
+Weapon {
+	Identifier: weapon_Boulder
+	DisplayName: Boulder
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/boulder.plist
+	Effect: effects/boulder_smokeTrail.plist
+	Effect: effects/boulder_dustTrail.plist
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	ImpactEffect: effects/blasterImpact_sparkWave.plist
+	ImpactEffect: effects/blasterImpact_boom.plist
+	Deviation: 0.35
+	Range: 1500
+	Speed: 500
+	MinDamage: 80
+	MaxDamage: 100
+	ROF: 5
+	DumbFire: 0
+	EXP: 100, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Blaster1
+	DisplayName: Blaster
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Energy
+	Effect: effects/blasterCore_bullet.plist
+	Effect: effects/blasterHotCenter_bullet.plist
+	Effect: effects/blasterEnergyCase_bullet.plist
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	ImpactEffect: effects/blasterImpact_sparkWave.plist
+	ImpactEffect: effects/blasterImpact_boom.plist
+	Deviation: 0.15
+	Range: 600
+	Speed: 400
+	MinDamage: 25
+	MaxDamage: 40
+	ROF: 5
+	DumbFire: 0
+	FireIgniteOdds: 0.35
+	EXP: 50, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Blaster2
+	DisplayName: Turbo Blaster
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Energy
+	Effect: effects/turboBlasterCore_bullet.plist
+	Effect: effects/turboBlasterHotCenter_bullet.plist
+	Effect: effects/turboBlasterEnergyCase_bullet.plist
+	MuzzleEffect: effects/turboBlasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	ImpactEffect: effects/turboBlasterImpact_sparkWave.plist
+	ImpactEffect: effects/turboBlasterImpact_boom.plist
+	Deviation: 0.15
+	Range: 800
+	Speed: 500
+	MinDamage: 35
+	MaxDamage: 60
+	ROF: 5
+	DumbFire: 0
+	FireIgniteOdds: 0.45
+	EXP: 60, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Bomb
+	DisplayName: Bomb
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/tankShellBullet_autocannon.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	Deviation: 0.1
+	Range: 300
+	Speed: 200
+	MinDamage: 30
+	MaxDamage: 50
+	ROF: 15
+	DumbFire: 0
+	FireIgniteOdds: 1
+	EXP: 75, 0
+	BURST: 4, 0.5
+}
+
+
+Weapon {
+	Identifier: weapon_Cannon
+	DisplayName: Cannon
+	Description: A high velocity cannon
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/tankShellBullet.plist
+	Effect: effects/bulletTank_smokeTrail_small.plist
+	MuzzleEffect: effects/cannonMuzzle_Boom.plist
+	MuzzleEffect: effects/cannonMuzzle_Pow.plist
+	MuzzleEffect: effects/muzzleSmoke_medium.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/impactFire_medium.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	ImpactEffect: effects/impactSparks_medium.plist
+	Deviation: 0.2
+	Range: 700
+	Speed: 400
+	MinDamage: 25
+	MaxDamage: 40
+	ROF: 5
+	DumbFire: 0
+	FireIgniteOdds: 0
+	AP: 4, 0
+}
+
+
+Weapon {
+	Identifier: weapon_CannonHeavy
+	DisplayName: CannonHeavy
+	Description: A very heavy piece of artillery that fires on a ballistic trajectory
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/tankShellBullet.plist
+	Effect: effects/bulletTank_smokeTrail_small.plist
+	MuzzleEffect: effects/cannonMuzzle_Boom.plist
+	MuzzleEffect: effects/cannonMuzzle_Pow.plist
+	MuzzleEffect: effects/muzzleSmoke_large.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/impactFire_large.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	ImpactEffect: effects/impactSparks_large.plist
+	ImpactEffect: effects/impact_flash.plist
+	Deviation: 0.35
+	Range: 1500
+	Speed: 550
+	MinDamage: 50
+	MaxDamage: 70
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 0
+}
+
+
+Weapon {
+	Identifier: weapon_Drill1
+	DisplayName: Drill1
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0.3
+	Range: 0
+	Speed: 0
+	MinDamage: 35
+	MaxDamage: 40
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 0
+	AP: 13, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Drill2
+	DisplayName: Drill2
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0.3
+	Range: 0
+	Speed: 0
+	MinDamage: 40
+	MaxDamage: 60
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 0
+	AP: 20, 0
+}
+
+
+Weapon {
+	Identifier: weapon_DumbFire1
+	DisplayName: DumbFire1
+	Description: High speed unguided missiles
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/missileDumbfireAir_bullet.plist
+	Effect: effects/missileFire_Bullet.plist
+	Effect: effects/missileSmoke_air.plist
+	MuzzleEffect: effects/muzzleSmoke_small.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/impactFire_medium.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	Deviation: 0.25
+	Range: 500
+	Speed: 200
+	MinDamage: 7
+	MaxDamage: 10
+	ROF: 10
+	DumbFire: 0
+	FireIgniteOdds: 55
+	BURST: 5, 0.1
+	EXP: 50, 0
+}
+
+
+Weapon {
+	Identifier: weapon_DumbFire2
+	DisplayName: DumbFire2
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/missileDumbfire_fireCore.plist
+	Effect: effects/missileDumbFire_bullet.plist
+	Effect: effects/missileFire_bullet.plist
+	MuzzleEffect: effects/muzzleSmoke_medium.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/impactFire_medium.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	ImpactEffect: effects/impactSparks_medium.plist
+	Deviation: 0.3
+	Range: 800
+	Speed: 500
+	MinDamage: 7
+	MaxDamage: 11
+	ROF: 10
+	DumbFire: 0
+	FireIgniteOdds: 55
+	BURST: 7, 0.1
+}
+
+
+Weapon {
+	Identifier: weapon_EyeBeam1
+	DisplayName: EyeBeam1
+	Script: 
+	WeaponType: Beam
+	WeaponClass: Energy
+	Deviation: 0.3
+	Range: 0
+	Speed: 0
+	MinDamage: 10
+	MaxDamage: 15
+	ROF: 5
+	DumbFire: 0
+	FireIgniteOdds: 0.75
+	AP: 1, 0
+}
+
+
+Weapon {
+	Identifier: weapon_EyeBeam2
+	DisplayName: EyeBeam2
+	Script: 
+	WeaponType: Beam
+	WeaponClass: Energy
+	Deviation: 0.3
+	Range: 0
+	Speed: 0
+	MinDamage: 20
+	MaxDamage: 25
+	ROF: 6
+	DumbFire: 0
+	FireIgniteOdds: 0.75
+	AP: 3, 0
+}
+
+
+Weapon {
+	Identifier: weapon_EyeBeam3
+	DisplayName: EyeBeam3
+	Script: 
+	WeaponType: Beam
+	WeaponClass: Energy
+	Deviation: 0.1
+	Range: 0
+	Speed: 0
+	MinDamage: 40
+	MaxDamage: 60
+	ROF: 10
+	DumbFire: 0
+	FireIgniteOdds: 0
+	AP: 8, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Plasmaclaw1
+	DisplayName: plasmaclaw1
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Energy
+	Deviation: 0.1
+	Range: 0
+	Speed: 0
+	MinDamage: 13
+	MaxDamage: 20
+	ROF: 12
+	DumbFire: 0
+	FireIgniteOdds: 1.0
+	AP: 6, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Plasmaclaw2
+	DisplayName: plasmaclaw2
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Energy
+	Deviation: 0.1
+	Range: 0
+	Speed: 0
+	MinDamage: 22
+	MaxDamage: 32
+	ROF: 12
+	DumbFire: 0
+	FireIgniteOdds: 1.0
+	AP: 9, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Plasmaclaw3
+	DisplayName: plasmaclaw3
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Energy
+	Deviation: 0.1
+	Range: 0
+	Speed: 0
+	MinDamage: 35
+	MaxDamage: 45
+	ROF: 12
+	DumbFire: 0
+	FireIgniteOdds: 1.0
+	AP: 12, 0
+}
+
+
+Weapon {
+	Identifier: weapon_Plasmaclaw4
+	DisplayName: plasmaclaw4
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Energy
+	Deviation: 0.1
+	Range: 0
+	Speed: 0
+	MinDamage: 50
+	MaxDamage: 60
+	ROF: 12
+	DumbFire: 0
+	FireIgniteOdds: 1.0
+	AP: 15, 0
+}
+
+
+
+Weapon {
+	Identifier: weapon_Plasmoid
+	DisplayName: Plasma Ball
+	Description: Ball of plasma
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleEffect: effects/plasmoid_muzzle.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/plasmoid_core.plist
+	Effect: effects/plasmoid_trail.plist
+	Effect: effects/plasmoid_smokeTrail.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/debris.plist
+	ImpactEffect: effects/plasmoid_boomRisingSmall.plist
+	ImpactEffect: effects/plasmoid_boomCore.plist
+	ImpactEffect: effects/debris_tall.plist
+	ImpactEffect: effects/impact_smokeRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 0
+	Range: 320
+	Speed: 300
+	MinDamage: 10
+	MaxDamage: 15
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 0.65
+	EXP: 50, 0
+}
+
+Weapon {
+	Identifier: weapon_IceBallDirect
+	DisplayName: Fire Ball
+	Description: Ball of fire
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/iceDebris.plist
+	Effect: effects/iceDebris_fire.plist
+	Effect: effects/iceDebris_smokeTrail.plist
+	ImpactEffect: effects/ice_BoomLayer.plist
+	ImpactEffect: effects/ice_SmokeLayer.plist
+	ImpactEffect: effects/ice_SparkLayer.plist
+	ImpactEffect: effects/ice_SparkFireLayer.plist
+	ImpactEffect: effects/ice_dustCloud_small.plist
+	Deviation: 0
+	Range: 500
+	Speed: 500
+	MinDamage: 10
+	MaxDamage: 13
+	EXP: 75, 0
+}
+
+
+Weapon {
+	Identifier: weapon_FireBallDirect
+	DisplayName: Fire Ball
+	Description: Ball of fire
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Bomb
+	WeaponClass: Physical
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/fireball_core.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/debris.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_boomCore.plist
+	ImpactEffect: effects/debris_tall.plist
+	ImpactEffect: effects/impact_smokeRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 0
+	Range: 575
+	Speed: 500
+	MinDamage: 15
+	MaxDamage: 18
+	FireIgniteOdds: 0.75
+	EXP: 50, 0
+}
+
+Weapon {
+	Identifier: weapon_FireBall
+	DisplayName: Fire Ball
+	Description: Ball of fire
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/fireball_core.plist
+	Effect: effects/fireball_glow.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	Effect: effects/fireball_glowTrail.plist
+	ImpactEffect: effects/fireball_fireRingBack.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/debris.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_boomCore.plist
+	ImpactEffect: effects/fireball_impactBoom.plist
+	ImpactEffect: effects/fireball_fireRingFront.plist
+	WeaponAspect: Fire
+	Deviation: 0
+	Range: 500
+	Speed: 500
+	MinDamage: 30
+	MaxDamage: 50
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 0.75
+	EXP: 50, 0
+}
+
+Weapon {
+	Identifier: weapon_Nuke1
+	DisplayName: Nuke1
+	Description: mushroom cloud nuke
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/nukeBomb.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/impact_fireRingBack_large.plist
+	ImpactEffect: effects/collapseSmokeDark_large.plist
+	ImpactEffect: effects/impact_BoomRisingXlrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_dustCloud_med.plist
+	ImpactEffect: effects/impact_boomCore_xlrg.plist
+	ImpactEffect: effects/impact_fireRingFront_large.plist
+	ImpactEffect: effects/impact_boomXlrg.plist
+	ImpactEffect: effects/impact_mushCloud_small.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 1200
+	Speed: 700
+	MinDamage: 250
+	MaxDamage: 400
+	ROF: 0
+	DumbFire: 0
+	EXP: 300, 0
+}
+
+Weapon {
+	Identifier: weapon_Nuke2
+	DisplayName: Nuke2
+	Description: mushroom cloud nuke
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/nukeBomb.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/impact_fireRingBack_large.plist
+	ImpactEffect: effects/collapseSmokeDark_large.plist
+	ImpactEffect: effects/impact_BoomRisingXlrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_dustCloud_med.plist
+	ImpactEffect: effects/impact_boomCore_xlrg.plist
+	ImpactEffect: effects/impact_fireRingFront_large.plist
+	ImpactEffect: effects/impact_boomXlrg.plist
+	ImpactEffect: effects/impact_mushCloud_small.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 1200
+	Speed: 500
+	MinDamage: 200
+	MaxDamage: 245
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 0
+	EXP: 400, 0
+}
+
+Weapon {
+	Identifier: weapon_BoomerNuke
+	DisplayName: BoomerNuke
+	Description: mushroom cloud nuke for the boomer
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/missileNuke.plist
+	Effect: effects/fireball_glow.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	Effect: effects/fireball_glowTrail.plist
+	ImpactEffect: effects/impact_fireRingBack_large.plist
+	ImpactEffect: effects/collapseSmokeDark_large.plist
+	ImpactEffect: effects/impact_BoomRisingXlrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_dustCloud_med.plist
+	ImpactEffect: effects/impact_boomCore_xlrg.plist
+	ImpactEffect: effects/impact_fireRingFront_large.plist
+	ImpactEffect: effects/impact_boomXlrg.plist
+	ImpactEffect: effects/impact_mushCloud_small.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 1800
+	Speed: 900
+	MinDamage: 250
+	MaxDamage: 350
+	ROF: 90
+	DumbFire: 0
+	FireIgniteOdds: 0
+	EXP: 100, 0
+}
+
+Weapon {
+	Identifier: weapon_VolcanoShell
+	DisplayName: VolcanoShell
+	Description: volcano creating shell
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/fireball_core.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/debris.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_boomCore.plist
+	ImpactEffect: effects/debris_tall.plist
+	ImpactEffect: effects/impact_smokeRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 800
+	Speed: 100
+	MinDamage: 0
+	MaxDamage: 0
+	ROF: 0
+}
+
+Weapon {
+	Identifier: weapon_FreezeRay
+	DisplayName: Freeze Ray
+	Description: A powerful experimental laser
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/freezeRay.plist
+	ImpactEffect: effects/freezeImpact.plist
+	MuzzleSound: sfx_weap_freeze_ray_muzzle
+	Deviation: 0.4
+	Range: 875
+	Duration: 0.5
+	Speed: 1000
+	WeaponAspect: Cold
+	MinDamage: 30
+	MaxDamage: 40
+	ROF: 7
+	FREEZE: 0.3, 30
+	AP: 4, 0
+}
+
+Weapon {
+	Identifier: weapon_AcidSpray
+	DisplayName: Acid Spray
+	Description: Acid
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/acidSpray_wide.plist
+	Effect: effects/acidSpray_core.plist
+	Effect: effects/acidSpray_splash.plist
+	ImpactEffect: effects/acidImpact_clouds.plist
+	MuzzleSound: sfx_weap_acid_spray_muzzle
+	WeaponAspect: Gas
+	Deviation: 0.2
+	Range: 200
+	Duration: 0.5
+	Speed: 1000
+	MinDamage: 20
+	MaxDamage: 25
+	ROF: 12
+	ACID: 0.02, 0
+	DOT: 1, 3
+}
+
+Weapon {
+	Identifier: weapon_FlameSpray
+	DisplayName: Flame Spray
+	Description: Fire
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/flameSpray_core.plist
+	Effect: effects/flameSpray_wide.plist
+	ImpactEffect: effects/flameImpact_clouds.plist
+	MuzzleSound: sfx_weap_acid_spray_muzzle
+	WeaponAspect: Fire
+	Deviation: 0.2
+	Range: 200
+	Duration: 0.5
+	Speed: 1000
+	MinDamage: 10
+	MaxDamage: 15
+	ROF: 8
+	FireIgniteOdds: 1.0
+	DOT: 1, 5
+}
+
+
+
+Weapon {
+	Identifier: weapon_Laser1
+	DisplayName: Laser
+	Description: A powerful experimental laser
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/beam_Laser.plist
+	MuzzleSound: sfx_weap_laser_muzzle
+	Deviation: 0.2
+	Range: 675
+	Duration: 0.5
+	Speed: 1000
+	MinDamage: 20
+	MaxDamage: 30
+	ROF: 4
+	DumbFire: 0
+	FireIgniteOdds: 80
+	AP: 10, 0
+    CollisionEnabled: true
+}
+
+Weapon {
+	Identifier: weapon_lair_AnnihilatorRay
+	DisplayName: Annihilator Ray
+	Description: A powerful experimental laser
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/annihilatorRay_core.plist
+	Effect: effects/annihilatorRay_flare.plist
+	ImpactEffect: effects/fireball_fireRingBack.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/debris.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_boomCore.plist
+	ImpactEffect: effects/fireball_impactBoom.plist
+	ImpactEffect: effects/fireball_fireRingFront.plist
+	MuzzleSound: sfx_weap_laser_muzzle
+	Deviation: 0.2
+	Range: 1200
+	Duration: 0.5
+	Speed: 1000
+	MinDamage: 500
+	MaxDamage: 500
+	ROF: 90
+	DumbFire: 0
+	FireIgniteOdds: 80
+	AP: 8, 0
+    CollisionEnabled: true
+	SkipLOS: true
+}
+
+Weapon {
+	Identifier: weapon_lair_Cannon
+	DisplayName: Cannon
+	Description: A high velocity cannon (lair use)
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/tankShellBullet.plist
+	Effect: effects/bulletTank_smokeTrail_small.plist
+	MuzzleEffect: effects/cannonMuzzle_Boom.plist
+	MuzzleEffect: effects/cannonMuzzle_Pow.plist
+	MuzzleEffect: effects/muzzleSmoke_medium.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/impactFire_medium.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	ImpactEffect: effects/impactSparks_medium.plist
+	Deviation: 0.2
+	Range: 700
+	Speed: 400
+	MinDamage: 50
+	MaxDamage: 80
+	ROF: 5
+	DumbFire: 0
+	FireIgniteOdds: 0
+	AP: 4, 0
+	SkipLOS: true
+}
+
+Weapon {
+	Identifier: weapon_lair_AutoCannon
+	DisplayName: AutoCannon
+	Description: A light cannon with a high rate of fire. (lair use)
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/tankShellBullet_autocannon.plist
+	Effect: effects/bulletTank_smokeTrail_small.plist
+	MuzzleEffect: effects/cannonMuzzle_Boom.plist
+	MuzzleEffect: effects/cannonMuzzle_Pow.plist
+	MuzzleEffect: effects/muzzleSmoke_large.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/impactFire_medium.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	Deviation: 0.2
+	Range: 550
+	Speed: 450
+	MinDamage: 6
+	MaxDamage: 10
+	ROF: 4
+	DumbFire: 0
+	FireIgniteOdds: 0
+	AP: 2, 0
+	BURST: 3, 0.15
+	SkipLOS: true
+}
+
+Weapon {
+	Identifier: weapon_lair_Laser1
+	DisplayName: Laser
+	Description: A powerful experimental laser
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/beam_Laser.plist
+	MuzzleSound: sfx_weap_laser_muzzle
+	Deviation: 0.2
+	Range: 1000
+	Duration: 0.5
+	Speed: 1200
+	MinDamage: 40
+	MaxDamage: 60
+	ROF: 4
+	DumbFire: 0
+	FireIgniteOdds: 80
+	AP: 10, 0
+    CollisionEnabled: true
+	SkipLOS: true
+}
+
+Weapon {
+	Identifier: weapon_LaserLight
+	DisplayName: Light Laser
+	Description: A mini laser
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	MuzzleEffect: effects/laserLight_muzzle.plist
+	Effect: effects/laserLight.plist
+	MuzzleSound: sfx_weap_laser_small_muzzle
+	Deviation: 0.3
+	Range: 475
+	Duration: 0.3
+	Speed: 1000
+	MinDamage: 12
+	MaxDamage: 15
+	ROF: 2
+	DumbFire: 0
+	FireIgniteOdds: 50
+	AP: 8, 0
+    CollisionEnabled: true
+}
+
+
+Weapon {
+	Identifier: weapon_LaserHeavy
+	DisplayName: Light Heavy
+	Description: A large laser
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	MuzzleEffect: effects/laserLight_muzzle.plist
+	Effect: effects/laserHeavy.plist
+	MuzzleSound: sfx_weap_laser_small_muzzle
+	Deviation: 0.3
+	Range: 975
+	Duration: 0.3
+	Speed: 1000
+	MinDamage: 40
+	MaxDamage: 50
+	ROF: 3
+	DumbFire: 0
+	FireIgniteOdds: 50
+	AP: 12, 0
+    CollisionEnabled: true
+}
+
+
+Weapon {
+	Identifier: weapon_LaserPulse
+	DisplayName: Pulse Laser
+	Description: 
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	MuzzleEffect: effects/laserPulse_muzzle.plist
+	Effect: effects/laserPulse.plist
+	MuzzleEffect: effects/laserPulse_impactCore.plist
+	MuzzleSound: sfx_weap_laser_small_muzzle
+	Deviation: 0.3
+	Range: 575
+	Duration: 0.1
+	Speed: 1000
+	MinDamage: 15
+	MaxDamage: 20
+	ROF: 3
+	DumbFire: 0
+	FireIgniteOdds: 50
+	AP: 8, 0
+        CollisionEnabled: true
+	BURST: 3, .5
+}
+
+
+
+
+Weapon {
+	Identifier: weapon_MachineGun
+	DisplayName: MachineGun
+	Description: A reiable 30 calibre machine Gun
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_50cal
+	Effect: effects/tracerBullet.plist
+	MuzzleEffect: effects/muzzleFlash.plist
+	ImpactEffect: effects/impact_glow.plist
+	ImpactEffect: effects/impact_sparks.plist
+	ImpactEffect: effects/impact_sparksChunky.plist
+	Deviation: 0.15
+	Range: 100
+	Speed: 100
+	MinDamage: 1
+	MaxDamage: 3
+	ROF: 3
+	DumbFire: 0
+	FireIgniteOdds: 0
+	BURST: 3, 0.1
+}
+
+
+Weapon {
+	Identifier: weapon_MachineGunHeavy
+	DisplayName: MachineGunHeavy
+	Description: The classic american 50 calibre machine gun
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleSound: fire_50cal
+	Effect: effects/tracerBullet.plist
+	MuzzleEffect: effects/muzzleGeneric.plist
+	ImpactEffect: effects/bulletImpact_ImpactLayer.plist
+	ImpactEffect: effects/bulletImpact_GlowLayer.plist
+	ImpactEffect: effects/bulletImpact_SparkLayer.plist
+	Deviation: 0.15
+	Range: 450
+	Speed: 200
+	MinDamage: 1
+	MaxDamage: 4
+	ROF: 4
+	DumbFire: 0
+	FireIgniteOdds: 0
+	BURST: 3, 0.1
+}
+
+
+Weapon {
+	Identifier: weapon_MissilePD
+	DisplayName: PD Missile
+	Description: A small guided missile fired from an aircraft or small launcher
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/missileBullet.plist
+	Effect: effects/missileFire_bullet.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	Deviation: 0
+	Range: 1000
+	Speed: 400
+	MinDamage: 10
+	MaxDamage: 15
+	ROF: 5
+	DumbFire: 0.1
+}
+
+
+Weapon {
+	Identifier: weapon_MissileGuidedAA
+	DisplayName: Guided Missile
+	Description: A small guided missile fired from an A-A Tower
+	Script: scripts/weapons/default_weapon.lua
+	MuzzleSound: fire_cannon
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/missileBullet.plist
+	Effect: effects/missileFire_bullet.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	Deviation: 0.15
+	Range: 1200
+	Speed: 500
+	MinDamage: 35
+	MaxDamage: 50
+	ROF: 9
+	AP: 6, 0
+	DumbFire: 0
+	FireIgniteOdds: 0
+}
+
+Weapon {
+	Identifier: weapon_MissileGuidedAAGround
+	DisplayName: Guided Missile
+	Description: A small unguided missile fired from an A-A Tower at a ground target
+	Script: scripts/weapons/default_weapon.lua
+	MuzzleSound: fire_cannon
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/missileBullet.plist
+	Effect: effects/missileFire_bullet.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	Deviation: 0.25
+	Range: 700
+	Speed: 500
+	MinDamage: 5
+	MaxDamage: 10
+	ROF: 9
+	AP: 6, 0
+	DumbFire: 0
+	FireIgniteOdds: 0
+}
+
+
+Weapon {
+	Identifier: weapon_MissileGuided1
+	DisplayName: Guided Missile
+	Description: A small guided missile fired from an aircraft or small launcher
+	Script: scripts/weapons/default_weapon.lua
+	MuzzleSound: fire_cannon
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/missileBullet.plist
+	Effect: effects/missileFire_bullet.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	Deviation: 0
+	Range: 700
+	Speed: 500
+	MinDamage: 15
+	MaxDamage: 25
+	ROF: 9
+	AP: 6, 0
+	DumbFire: 0
+	FireIgniteOdds: 0
+}
+
+
+Weapon {
+	Identifier: weapon_MissileGuided2
+	DisplayName: Guided Missile
+	Description: A heavy guided missile akin to a cruise missile
+	Script: scripts/weapons/default_weapon.lua
+	MuzzleSound: fire_cannon
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/missileBullet.plist
+	Effect: effects/missileFire_bullet.plist
+	Effect: effects/missileSmoke_bullet.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	Deviation: 0
+	Range: 1000
+	Speed: 450
+	MinDamage: 30
+	MaxDamage: 45
+	ROF: 12
+	DumbFire: 0
+	AP: 8, 0
+	FireIgniteOdds: 0
+}
+
+
+Weapon {
+	Identifier: weapon_RPG
+	DisplayName: RPG
+	Description: A rocket propelled grenade that can pierce armor at close ranges.
+	Script: scripts/weapons/default_weapon.lua
+	MuzzleSound: fire_cannon
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/rpgBullet.plist
+	Effect: effects/missileFire_bullet.plist
+	Effect: effects/missileSmoke_bullet.plist
+	MuzzleEffect: effects/muzzleSmoke_medium.plist
+	ImpactEffect: effects/explosion_Boomlayer.plist
+	ImpactEffect: effects/impactFire_medium.plist
+	ImpactEffect: effects/impactSmoke_grey.plist
+	Deviation: 0.3
+	Range: 250
+	Speed: 220
+	MinDamage: 10
+	MaxDamage: 14
+	ROF: 8
+	DumbFire: 0
+	FireIgniteOdds: 0.35
+	AP: 5, 0
+}
+
+
+Weapon {
+	Identifier: weapon_mortar1
+	DisplayName: mortar1
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/starCannon_shell.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 0.5
+	Range: 1500
+	Speed: 300
+	MinDamage: 50
+	MaxDamage: 65
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 0
+	EXP: 65, 0
+}
+
+Weapon {
+	Identifier: weapon_mortar2
+	DisplayName: mortar2
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	Effect: effects/starCannon_shell.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/impact_fireRingBack_med.plist
+	ImpactEffect: effects/collapseSmoke_med.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_BoomRisingLrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_boomCore_large.plist
+	ImpactEffect: effects/impact_fireRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 5.8
+	Range: 1800
+	Speed: 300
+	MinDamage: 60
+	MaxDamage: 65
+	ROF: 28
+	DumbFire: 0
+	EXP: 75, 0
+}
+
+
+Weapon {
+	Identifier: weapon_ultrasan_laser
+	DisplayName: weapon_laser_ultrasan
+	Description: ultra laser beam
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/beam_Laser.plist
+	Deviation: 0.2
+	Range: 1000
+	Duration: 0.5
+	Speed: 1000
+	MinDamage: 60
+	MaxDamage: 70
+	ROF: 2
+	FireIgniteOdds: 1
+	AP: 15, 0
+	MuzzleSound: sfx_weap_laser_muzzle
+}
+
+
+Weapon {
+	Identifier: weapon_planto_chomp
+	DisplayName: weapon_planto_chomp
+	Description: ultra laser beam
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0.2
+	Range: 100
+	Speed: 1000
+	MinDamage: 45
+	MaxDamage: 60
+	AP: 6, 0
+}
+
+Weapon {
+	Identifier: weapon_planto_acid
+	DisplayName: weapon_planto_acid
+	Description: planto acid
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	WeaponAspect: Gas
+	Deviation: 0.2
+	Range: 400
+	Speed: 1000
+	MinDamage: 30
+	MaxDamage: 60
+	ACID: 0.02, 0
+}
+
+Weapon {
+	Identifier: weapon_mechgreen_acid
+	DisplayName: weapon_mechgreen_acid
+	Description: planto acid
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0.2
+	WeaponAspect: Gas
+	Range: 150
+	Speed: 1000
+	MinDamage: 10
+	MaxDamage: 20
+	ACID: 0.02, 0
+}
+
+Weapon {
+	Identifier: weapon_rock_punch
+	DisplayName: weapon_rock_punch
+	Description: ultra laser beam
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0.2
+	Range: 100
+	Speed: 1000
+	MinDamage: 180
+	MaxDamage: 240
+}
+
+
+Weapon {
+	Identifier: weapon_shrubby_roots1
+	DisplayName: Roots
+	Description: Roots spring up around shrubby, damaging everything nearby.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: 
+	ImpactEffect: 
+	Deviation: 0
+	Range: 0
+	Speed: 0
+	MinDamage: 18
+	MaxDamage: 25
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 
+	EXP: 100, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_bite1
+	DisplayName: Bite
+	Description: Shrubby's jaws devastate buildings and devour enemy units. 
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: 
+	ImpactEffect: 
+	Deviation: 0
+	Range: 0
+	Speed: 0
+	MinDamage: 40
+	MaxDamage: 60
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 0.2
+	DEMOLISH: 0, 1.0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_stranglevine
+	DisplayName: Strangle Vine
+	Description: An attack vine that wraps around its target, immobilizing it and slowly crushing it. 
+	Script: scripts/weapons/default_weapon.lua
+	Effect: effects/.plist
+	ImpactEffect: effects/leaves_impactSplash.plist
+	ImpactEffect: effects/impact_sparksGreen.plist
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 0
+	MaxDamage: 0
+	IMMOBILIZE: 10, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_Sweeper
+	DisplayName: Strangle Vine
+	Description: An attack vine that wraps around its target, immobilizing it and slowly crushing it. 
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/vinesweeper.plist
+	ImpactEffect: effects/leaves_splash.plist
+	Deviation: 0
+	Range: 100
+	Speed: 0
+	MinDamage: 80
+	MaxDamage: 100
+}
+
+Weapon {
+	Identifier: weapon_shrubby_bite2
+	DisplayName: Chomp
+	Description: A massive bite using razor sharp teeth.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: 
+	ImpactEffect: 
+	Deviation: 0
+	Range: 50
+	Speed: 400
+	MinDamage: 60
+	MaxDamage: 80
+	AP: 10, 0
+	SUNDER: 0, 0.25
+}
+
+
+Weapon {
+	Identifier: weapon_shrubby_devour
+	DisplayName: Devour
+	Description: Shrubby embraces the target and drains up to 75 hitpoints from it.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: 
+	ImpactEffect: 
+	Deviation: 0
+	Range: 150
+	Speed: 400
+	MinDamage: 20
+	MaxDamage: 25
+	IMMOBILIZE: 1, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_vinewave
+	DisplayName: Vinewave
+	Description: An explosive burst of vines all around the KAIJU that damages and pushes everything back.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/roots_debris.plist
+	Effect: effects/roots_shockwave.plist
+	Effect: effects/leaves.plist
+	ImpactEffect: 
+	Deviation: 0
+	Range: 0
+	Speed: 400
+	MinDamage: 40
+	MaxDamage: 60
+}
+
+Weapon {
+	Identifier: weapon_shrubby_bite4
+	DisplayName: Feast
+	Description: A bite so powerful it can swallow enemy units whole.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: 
+	ImpactEffect: 
+	Deviation: 0
+	Range: 50
+	Speed: 400
+	MinDamage: 100
+	MaxDamage: 125
+}
+
+Weapon {
+	Identifier: weapon_shrubby_vine3
+	DisplayName: Fang Strike
+	Description: 
+	Script: scripts/weapons/default_weapon.lua
+	Effect: effects/fangstrike.plist
+	ImpactEffect: effects/leaves_impactSplash.plist
+	ImpactEffect: effects/impact_sparksGreen.plist
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 1000
+	Speed: 600
+	MinDamage: 70
+	MaxDamage: 90
+	AP: 10, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_airVine1
+	DisplayName: Vine Strike
+	Description: A vine specialized to engage the nearest airborne target.
+	Script: scripts/weapons/default_weapon.lua
+	Effect: effects/.plist
+	ImpactEffect: effects/leaves_impactSplash.plist
+	ImpactEffect: effects/impact_sparksGreen.plist
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 20
+	MaxDamage: 30
+}
+
+Weapon {
+	Identifier: weapon_shrubby_creeper
+	DisplayName: Creeper
+	Description: An Underground vine that burst up under the target and pierces it.
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/roots_creeper.plist
+	ImpactEffect: effects/roots_creeper.plist
+	ImpactEffect: effects/debris_rocks.plist
+	ImpactEffect: effects/roots_shockwave.plist
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 40
+	MaxDamage: 60
+	AP: 5, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_vine2
+	DisplayName: Piercer
+	Description: A range striking vine with a heavy razor thorn tip capable of punching through thick armor.
+	Script: scripts/weapons/default_weapon.lua
+	Effect: effects/roots_piercer.plist
+	ImpactEffect: effects/roots_creeper.plist
+	ImpactEffect: effects/creeper_rocks.plist
+	ImpactEffect: effects/creeper_shrapnelLeft.plist
+	ImpactEffect: effects/creeper_shrapnelRight.plist
+	ImpactEffect: effects/roots_shockwave.plist
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 700
+	Speed: 400
+	MinDamage: 30
+	MaxDamage: 40
+	AP: 10, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_tunneler
+	DisplayName: Tunneler
+	Description: A line of powerful roots that shatter the foundations of buildings in a straight line ahead of the KAIJU.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/roots_creeper.plist
+	ImpactEffect: effects/debris_rocks.plist
+	ImpactEffect: effects/roots_creeper.plist
+	Deviation: 0
+	Range: 700
+	Speed: 400
+	MinDamage: 40
+	MaxDamage: 80
+}
+
+Weapon {
+	Identifier: weapon_shrubby_entangle
+	DisplayName: Entangle
+	Description:  Roots spring up under a distant target, immobilizing it and anything around it.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/roots_debris.plist
+	ImpactEffect: effects/roots_debris.plist
+	Deviation: 0
+	Range: 800
+	Speed: 400
+	MinDamage: 5
+	MaxDamage: 10
+	IMMOBILIZE: 1, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_airVine2
+	DisplayName: Impale
+	Description: Multiple vines lash out to stab through multiple air targets.
+	Script: scripts/weapons/default_weapon.lua
+	Effect: effects/vinestrike.plist
+	ImpactEffect: effects/leaves_impactSplash.plist
+	ImpactEffect: effects/impact_sparksGreen.plist
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 800
+	Speed: 700
+	MinDamage: 20
+	MaxDamage: 30
+}
+
+Weapon {
+	Identifier: weapon_shrubby_airVine3
+	DisplayName: Air Spike
+	Description:  A powerful anti-aircraft vine that spikes from one target to the next.
+	Script: scripts/weapons/default_weapon.lua
+	Effect: effects/vinestrike.plist
+	ImpactEffect: effects/leaves_impactSplash.plist
+	ImpactEffect: effects/impact_sparksGreen.plist
+	WeaponType: Tracking
+	WeaponClass: Physical 
+	Deviation: 0
+	Range: 600
+	Speed: 400
+	MinDamage: 20
+	MaxDamage: 30
+	AP: 5, 0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_underminer
+	DisplayName: Underminer
+	Description: This powerful vine surges under the ground and can erupt violently anywhere in the city.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/roots_undermine.plist
+	ImpactEffect: effects/roots_shockwave_big.plist
+	Deviation: 0
+	Range: 10000
+	Speed: 400
+	MinDamage: 40
+	MaxDamage: 50
+}
+
+Weapon {
+	Identifier: weapon_shrubby_bloodvine
+	DisplayName: Bloodvine
+	Description: A life drain vine that shout out ahead of the KAIJU and drains the life from whatever it touches.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/roots_blood.plist
+	ImpactEffect: effects/bloodSpike.plist
+	ImpactEffect: effects/roots_blood.plist
+	ImpactEffect: effects/bloodCloud.plist
+	ImpactEffect: effects/bloodSparks.plist
+	ImpactEffect: effects/creeper_shrapnelLeft.plist
+	ImpactEffect: effects/creeper_shrapnelRight.plist
+	Deviation: 0
+	Range: 600
+	Speed: 400
+	MinDamage: 50
+	MaxDamage: 70
+}
+
+Weapon {
+	Identifier: weapon_shrubby_poisonSpray1
+	DisplayName: Poison Plume
+	Description: A large plume of poisonous spores deadly to all unprotected meatforms.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/acidBreath_core.plist
+	Effect: effects/acidBreath_main.plist
+	ImpactEffect: 
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 5
+	MaxDamage: 10
+	AP: 0, 1.0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_poisonCloud1
+	DisplayName: Spore Cloud
+	Description:  A poisonous spore cloud that can be targeted at range but then will drift with the wind.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sporecloud.plist
+	Effect: effects/sporesBurst.plist
+	ImpactEffect: 
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 5
+	MaxDamage: 5
+	AP: 0, 1.0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_poisonCloud2
+	DisplayName: Toxic Cloud
+	Description: A large poisonous wandering cloud with a corrosive element that lets it harm protected units as well.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/toxiccloud.plist
+	Effect: effects/acidrain.plist
+	ImpactEffect: 
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 5
+	MaxDamage: 5
+	AP: 0, 1.0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_poisonCloud2_protected
+	DisplayName: Toxic Cloud
+	Description: A large poisonous wandering cloud with a corrosive element that lets it harm protected units as well.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/toxiccloud.plist
+	Effect: effects/acidrain.plist
+	ImpactEffect: 
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 3
+	MaxDamage: 3
+	AP: 0, 1.0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_acidCloud
+	DisplayName: Corrosive Spores
+	Description: A targeted of acidic spores that slow enemy units and damages their armor.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/acidBreath_core.plist
+	Effect: effects/acidBreath_main.plist
+	ImpactEffect: 
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 10
+	MaxDamage: 15
+	DumbFire: 0
+	AP: 0, 1.0
+}
+
+Weapon {
+	Identifier: weapon_shrubby_poisonSpray2
+	DisplayName: Infectious Plume
+	Description: The ultimate in bio weaponry, this KAIJU can emit a cloud of infectious spores.  Any unprotected organic will become poisoned and pass that effect onto any other unprotected organic.
+	Script: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: 
+	ImpactEffect: 
+	Deviation: 0
+	Range: 500
+	Speed: 400
+	MinDamage: 2
+	MaxDamage: 5
+}
+
+Weapon {
+	Identifier: weapon_spawnseedling
+	DisplayName: Spawn Seedling
+	Description: effects for spawning a Shrubby Seedling
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/seedpod_glow.plist
+	Effect: effects/seedpod.plist
+	Effect: effects/seedpod_trail.plist
+	Effect: effects/seedpod_sporedust.plist
+	ImpactEffect: effects/leaves.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/acidImpact_clouds.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/impact_smokeRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 300
+	Speed: 150
+	MinDamage: 0
+	MaxDamage: 0
+	ROF: 0
+}
+
+Weapon {
+	Identifier: weapon_spawnfeeder
+	DisplayName: Spawn Seedling
+	Description: effects for spawning a Shrubby Seedling
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/seedpod_glow.plist
+	Effect: effects/feederpod.plist
+	Effect: effects/feederpod_trail.plist
+	Effect: effects/feederpod_sporedust.plist
+	ImpactEffect: effects/leaves.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/acidImpact_clouds.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/impact_smokeRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 300
+	Speed: 150
+	MinDamage: 0
+	MaxDamage: 0
+	ROF: 0
+}
+
+
+Weapon {
+	Identifier: weapon_seedling1
+	DisplayName: Seed
+	Description: Seed
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleEffect: effects/leaves_splash.plist
+	MuzzleSound: shrubby_sprout_sproutmuzzle
+	Effect: effects/seedpod_projectile.plist
+	Effect: effects/seedpod_sporedust.plist
+	ImpactEffect: effects/acidSpray_splash.plist
+	Deviation: 0
+	Range: 80
+	Speed: 250
+	MinDamage: 10
+	MaxDamage: 15
+	ROF: 1
+}
+
+Weapon {
+	Identifier: weapon_seedling_small
+	DisplayName: Seed
+	Description: Seed
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleEffect: effects/leaves_splash_small.plist
+	MuzzleSound: shrubby_sprout_sproutmuzzle
+	Effect: effects/seedpod_projectile.plist
+	Effect: effects/seedpod_sporedust_small.plist
+	ImpactEffect: effects/acidSpray_splash_small.plist
+	Deviation: 0
+	Range: 80
+	Speed: 250
+	MinDamage: 5
+	MaxDamage: 12
+	ROF: 1
+}
+
+Weapon {
+	Identifier: weapon_feeder_heal
+	DisplayName: Seed
+	Description: Seed
+	Script: scripts/weapons/heal_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	MuzzleEffect: effects/leaves_splash_small.plist
+	MuzzleSound: shrubby_ability_Feeders_healing
+	Effect: effects/seedpod_projectile.plist
+	Effect: effects/seedpod_sporedust_small.plist
+	Effect: effects/feederpod_trailCore.plist
+	ImpactEffect: effects/heal_small.plist
+	IsHealing: true
+	Range: 200
+	Speed: 250
+	MinDamage: 5
+	MaxDamage: 10
+	ROF: 1
+}
+
+Weapon {
+	Identifier: weapon_spawnsprout
+	DisplayName: Spawn Sprout
+	Description: effects for spawning a Shrubby Sprout
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/seedpod_glow.plist
+	Effect: effects/sproutpod.plist
+	Effect: effects/seedpod_trail_small.plist
+	Effect: effects/seedpod_sporedust_small.plist
+	ImpactEffect: effects/leaves.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/acidImpact_clouds.plist
+	ImpactEffect: effects/impact_smokeRingBack_small.plist
+	ImpactEffect: effects/impact_smokeRingFront_med.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 300
+	Speed: 150
+	MinDamage: 0
+	MaxDamage: 0
+	ROF: 0
+}
+
+Weapon {
+	Identifier: weapon_gordon_atomic_punch_melee
+	DisplayName: Gordon Placeholder
+	Description: a placeholder weapon for gordon's melee weapons, only uses aspects/type/class/damage/mods
+	WeaponType: Melee
+	WeaponClass: Physical
+	Range:0
+	MinDamage: 10
+	MaxDamage: 10
+}
+
+Weapon {
+	Identifier: weapon_gordon_atomic_punch_collision
+	DisplayName: Gordon Placeholder
+	Description: a placeholder weapon for gordon's melee weapons, only uses aspects/type/class/damage/mods
+	WeaponType: Direct
+	WeaponClass: Physical
+	Range:0
+	MinDamage: 20
+	MaxDamage: 20
+}
+
+Weapon {
+	Identifier: ForcePunch1
+	DisplayName: Gordon Placeholder
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	Range:0
+	MinDamage: 25
+	MaxDamage: 30Deals damage in a line, double damage to the first target.
+}
+
+Weapon {
+	Identifier: ForcePunch1_first
+	DisplayName: Gordon Placeholder
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	Range:0
+	MinDamage: 50
+	MaxDamage: 60
+}
+
+Weapon {
+	Identifier: weapon_gordon_placehold_melee
+	DisplayName: Gordon Placeholder
+	Description: a placeholder weapon for gordon's melee weapons, only uses aspects/type/class/damage/mods
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 10
+	MaxDamage: 10
+	Range:0
+}
+
+Weapon {
+	Identifier: weapon_gordon_placehold
+	DisplayName: Gordon Placeholder
+	Description: a placeholder weapon for all of gordon's weapons
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 1000
+	Speed: 150
+	MinDamage: 10
+	MaxDamage: 10
+	FireIgniteOdds: 1.0
+}
+
+Weapon {
+	Identifier: Stomp1
+	DisplayName: Gordon
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 10
+	MaxDamage: 15
+	Range: 80
+	DEMOLISH: 0, 1.0
+}
+
+Weapon {
+	Identifier: AtomicPunch1
+	DisplayName: Gordon 
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 20
+	MaxDamage: 20
+	Range: 80
+}
+Weapon {
+	Identifier: AtomicPunch1_collision
+	DisplayName: Gordon
+	Description:
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 40
+	MaxDamage: 40
+	Range: 80
+}
+
+
+Weapon {
+	Identifier: RadBeam1
+	DisplayName: Gordon Rad Beam Range and Damage
+	Description: a weapon for gordon's Rad Beam
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 400
+	Speed: 150
+	MinDamage: 8
+	MaxDamage: 12
+	AP: 2, 0
+}
+
+Weapon {
+	Identifier: RadBeam2
+	DisplayName: Gordon Rad Beam Range and Damage
+	Description: a weapon for gordon's Rad Beam
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 600
+	Speed: 150
+	MinDamage: 8
+	MaxDamage: 12
+	AP: 10, 0
+}
+
+Weapon {
+	Identifier: PiercingBeam1
+	DisplayName: Gordon Rad Beam Range and Damage
+	Description: a weapon for gordon's Rad Beam
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 400
+	Speed: 150
+	MinDamage: 50
+	MaxDamage: 50
+}
+
+Weapon {
+	Identifier: PiercingBeam2
+	DisplayName: Gordon Rad Beam Range and Damage
+	Description: a weapon for gordon's Rad Beam
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 600
+	Speed: 150
+	MinDamage: 100
+	MaxDamage: 100
+}
+
+Weapon {
+	Identifier: BlastZone1
+	DisplayName: Gordon
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 130
+	Speed: 150
+	MinDamage: 30
+	MaxDamage: 35
+}
+
+Weapon {
+	Identifier: BlastZone2
+	DisplayName: Gordon
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 200
+	Speed: 150
+	MinDamage: 50
+	MaxDamage: 60
+}
+
+Weapon {
+	Identifier: BlastZone3
+	DisplayName: Gordon
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 600
+	Speed: 150
+	MinDamage: 50
+	MaxDamage: 60
+}
+
+Weapon {
+	Identifier: BlastZone4
+	DisplayName: Gordon
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 240
+	Speed: 150
+	MinDamage: 60
+	MaxDamage: 72
+}
+
+
+Weapon {
+	Identifier: Arc1
+	DisplayName: Gordon
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 200
+	Speed: 150
+	MinDamage: 5
+	MaxDamage: 5
+}
+
+Weapon {
+	Identifier: weapon_gordon_deathArc1
+	DisplayName: Gordon
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 200
+	Speed: 150
+	MinDamage: 1
+	MaxDamage: 2
+}
+
+Weapon {
+	Identifier: weapon_gordon_deathArc2
+	DisplayName: Gordon
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 200
+	Speed: 150
+	MinDamage: 5
+	MaxDamage: 5
+}
+
+
+Weapon {
+	Identifier: weapon_gordon_placehold_track
+	DisplayName: Gordon Placeholder
+	Description: a placeholder weapon for all of gordon's weapons
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 1000
+	Speed: 150
+	MinDamage: 10
+	MaxDamage: 10
+	ROF: 0
+}
+
+Weapon {
+	Identifier: Throw1
+	DisplayName: Gordon 
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/toss_rubble.plist
+	Effect: effects/rubbleSmoke.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 300
+	Speed: 150
+	MinDamage: 40
+	MaxDamage: 60
+	ROF: 0
+	EXP: 50, 0
+}
+
+Weapon {
+	Identifier: Throw2
+	DisplayName: Gordon 
+	Description:
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/atomicFastball_rubble.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/rubbleSmoke.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/explosion_BoomLayer.plist
+	ImpactEffect: effects/explosion_SmokeLayer.plist
+	ImpactEffect: effects/explosion_SparkLayer.plist
+	ImpactEffect: effects/explosion_SparkFireLayer.plist
+	ImpactEffect: effects/impact_dustCloud_small.plist
+	Deviation: 3
+	Range: 300
+	Speed: 150
+	MinDamage: 40
+	MaxDamage: 60
+	ROF: 0
+	EXP: 100, 0
+	DOT: 15, 5
+}
+
+Weapon {
+	Identifier: Pummel1
+	DisplayName: Gordon Pummel
+	Description:
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 20
+	MaxDamage: 20
+	Range: 0
+}
+
+Weapon {
+	Identifier: Pummel2
+	DisplayName: Gordon Pummel
+	Description:
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 25
+	MaxDamage: 30
+	Range: 0
+}
+
+Weapon {
+	Identifier: Skyfall1
+	DisplayName: Gordon skyfall
+	Description:
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 50
+	MaxDamage: 60
+	Range: 0
+	DEMOLISH: 0, 2.0
+}
+
+
+Weapon {
+	Identifier: ForcePunch2
+	DisplayName: Gordon Placeholder
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 25
+	MaxDamage: 30
+	Effect: effects/fireball_core.plist
+	Effect: effects/fireball_trail.plist
+	Speed: 1000
+	Range: 600
+	FireIgniteOdds: 1.0
+}
+
+Weapon {
+	Identifier: ForcePunch2_first
+	DisplayName: Gordon Placeholder
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	MinDamage: 50
+	MaxDamage: 60
+	Range: 0
+	FireIgniteOdds: 1.0
+}
+
+Weapon {
+	Identifier: Meson1_track
+	DisplayName: Gordon 
+	Description: 
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/sproutpod.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 3
+	Range: 400
+	Speed: 150
+	MinDamage: 0
+	MaxDamage: 0
+}
+
+Weapon {
+	Identifier: Meson1
+	DisplayName: Gordon 
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	MinDamage: 20
+	MaxDamage: 20
+	Range: 0
+}
+
+Weapon {
+	Identifier: Bolter1
+	DisplayName: Gordon
+	Description: 
+	Script: scripts/weapons/default_weapon.lua
+	Effect: effects/electricShard_fire.plist
+	Effect: effects/electricShard_core.plist
+	Effect: effects/electricShard_ball.plist
+	ImpactEffect: effects/electricShard_muzzleCloud.plist
+	WeaponType: Tracking
+	WeaponClass: Energy
+	Deviation: 0
+	Range: 1000
+	Speed: 300
+	MinDamage: 30
+	MaxDamage: 30
+}
+
+Weapon {
+	Identifier: gord_Meltdown
+	DisplayName: Meltdown
+	Description: mushroom cloud nuke
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	MuzzleSound: fire_cannon
+	MuzzleEffect: effects/blasterMuzzle_poof.plist
+	MuzzleEffect: effects/blasterMuzzle_sparks.plist
+	Effect: effects/nukeBomb.plist
+	Effect: effects/fireball_trail.plist
+	Effect: effects/fireball_smokeTrail.plist
+	ImpactEffect: effects/impact_fireRingBack_large.plist
+	ImpactEffect: effects/collapseSmokeDark_large.plist
+	ImpactEffect: effects/impact_BoomRisingXlrg.plist
+	ImpactEffect: effects/impact_fireCloud_linger.plist
+	ImpactEffect: effects/impact_dustCloud_med.plist
+	ImpactEffect: effects/impact_boomCore_xlrg.plist
+	ImpactEffect: effects/impact_fireRingFront_large.plist
+	ImpactEffect: effects/impact_boomXlrg.plist
+	ImpactEffect: effects/impact_mushCloud_small.plist
+	WeaponAspect: Fire
+	Deviation: 3
+	Range: 400
+	Speed: 400
+	MinDamage: 200
+	MaxDamage: 245
+	ROF: 0
+	DumbFire: 0
+	FireIgniteOdds: 0
+	EXP: 400, 0
+}
+
+Weapon {
+	Identifier: goop_Goop
+	DisplayName: Goop
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 100
+	Speed: 0
+	MinDamage: 3
+	MaxDamage: 3
+	AP: 2
+}
+
+Weapon {
+	Identifier: goop_Spit
+	DisplayName: Spit
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/goopball_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/goopball_splort.plist
+	ImpactEffect: effects/goopball_splortsplash.plist
+	ImpactEffect: effects/goopball_splortsplash_small.plist
+	Deviation: 1
+	Range: 400
+	Speed: 300
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_Sting
+	DisplayName: Sting
+	Description: 
+//	Effect: effects/goopball_projectile.plist
+//	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/goopball_splort.plist
+	ImpactEffect: effects/goopball_splortsplash.plist
+	ImpactEffect: effects/goopball_splortsplash_small.plist
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 150
+	Speed: 500
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_StingDamage
+	DisplayName: Sting damage
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 0
+	Speed: 0
+	MinDamage: 10
+	MaxDamage: 10
+}
+
+Weapon {
+	Identifier: goop_Snap
+	DisplayName: Snap
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 85
+	Speed: 0
+	MinDamage: 12
+	MaxDamage: 20
+	AP: 5
+}
+
+Weapon {
+	Identifier: goop_Snap2
+	DisplayName: Snap
+	Description: 
+	WeaponType: Melee
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 125
+	Speed: 0
+	MinDamage: 20
+	MaxDamage: 30
+	AP: 10
+}
+
+Weapon {
+	Identifier: goop_Glare
+	DisplayName: Shock Glare
+	Description: 
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/shockglare_beam.plist
+	Effect: effects/shockglare_core.plist
+	Effect: effects/shockglare_crackle.plist
+	MuzzleEffect: effects/shockglare_muzzle.plist
+	Deviation: 0
+	Range: 300
+	Speed: 0
+	MinDamage: 3
+	MaxDamage: 3
+}
+
+Weapon {
+	Identifier: goop_Glare2
+	DisplayName: Wide Glare
+	Description: 
+	WeaponType: Beam
+	WeaponClass: Energy
+	Effect: effects/shockglare_beam.plist
+	Effect: effects/shockglare_core.plist
+	Effect: effects/shockglare_wide.plist
+	Effect: effects/shockglare_crackle_wide.plist
+	MuzzleEffect: effects/shockglare_muzzle.plist
+	Deviation: 0
+	Range: 500
+	Speed: 0
+	MinDamage: 3
+	MaxDamage: 3
+}
+
+Weapon {
+	Identifier: goop_Barrage
+	DisplayName: Barrage Spit
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/goopball_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/goopball_splort.plist
+	ImpactEffect: effects/goopball_splortsplash.plist
+	ImpactEffect: effects/goopball_splortsplash_small.plist
+	Deviation: 1
+	Range: 500
+	Speed: 300
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_GoopBomb
+	DisplayName: Goop Bomb
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/goopbomb_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/goopball_splort.plist
+	ImpactEffect: effects/goopball_splortsplash.plist
+	ImpactEffect: effects/goopball_splortsplash_small.plist
+	Deviation: 1
+	Range: 650
+	Speed: 300
+	MinDamage: 15
+	MaxDamage: 20
+}
+
+Weapon {
+	Identifier: goop_GoopBombSplit
+	DisplayName: Goop Bomb split
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/goopball_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 1
+	Range: 1000
+	Speed: 300
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_Artillery
+	DisplayName: Artillery Spit
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/goopball_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	ImpactEffect: effects/goopball_splort.plist
+	ImpactEffect: effects/goopball_splortsplash.plist
+	ImpactEffect: effects/goopball_splortsplash_small.plist
+	Deviation: 1
+	Range: 700
+	Speed: 300
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_Viral1
+	DisplayName: Sting
+	Description: 
+	WeaponType: Tracking
+	WeaponClass: Physical
+//	Effect: effects/goopball_projectile_virus.plist
+//	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/sting_viral_impact.plist
+	ImpactEffect: effects/goop_splash_viral.plist
+	ImpactEffect: effects/goop_slamsplash1_viral.plist
+	ImpactEffect: effects/goop_slamsplash2_viral.plist
+	ImpactEffect: effects/goop_slamsplash3_viral.plist
+	ImpactEffect: effects/goop_viral_persist.plist
+	ImpactEffect: effects/goop_infusion_viral.plist
+	Deviation: 0
+	Range: 150
+	Speed: 500
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_Viral2
+	DisplayName: Viral Barrage
+	Description: 
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/goopball_projectile_virus.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/sting_viral_impact.plist
+	ImpactEffect: effects/goop_splash_viral.plist
+	ImpactEffect: effects/goop_slamsplash1_viral.plist
+	ImpactEffect: effects/goop_slamsplash2_viral.plist
+	ImpactEffect: effects/goop_slamsplash3_viral.plist
+	ImpactEffect: effects/goop_viral_persist.plist
+	ImpactEffect: effects/goop_infusion_viral.plist
+	Deviation: 0
+	Range: 500
+	Speed: 500
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_Explosive1
+	DisplayName: Explosive goop
+	Description: 
+	WeaponType: Tracking
+	WeaponClass: Energy
+//	Effect: effects/goopball_projectile.plist
+//	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/sting_impact.plist
+	ImpactEffect: effects/goop_splash.plist
+	ImpactEffect: effects/goop_slamsplash1.plist
+	ImpactEffect: effects/goop_slamsplash2.plist
+	ImpactEffect: effects/goop_slamsplash3.plist
+	Deviation: 0
+	Range: 150
+	Speed: 500
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_Explosive2
+	DisplayName: Explosive Barrage
+	Description: 
+	WeaponType: Tracking
+	WeaponClass: Energy
+	Effect: effects/goopball_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/sting_impact.plist
+	ImpactEffect: effects/goop_splash.plist
+	ImpactEffect: effects/goop_slamsplash1.plist
+	ImpactEffect: effects/goop_slamsplash2.plist
+	ImpactEffect: effects/goop_slamsplash3.plist
+	Deviation: 0
+	Range: 500
+	Speed: 500
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_Zzap
+	DisplayName: Zzap
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Energy
+	Deviation: 0
+	Range: 200
+	Speed: 0
+	MinDamage: 10
+	MaxDamage: 20
+}
+
+Weapon {
+	Identifier: goop_Feedback
+	DisplayName: Feedback
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Energy
+	Deviation: 0
+	Range: 1000
+	Speed: 0
+	MinDamage: 10
+	MaxDamage: 20
+}
+
+Weapon {
+	Identifier: goop_Spew
+	DisplayName: Spit
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/toss_rubble.plist
+	Effect: effects/rubbleSmoke.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 1
+	Range: 300
+	Speed: 300
+	MinDamage: 15
+	MaxDamage: 15
+}
+
+Weapon {
+	Identifier: goop_Fog
+	DisplayName: Goop Fog
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 300
+	Speed: 0
+	MinDamage: 5
+	MaxDamage: 5
+}
+
+Weapon {
+	Identifier: goop_Lougee
+	DisplayName: Sting
+	Description: 
+	WeaponType: Tracking
+	WeaponClass: Physical
+	Effect: effects/goopball_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/goopball_splort.plist
+	ImpactEffect: effects/goopball_splortsplash.plist
+	ImpactEffect: effects/goopball_splortsplash_small.plist
+	Deviation: 0
+	Range: 500
+	Speed: 500
+	MinDamage: 0
+}
+
+Weapon {
+	Identifier: goop_LougeeDamage
+	DisplayName: Lougee damage
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 0
+	Speed: 0
+	MinDamage: 10
+	MaxDamage: 15
+}
+
+Weapon {
+	Identifier: goop_LougeeDamage2
+	DisplayName: Apocalougie damage
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 0
+	Speed: 0
+	MinDamage: 20
+	MaxDamage: 30
+}
+
+Weapon {
+	Identifier: goop_Splork
+	DisplayName: Splork
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/toss_rubble.plist
+	Effect: effects/rubbleSmoke.plist
+	ImpactEffect: effects/impact_shockwave.plist
+	Deviation: 1
+	Range: 600
+	Speed: 300
+	MinDamage: 15
+	MaxDamage: 15
+}
+
+Weapon {
+	Identifier: goop_GodGoop
+	DisplayName: God Goop
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/goopbomb_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail_godly.plist
+	ImpactEffect: effects/goopball_splortsplash.plist
+	ImpactEffect: effects/goopball_splortsplash_small.plist
+	ImpactEffect: effects/goopball_splort.plist
+	ImpactEffect: effects/goop_infusion_godly.plist
+	Deviation: 1
+	Range: 500
+	Speed: 300
+	MinDamage: 20
+	MaxDamage: 20
+}
+
+Weapon {
+	Identifier: goop_Goopicane
+	DisplayName: goopicane
+	Description: 
+	WeaponType: Direct
+	WeaponClass: Physical
+	Deviation: 0
+	Range: 700
+	Speed: 0
+	MinDamage: 10
+	MaxDamage: 10
+}
+
+Weapon {
+	Identifier: weapon_goop_goopling
+	DisplayName: GOOPLING
+	Description: Acid
+	Script: scripts/weapons/default_weapon.lua
+	WeaponType: Direct
+	WeaponClass: Physical
+	Effect: effects/goopball_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	ImpactEffect: effects/goopball_splort.plist
+	MuzzleSound: goop_goopling_muzzle
+	WeaponAspect: Gas
+	Deviation: 0.2
+
+	Range: 100
+	Duration: 0.5
+	Speed: 1000
+	MinDamage: 15
+	MaxDamage: 20
+	ROF: 2
+}
+
+Weapon {
+	Identifier: goop_Unstoppable
+	DisplayName: Unstoppogoop
+	Description: 
+	WeaponType: Ballistic
+	WeaponClass: Physical
+	Effect: effects/goopbomb_projectile.plist
+	Effect: effects/goopball_glow.plist
+	Effect: effects/goopball_trail.plist
+	Deviation: 1
+	Range: 400
+	Speed: 300
+	MinDamage: 0
+}

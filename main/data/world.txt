@@ -1,0 +1,1501 @@
+DefenseGroup {
+	Identifier: AF_Army1
+	DisplayName: 8'th Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 40
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 4
+	Route: AF1, AF2, AF3
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 5
+		Air: 3
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: AF_Army2
+	DisplayName: 9'th Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 40
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 4
+	Route: AF4, AF5, AF6
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 5
+		Air: 3
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Atl_Fleet1
+	DisplayName: NorAtl Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 3
+	Route: A27, A1, A2
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Atl_Fleet2
+	DisplayName: Atlantic Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 3
+	Route: A2, A3, A4
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Atl_Fleet3
+	DisplayName: SoAtl Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 4
+	Route: A5, A6, A7
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 6
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Atl_Fleet4
+	DisplayName: SoAtl Fleet 2
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 4
+	Route: A7, A8, A9, A10
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Atl_Fleet5
+	DisplayName: SoAtl Fleet 3
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 2
+	Route: A14, A15, A16, A17, A18
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Atl_Fleet6
+	DisplayName: SoAtl Fleet 4
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 2
+	Route: A20, A21, A22
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Atl_Fleet7
+	DisplayName: Atlantic Fleet 2
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 1
+	Route: A22, A23, A24, A25
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: EU_Army1
+	DisplayName: 6'th Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 3
+	Route: E1, E2, E3
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 5
+		Air: 3
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: EU_Army2
+	DisplayName: 7'th Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 3
+	Route: E4, E5, E6
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 5
+		Air: 3
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Ind_Army1
+	DisplayName: 10'th Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 40
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 6
+	Route: ID1, ID2, ID3
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 5
+		Air: 3
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Ind_Fleet1
+	DisplayName: Indian Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 6
+	Route: I1, I2, I3, I4
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 12
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Ind_Fleet2
+	DisplayName: Indian Fleet 2
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 2
+	Route: I8, I9, I10, I11
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 12
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Inv_Fleet1
+	DisplayName: Invasion Force 1
+	Role: Invade
+	InitialTier: 2
+	Sensors: 40
+	SensorsRange: 500
+	MapSpeed: 90
+	MapType: Ocean
+	Regions: 1,2,3,4,5,6
+	Route: P1, P2, P3, P4, P6, P8, P10, P12, P14, P17, P20, P24, P26, P28, P29, P32
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_kdficon.xml
+	DefenseProfile {
+		Infantry: 10
+		Vehicle: 12
+		Armor: 17
+		Air: 6
+		Navy: 5
+		Super: 3
+	}
+}
+
+
+DefenseGroup {
+	Identifier: NA_Army1
+	DisplayName: 1'st Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 40
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 1
+	Route: NA1, NA2, NA3
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 7
+		Air: 5
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: NA_Army2
+	DisplayName: 2'nd Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 1
+	Route: NA4, NA5, NA6, NA7
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 3
+		Vehicle: 6
+		Armor: 8
+		Air: 3
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: NA_Army3
+	DisplayName: 3'rd Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 1
+	Route: NA8, NA9, NA10
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 4
+		Vehicle: 5
+		Armor: 8
+		Air: 4
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Pac_Fleet1
+	DisplayName: NorPac Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 55
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 1
+	Route: P1, P2, P3, P4
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Pac_Fleet2
+	DisplayName: EastPac Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 45
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 2
+	Route: P23, P24, P25
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Pac_Fleet3
+	DisplayName: WestPac Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 55
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 5
+	Route: P6, P7, P8, P9
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 6
+		Navy: 7
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Pac_Fleet4
+	DisplayName: WestPac Fleet 2
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 55
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 5
+	Route: P8, P9, P10, P11
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 6
+		Navy: 7
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Pac_Fleet5
+	DisplayName: WestPac Fleet 3
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 55
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 6
+	Route: P9, P10, P11, P12
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 7
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Pac_Fleet6
+	DisplayName: WestPac Fleet 4
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 55
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 6
+	Route: P14, P15, P16
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 7
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Pac_Fleet7
+	DisplayName: SouthPac Fleet 1
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 55
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 6
+	Route: P16, P17, P18
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 7
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: SA_Army1
+	DisplayName: 4'th Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 2
+	Route: SA1, SA2, SA3
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 5
+		Air: 5
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: SA_Army2
+	DisplayName: 5'th Corp
+	Role: Patrol
+	InitialTier: 1
+	Sensors: 50
+	SensorsRange: 500
+	MapSpeed: 80
+	MapType: Land
+	Regions: 2
+	Route: SA4, SA5, SA6
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_army_patrol.xml
+	DefenseProfile {
+		Infantry: 5
+		Vehicle: 4
+		Armor: 5
+		Air: 5
+		Navy: 0
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Search_Fleet1
+	DisplayName: Hunter Fleet 1
+	Role: Search
+	InitialTier: 2
+	Sensors: 45
+	SensorsRange: 800
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 1,2,3,4,5,6
+	Route: P1, P2, P3, P4, P6, P8, P10, P12, P14, P17, P20, P24, P26, P28, P29, P32, P19, P34, P27, P15, P17, P19
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+DefenseGroup {
+	Identifier: Search_Fleet2
+	DisplayName: Hunter Fleet 2
+	Role: Search
+	InitialTier: 2
+	Sensors: 45
+	SensorsRange: 600
+	MapSpeed: 80
+	MapType: Ocean
+	Regions: 1,2,3,4,5,6
+	Route: A6, A9, A11, A14, A16, A18, A19
+	SpriteScale: 0.2
+	SpriteSheet: sprites/map_navy_patrol.xml
+	DefenseProfile {
+		Infantry: 0
+		Vehicle: 0
+		Armor: 0
+		Air: 5
+		Navy: 8
+		Super: 0
+	}
+}
+
+
+Marker {
+	Identifier: A1
+	UX: 0.439737
+	UY: 0.73848
+}
+
+
+Marker {
+	Identifier: A10
+	UX: 0.523615
+	UY: 0.208079
+}
+
+
+Marker {
+	Identifier: A11
+	UX: 0.490504
+	UY: 0.167566
+}
+
+
+Marker {
+	Identifier: A12
+	UX: 0.442674
+	UY: 0.139683
+}
+
+
+Marker {
+	Identifier: A13
+	UX: 0.39285
+	UY: 0.127397
+}
+
+
+Marker {
+	Identifier: A14
+	UX: 0.339093
+	UY: 0.142199
+}
+
+
+Marker {
+	Identifier: A15
+	UX: 0.352739
+	UY: 0.202445
+}
+
+
+Marker {
+	Identifier: A16
+	UX: 0.381759
+	UY: 0.24919
+}
+
+
+Marker {
+	Identifier: A17
+	UX: 0.410159
+	UY: 0.297402
+}
+
+
+Marker {
+	Identifier: A18
+	UX: 0.418319
+	UY: 0.355763
+}
+
+
+Marker {
+	Identifier: A19
+	UX: 0.413254
+	UY: 0.426163
+}
+
+
+Marker {
+	Identifier: A2
+	UX: 0.446749
+	UY: 0.703421
+}
+
+
+Marker {
+	Identifier: A20
+	UX: 0.382286
+	UY: 0.458105
+}
+
+
+Marker {
+	Identifier: A21
+	UX: 0.356648
+	UY: 0.492718
+}
+
+
+Marker {
+	Identifier: A22
+	UX: 0.336421
+	UY: 0.542467
+}
+
+
+Marker {
+	Identifier: A23
+	UX: 0.303524
+	UY: 0.582094
+}
+
+
+Marker {
+	Identifier: A24
+	UX: 0.321442
+	UY: 0.627281
+}
+
+
+Marker {
+	Identifier: A25
+	UX: 0.353538
+	UY: 0.657966
+}
+
+
+Marker {
+	Identifier: A26
+	UX: 0.365187
+	UY: 0.712795
+}
+
+
+Marker {
+	Identifier: A27
+	UX: 0.403557
+	UY: 0.743179
+}
+
+
+Marker {
+	Identifier: A3
+	UX: 0.448307
+	UY: 0.657845
+}
+
+
+Marker {
+	Identifier: A4
+	UX: 0.44189
+	UY: 0.610806
+}
+
+
+Marker {
+	Identifier: A5
+	UX: 0.430983
+	UY: 0.549258
+}
+
+
+Marker {
+	Identifier: A6
+	UX: 0.432903
+	UY: 0.485546
+}
+
+
+Marker {
+	Identifier: A7
+	UX: 0.456276
+	UY: 0.425946
+}
+
+
+Marker {
+	Identifier: A8
+	UX: 0.494744
+	UY: 0.35996
+}
+
+
+Marker {
+	Identifier: A9
+	UX: 0.515045
+	UY: 0.269626
+}
+
+
+Marker {
+	Identifier: AF1
+	UX: 0.494028
+	UY: 0.478154
+}
+
+
+Marker {
+	Identifier: AF2
+	UX: 0.507561
+	UY: 0.531175
+}
+
+
+Marker {
+	Identifier: AF3
+	UX: 0.516274
+	UY: 0.584196
+}
+
+
+Marker {
+	Identifier: AF4
+	UX: 0.549218
+	UY: 0.2705
+}
+
+
+Marker {
+	Identifier: AF5
+	UX: 0.566088
+	UY: 0.318701
+}
+
+
+Marker {
+	Identifier: AF6
+	UX: 0.585739
+	UY: 0.366531
+}
+
+
+Marker {
+	Identifier: AF7
+	UX: 0.627232
+	UY: 0.543192
+}
+
+
+Marker {
+	Identifier: AF8
+	UX: 0.617467
+	UY: 0.588042
+}
+
+
+Marker {
+	Identifier: AF9
+	UX: 0.610595
+	UY: 0.622041
+}
+
+
+Marker {
+	Identifier: E1
+	UX: 0.499801
+	UY: 0.702156
+}
+
+
+Marker {
+	Identifier: E2
+	UX: 0.498987
+	UY: 0.675137
+}
+
+
+Marker {
+	Identifier: E3
+	UX: 0.49443
+	UY: 0.643236
+}
+
+
+Marker {
+	Identifier: E4
+	UX: 0.535171
+	UY: 0.72394
+}
+
+
+Marker {
+	Identifier: E5
+	UX: 0.548517
+	UY: 0.708966
+}
+
+
+Marker {
+	Identifier: E6
+	UX: 0.561375
+	UY: 0.693015
+}
+
+
+Marker {
+	Identifier: I1
+	UX: 0.743989
+	UY: 0.515644
+}
+
+
+Marker {
+	Identifier: I10
+	UX: 0.646711
+	UY: 0.418366
+}
+
+
+Marker {
+	Identifier: I11
+	UX: 0.655063
+	UY: 0.477323
+}
+
+
+Marker {
+	Identifier: I12
+	UX: 0.67275
+	UY: 0.523505
+}
+
+
+Marker {
+	Identifier: I13
+	UX: 0.693385
+	UY: 0.508766
+}
+
+
+Marker {
+	Identifier: I14
+	UX: 0.711072
+	UY: 0.45767
+}
+
+
+Marker {
+	Identifier: I15
+	UX: 0.733672
+	UY: 0.44981
+}
+
+
+Marker {
+	Identifier: I16
+	UX: 0.739257
+	UY: 0.492016
+}
+
+
+Marker {
+	Identifier: I2
+	UX: 0.75922
+	UY: 0.438018
+}
+
+
+Marker {
+	Identifier: I3
+	UX: 0.783294
+	UY: 0.379062
+}
+
+
+Marker {
+	Identifier: I4
+	UX: 0.79705
+	UY: 0.325018
+}
+
+
+Marker {
+	Identifier: I5
+	UX: 0.803437
+	UY: 0.264096
+}
+
+
+Marker {
+	Identifier: I6
+	UX: 0.753324
+	UY: 0.232653
+}
+
+
+Marker {
+	Identifier: I7
+	UX: 0.68012
+	UY: 0.229705
+}
+
+
+Marker {
+	Identifier: I8
+	UX: 0.626567
+	UY: 0.233635
+}
+
+
+Marker {
+	Identifier: I9
+	UX: 0.648676
+	UY: 0.333861
+}
+
+
+Marker {
+	Identifier: ID1
+	UX: 0.714045
+	UY: 0.538283
+}
+
+
+Marker {
+	Identifier: ID2
+	UX: 0.733576
+	UY: 0.568664
+}
+
+
+Marker {
+	Identifier: ID3
+	UX: 0.756363
+	UY: 0.607727
+}
+
+
+Marker {
+	Identifier: Id1
+	UX: 0.714045
+	UY: 0.538283
+}
+
+
+Marker {
+	Identifier: NA1
+	UX: 0.175819
+	UY: 0.737849
+}
+
+
+Marker {
+	Identifier: NA10
+	UX: 0.2987
+	UY: 0.668967
+}
+
+
+Marker {
+	Identifier: NA2
+	UX: 0.178753
+	UY: 0.684135
+}
+
+
+Marker {
+	Identifier: NA3
+	UX: 0.180706
+	UY: 0.631404
+}
+
+
+Marker {
+	Identifier: NA4
+	UX: 0.246132
+	UY: 0.720592
+}
+
+
+Marker {
+	Identifier: NA5
+	UX: 0.247434
+	UY: 0.680229
+}
+
+
+Marker {
+	Identifier: NA6
+	UX: 0.247759
+	UY: 0.647679
+}
+
+
+Marker {
+	Identifier: NA7
+	UX: 0.25134
+	UY: 0.616431
+}
+
+
+Marker {
+	Identifier: NA8
+	UX: 0.297333
+	UY: 0.721698
+}
+
+
+Marker {
+	Identifier: NA9
+	UX: 0.298114
+	UY: 0.695528
+}
+
+
+Marker {
+	Identifier: Origin
+	UX: 0
+	UY: 0.5
+}
+
+
+Marker {
+	Identifier: P1
+	UX: 0.126479
+	UY: 0.680879
+}
+
+
+Marker {
+	Identifier: P10
+	UX: 0.881199
+	UY: 0.525714
+}
+
+
+Marker {
+	Identifier: P11
+	UX: 0.875502
+	UY: 0.491534
+}
+
+
+Marker {
+	Identifier: P12
+	UX: 0.909682
+	UY: 0.457355
+}
+
+
+Marker {
+	Identifier: P13
+	UX: 0.943048
+	UY: 0.431313
+}
+
+
+Marker {
+	Identifier: P14
+	UX: 0.969089
+	UY: 0.38574
+}
+
+
+Marker {
+	Identifier: P15
+	UX: 0.987807
+	UY: 0.34505
+}
+
+
+Marker {
+	Identifier: P16
+	UX: 0
+	UY: 0.29785
+}
+
+
+Marker {
+	Identifier: P17
+	UX: 0.00977945
+	UY: 0.27018
+}
+
+
+Marker {
+	Identifier: P18
+	UX: 0.0301245
+	UY: 0.218097
+}
+
+
+Marker {
+	Identifier: P19
+	UX: 0.0879045
+	UY: 0.166014
+}
+
+
+Marker {
+	Identifier: P2
+	UX: 0.0927873
+	UY: 0.704317
+}
+
+
+Marker {
+	Identifier: P20
+	UX: 0.19614
+	UY: 0.156248
+}
+
+
+Marker {
+	Identifier: P21
+	UX: 0.262058
+	UY: 0.187173
+}
+
+
+Marker {
+	Identifier: P22
+	UX: 0.276706
+	UY: 0.258787
+}
+
+
+Marker {
+	Identifier: P23
+	UX: 0.269382
+	UY: 0.328774
+}
+
+
+Marker {
+	Identifier: P24
+	UX: 0.253106
+	UY: 0.395506
+}
+
+
+Marker {
+	Identifier: P25
+	UX: 0.244154
+	UY: 0.4541
+}
+
+
+Marker {
+	Identifier: P26
+	UX: 0.225437
+	UY: 0.485024
+}
+
+
+Marker {
+	Identifier: P27
+	UX: 0.187188
+	UY: 0.512693
+}
+
+
+Marker {
+	Identifier: P28
+	UX: 0.165216
+	UY: 0.558266
+}
+
+
+Marker {
+	Identifier: P29
+	UX: 0.139174
+	UY: 0.618488
+}
+
+
+Marker {
+	Identifier: P3
+	UX: 0.061049
+	UY: 0.697481
+}
+
+
+Marker {
+	Identifier: P30
+	UX: 0.0785275
+	UY: 0.622815
+}
+
+
+Marker {
+	Identifier: P31
+	UX: 0.0269866
+	UY: 0.576157
+}
+
+
+Marker {
+	Identifier: P32
+	UX: 0.974361
+	UY: 0.493691
+}
+
+
+Marker {
+	Identifier: P33
+	UX: 0.0400075
+	UY: 0.402546
+}
+
+
+Marker {
+	Identifier: P34
+	UX: 0.134951
+	UY: 0.263657
+}
+
+
+Marker {
+	Identifier: P35
+	UX: 0.196257
+	UY: 0.368908
+}
+
+
+Marker {
+	Identifier: P36
+	UX: 0.148514
+	UY: 0.506712
+}
+
+
+Marker {
+	Identifier: P4
+	UX: 0.022963
+	UY: 0.687715
+}
+
+
+Marker {
+	Identifier: P5
+	UX: 0.985854
+	UY: 0.691621
+}
+
+
+Marker {
+	Identifier: P6
+	UX: 0.952651
+	UY: 0.692598
+}
+
+
+Marker {
+	Identifier: P7
+	UX: 0.931654
+	UY: 0.656465
+}
+
+
+Marker {
+	Identifier: P8
+	UX: 0.914022
+	UY: 0.607637
+}
+
+
+Marker {
+	Identifier: P9
+	UX: 0.897204
+	UY: 0.557724
+}
+
+
+Marker {
+	Identifier: SA1
+	UX: 0.291825
+	UY: 0.467708
+}
+
+
+Marker {
+	Identifier: SA2
+	UX: 0.316837
+	UY: 0.449237
+}
+
+
+Marker {
+	Identifier: SA3
+	UX: 0.343005
+	UY: 0.426148
+}
+
+
+Marker {
+	Identifier: SA4
+	UX: 0.311065
+	UY: 0.226045
+}
+
+
+Marker {
+	Identifier: SA5
+	UX: 0.336078
+	UY: 0.276071
+}
+
+
+Marker {
+	Identifier: SA6
+	UX: 0.364939
+	UY: 0.336102
+}
+
+
