@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local weapon = "weapon_shrubby_vinewave";
 local aoeRange = 300;
 local kbDistance = 200;
@@ -16,26 +16,26 @@ function setupNewVine()
 	-- setRetract(delay between vert culling, lower = more culled per update) default  0.0, 30
 	vine:setRetract(0.4, 30);
 	vine:setPathSpeed(60);
-	vine:setEndEntity(avatar);
+	vine:setEndEntity(kaiju);
 	return vine;
 end
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_channel");
+	kaiju = a;
+	playAnimation(kaiju, "ability_channel");
 	local view = a:getView();
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 		
 	local targets = getTargetsInRadius(worldPos, aoeRange, EntityFlags(EntityType.Vehicle, EntityType.Zone, EntityType.Avatar));
 	for t in targets:iterator() do
-		if not isSameEntity(t, avatar) then
+		if not isSameEntity(t, kaiju) then
 			local otherPos = t:getWorldPosition();
 			local dir = getDirectionFromPoints(worldPos, otherPos);
 			t:displaceDirection(dir, kbPower, kbDistance);
 			t:attachEffect("effects/roots_debris.plist", 1, true);
 			t:attachEffect("effects/roots_shockwave.plist", 1, true);
 			t:attachEffect("effects/leaves.plist", 1, true);
-			applyDamageWithWeapon(avatar, t, weapon);
+			applyDamageWithWeapon(kaiju, t, weapon);
 		end
 	end
 	
@@ -76,6 +76,6 @@ function onUse(a)
 	vine1:activate();
 	
 	playSound("shrubby_ability_VineWave");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end
 

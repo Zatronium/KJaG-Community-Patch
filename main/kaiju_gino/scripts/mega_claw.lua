@@ -1,14 +1,13 @@
 require 'kaiju_gino/scripts/gino'
 
-local avatar = nil;
+local kaiju = nil;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation(a, "punch_01");
 	registerAnimationCallback(this, a, "attack");
 	startCooldown(a, abilityData.name);
 	playSound("gino_claw");
 	local view = a:getView();
-	local avatarFacing = a:getSceneFacing();
 	
 	view:attachEffectToNode("palm_node_01", "effects/megaClaw.plist", 1,  0, 0,false, false);
 	view:attachEffectToNode("palm_node_02", "effects/megaClaw.plist", 1,  0, 0,false, false);
@@ -32,6 +31,8 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
-	avatar = getPlayerAvatar();
-	applyDamageWithWeapon(avatar, aura:getTarget(), "weapon_Plasmaclaw3");
+	if not aura then
+		return
+	end
+	applyDamageWithWeapon(kaiju, aura:getTarget(), "weapon_Plasmaclaw3");
 end

@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local targetPos = nil;
 local weapon = "weapon_shrubby_poisonCloud2"
 local weaponProtect = "weapon_shrubby_poisonCloud2_protected"
@@ -9,21 +9,21 @@ local poisonduration = 10;
 local cloudaoe = 100;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end 
 	
 function onTargets(position)
 	targetPos = position;
 	
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);	
-	playAnimation(avatar, "ability_breath");
-	registerAnimationCallback(this, avatar, "start");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);	
+	playAnimation(kaiju, "ability_breath");
+	registerAnimationCallback(this, kaiju, "start");
 end
 
 function onAnimationEvent(a)
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 	playSound("shrubby_ability_ToxicCloud");
 	local cloud = spawnEntity(EntityType.Minion, "unit_shrubby_cloud", targetPos);
 	setRole(cloud, "Player");
@@ -38,7 +38,7 @@ function onTick(aura)
 	local targets = getTargetsInRadius(aura:getTarget():getWorldPosition(), cloudaoe, EntityFlags(EntityType.Vehicle, EntityType.Avatar));
 	for t in targets:iterator() do
 		local targetable = true;
-		if not canTarget(t) or isSameEntity(avatar, t) then
+		if not canTarget(t) or isSameEntity(kaiju, t) then
 			targetable = false;
 		end
 		if getEntityType(t) == EntityType.Vehicle then
@@ -47,7 +47,7 @@ function onTick(aura)
 				targetable = false;
 			end
 		end
-		if targetable == true then		
+		if targetable then		
 			if t:hasAura("toxic_cloud_dot") then
 				t:getAura("toxic_cloud_dot"):resetElapsed();
 			else
@@ -66,19 +66,31 @@ function onTick(aura)
 end
 
 function onTickProtected(aura)
+	if not aura then return end
 	if aura:getElapsed() > poisonduration then
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	else
-		avatar = getPlayerAvatar();
-		applyDamageWithWeapon(avatar, aura:getTarget(), weaponProtect);
+		applyDamageWithWeapon(kaiju, aura:getTarget(), weaponProtect);
 	end
 end
 
 function onTickUnProtected(aura)
+	if not aura then return
 	if aura:getElapsed() > poisonduration then
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	else
-		avatar = getPlayerAvatar();
-		applyDamageWithWeapon(avatar, aura:getTarget(), weapon);
+		applyDamageWithWeapon(kaiju, aura:getTarget(), weapon);
 	end
 end

@@ -1,9 +1,9 @@
 require 'kaiju_gordon/scripts/catalyst'
 
-local avatar = nil;
+local kaiju = nil;
 
 function onSet(a)
-	avatar = a;
+	kaiju = a;
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('catalyst');
 	buffAura:setScriptCallback(AuraEvent.OnTick, 'onTick');

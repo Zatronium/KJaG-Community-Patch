@@ -1,9 +1,9 @@
 local duration = 5;
 local ticktime = 0.5;
-local avatar = nil;
+local kaiju = nil;
 function onUse(a)
-	avatar = a;
-	startAbilityUse(avatar, abilityData.name);
+	kaiju = a;
+	startAbilityUse(kaiju, abilityData.name);
 	local durationtime = 2;
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/flickerShield_burst.plist", durationtime, 0, 0, false, true);
@@ -21,11 +21,20 @@ function onUse(a)
 end
 
 function onTick(aura)
-	avatar:misdirectMissiles(0.75, false);
-	local view = avatar:getView();
+	if not aura then
+		return
+	end
+	kaiju:misdirectMissiles(0.75, false);
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/IFFScrambler_shockwave.plist", 0, 0, 0, false, true);
 	if aura:getElapsed() >= duration then
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

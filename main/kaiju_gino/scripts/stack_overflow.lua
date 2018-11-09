@@ -3,9 +3,9 @@ local bonusDamageMult = 1;
 local duration = 18;
 local speedIncrease = 0.25;
 local speedValue = 0;
-local avatar = nil;
+local kaiju = nil;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	if a:hasStat("damage_resist") then
 		local resist = a:getStat("damage_resist");
 		resist = resist * damageTaken;
@@ -19,7 +19,7 @@ function onUse(a)
 	a:setPassive("stack_overflow", bonusDamageMult);
 	a:rampage();
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/stackOverflow_back.plist", duration, 0,0, false, true);
@@ -34,14 +34,22 @@ end
 
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= duration then
-		avatar:regainControl();
-		avatar:modStat("Speed", -speedValue);
-		local damageres = avatar:getStat("damage_resist");
-		damageres = damageres / damageTaken;
-		avatar:setStat("damage_resist", damageres);
-		avatar:removePassive("stack_overflow", 0);
-		endAbilityUse(avatar, abilityData.name);
-		avatar:detachAura(aura);
+		kaiju:regainControl();
+		kaiju:modStat("Speed", -speedValue);
+		local damageres = kaiju:getStat("damage_resist") / damageTaken;
+		kaiju:setStat("damage_resist", damageres);
+		kaiju:removePassive("stack_overflow", 0);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

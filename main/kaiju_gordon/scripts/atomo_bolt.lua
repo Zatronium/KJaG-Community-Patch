@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 -- Global values.
-local avatar = 0;
+local kaiju = 0;
 local weapon = "Bolter1";
 
 local weapon_node = "breath_node"
@@ -11,39 +11,39 @@ local targetPos = nil;
 local disableDuration = 5;
 local aoe = 100;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 -- Target selection is complete.
 function onTargets(position)
 	targetPos = position;
-	target = getAbilityTarget(avatar, abilityData.name);
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
-		local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-		avatar:setWorldFacing(facingAngle);	
-		playAnimation(avatar, "ability_breath");
-		registerAnimationCallback(this, avatar, "start");
+		local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+		kaiju:setWorldFacing(facingAngle);	
+		playAnimation(kaiju, "ability_breath");
+		registerAnimationCallback(this, kaiju, "start");
 	end
 end
 
 function onAnimationEvent(a)
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	local proj;
-	target = getAbilityTarget(avatar, abilityData.name);
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) and not (getEntityType(target) == EntityType.Zone) then
-		proj = avatarFireAtTarget(avatar, weapon, weapon_node, target, 90 - view:getFacingAngle());
+		proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target, 90 - view:getFacingAngle());
 	else
-		proj = avatarFireAtPoint(avatar, weapon, weapon_node, targetPos, 90 - view:getFacingAngle());
+		proj = avatarFireAtPoint(kaiju, weapon, weapon_node, targetPos, 90 - view:getFacingAngle());
 	end
 	proj:setCallback(this, 'onHit');
 	playSound("AtomoBolt");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end
 
 -- Projectile hits a target.
 function onHit(proj)
-	avatar = getPlayerAvatar();
+	kaiju = getPlayerAvatar();
 	local scenePos = proj:getView():getPosition();
 	createImpactEffect(proj:getWeapon(), scenePos);
 	local pos = proj:getWorldPosition();
@@ -52,11 +52,11 @@ function onHit(proj)
 	local targets = getTargetsInRadius(pos, aoe, EntityFlags(EntityType.Vehicle, EntityType.Avatar));
 		
 	for t in targets:iterator() do
-		if canTarget(t) and not isSameEntity(t, avatar) then
+		if canTarget(t) and not isSameEntity(t, kaiju) then
 			t:disabled(disableDuration);
 			t:attachEffect("effects/electricShard_core.plist", disableDuration, true);
 			t:attachEffect("effects/atomoBolt_wave.plist", disableDuration, true);
-			applyDamageWithWeapon(avatar, t, weapon);
+			applyDamageWithWeapon(kaiju, t, weapon);
 		end
 	end
 end

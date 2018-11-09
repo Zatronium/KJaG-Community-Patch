@@ -1,8 +1,8 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation(a, "ability_tailblaster");
 	registerAnimationCallback(this, a, "attack");
 	startCooldown(a, abilityData.name);

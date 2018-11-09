@@ -1,6 +1,7 @@
 require 'scripts/common'
 
-local avatar = 0;
+-- Global values.
+local kaiju = nil
 local weapon = "weapon_shrubby_vine3";
 local weapon_node = "root"
 local damage_per_tick = 3;
@@ -12,30 +13,30 @@ local kbDistance = 1000; -- max distance
 
 local vine = nil;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 -- Target selection is complete.
 function onTargets(position)
 	targetPos = position;
-	target = getAbilityTarget(avatar, abilityData.name);
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
-		local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-		avatar:setWorldFacing(facingAngle);	
-		playAnimation(avatar, "punch_01");
-		registerAnimationCallback(this, avatar, "attack");
+		local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+		kaiju:setWorldFacing(facingAngle);	
+		playAnimation(kaiju, "punch_01");
+		registerAnimationCallback(this, kaiju, "attack");
 	end
 end
 
 function onAnimationEvent(a)
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	local proj;
-	target = getAbilityTarget(avatar, abilityData.name);
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
-		proj = avatarFireAtTarget(avatar, weapon, weapon_node, target, 90 - view:getFacingAngle());
+		proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target, 90 - view:getFacingAngle());
 	else
-		proj = avatarFireAtPoint(avatar, weapon, weapon_node, targetPos, 90 - view:getFacingAngle());
+		proj = avatarFireAtPoint(kaiju, weapon, weapon_node, targetPos, 90 - view:getFacingAngle());
 	end
 	
 	vine = createRope("sprites/placehold_vine.png", 20, 45);
@@ -46,12 +47,12 @@ function onAnimationEvent(a)
 	-- setRetract(delay between vert culling, lower = more culled per update) default  0.0, 30
 	vine:setRetract(0.0, 100);
 	vine:setStartEntity(proj);
-	vine:setEndEntity(avatar);
+	vine:setEndEntity(kaiju);
 	vine:activate();
 	
 	proj:setCallback(this, 'onHit');
 	playSound("shrubby_ability_FangStrike");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end
 
 -- Projectile hits a target.
@@ -60,7 +61,7 @@ function onHit(proj)
 	createImpactEffect(proj:getWeapon(), scenePos);
 	local t = proj:getTarget();
 	if canTarget(t) then
-		local worldPos = avatar:getWorldPosition();
+		local worldPos = kaiju:getWorldPosition();
 		local otherPos = t:getWorldPosition();
 		local distance = getDistanceFromPoints(otherPos, worldPos);
 		if distance > kbDistance then
@@ -87,11 +88,17 @@ function onHit(proj)
 end
 
 function onTick(aura)
+	if not aura then return end
 	if aura:getElapsed() < number_of_ticks then
-		avatar = getPlayerAvatar();
-		applyDamage(avatar, aura:getTarget(), damage_per_tick);
+		applyDamage(kaiju, aura:getTarget(), damage_per_tick);
 	else
 		vine:setStartEntity(nil);
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

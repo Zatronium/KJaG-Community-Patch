@@ -3,17 +3,16 @@
 --Active.
 require 'scripts/common'
 
-local avatar = 0;
+local kaiju = 0;
 local deflectchance = 0.5;
 local durationtime = 10;
 function onUse(a)
-	avatar = a;
-	if not avatar:hasStat("block_all") then
-		avatar:addStat("block_all", 100);
+	kaiju = a;
+	if not(kaiju:hasStat("block_all")) then
+		kaiju:addStat("block_all", 100);
 	end
-	local def = avatar:getStat("block_all");
-	def = def * deflectchance;
-	avatar:setStat("block_all", def);
+	local def = kaiju:getStat("block_all");
+	kaiju:setStat("block_all", def * deflectchance);
 	
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/deflector_shieldPulseBack.plist", durationtime, 0, 0, false, true);
@@ -21,20 +20,28 @@ function onUse(a)
 	view:attachEffectToNode("root", "effects/deflector_coreShield.plist", durationtime, 0, 0, true, false);
 	view:attachEffectToNode("root", "effects/deflector_shieldSolid.plist", durationtime, 0, 0, true, false);
 
-	startAbilityUse(avatar, abilityData.name);
-	local aura = createAura(this, avatar, "gino_defelctors");
+	startAbilityUse(kaiju, abilityData.name);
+	local aura = createAura(this, kaiju, "gino_defelctors");
 	aura:setTickParameters(durationtime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationtime then
-		local def = avatar:getStat("block_all");
-		def = def / deflectchance;
-		avatar:setStat("block_all", def);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		local def = kaiju:getStat("block_all");
+		kaiju:setStat("block_all", def / deflectchance);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 

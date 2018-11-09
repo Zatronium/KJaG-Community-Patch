@@ -1,10 +1,9 @@
-local avatar = nil;
+local kaiju = nil;
 local bonusSpeed = 0.0;
 local speedBonusPercent = 1.0;
 local durationtime = 10;
 function onUse(a)
-	avatar = a;
-	hasUpdated = false;
+	kaiju = a;
 	
 	--modify stats first and store the values to remove EXACLTY the same amount 
 	--	(otherwise with %, you run the risk of leaving trace bonuses behind
@@ -16,38 +15,44 @@ function onUse(a)
 	boostAura:setTickParameters(durationtime, 0); --updates at time 0 then at time 10
 	boostAura:setTarget(a); -- required so aura doesn't autorelease
 	
-	if not avatar:hasStat("acc_notrack") then
-		avatar:addStat("acc_notrack", 100);
+	if not(kaiju:hasStat("acc_notrack")) then
+		kaiju:addStat("acc_notrack", 100);
 	end
-	local acc = avatar:getStat("acc_notrack");
-	acc = acc - 100;
-	avatar:setStat("acc_notrack", acc);
+	local acc = kaiju:getStat("acc_notrack") - 100;
+	kaiju:setStat("acc_notrack", acc);
 	
 	a:misdirectMissiles(1.0, false);
 	a:setEnablePhysicsBody(false);
-	avatar:setPassive("ignore_proj", 100);
-	a:getView():setKaijuVisible(false);
-
-	startAbilityUse(avatar, abilityData.name);
+	kaiju:setPassive("ignore_proj", 100);
 	local view = a:getView();
+	view:setKaijuVisible(false);
+
+	startAbilityUse(kaiju, abilityData.name);
 	view:attachEffectToNode("root", "effects/pulseVertical_back.plist", 0, 0,0, false, true);
 	view:attachEffectToNode("root", "effects/pulseVertical_front.plist", 0, 0,0, true, false);
 	
-	--store bonus total (NOTE: may need a "getBaseStat" and go off of that, but minor concern)
 	bonusSpeed = a:getBaseStat("Speed") * speedBonusPercent;
 	a:modStat("Speed", bonusSpeed);
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationtime then
-		avatar:modStat("Speed", -bonusSpeed);	
-		avatar:setEnablePhysicsBody(true);
-		avatar:removePassive("ignore_proj", 0);
-		avatar:getView():setKaijuVisible(true);
-		local acc = avatar:getStat("acc_notrack");
-		acc = acc + 100;
-		avatar:setStat("acc_notrack", acc);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		kaiju:modStat("Speed", -bonusSpeed);	
+		kaiju:setEnablePhysicsBody(true);
+		kaiju:removePassive("ignore_proj", 0);
+		kaiju:getView():setKaijuVisible(true);
+		local acc = kaiju:getStat("acc_notrack") + 100;
+		kaiju:setStat("acc_notrack", acc);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

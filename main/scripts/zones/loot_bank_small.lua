@@ -1,5 +1,6 @@
 require 'scripts/common'
 function onDeath(self)
+	if not self then return end
 	local odds = 10;
 	local roll = randomInt(1, 100);
 	if roll <= odds then

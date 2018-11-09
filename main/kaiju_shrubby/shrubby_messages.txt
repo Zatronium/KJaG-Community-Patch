@@ -1,3 +1,29 @@
+Message {
+	Identifier: msg_FabulosoIsland
+	Comment: Fabuloso Island bugfix placeholder. (Shrubby version)
+	DisplayText: What's this about Fabuloso Island? Best play-dough contest? Weird, man.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_TarmagantIsland
+	Comment: Tarmagant Island bugfix placeholder. (Shrubby version)
+	DisplayText: Hey boss, this Tarmagant Island looks like an atomic playground. Raaaadical!
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: citymsg_IslandX
+	Comment: IslandX bugfix placeholder. (Shrubby version)
+	DisplayText: Ugh, this IslandX is industrial to the MAX. We need to green it up immediately.
+	Speaker: Intern_Large
+	Sound: babble_bella-intern_normal
+	IsTutorial: false
+}
 
 Message {
 	Identifier: msg_Year1

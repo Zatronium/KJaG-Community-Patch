@@ -1,15 +1,15 @@
-local avatar = nil;
+local kaiju = nil;
 local durationtime = 30;
 
 function onUse(a)
-	avatar = a;
-	avatar:setPassive("reflect_beam", 1);
-	local aura = createAura(this, avatar, "gino_reflector");
+	kaiju = a;
+	kaiju:setPassive("reflect_beam", 1);
+	local aura = createAura(this, kaiju, "gino_reflector");
 	aura:setTickParameters(durationtime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/shieldPulse_backDown.plist", durationtime, 0, 0, false, true);
@@ -20,9 +20,18 @@ function onUse(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() > durationtime then
-		avatar:removePassive("reflect_beam", 0);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		kaiju:removePassive("reflect_beam", 0);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

@@ -1,5 +1,7 @@
 require 'scripts/common'
 
+local citySetup = false
+
 function setLightingProfile()
 	--					hrMin,	ambR,	ambG,	ambB,			dirX,	dirY,	dirZ,			dirR,	dirG,	dirB,	emZ
 	_setLightingProfile(0,		vec3(0.025,	0.025,	0.15	),vec3(1.2,		-2,		0.75	),vec3(.02,		.04,	.07		),true); --midnight
@@ -14,7 +16,14 @@ function setLightingProfile()
 	_setLightingProfile(23,		vec3(0.03,	0.02,	0.03	),vec3(1.5,		 0,		0.75	),vec3(.07,		.1,		.15		),true); --evening
 end
 
-function onSpawn()
+function onSpawn() -- No heartbeat
+	if not citySetup then
+		doSpawnSetup()
+	end
+end
+
+function doSpawnSetup()
+	citySetup = true
 	-- check to see PREP value
 	-- randomly scatter units throughout the map (need to keep a limit of units, don't want more than say 50 available at the same time)
 	-- spawn the units

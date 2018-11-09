@@ -4,7 +4,7 @@ require 'scripts/avatars/common'
 -- if health < 10 instant kill.
 -- else punch dealing 25 damage.
 
-local avatar = nil;
+local kaiju = nil;
 local alevel = 1;
 local baseHPRegen = 5;
 local healaura = nil;
@@ -21,15 +21,15 @@ function calcAttackDamage()
 end
 
 function onInitStat(a, lv)
-	if not avatar then
-		avatar = a;
+	if not kaiju then
+		kaiju = a;
 		alevel = lv;
 		
-		healaura = createAura(this, avatar, 0);
+		healaura = createAura(this, kaiju, 0);
 		healaura:setTag("base_regen");
 		healaura:setTickParameters(5, 0);
 		healaura:setScriptCallback(AuraEvent.OnTick, "onBaseHeal");
-		healaura:setTarget(avatar);
+		healaura:setTarget(kaiju);
 		
 		a:setStat("ExtraDamage_Fire", 1);
 		a:setStat("ExtraDamage_Gas", -1);
@@ -37,18 +37,18 @@ function onInitStat(a, lv)
 end
 
 function onBaseHeal(aura)
-	if not canTarget(avatar) then
+	if not canTarget(kaiju) then
 		aura:getOwner():detachAura(aura);
 	else
-		local heal = baseHPRegen * ( 1 + avatar:hasPassive("base_heal_bonus"));
-		local surv = avatar:hasPassive("shrubby_survival_regen");
+		local heal = baseHPRegen * ( 1 + kaiju:hasPassive("base_heal_bonus"));
+		local surv = kaiju:hasPassive("shrubby_survival_regen");
 		if surv > 0 then
-			local scale = avatar:getStat("Health")/avatar:getStat("MaxHealth");
-			if scale <= avatar:hasPassive("shrubby_survival") then
+			local scale = kaiju:getStat("Health")/kaiju:getStat("MaxHealth");
+			if scale <= kaiju:hasPassive("shrubby_survival") then
 				heal = heal + heal * surv;
 			end
 		end
-		avatar:gainHealth(heal);
+		kaiju:gainHealth(heal);
 	end
 end
 
@@ -77,20 +77,20 @@ function onAttack(a)
 		if getEntityType(t) == EntityType.Zone and maxHealth <= buildingThreshhold then 
 			t:modStat("Health", -maxHealth); 
 		else
-			v = entityToVehicle(t);
-			if getEntityType(t) == EntityType.Vehicle and v then -- is vehicle						
-					if v:isAir() then -- is air
-						playAnimation(a, "punch_crit");
-					elseif alevel == 1 then -- is ground 
+			if getEntityType(t) == EntityType.Vehicle then -- is vehicle
+				v = entityToVehicle(t);						
+				if v:isAir() then -- is air
+					playAnimation(a, "punch_crit");
+				elseif alevel == 1 then -- is ground 
+					playAnimation(a, "stomp");
+				else
+					local animRand = math.random(1, 3);
+					if animRand == 1 then
 						playAnimation(a, "stomp");
 					else
-						local animRand = math.random(1, 3);
-						if animRand == 1 then
-							playAnimation(a, "stomp");
-						else
-							playAnimation(a, "stomp");
-						end
+						playAnimation(a, "stomp");
 					end
+				end
 			elseif alevel == 1 or alevel == 2 then-- is zone
 				local animRand = math.random(1, 4);
 				if animRand == 1 then	
@@ -131,9 +131,8 @@ function onStomp(a, inwater)
 end
 
 function onAnimAttack(a)
-	local ctrl = a:getControl()
-	if ctrl:hasTarget() then
-		local t = ctrl:getTarget();
+	if a:getControl():hasTarget() then
+		local t = a:getControl():getTarget();
 		local damage = a:modifyDamage(t, calcAttackDamage());
 		if getEntityType(t) == EntityType.Zone then
 			playSound("shrubby_claw");
@@ -163,7 +162,7 @@ function ThornPatch(pos)
 end
 
 function onThornTick(aura)
-	avatar = getPlayerAvatar();
+	kaiju = getPlayerAvatar();
 	local thornLife = 30;
 	local slowPercent = -0.5;
 	local patchAoe = 50;
@@ -175,7 +174,7 @@ function onThornTick(aura)
 	else
 		local targets = getTargetsInRadius(aura:getTarget():getWorldPosition(), patchAoe, EntityFlags(EntityType.Vehicle ,EntityType.Avatar));
 		for t in targets:iterator() do
-			if canTarget(t) and not isSameEntity(avatar, t) then
+			if canTarget(t) and not isSameEntity(kaiju, t) then
 				local airUnit = false;
 				if getEntityType(t) == EntityType.Vehicle then	
 					local veh = entityToVehicle(t);
@@ -210,8 +209,8 @@ function onThornDot(aura)
 		target:modStat("Speed", -(aura:getStat("Speed")));
 		target:detachAura(aura);
 	else
-		avatar = getPlayerAvatar();
-		applyDamage(avatar, target, dotDamage);
+		kaiju = getPlayerAvatar();
+		applyDamage(kaiju, target, dotDamage);
 	end
 end
 

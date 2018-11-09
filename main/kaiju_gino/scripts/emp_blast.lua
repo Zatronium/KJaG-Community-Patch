@@ -2,12 +2,12 @@ require 'scripts/common'
 local disableTime = 30;
 local kaijuDisable = 5;
 local range = 1000;
-local avatar = nil;
+local kaiju = nil;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/empBlast_shockwave.plist", 0, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/armorPolarization_back.plist", kaijuDisable, 0,0, false, true);
@@ -41,9 +41,18 @@ function onUse(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= kaijuDisable then
-		endAbilityUse(avatar, abilityData.name);
-		avatar:regainControl();
-		avatar:detachAura(aura);
+		endAbilityUse(kaiju, abilityData.name);
+		kaiju:regainControl();
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

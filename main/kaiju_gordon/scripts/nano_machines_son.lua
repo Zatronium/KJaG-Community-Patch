@@ -3,10 +3,10 @@ require 'scripts/avatars/common'
 local bonusRepair = 0.2;
 local hpPerTick = 1;
 local tickRate = 3; --seconds
-local avatar = nil;
+local kaiju = nil;
 
 function onSet(a)
-	avatar = a;
+	kaiju = a;
 	
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('nano_machines');
@@ -20,7 +20,7 @@ function onSet(a)
 end
 
 function onTick(aura)
-	avatar:gainHealth(hpPerTick);
+	kaiju:gainHealth(hpPerTick);
 end
 
 function bonusStats(s)

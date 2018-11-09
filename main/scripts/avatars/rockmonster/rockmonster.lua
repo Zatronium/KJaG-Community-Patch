@@ -19,6 +19,8 @@ local boulderCooldown = 20;
 local boulderRange = 1500;
 local boulderMinRange = 200;
 
+local dist = 9999;
+
 function onHeartbeat(a, dt)
 	kaiju = getPlayerAvatar();
 	local ctrl = a:getControl();
@@ -32,7 +34,7 @@ function onHeartbeat(a, dt)
 		return;
 	end
 	if not ctrl:usingAbility() then	
-		local dist = getDistance(kaiju, a);
+		dist = getDistance(kaiju, a);
 		if punchcd <= 0 and dist > punchMinRange and dist < punchRange then
 			ctrl:useAbility("scripts/avatars/rockmonster/megapunch.lua", kaiju);
 			punchcd = punchCooldown;
@@ -55,7 +57,7 @@ function onStatChanged(e, stat, prev, val)
 		if val <= 0 then
 			e:getView():doDeathEffect()
 			e:setEnablePhysicsBody(false);
-		elseif val > e:getStat("MaxHealth")) then
+		elseif val > e:getStat("MaxHealth") then
 			e:setStat("Health", maxHealth);
 		end
 	end

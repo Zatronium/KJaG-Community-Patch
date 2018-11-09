@@ -1,5 +1,5 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 
 function onSet(a)
 	a:setPassive("rebirth", 1);

@@ -19,6 +19,8 @@ local acidCooldown = 20;
 local acidRange = 250;
 local acidMinRange = 0;
 
+local dist = 9999;
+
 function onHeartbeat(a, dt)
 	kaiju = getPlayerAvatar();
 	local ctrl = a:getControl();
@@ -33,7 +35,7 @@ function onHeartbeat(a, dt)
 		return;
 	end
 	if not ctrl:usingAbility() then	
-		local dist = getDistance(kaiju, a);
+		dist = getDistance(kaiju, a);
 		if acidcd <= 0 and dist > acidMinRange and dist < acidRange then
 			ctrl:useAbility("scripts/avatars/planto/acidspray.lua", kaiju);
 			acidcd = acidCooldown;
@@ -58,7 +60,7 @@ function onStatChanged(e, stat, prev, val)
 		if val <= 0 then
 			e:getView():doDeathEffect()
 			e:setEnablePhysicsBody(false);
-		elseif val > e:getStat("MaxHealth")) then
+		elseif val > e:getStat("MaxHealth") then
 			e:setStat("Health", maxHealth);
 		end
 	end

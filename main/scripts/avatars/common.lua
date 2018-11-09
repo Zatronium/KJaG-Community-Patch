@@ -23,12 +23,8 @@ end
 -- Generic event handlers.
 ------------------------------------------------------------
 
-local initialSetup = false
-function onHeartbeat(v)
-	if not initialSetup then
-		defaultSpawn(v);
-		initialSetup = true
-	end
+function onSpawn(v)
+	defaultSpawn(v);
 end
 
 function onHit(e, p, s)
@@ -44,10 +40,16 @@ function dotSetTargets(owner, targets, interval, duration, onAuraTick)
 end
 
 function dotOnTick(aura, minDamage, maxDamage, damageEffect, igniteOdds)
+	if not aura then return end
 	local target = aura:getTarget();
 	local owner = aura:getOwner();
 	if not target then
-		owner:detachAura(aura);
+		if not owner then
+			aura = nil return;
+		else
+			owner:detachAura(aura);
+		end
+		return
 	else
 		-- optional fire
 		if igniteOdds then
@@ -63,8 +65,8 @@ function dotOnTick(aura, minDamage, maxDamage, damageEffect, igniteOdds)
 	end
 end
 
-function NoTargetText(avatar)
-	createFloatingText(avatar, "no targets in range", 255, 116, 25); --TODO LOCALIZATION
+function NoTargetText(kaiju)
+	createFloatingText(kaiju, "no targets in range", 255, 116, 25); --TODO LOCALIZATION
 end
 
 ------------------------------------------------------------

@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local bonusDamagePercent = 0.5;
 local bonusSpeedPercent = 0.5;
 local bonusCDR = 0.2;
@@ -8,12 +8,11 @@ local bonusCDR = 0.2;
 local durationtime = 30;
 local timer = durationtime;
 
-local avatar = nil;
-
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_stomp");
+	timer = durationtime
+	kaiju = a;
+	playAnimation(kaiju, "ability_stomp");
 	
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('failsafe');
@@ -27,16 +26,19 @@ function onUse(a)
 	
 	startCooldown(a, abilityData.name);
 	
-	avatar:modStat("damage_amplify", bonusDamagePercent);
-	local bonusSpeed = avatar:getBaseStat("Speed") * bonusSpeedPercent;
-	avatar:modStat("Speed", bonusSpeed);
-	avatar:modStat("CoolDownReductionPercent", bonusCDR);
+	kaiju:modStat("damage_amplify", bonusDamagePercent);
+	local bonusSpeed = kaiju:getBaseStat("Speed") * bonusSpeedPercent;
+	kaiju:modStat("Speed", bonusSpeed);
+	kaiju:modStat("CoolDownReductionPercent", bonusCDR);
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	timer = timer - 1;
 	if timer <= 0 then
-		local wp = avatar:getWorldPosition();
+		local wp = kaiju:getWorldPosition();
 		createEffectInWorld("effects/impact_fireRingBack_large.plist"	,wp ,1);
 		createEffectInWorld("effects/collapseSmokeDark_large.plist"		,wp ,1);
 		createEffectInWorld("effects/impact_BoomRisingXlrg.plist"		,wp ,1);
@@ -47,21 +49,36 @@ function onTick(aura)
 		createEffectInWorld("effects/impact_boomXlrg.plist"				,wp ,1);
 		createEffectInWorld("effects/impact_mushCloud_small.plist"		,wp ,1);
 
-		avatar:detachAura(aura);
-		avatar:loseControl();
-		local deathAura = Aura.create(this, avatar);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
+		kaiju:loseControl();
+		local deathAura = Aura.create(this, kaiju);
 		deathAura:setTag('death_failsafe');
 		deathAura:setScriptCallback(AuraEvent.OnTick, 'onDeathDelayTick');
 		deathAura:setTickParameters(2, 0); 
-		deathAura:setTarget(avatar);
+		deathAura:setTarget(kaiju);
 	else
 		createSystemText(timer, 0);
 	end
 end
 
 function onDeathDelayTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= 1 then
-		avatar:setStat("Health", 0);
-		avatar:detachAura(aura);
+		kaiju:setStat("Health", 0);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

@@ -1,28 +1,37 @@
 require 'scripts/common'
 
-local avatar = 0;
+local kaiju = nil
 local durationtime = 15;
 local percentconverted = 0.5;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/energyAbsorber_coreElectric.plist", durationtime,  0, 0,true, false);
 	view:attachEffectToNode("root", "effects/mirrorShield_solid.plist", durationtime,  0, 0,true, false);
 
 	a:addPassiveScript(this);
-	startAbilityUse(avatar, abilityData.name);
-	local aura = createAura(this, avatar, "gino_energyabsorber");
+	startAbilityUse(kaiju, abilityData.name);
+	local aura = createAura(this, kaiju, "gino_energyabsorber");
 	aura:setTickParameters(durationtime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationtime then
-		avatar:removePassiveScript(this);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		kaiju:removePassiveScript(this);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 

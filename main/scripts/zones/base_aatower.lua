@@ -1,5 +1,6 @@
 require 'scripts/common'
 require 'scripts/zones/common'
+require 'scripts/abstraction'
 
 local weaponAA 		= 'weapon_MissileGuidedAA'
 local weaponGround 	= 'weapon_MissileGuidedAAGround'
@@ -7,12 +8,6 @@ local initialSetup	= false
 local kaiju 		= nil
 
 function onSpawn(self)
-	if not initialSetup then
-		doSpawnSetup(self)
-	end
-end
-
-function onHeartbeat(self)
 	if not initialSetup then
 		doSpawnSetup(self)
 	end
@@ -40,25 +35,32 @@ function onTick(aura)
 	end
 	local self = aura:getOwner();
 	if not self then
-		aura:setScriptCallback(AuraEvent.OnTick, nil)
+		aura = nil return
+	end
+	
+	local weaponRange = getWeaponRange(weaponAA)
+	local worldPosition = self:getWorldPosition()
+	
+	targetEnt = getTargetInEntityRadius(self, weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar), TargetFlags(TargetType.Air))
+	if targetEnt then
+		fireWeaponWithTarget(self, targetEnt, weaponAA, 'onHit')
 		return
 	end
 	
-	local targetRange = getWeaponRange(weaponAA)
-	local worldPosition = self:getWorldPosition()
-	local target = getClosestAirTargetInRadius(worldPosition, targetRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar))
-	if not canTarget(target) then
-		targetRange = getWeaponRange(weaponGround)
-		local newTargets = getTargetsInRadius(worldPosition, targetRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar))
-		for t in newTargets:iterator() do
-			if canTarget(t) and not isSameEntity(t, kaiju) then
-				target = t
-				break
-			end
-		end
+	weaponRange = getWeaponRange(weaponGround)
+	targetEnt = getTargetInEntityRadius(self, weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar), TargetFlags(TargetType.Land, TargetType.Sea))
+	if targetEnt then
+		fireWeaponWithTarget(self, targetEnt, weaponGround, 'onHit')
 	end
 	
-	if target then
-		setTarget(self, target);
+	if targetEnt then
+		setTarget(self, targetEnt);
 	end
+end
+
+function onHit(proj)
+	local scenePos = proj:getView():getPosition();
+	local weapon = proj:getWeapon();
+	playSound("impact_missile");
+	createImpactEffect(weapon, scenePos);
 end

@@ -3,24 +3,24 @@
 require 'scripts/common'
 
 -- Global values.
-local avatar = nil;
+local kaiju = nil;
 
 function onUse(a, t)
-	avatar = a;
+	kaiju = a;
 	a:setWeakTarget(t);
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), t:getWorldPosition());
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_laserlight");
-	registerAnimationCallback(this, avatar, "attack");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), t:getWorldPosition());
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_laserlight");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
-	local target = avatar:getWeakTarget();
+	local target = kaiju:getWeakTarget();
 	if not canTarget(target) then
 		return;
 	end
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
     
 	local pos = getScenePosition(target:getWorldPosition());
 	
@@ -32,5 +32,5 @@ function onAnimationEvent(a)
 	createEffect("effects/explosion_SparkLayer.plist",		pos);
 	createEffect("effects/explosion_SparkFireLayer.plist",	pos);
 	playSound("sfx_weap_laser_small_muzzle");
-	applyDamageWithWeapon(avatar, target, "weapon_LaserLight");
+	applyDamageWithWeapon(kaiju, target, "weapon_LaserLight");
 end

@@ -1,0 +1,335 @@
+Avatar {
+	Identifier: avatar_shrubby
+	Name: avatar_shrubby
+	DisplayName: Shrubby
+	Role: Player
+	Lair: city_ParadiseIsland
+	InitialAttackCity: d091bb5c22ae9ef6e7e1faeed5c31f79
+	InitialMapFocus: -250,0
+	LandClearEffect:  effects/clearingTile.plist
+	LandClearEffect:  effects/clearingSmoke.plist
+	LandClearEffect:  effects/clearingLeaves.plist
+	
+	Script: kaiju_shrubby/scripts/shrubby.lua
+	TrainingAvatarIcon: ui/ability/kaiju_icon_shrubby.png
+	StatusIcon: kaiju_shrubby/ui/shrubbyAvatar.png
+	CityConqueredIcon: kaiju_shrubby/ui/cityConquered.png
+	OriginText: Organic
+	InnateAbility: ability_Sprout
+	AchievementSurrenderWorld: kagg_worldkingshrub
+	AchievementSurrenderWorldEasy: kagg_lilworldkingshrub
+	AchievementSurrenderWorldHard: kagg_badworldkingshrub
+	AchievementSurrenderWorldVeryHard: kagg_vbadworldkingshrub
+	AbilityResource: organic
+	AbilitySlots: 8
+	Level {
+		Level: 1
+		Scale: 0.75
+		SummaryScale: 0.65
+		SummaryOffset: 0,32
+		Skin: base
+		Armor: 0
+		AttackDelay: 0.25
+		SensorsSignature: -5
+		Speed: 45
+		MapSpeed: 90
+		MaxHealth: 600
+		MaxMoney: 180000
+		MaxPower: 120
+		MaxKnow: 400
+		MaxPurple: 15
+		MaxOrganic: 350
+	}
+	Level {
+		Level: 2
+		Scale: 1
+		SummaryScale: 0.9
+		SummaryOffset: 0,32
+		Skin: upgrade01
+		Armor: 1
+		AttackDelay: 0.25
+		SensorsSignature: -10
+		Speed: 50
+		MapSpeed: 95
+		MaxHealth: 800
+		MaxMoney: 300000
+		MaxPower: 240
+		MaxKnow: 600
+		MaxPurple: 20
+		MaxOrganic: 500
+	}
+	Level {
+		Level: 3
+		Scale: 1
+		SummaryScale: 0.9
+		SummaryOffset: 0,32
+		Skin: upgrade02
+		Armor: 2
+		AttackDelay: 0.25
+		SensorsSignature: -15
+		Speed: 55
+		MapSpeed: 100
+		MaxHealth: 1200
+		MaxMoney: 450000
+		MaxPower: 350
+		MaxKnow: 800
+		MaxPurple: 30
+		MaxOrganic: 800
+	}
+
+	Speaker {
+		Identifier: MadScientist
+		Icon: kaiju_shrubby/speakers/drbd_neutral_scope.png
+	}
+	Speaker {
+		Identifier: MadScientist_Large
+		Icon: kaiju_shrubby/speakers/drbd_neutral.png
+	}
+	Speaker {
+		Identifier: MadScientistRage
+		Icon: kaiju_shrubby/speakers/drbd_rage_scope.png
+	}
+	Speaker {
+		Identifier: MadScientistRage_Large
+		Icon: kaiju_shrubby/speakers/drbd_rage.png
+	}
+	Speaker {
+		Identifier: MadScientistJoy
+		Icon: kaiju_shrubby/speakers/drbd_joy_scope.png
+	}
+	Speaker {
+		Identifier: MadScientistJoy_Large
+		Icon: kaiju_shrubby/speakers/drbd_joy.png
+	}
+	Speaker {
+		Identifier: MadScientistUpset
+		Icon: kaiju_shrubby/speakers/drbd_upset_scope.png
+	}
+	Speaker {
+		Identifier: MadScientistUpset_Large
+		Icon: kaiju_shrubby/speakers/drbd_upset.png
+	}
+	Speaker {
+		Identifier: Intern
+		Icon: kaiju_shrubby/speakers/drbd_intern_scope.png
+	}
+	Speaker {
+		Identifier: Intern_Large
+		Icon: kaiju_shrubby/speakers/drbd_intern.png
+	}
+	Speaker {
+		Identifier: Engineer
+		Icon: kaiju_shrubby/speakers/drbd_engineer_scope.png
+	}
+	Speaker {
+		Identifier: Engineer_Large
+		Icon: kaiju_shrubby/speakers/drbd_engineer.png
+	}
+	Speaker {
+		Identifier: General
+		Icon: ui/characters/generalsir_scope.png
+	}
+	Speaker {
+		Identifier: General_Large
+		Icon: ui/characters/generalsir.png
+	}
+	Speaker {
+		Identifier: Reporter
+		Icon: ui/characters/reporterman_scope.png
+	}
+	Speaker {
+		Identifier: Reporter_Large
+		Icon: ui/characters/reporterman.png
+	}
+
+	SplashBaseReturn:				kaiju_shrubby/splashscreens/arrivalBase_shrubby.png
+	SplashBaseAttack:				ui/splashscreens/loading_baseattack.png
+	SplashCityAttack:				kaiju_shrubby/splashscreens/loading_kaijuattack_shrubby.png
+	SplashInterceptOcean:			kaiju_shrubby/splashscreens/loading_fleetintercept_shrubby.png
+	SplashInterceptLand:			kaiju_shrubby/splashscreens/loading_armyintercept_shrubby.png
+	SplashKaijuLeavesCity:			kaiju_shrubby/splashscreens/loading_kaijuleave_shrubby.png 
+	SplashCitySurrendered:			kaiju_shrubby/splashscreens/loading_kaijucitysurrender_shrubby.png 
+	SplashKaijuEscapesPatrol:		kaiju_shrubby/splashscreens/loading_kaiju_patrolretreat_shrubby.png 
+	SplashKaijuDefeatsPatrol:		kaiju_shrubby/splashscreens/loading_kaiju_patrolvictory_shrubby.png 
+	SplashLairDefended:				kaiju_shrubby/splashscreens/loading_basedefended_shrubby.png 
+	SplashKaijuDestroyedByCity:		kaiju_shrubby/splashscreens/loading_kaijudefeat_shrubby.png 
+	SplashKaijuDestroyedByPatrol:	kaiju_shrubby/splashscreens/loading_kaiju_patroldefeat_shrubby.png 
+	SplashLairDestroyed:			ui/splashscreens/loading_basedestroyed.png
+	SplashRegion1Surrendered:		kaiju_shrubby/splashscreens/region1_surrender_shrubby.png
+	SplashRegion2Surrendered:		kaiju_shrubby/splashscreens/region2_surrender_shrubby.png
+	SplashRegion3Surrendered:		kaiju_shrubby/splashscreens/region3_surrender_shrubby.png
+	SplashRegion4Surrendered:		kaiju_shrubby/splashscreens/region4_surrender_shrubby.png
+	SplashRegion5Surrendered:		kaiju_shrubby/splashscreens/region5_surrender_shrubby.png
+	SplashRegion6Surrendered:		kaiju_shrubby/splashscreens/region6_surrender_shrubby.png
+	SplashPlayerDefeated:			ui/splashscreens/loading_basedestroyed.png
+	SplashPlayerVictory:			kaiju_shrubby/splashscreens/loading_gamevictory_shrubby.png
+	SplashNewspaper1:				kaiju_shrubby/newspapers/newspaper_001_shrubby.png
+	SplashNewspaper2:				kaiju_shrubby/newspapers/newspaper_002_shrubby.png
+	SplashNewspaper3:				kaiju_shrubby/newspapers/newspaper_003_shrubby.png
+
+	Skin {
+		Identifier: skin_shrubby_default
+		DisplayName: Shrubby
+		RepairSprites: kaiju_shrubby/skin/shrubby_construct.xml
+		SeedlingSpritesSmall: kaiju_shrubby/skin/seedling_body_small.xml
+		SeedlingSpritesNormal: kaiju_shrubby/skin/seedling_body.xml
+		SeedlingSpritesHealing: kaiju_shrubby/skin/seedling_body.xml
+		SeedlingTurretSmall: kaiju_shrubby/skin/seedling_turret_small.xml
+		SeedlingTurretNormal: kaiju_shrubby/skin/seedling_turret.xml
+		SeedlingTurretHealing: kaiju_shrubby/skin/seedling_turret_healing.xml
+		SelectSkinImage: skins/shrubby_skin_shrubby.png
+		Direction {
+			Direction: 1
+			Atlas: kaiju_shrubby/skin/shrubby_nw.atlas
+			Json: kaiju_shrubby/skin/shrubby_nw.json
+			Normal: kaiju_shrubby/skin/shrubby_nw_normal.png
+			Depth: kaiju_shrubby/skin/shrubby_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Atlas: kaiju_shrubby/skin/shrubby_sw.atlas
+			Json: kaiju_shrubby/skin/shrubby_sw.json
+			Normal: kaiju_shrubby/skin/shrubby_sw_normal.png
+			Depth: kaiju_shrubby/skin/shrubby_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Atlas: kaiju_shrubby/skin/shrubby_n.atlas
+			Json: kaiju_shrubby/skin/shrubby_n.json
+			Normal: kaiju_shrubby/skin/shrubby_n_normal.png
+			Depth: kaiju_shrubby/skin/shrubby_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Atlas: kaiju_shrubby/skin/shrubby_s.atlas
+			Json: kaiju_shrubby/skin/shrubby_s.json
+			Normal: kaiju_shrubby/skin/shrubby_s_normal.png
+			Depth: kaiju_shrubby/skin/shrubby_s_depth.png
+		}
+	}
+	Skin {
+		Identifier: skin_shrubby_gold
+		DisplayName: Gold
+		DlcName: dlc_skins_gold
+		RepairSprites: kaiju_shrubby/skin_gold/shrubby_gold_construct.xml
+		SeedlingSpritesSmall: kaiju_shrubby/skin_gold/seedling_gold_body_small.xml
+		SeedlingSpritesNormal: kaiju_shrubby/skin_gold/seedling_gold_body.xml
+		SeedlingSpritesHealing: kaiju_shrubby/skin_gold/seedling_gold_body.xml
+		SeedlingTurretSmall: kaiju_shrubby/skin_gold/seedling_gold_turret_small.xml
+		SeedlingTurretNormal: kaiju_shrubby/skin_gold/seedling_gold_turret.xml
+		SeedlingTurretHealing: kaiju_shrubby/skin_gold/seedling_gold_turret_healing.xml
+		SelectSkinImage: skins/shrubby_skin_gold.png
+		Direction {
+			Direction: 1
+			Atlas: kaiju_shrubby/skin_gold/shrubby_gold_nw.atlas
+			Json: kaiju_shrubby/skin_gold/shrubby_gold_nw.json
+			Normal: kaiju_shrubby/skin_gold/shrubby_gold_nw_normal.png
+			Depth: kaiju_shrubby/skin_gold/shrubby_gold_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Atlas: kaiju_shrubby/skin_gold/shrubby_gold_sw.atlas
+			Json: kaiju_shrubby/skin_gold/shrubby_gold_sw.json
+			Normal: kaiju_shrubby/skin_gold/shrubby_gold_sw_normal.png
+			Depth: kaiju_shrubby/skin_gold/shrubby_gold_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Atlas: kaiju_shrubby/skin_gold/shrubby_gold_n.atlas
+			Json: kaiju_shrubby/skin_gold/shrubby_gold_n.json
+			Normal: kaiju_shrubby/skin_gold/shrubby_gold_n_normal.png
+			Depth: kaiju_shrubby/skin_gold/shrubby_gold_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Atlas: kaiju_shrubby/skin_gold/shrubby_gold_s.atlas
+			Json: kaiju_shrubby/skin_gold/shrubby_gold_s.json
+			Normal: kaiju_shrubby/skin_gold/shrubby_gold_s_normal.png
+			Depth: kaiju_shrubby/skin_gold/shrubby_gold_s_depth.png
+		}
+	}
+	Skin {
+		Identifier: skin_shrubby_plantzombie
+		DisplayName: Plant Zombie
+		DlcName: dlc_skin_shrubby_plantzombie
+		DlcID: 393990
+		RepairSprites: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_construct.xml
+		SeedlingSpritesSmall: kaiju_shrubby/skin_plantzombie/seedling_plantzombie_body_small.xml
+		SeedlingSpritesNormal: kaiju_shrubby/skin_plantzombie/seedling_plantzombie_body.xml
+		SeedlingSpritesHealing: kaiju_shrubby/skin_plantzombie/seedling_plantzombie_body.xml
+		SeedlingTurretSmall: kaiju_shrubby/skin_plantzombie/seedling_plantzombie_turret_small.xml
+		SeedlingTurretNormal: kaiju_shrubby/skin_plantzombie/seedling_plantzombie_turret.xml
+		SeedlingTurretHealing: kaiju_shrubby/skin_plantzombie/seedling_plantzombie_turret_healing.xml
+		SelectSkinImage: skins/shrubby_skin_plantzombie.png
+		Direction {
+			Direction: 1
+			Atlas: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_nw.atlas
+			Json: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_nw.json
+			Normal: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_nw_normal.png
+			Depth: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Atlas: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_sw.atlas
+			Json: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_sw.json
+			Normal: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_sw_normal.png
+			Depth: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Atlas: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_n.atlas
+			Json: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_n.json
+			Normal: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_n_normal.png
+			Depth: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Atlas: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_s.atlas
+			Json: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_s.json
+			Normal: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_s_normal.png
+			Depth: kaiju_shrubby/skin_plantzombie/shrubby_plantzombie_s_depth.png
+		}
+	}
+	Skin {
+		Identifier: skin_shrubby_greatpumpkin
+		DisplayName: Great Pumpkin
+		DlcName: dlc_skins_halloween
+		DlcID: 415220
+		RepairSprites: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_construct.xml
+		SeedlingSpritesSmall: kaiju_shrubby/skin_greatpumpkin/seedling_greatpumpkin_body_small.xml
+		SeedlingSpritesNormal: kaiju_shrubby/skin_greatpumpkin/seedling_greatpumpkin_body.xml
+		SeedlingSpritesHealing: kaiju_shrubby/skin_greatpumpkin/seedling_greatpumpkin_body.xml
+		SeedlingTurretSmall: kaiju_shrubby/skin_greatpumpkin/seedling_greatpumpkin_turret_small.xml
+		SeedlingTurretNormal: kaiju_shrubby/skin_greatpumpkin/seedling_greatpumpkin_turret.xml
+		SeedlingTurretHealing: kaiju_shrubby/skin_greatpumpkin/seedling_greatpumpkin_turret_healing.xml
+		SelectSkinImage: skins/shrubby_skin_greatpumpkin.png
+		Direction {
+			Direction: 1
+			Atlas: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_nw.atlas
+			Json: kaiju_shrubby/skin_greatpumpkin/shrubby_pumpkin_nw.json
+			Normal: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_nw_normal.png
+			Depth: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Atlas: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_sw.atlas
+			Json: kaiju_shrubby/skin_greatpumpkin/shrubby_pumpkin_sw.json
+			Normal: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_sw_normal.png
+			Depth: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Atlas: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_n.atlas
+			Json: kaiju_shrubby/skin_greatpumpkin/shrubby_pumpkin_n.json
+			Normal: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_n_normal.png
+			Depth: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Atlas: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_s.atlas
+			Json: kaiju_shrubby/skin_greatpumpkin/shrubby_pumpkin_s.json
+			Normal: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_s_normal.png
+			Depth: kaiju_shrubby/skin_greatpumpkin/shrubby_greatpumpkin_s_depth.png
+		}
+	}
+}

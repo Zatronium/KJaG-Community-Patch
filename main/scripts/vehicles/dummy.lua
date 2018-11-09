@@ -5,12 +5,6 @@ require 'scripts/vehicles/common'
 
 local initialSetup = false
 
-function onSpawn(v)
-	if not initialSetup then
-		doSpawnSetup()
-	end
-end
-
 function onHeartbeat(v)
 	if not initialSetup then
 		doSpawnSetup(v)

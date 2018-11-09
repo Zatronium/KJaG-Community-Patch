@@ -1,15 +1,15 @@
 require 'kaiju_gordon/scripts/absorption_module'
 
-local avatar = nil;
+local kaiju = nil;
 
 local shieldCooldown = 20;
 local onCD = false;
 
 function onSet(a)
-	avatar = a;
-	avatar:addPassiveScript(this);
-	avatar:addPassive("absorption_infusion", shieldCooldown);
-	avatar:addPassive("absorption_infusion_ready", 1);
+	kaiju = a;
+	kaiju:addPassiveScript(this);
+	kaiju:addPassive("absorption_infusion", shieldCooldown);
+	kaiju:addPassive("absorption_infusion_ready", 1);
 end
 
 function bonusStats(s)

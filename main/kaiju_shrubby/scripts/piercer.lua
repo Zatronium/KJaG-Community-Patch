@@ -1,7 +1,7 @@
 require 'scripts/avatars/common'
 
 -- Global values.
-local avatar = 0;
+local kaiju = 0;
 local weapon = "weapon_shrubby_vine2";
 local weapon_node = "root"
 local target = nil;
@@ -24,28 +24,28 @@ function setupNewVine(vine)
 end
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 -- Target selection is complete.
 function onTargets(position)
 	targetPos = position;
-	target = getAbilityTarget(avatar, abilityData.name);
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
-		local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-		avatar:setWorldFacing(facingAngle);	
-		playAnimation(avatar, "punch_01");
+		local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+		kaiju:setWorldFacing(facingAngle);	
+		playAnimation(kaiju, "punch_01");
 	
-		registerAnimationCallback(this, avatar, "attack");
+		registerAnimationCallback(this, kaiju, "attack");
 	end
 end
 
 function onAnimationEvent(a)
-	local view = avatar:getView();
-	target = getAbilityTarget(avatar, abilityData.name);
+	local view = kaiju:getView();
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
-		local proj = avatarFireAtTarget(avatar, weapon, weapon_node, target, 90 - view:getFacingAngle());
+		local proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target, 90 - view:getFacingAngle());
 		proj:setCallback(this, 'onHit');
 	
 		vineEffect = setupNewVine(vineEffect);
@@ -54,9 +54,9 @@ function onAnimationEvent(a)
 		vineEffect:activate();
 		
 		playSound("shrubby_ability_Piercer");
-		startCooldown(avatar, abilityData.name);	
+		startCooldown(kaiju, abilityData.name);	
 	else
-		NoTargetText(avatar);
+		NoTargetText(kaiju);
 	end
 end
 

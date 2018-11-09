@@ -1,5 +1,5 @@
 require 'kaiju_gordon/scripts/gordon'
-local avatar = nil;
+local kaiju = nil;
 
 local freezeDuration = 2;
 
@@ -8,22 +8,22 @@ local weaponName = "BlastZone4"
 local blastNumber = 5;
 local blastDelay = 2;
 
-local blastTotal = blastDelay * blastNumber;
+blastTotal = blastDelay * blastNumber;
 
 local empower = 0;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
 	local rebootAura = Aura.create(this, a);
 	rebootAura:setTag('harmonic_overflow_tick');
 	rebootAura:setScriptCallback(AuraEvent.OnTick, 'onBlast');
-	rebootAura:setTickParameters(blastDelay, 0);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	rebootAura:setTickParameters(blastDelay, 0); --Zat: This line was corrupted
 	rebootAura:setTarget(a); -- required so aura doesn't autorelease
 	
-	startAbilityUse(avatar, abilityData.name);
-	empower = avatar:hasPassive("enhancement");
-	avatar:removePassive("enhancement", 0);
+	startAbilityUse(kaiju, abilityData.name);
+	empower = kaiju:hasPassive("enhancement");
+	kaiju:removePassive("enhancement", 0);
 
 end
 
@@ -36,27 +36,45 @@ function onAnimationEvent(a)
 	local rebootAura = Aura.create(this, a);
 	rebootAura:setTag('harmonic_overflow_freeze');
 	rebootAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
-	rebootAura:setTickParameters(freezeDuration, 0);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	rebootAura:setTickParameters(freezeDuration, 0); --Zat: this line was corrupted
 	rebootAura:setTarget(a); -- required so aura doesn't autorelease
 	
 	a:loseControl();
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() > freezeDuration then
-		avatar:regainControl();
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		kaiju:regainControl();
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 
 function onBlast(aura)
+	if not aura then
+		return
+	end
 	abilityEnhance(empower);
-	BlastZone(avatar, weaponName);
+	BlastZone(kaiju, weaponName);
 	abilityEnhance(0);
 	if aura:getElapsed() > blastTotal then
-		playAnimation(avatar, "ability_jump");
-		registerAnimationCallback(this, avatar, "start");
-		aura:getOwner():detachAura(aura);
+		playAnimation(kaiju, "ability_jump");
+		registerAnimationCallback(this, kaiju, "start");
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

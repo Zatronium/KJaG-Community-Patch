@@ -1,0 +1,1748 @@
+Vehicle {
+	Identifier: unit_AirborneLaser
+	Name: Airborne Laser
+	Description: 
+	VehicleType: Air
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/AirborneLaser.xml
+	Debris: weapon_AirborneLaser
+	StrafeSound: jet_flyby
+	Regions: 1,3,5
+	Armor: 10
+	Speed: 110
+	MaxHealth: 45
+	Tier: 5
+	Morale: 50
+	Node:nose:(-94,0,2)(-85,-16,2)(-65,-31,2)(-35,-42,2)(0,-45,2)(37,-42,2)(67,-31,2)(88,-16,2)(95,0,2)(86,21,2)(67,36,2)(38,48,2)(0,52,2)(-39,48,2)(-69,38,2)(-89,20,2)
+	Turret {
+		Node:nose
+		FireArc: 45
+		FireArcOrigin: 0
+		SpriteSheet: sprites/blankTurret.xml
+		Weapon {
+			WeaponId: weapon_LaserHeavy
+		}
+	}
+}
+
+
+
+Vehicle {
+	Identifier: unit_Bomber
+	Name: Bomber
+	Description: The Marauder is a venerable but reliable bomber design.
+	VehicleType: Bomber
+	DefenseType: Air
+	Script: scripts/vehicles/bomber.lua
+	SpriteSheet: sprites/bomber.xml
+	Debris: weapon_bomber
+	StrafeSound: bigplane_flyby
+	Regions: 2,4,5
+	Armor: 3
+	Speed: 90
+	MaxHealth: 20
+	Tier: 2
+	Morale: 15
+	Turret {
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Bomb
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_BomberJet
+	Name: Bomber
+	Description: The Ghost is a strategic heavy bomber.
+	VehicleType: Bomber
+	DefenseType: Air
+	Script: scripts/vehicles/bomber.lua
+	SpriteSheet: sprites/bomberJet.xml
+	Debris: weapon_bomberJet
+	StrafeSound: jet_flyby
+	Regions: 0
+	Armor: 3
+	Speed: 275
+	MaxHealth: 40
+	Tier: 4
+	Morale: 35
+	Turret {
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Bomb
+		}
+	}
+	Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+	}
+
+}
+
+
+Vehicle {
+	Identifier: unit_ChopperAssault
+	Alias: HelicarrierUnit
+	Name: Assault Chopper
+	Description: A powerful, well armoured helicopter.
+	VehicleType: Helicopter
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/chopperAssault.xml
+	IdleEffect: effects/assaultChopperBlade.plist
+	Debris: weapon_chopperAssault
+	Regions: 1,2,6
+	Armor: 7
+	Speed: 60
+	MaxHealth: 45
+	Tier: 3
+	Morale: 30
+	Turret {
+		FireArc: 45
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_AutoCannon
+		}
+	}
+	Turret {
+		FireArc: 90
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_ChopperAttack
+	Alias: AttackChopperClass
+	Name: Attack Chopper
+	Description: The viper attack chopper is fast and deadly but not very durable
+	VehicleType: Helicopter
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/chopperAttack.xml
+	IdleEffect: effects/attackChopperBlade.plist
+	Debris: weapon_chopperAttack
+	Regions: 2,4,5
+	Armor: 4
+	Speed: 70
+	MaxHealth: 25
+	Tier: 2
+	Morale: 20
+	Turret {
+		FireArc: 30
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_DumbFire1
+		}
+		Weapon {
+			WeaponId: weapon_DumbFire1
+		}
+	}
+	Turret {
+		FireArc: 30
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_ChopperRecon
+	Alias: ReconChopperClass
+	Name: Recon Chopper
+	Description: A light, fast recon helicopter with twin machineguns
+	VehicleType: Helicopter
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/chopperRecon.xml
+	IdleEffect: effects/reconChopperBlade.plist
+	Debris: weapon_chopperRecon
+	Regions: 1,5,6
+	Armor: 1
+	Speed: 70
+	MaxHealth: 10
+	Tier: 1
+	Morale: 15
+	Turret {
+		FireArc: 45
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Civilians
+	Name: Civilians
+	Description: Panicky people running for safety...YUM!
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/civilians.lua
+	SpriteSheet: sprites/civilians.xml
+	SpriteSheetHalloween: sprites/halloween_civillians.xml
+	SpriteSheetXmas: sprites/xmas_elf_civilians.xml
+	Regions: 0
+	Armor: 0
+	Speed: 20
+	MaxHealth: 5
+	Tier: 1
+	Morale: 50
+}
+
+
+Vehicle {
+	Identifier: unit_Battleship
+	Name: Battleship
+	Description: The Navy's first line of defence!
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_large.lua
+	SpriteSheet: sprites/battleshipBody.xml
+	CollisionShape: 380, 40
+	Regions: 1,2,3,6
+	Node:       tower: (0,0,2)		(0,0,3)			(0,0,3)		(0,0,3)			(0,0,2)		(0,0,4)			(0,00,4)	(0,0,4)
+	Node: frontTurret: (-216,5,5)	(-154,-70,5)	(0,-105,5)	(123,-65,5)		(216,12,0)	(153,80,2)		(0,112,2)	(-154,82,2)
+	Node:   midTurret: (-129,05,3)	(-92,-42,4)		(0,-60,4)	(90,-40,4)		(128,05,4)	(91,50,3)		(0,70,3)	(-92,50,2)
+	Node:  backTurret: (195,7,4)	(138,75,2)		(0,103,2)	(-140,72,2)		(-197,3,3)	(-139,-65,5)	(0,-95,5)	(138,-65,5)
+	Speed: 12
+	MaxHealth: 200
+	Tier: 4
+	Morale: 100
+	Armor: 18
+	Turret {
+		Node: tower
+		SpriteSheet: sprites/battleshipTower.xml
+		FireArc: 0
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: nullweapon
+		}
+	}
+	Turret {
+		Node: frontTurret
+		SpriteSheet: sprites/cruiserTurret.xml
+		FireArc: 300
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_CannonHeavy
+			Barrel: cruiserTurret
+		}
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: cruiserTurret
+		}
+	}
+	Turret {
+		Node: backTurret
+		SpriteSheet: sprites/cruiserTurret.xml
+		FireArc: 300
+		FireArcOrigin: 180
+		Weapon {
+			WeaponId: weapon_CannonHeavy
+			Barrel: cruiserTurret
+		}
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: cruiserTurret
+		}
+	}
+ 	Turret {
+ 		Node: midTurret
+ 		SpriteSheet: sprites/cruiserTurretTall.xml
+ 		FireArc: 300
+ 		FireArcOrigin: 0
+ 		Weapon {
+ 			WeaponId: weapon_CannonHeavy
+ 			Barrel: cruiserTurretTall
+ 		}
+ 		Weapon {
+ 			WeaponId: weapon_Cannon
+ 			Barrel: cruiserTurretTall
+ 		}
+ 	}
+}
+
+
+Vehicle {
+	Identifier: unit_Boomer
+	Name: Boomer
+	Description:  Classic nuclear sub
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_medium.lua
+	SpriteSheet: sprites/boomer.xml
+	CollisionShape: 120,20
+	Armor: 5
+	Regions: 0
+	Speed: 15
+	MaxHealth: 70
+	Tier: 5
+	Morale: 60
+	Turret {
+		FireArc: 360
+		FireArcOrigin:0
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+		}
+		Weapon {
+			WeaponId: weapon_BoomerNuke
+		}
+	}
+}
+
+
+
+
+Vehicle {
+	Identifier: unit_Cruiser
+	Alias: CruiserClass
+	Name: Cruiser
+	Description: The Navy's first line of defence!
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_medium.lua
+	SpriteSheet: sprites/cruiserBody.xml
+	CollisionShape: 250,25
+	Regions: 0
+	Node:       tower: (0,0,2)		(0,0,3)			(0,0,3)		(0,0,3)		(0,0,2)		(0,0,4)			(0,00,4)	(0,0,4)
+	Node: frontTurret: (-188,021,5)	(-132,-48,5)	(0,-74,5)	(131,-47,5)	(187,21,5)	(132,87,2)		(0,114,2)	(-134,86,2)
+	Node:   midTurret: (-122,021,3)	(-87,-26,4)		(0,-41,4)	(86,-24,4)	(121,20,4)	(85,64,3)		(0,81,3)	(-87,64,3)
+	Node:  backTurret: (207,021,4) 	(147,95,2)		(0,125,2)	(-148,93,2)	(-209,19,3)	(-148,-55,5)	(0,-86,5)	(146,-54,5)
+	Armor: 10
+	Speed: 18
+	MaxHealth: 200
+	Tier: 4
+	Morale: 60
+	Turret {
+		Node: tower
+		SpriteSheet: sprites/cruiserTower.xml
+		FireArc: 0
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: nullweapon
+		}
+	}
+	Turret {
+		Node: frontTurret
+		SpriteSheet: sprites/cruiserTurret.xml
+		FireArc: 300
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: cruiserTurret
+		}
+	}
+	Turret {
+		Node: backTurret
+		SpriteSheet: sprites/cruiserTurret.xml
+		FireArc: 300
+		FireArcOrigin: 180
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: cruiserTurret
+		}
+	}
+	Turret {
+		Node: midTurret
+		SpriteSheet: sprites/cruiserTurretTall.xml
+		FireArc: 300
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: cruiserTurretTall
+		}
+	}
+	Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_CruiserMissile
+	Alias: CruiserClass
+	Name: Missile Cruiser
+	Description: The Navy's first line of defence!
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_medium.lua
+	SpriteSheet: sprites/cruiserBody.xml
+	CollisionShape: 250,25
+	Regions: 1,2,5,6
+	Node:       tower: (0,0,2)		(0,0,3)			(0,0,3)		(0,0,3)		(0,0,2)		(0,0,4)			(0,00,4)	(0,0,4)
+	Node: frontTurret: (-188,017,5)	(-132,-48,5)	(0,-74,5)	(131,-47,5)	(187,17,5)	(132,84,2)		(0,114,2)	(-134,86,2)
+	Node:   midTurret: (-122,021,3)	(-87,-26,4)		(0,-41,4)	(86,-24,4)	(121,20,4)	(85,64,3)		(0,81,3)	(-87,64,3)
+	Node:  backTurret: (207,017,4) 	(147,95,2)		(0,125,2)	(-148,93,2)	(-209,17,3)	(-148,-55,5)	(0,-86,5)	(146,-54,5)
+	Armor: 8
+	Speed: 20
+	MaxHealth: 190
+	Tier: 5
+	Morale: 60
+	Turret {
+		Node: tower
+		SpriteSheet: sprites/cruiserTowerMissile.xml
+		FireArc: 0
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: nullweapon
+		}
+	}
+	Turret {
+		Node: frontTurret
+		SpriteSheet: sprites/destroyerTurret.xml
+		FireArc: 300
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_AutoCannon
+			Barrel: destroyerTurret
+		}
+	}
+	Turret {
+		Node: backTurret
+		SpriteSheet: sprites/destroyerTurret.xml
+		FireArc: 300
+		FireArcOrigin: 180
+		Weapon {
+			WeaponId: weapon_AutoCannon
+			Barrel: destroyerTurret
+		}
+	}
+	Turret {
+		Node: midTurret
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Destroyer
+	Alias: DestroyerClass
+	Name: Destroyer
+	Description: The Navy's first line of defence!
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_medium.lua
+	SpriteSheet: sprites/destroyer.xml
+	CollisionShape: 180,20
+	Regions: 0
+	Node:    mg1: (  38,  -7, 6)(  42,  -3, 5)(  43,   2, 5)(  43,   6, 5)(  41,  10, 5)(  37,  15, 5)(  33,  18, 5)(  27,  21, 5)(  20,  23, 3)(  12,  24, 3)(   2,  26, 3)(  -6,  25, 3)( -13,  25, 3)( -23,  23, 3)( -28,  21, 3)( -34,  18, 2)( -40,  14, 2)( -42,  10, 3)( -44,   6, 3)( -43,   2, 3)( -43,  -3, 3)( -40,  -7, 3)( -35, -10, 3)( -28, -13, 3)( -22, -16, 4)( -13, -17, 5)(  -4, -19, 5)(   5, -18, 5)(  13, -17, 5)(  21, -16, 5)(  28, -13, 5)(  34, -10, 5)
+	Node:    mg2: (  38,  14, 2)(  34,  18, 2)(  27,  20, 3)(  19,  23, 3)(  12,  25, 3)(   5,  25, 3)(  -5,  25, 3)( -14,  25, 3)( -22,  23, 5)( -29,  20, 5)( -35,  17, 5)( -40,  14, 5)( -43,  10, 5)( -45,   6, 5)( -44,   2, 5)( -42,  -4, 5)( -40,  -7, 6)( -34, -10, 5)( -30, -13, 5)( -21, -16, 5)( -13, -17, 5)(  -5, -18, 5)(   4, -18, 5)(  12, -17, 5)(  20, -16, 5)(  27, -13, 3)(  34, -10, 3)(  38,  -7, 3)(  42,  -3, 3)(  43,   2, 3)(  43,   6, 3)(  41,  10, 3)
+	Node:    mg3: ( 132,   3, 4)( 129,  17, 3)( 121,  28, 2)( 109,  40, 2)(  93,  50, 2)(  73,  58, 2)(  50,  64, 2)(  26,  67, 2)(   0,  69, 2)( -28,  67, 2)( -51,  64, 2)( -74,  54, 2)( -91,  50, 2)(-109,  40, 2)(-121,  28, 2)(-129,  16, 3)(-132,   3, 5)(-130, -11, 6)(-122, -22, 6)(-109, -33, 6)( -93, -43, 6)( -73, -52, 6)( -50, -58, 6)( -27, -61, 6)(   0, -63, 6)(  26, -61, 6)(  50, -58, 6)(  73, -52, 6)(  93, -43, 6)( 109, -34, 6)( 121, -22, 6)( 129, -10, 6)
+	Node: cannon: ( -82,  14, 5)( -81,   5, 6)( -76,  -2, 6)( -69,  -9, 6)( -59, -16, 6)( -46, -21, 6)( -32, -24, 6)( -17, -27, 6)(   0, -28, 6)(  16, -27, 6)(  31, -24, 6)(  46, -21, 6)(  58, -16, 6)(  68,  -9, 6)(  76,  -3, 6)(  81,   6, 6)(  82,  14, 4)(  81,  22, 2)(  76,  30, 2)(  68,  36, 2)(  58,  43, 2)(  46,  48, 2)(  31,  52, 2)(  16,  54, 2)(   0,  55, 2)( -17,  54, 2)( -32,  52, 2)( -47,  48, 2)( -60,  43, 2)( -69,  36, 2)( -76,  29, 2)( -81,  22, 2)
+	Node:  tower: (   0,   0, 3)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 3)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 3)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)(   0,   0, 4)
+	Armor: 5
+	Speed: 25
+	MaxHealth: 70
+	Tier: 2
+	Morale: 60
+	Turret {
+		Node: mg1
+		SpriteSheet: sprites/jeepTurret.xml
+		FireArc: 90
+		FireArcOrigin: 90
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+			Barrel: jeepTurret
+		}
+	}
+	Turret {
+		Node: mg2
+		SpriteSheet: sprites/jeepTurret.xml
+		FireArc: 90
+		FireArcOrigin: -90
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+			Barrel: jeepTurret
+		}
+	}
+	Turret {
+		Node: mg3
+		SpriteSheet: sprites/jeepTurret.xml
+		FireArc: 230
+		FireArcOrigin: 180
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+			Barrel: jeepTurret
+		}
+	}
+	Turret {
+		Node: cannon
+		SpriteSheet: sprites/destroyerTurret.xml
+		FireArc: 300
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: destroyerTurret
+		}
+	}
+	Turret {
+		Node: tower
+		SpriteSheet: sprites/destroyerTower.xml
+		FireArc: 0
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: nullweapon
+		}
+	}
+	Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_DroneAttack
+	Name: Attack Drone
+	Description: pteranodrone
+	VehicleType: Helicopter
+	DefenseType: None
+	Script: scripts/vehicles/drone.lua
+	SpriteSheet: kaiju_gino/skin/gino_pteranodrone.xml
+	MinionSpriteKey: DroneSprites
+	Regions: 0
+	Speed: 60
+	MaxHealth: 5
+	Tier: 6
+	Morale: 0
+	Turret {
+		FireArc: 30
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_LaserLight
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Fighter
+	Name: Fighter
+	Description: A propellor driven light fighter
+	VehicleType: Air
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/fighter.xml
+	Debris: weapon_fighter
+	StrafeSound: plane_flyby
+	Regions: 2,4
+	Armor: 2
+	Speed: 120
+	MaxHealth: 20
+	Tier: 1
+	Morale: 20
+	Turret {
+		FireArc: 45
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_FighterAttack
+	Alias: HelicarrierUnit
+	Name: Fighter
+	Description: A twin-engine, straight wing jet aircraft
+	VehicleType: Air
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/fighterAttack.xml
+	Debris: weapon_fighterAttack
+	StrafeSound: jet_flyby
+	Regions: 0
+	Armor: 5
+	Speed: 130
+	MaxHealth: 24
+	Tier: 4
+	Morale: 20
+	Turret {
+		FireArc: 45
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_AutoCannon
+		}
+	}
+	Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_FighterJet
+	Alias: HelicarrierUnit
+	Name: Jet Fighter
+	Description: A powerful interceptor armed with guided missiles and heavy machine guns.
+	VehicleType: Air
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/jetFighter.xml
+	Debris: weapon_fighterJet
+	StrafeSound: jet_flyby
+	Regions: 0
+	Armor: 1
+	Speed: 135
+	MaxHealth: 15
+	Tier: 3
+	Morale: 40
+	Turret {
+		FireArc: 45
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_GunshipHeavy
+	Name: Heavy Gunship
+	Description: A heavily armed ground-attack aircraft
+	VehicleType: Air
+	DefenseType: Air
+	Script: scripts/vehicles/jet.lua
+	SpriteSheet: sprites/gunshipHeavy.xml
+	Debris: weapon_gunshipHeavy
+	StrafeSound: jet_flyby
+	Regions: 1,2,4
+	Armor: 8
+	Speed: 80
+	MaxHealth: 50
+	Tier: 4
+	Morale: 20
+	Turret {
+		FireArc: 45
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Cannon
+		}
+		Weapon {
+			WeaponId: weapon_Cannon
+		}
+		Weapon {
+			WeaponId: weapon_AutoCannon
+		}
+		Weapon {
+			WeaponId: weapon_AutoCannon
+		}
+		Weapon {
+			WeaponId: weapon_AutoCannon
+		}
+		Weapon {
+			WeaponId: weapon_AutoCannon
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Infantry
+	Alias: InfantryClass
+	Name: Infantry
+	Description: Brave soldiers with a bad sense of scale
+	VehicleType: Infantry
+	DefenseType: Infantry
+	Script: scripts/vehicles/infantry.lua
+	SpriteSheet: sprites/infantry.xml
+	Regions: 0
+	Armor: 0
+	Speed: 15
+	MaxHealth: 10
+	Tier: 1
+	Morale: 10
+	Turret {
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_InfantryArmor
+	Name: Armored Infantry
+	Description: Trooper in powered battle armor
+	VehicleType: Vehicle
+	DefenseType: Infantry
+	Script: scripts/vehicles/infantry.lua
+	SpriteSheet: sprites/armoredInfantry_body.xml
+	Regions: 0
+	Armor: 8
+	Speed: 20
+	MaxHealth: 20
+	Tier: 4
+	Morale: 25
+	Turret {
+		SpriteSheet: sprites/armoredInfantry_turret.xml
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_LaserLight
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_InfantryRocket
+	Alias: RocketInfantryClass
+	Name: Rocket Infantry
+	Description: Brave soldiers with a bad sense of scale
+	VehicleType: Infantry
+	DefenseType: Infantry
+	Script: scripts/vehicles/infantry.lua
+	SpriteSheet: sprites/infantry.xml
+	Regions: 0
+	Armor: 0
+	Speed: 12
+	MaxHealth: 10
+	Tier: 2
+	Morale: 10
+	Turret {
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_RPG
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_InfantryFlame
+	Alias: FlameInfantryClass
+	Name: Flamer Infantry
+	Description: Brave soldiers with a bad sense of scale
+	VehicleType: Infantry
+	DefenseType: Infantry
+	Script: scripts/vehicles/infantry.lua
+	SpriteSheet: sprites/infantry.xml
+	Regions: 0
+	Armor: 0
+	Speed: 12
+	MaxHealth: 10
+	Tier: 2
+	Morale: 10
+	Turret {
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_FlameSpray
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_Militia
+	Alias: MilitiaClass
+	Name: Militia
+	Description: Brave soldiers with a bad sense of scale
+	VehicleType: Infantry
+	DefenseType: Infantry
+	Script: scripts/vehicles/infantry.lua
+	SpriteSheet: sprites/militia.xml
+	Regions: 2,4
+	Armor: 0
+	Speed: 12
+	MaxHealth: 10
+	Tier: 2
+	Morale: 10
+	Turret {
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+	}
+}
+
+
+
+Vehicle {
+	Identifier: unit_Jeep
+	Alias: JeepClass
+	Name: Jeep
+	Description: An old jeep armed with a 50 Cal machine gun on the back.
+	HasEngineVibration: true
+	VehicleType: Vehicle
+	DefenseType: Vehicle
+	Script: scripts/vehicles/jeep.lua
+	SpriteSheet: sprites/jeepBody.xml
+	Regions: 0
+	Armor: 1
+	Speed: 55
+	MaxHealth: 15
+	Tier: 1
+	Morale: 12
+	Turret {
+		SpriteSheet: sprites/jeepTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+			Barrel: jeepTurret
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_MRLTank
+	Name: MRL Tank
+	Description: A modern mulitple rocket luancher on a tank Chassis
+	HasEngineVibration: true
+	VehicleType: Tank
+	DefenseType: Armor
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: sprites/mediumTankBody.xml
+	Regions: 0
+	Armor: 8
+	Speed: 25
+	MaxHealth: 50
+	Tier: 3
+	Morale: 25
+	Turret {
+		SpriteSheet: sprites/mrlTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_DumbFire2
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_MRLTruck
+	Name: MRL Truck
+	Description: An old truck mounting multiple rocket launch tubes
+	HasEngineVibration: true
+	VehicleType: Vehicle
+	DefenseType: Vehicle
+	Script: scripts/vehicles/jeep.lua
+	SpriteSheet: sprites/mrl.xml
+	Regions: 2,4
+	Armor: 1
+	Speed: 50
+	MaxHealth: 20
+	Tier: 2
+	Morale: 20
+	Turret {
+		FireArc: 90
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_DumbFire2
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Melter
+	Name: Melter
+	Description: An improvised tanker truck designed to deliver a powerful organic acid through a modified firehose.
+	HasEngineVibration: true
+	VehicleType: Vehicle
+	DefenseType: Vehicle
+	Script: scripts/vehicles/jeep.lua
+	SpriteSheet: sprites/melterBody.xml
+	Regions: 0
+	Armor: 1
+	Speed: 40
+	MaxHealth: 30
+	Tier: 3
+	Morale: 35
+	Turret {
+		FireArc: 
+		FireArcOrigin: 0
+		SpriteSheet: sprites/melterTurret.xml
+		Weapon {
+			WeaponId: weapon_AcidSpray
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_TankFlame
+	Name: FlameThrower
+	Description:
+	HasEngineVibration: true
+	VehicleType: Vehicle
+	DefenseType: Vehicle
+	Script: scripts/vehicles/jeep.lua
+	SpriteSheet: sprites/mediumTankBody.xml
+	Regions: 0
+	Armor: 5
+	Speed: 45
+	MaxHealth: 30
+	Tier: 3
+	Morale: 35
+	Turret {
+		FireArc: 
+		FireArcOrigin: 0
+		SpriteSheet: sprites/tankFlameTurret.xml
+		Weapon {
+			WeaponId: weapon_FlameSpray
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Hovercraft
+	Alias: HovercraftClass
+	Name: Hover Craft
+	Description:
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_small.lua
+	SpriteSheet: sprites/hovercraftBody.xml
+	Regions: 0
+	Armor: 2
+	Speed: 65
+	MaxHealth: 25
+	Tier: 4
+	Morale: 25
+	Turret {
+		SpriteSheet: sprites/hovercraftTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_LaserLight
+			Barrel: hovercraftTurret
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Hydrofoil
+	Name: Hydrofoil
+	Description: A very advanced high speed attack boat.
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_small.lua
+	SpriteSheet: sprites/hydrofoilBody.xml
+	Regions: 4,5,6
+	Node:    FT: (-47,2,3)	(-33,-21,4)	(0,-28,4)	(32,-15,4)	(46,3,3)	(34,18,2)	(0,23,2)	(-35,15,2)
+	Node:    RT: (90,0,4)	(63,30,2)	(0,35,2)	(-64,30,2)	(-90,1,4)	(-64,-33,4)	(0,-47,4)	(63,-33,4)
+	Node: Tower: (0,0,2)	(0,0,3)		(0,0,3)		(0,0,3)		(0,0,2)		(0,0,3)		(0,00,3)	(0,0,3)
+	Armor: 1
+	Speed: 85
+	MaxHealth: 35
+	Tier: 5
+	Morale: 25
+		Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MissileGuided1
+		}
+	}
+	Turret {
+		Node: FT
+		SpriteSheet: sprites/destroyerTurret.xml
+		FireArc: 270
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_AutoCannon
+			Barrel: destroyerTurret
+		}
+	}
+	Turret {
+		Node: RT
+		SpriteSheet: sprites/destroyerTurret.xml
+		FireArc: 270
+		FireArcOrigin: 180
+		Weapon {
+			WeaponId: weapon_AutoCannon
+			Barrel: destroyerTurret
+		}
+	}
+	Turret {
+		Node: Tower
+		SpriteSheet: sprites/hydrofoilTower.xml
+		FireArc: 0
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: nullweapon
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_PatrolBoat
+	Alias: PatrolBoatClass
+	Name: Patrol Boat
+	Description: A small patrol boat with 2 heavy machine guns. One at each end.
+	VehicleType: Ship
+	DefenseType: Navy
+	Script: scripts/vehicles/ship_small.lua
+	SpriteSheet: sprites/boatPatrolBody.xml
+	Regions: 0
+	Node:    FT: ( -36, -11, 3)( -33, -19, 3)( -26, -25, 3)( -14, -27, 3)(   0, -29, 3)(  14, -28, 3)(  25, -25, 3)(  33, -18, 3)(  35, -12, 3)(  33,  -4, 3)(  25,   1, 3)(  14,   5, 1)(   0,   7, 3)( -14,   5, 1)( -26,   1, 3)( -33,  -4, 3)
+	Node:    RT: (  32, -14, 2)(  30,  -7, 2)(  23,  -2, 1)(  12,   2, 1)(   0,   3, 1)( -13,   2, 1)( -24,  -2, 1)( -30,  -8, 2)( -33, -14, 2)( -30, -20, 2)( -23, -25, 2)( -13, -29, 3)(   0, -30, 2)(  13, -29, 3)(  23, -25, 2)(  30, -20, 2)
+	Node: Tower: (   0,   0, 1)(   0,   0, 1)(   0,   0, 2)(   0,   0, 2)(   0,   0, 2)(   0,   0, 2)(   0,   0, 2)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 2)(   0,   0, 1)(   0,   0, 2)(   0,   0, 1)(   0,   0, 1)
+	Armor: 1
+	Speed: 45
+	MaxHealth: 10
+	Tier: 1
+	Morale: 25
+	Turret {
+		Node: FT
+		SpriteSheet: sprites/jeepTurret.xml
+		FireArc: 270
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+			Barrel: jeepTurret
+		}
+	}
+	Turret {
+		Node: RT
+		SpriteSheet: sprites/jeepTurret.xml
+		FireArc: 270
+		FireArcOrigin: 180
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+			Barrel: jeepTurret
+		}
+	}
+	Turret {
+		Node: Tower
+		SpriteSheet: sprites/boatPatrolTower.xml
+		FireArc: 0
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: nullweapon
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_RocketTruck
+	Alias: RocketTruckClass
+	Name: Rocket Truck
+	Description: A light truck with RPG armed soldiers in the back
+	HasEngineVibration: true
+	VehicleType: Vehicle
+	DefenseType: Vehicle
+	Script: scripts/vehicles/jeep.lua
+	SpriteSheet: sprites/truckBody.xml
+	Regions: 2,4
+	Armor: 2
+	Speed: 55
+	MaxHealth: 15
+	Tier: 2
+	Morale: 10
+	Turret {
+		FireArc: 180
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_RPG
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_Skitterbug
+	Name: SkitterBug
+	Description: A small remote controlled bomb on wheels.
+	HasEngineVibration: true
+	VehicleType: Vehicle
+	DefenseType: Vehicle
+	Script: scripts/vehicles/skitter.lua
+	SpriteSheet: sprites/skitterBug.xml
+	Regions: 2,4,6
+	Armor: 2
+	Speed: 60
+	MaxHealth: 10
+	Tier: 4
+	Morale: 1
+}
+
+
+Vehicle {
+	Identifier: unit_SuperTank
+	Name: Ultimate Behemoth
+	Description: Super! Enemy! Super! Tank!
+	VehicleType: Tank
+	DefenseType: Super
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: enemies/supertank/superTankBody.xml
+	Regions: 1
+	//				0				1				2			3				4				5			6				7			8			9				10			11				12				13			14			15
+	Node: FLT: ( -98, -38, 0)( -62, -53, 0)( -15, -62, 0)(  33, -59, 0)(  77, -48, 0)( 106, -29, 0)( 124,  -6, 0)( 121,  19, 0)(  99,  40, 0)(  61,  14, 0)(  15,  65, 0)( -36,  60, 0)( -79,  51, 0)(-111,  31, 0)(-128,  10, 0)(-123, -16, 0)
+	Node: FRT: ( -98,  39, 0)(-121,  18, 0)(-125,  -6, 0)(-110, -31, 0)( -77, -48, 0)( -35, -59, 0)(  14, -62, 0)(  61, -54, 0)(  99, -37, 0)( 121, -58, 0)( 125,  10, 0)( 109,  32, 0)(  79,  51, 0)(  35,  63, 0)( -18,  64, 0)( -62,  57, 0)
+	Node: BLT: (  24, -38, 0)(  53, -31, 0)(  72, -17, 0)(  80,  -2, 0)(  77,  13, 0)(  63,  26, 0)(  37,  36, 0)(   8,  42, 0)( -25,  40, 0)( -54,  32, 0)( -74,  20, 0)( -83,   6, 0)( -79, -12, 0)( -64, -25, 0)( -39, -35, 0)( -10, -39, 0)
+	Node: BRT: (  24,  60, 0)(  -9,  40, 0)( -39,  37, 0)( -63,  26, 0)( -77,  13, 0)( -82,  -4, 0)( -74, -19, 0)( -55, -31, 0)( -25, -37, 0)(   9, -38, 0)(  38, -34, 0)(  61, -25, 0)(  79, -12, 0)(  82,   5, 0)(  71,  20, 0)(  52,  31, 0)
+	Node: GBT: (   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)(   0,   0, 1)
+	Armor: 35
+	AttackDelay: 0.1
+	Speed: 25
+	MaxHealth: 1050
+	Tier: 4
+	Morale: 300
+	Turret {
+		Node: FLT
+		SpriteSheet: enemies/supertank/superTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 90
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: superTankTurret
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+			Barrel: superTankTurret
+		}
+	}
+	Turret {
+		Node: FRT
+		SpriteSheet: enemies/supertank/superTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 90
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: superTankTurret
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+			Barrel: superTankTurret
+		}
+	}
+	Turret {
+		Node: BLT
+		SpriteSheet: enemies/supertank/superTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 90
+		Weapon {
+			WeaponId: weapon_CannonHeavy
+			Barrel: superTankTurret
+		}
+	}
+	Turret {
+		Node: BRT
+		SpriteSheet: enemies/supertank/superTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 90
+		Weapon {
+			WeaponId: weapon_CannonHeavy
+			Barrel: superTankTurret
+		}
+	}
+	Turret {
+		Node: GBT
+		SpriteSheet: enemies/supertank/superTankBigTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_CannonHeavy
+			Barrel: superTankBigTurret
+		}
+		Weapon {
+			WeaponId: weapon_CannonHeavy
+			Barrel: superTankBigTurret
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_TankBehometh
+	Alias: HeavyBehomethClass
+	Name: Behemoth Tank
+	Description: 
+	HasEngineVibration: true
+	VehicleType: Tank
+	DefenseType: Armor
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: sprites/tankBehomethBody.xml
+	Regions: 0
+	Armor: 18
+	AttackDelay: 0.25
+	Speed: 25
+	MaxHealth: 100
+	Tier: 5
+	Morale: 50
+	Turret {
+		SpriteSheet: sprites/tankBehomethTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_LaserPulse
+			Barrel: tankBehomethTurret
+		}
+	}
+	Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+	}
+}
+
+
+
+Vehicle {
+	Identifier: unit_TankHeavy
+	Alias: HeavyTankClass
+	Name: Heavy Tank
+	Description: The JJ Abrams heavy tank has a powerful cannon, 2 heavy machine guns and lots of lens flare.
+	HasEngineVibration: true
+	VehicleType: Tank
+	DefenseType: Armor
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: sprites/heavyTankBody.xml
+	Regions: 0
+	Armor: 12
+	AttackDelay: 0.25
+	Speed: 30
+	MaxHealth: 80
+	Tier: 4
+	Morale: 50
+	Turret {
+		SpriteSheet: sprites/heavyTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: heavyTankTurret
+		}
+	}
+	Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_TankLaser
+	Name: Tank
+	Description: A medium main battle tank armed with an experimental laser cannon.
+	HasEngineVibration: true
+	VehicleType: Tank
+	DefenseType: Armor
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: sprites/tankLaserBody.xml
+	Regions: 0
+	Armor: 10
+	Speed: 50
+	MaxHealth: 35
+	Tier: 4
+	Morale: 55
+	Turret {
+		SpriteSheet: sprites/tankLaserTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Laser1
+			Barrel: tankLaserTurret
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_TankLight
+	Alias: LightTankClass
+	Name: Light Tank
+	Description: These light wheeled tanks are favoured by fast reponse national gaurd or security forces.  Armed wth and autocannon, they are most useful for parades and maintaining civil order.
+	HasEngineVibration: true
+	VehicleType: Tank
+	DefenseType: Armor
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: sprites/lightTankBody.xml
+	Regions: 0
+	Armor: 5
+	AttackDelay: 0.2
+	Speed: 40
+	MaxHealth: 20
+	Tier: 1
+	Morale: 20
+	Turret {
+		SpriteSheet: sprites/lightTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_AutoCannon
+			Barrel: lightTankTurret
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_TankMedium
+	Alias: TankClass
+	Name: Tank
+	Description: A medium main battle tank armed with a cannon and a machinegun
+	HasEngineVibration: true
+	VehicleType: Tank
+	DefenseType: Armor
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: sprites/mediumTankBody.xml
+	Regions: 0
+	Armor: 8
+	Speed: 30
+	MaxHealth: 45
+	Tier: 2
+	Morale: 30
+	Turret {
+		SpriteSheet: sprites/mediumTankTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Cannon
+			Barrel: mediumTankTurret
+			MuzzleEffect: effects/cannonMuzzle_Pow.plist
+			MuzzleEffect: effects/cannonMuzzle_Boom.plist
+		}
+		Weapon {
+			WeaponId: weapon_MachineGun
+		}
+	}
+}
+
+
+Vehicle {
+	Identifier: unit_TankStasis
+	Name: Stasis Tank
+	Description: A heavy tank mounting an absolute zero freeze ray.
+	HasEngineVibration: true
+	VehicleType: Tank
+	DefenseType: Armor
+	Script: scripts/vehicles/tank.lua
+	SpriteSheet: sprites/tankStasisBody.xml
+	Regions: 2,3,5
+	Armor: 7
+	AttackDelay: 0.25
+	Speed: 30
+	MaxHealth: 55
+	Tier: 4
+	Morale: 45
+	Turret {
+		SpriteSheet: sprites/tankStasisTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_FreezeRay
+			Barrel: tankStasisTurret
+		}
+	}
+	Turret {
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_MachineGunHeavy
+		}
+	}
+}
+
+
+
+Vehicle {
+	Identifier: unit_HeliCarrier
+	Name: The Skycarrier
+	Description: Skycarrier
+	VehicleType: Helicopter
+	DefenseType: Super
+	Script: scripts/vehicles/helicarrier.lua
+	SpriteSheet: enemies/helicarrier/helicarrierBody.xml
+	Debris: weapon_carrier
+	Regions: 1,2,3,4,5,6
+	CollisionShape: 200,50
+	//				0				1				2			3				4				5			6				7			8			9				10			11				12				13			14			15
+	Node: FLT: (-189,  11, 0)( -72, -44, 0)( -72, -44, 0)( -72, -44, 0)(  77, -44, 0)( 197,  16, 0)( 197,  16, 0)( 197,  16, 0)( 189,  98, 0)(  73, 151, 0)(  73, 151, 0)(  73, 151, 0)( -78, 150, 0)(-192,  95, 0)(-192,  95, 0)(-192,  95, 0)
+	Node: FRT: (-189,  99, 0)(-197,  16, 0)(-197,  16, 0)(-197,  16, 0)( -79, -44, 0)(  78, -43, 0)(  78, -43, 0)(  78, -43, 0)( 189,  11, 0)( 195,  96, 0)( 195,  96, 0)( 195,  96, 0)(  78, 150, 0)( -74, 150, 0)( -74, 150, 0)( -74, 150, 0)
+	Node: BLT: ( 180,  26, 0)( 164,  98, 0)( 164,  98, 0)( 164,  98, 0)(  55, 145, 0)( -87, 142, 0)( -87, 142, 0)( -87, 142, 0)(-180,  87, 0)(-167,  15, 0)(-167,  15, 0)(-167,  15, 0)( -57, -38, 0)(  86, -29, 0)(  86, -29, 0)(  86, -29, 0)
+	Node: BRT: ( 180,  87, 0)(  90, 142, 0)(  90, 142, 0)(  90, 142, 0)( -58, 145, 0)(-166,  99, 0)(-166,  99, 0)(-166,  99, 0)(-180,  26, 0)( -86, -30, 0)( -86, -30, 0)( -86, -30, 0)(  57, -38, 0)( 169,  15, 0)( 169,  15, 0)( 169,  15, 0)
+	Armor: 15
+	AttackDelay: 0.1
+	Speed: 40
+	MaxHealth: 750
+	Tier: 4
+	Morale: 300
+	Turret {
+		Node: FLT
+		SpriteSheet: enemies/helicarrier/helicarrierTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Laser1
+			Barrel: helicarrierTurret
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+			Barrel: superTankTurret
+		}
+	}
+	Turret {
+		Node: FRT
+		SpriteSheet: enemies/helicarrier/helicarrierTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Laser1
+			Barrel: helicarrierTurret
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+			Barrel: superTankTurret
+		}
+	}
+	Turret {
+		Node: BLT
+		SpriteSheet: enemies/helicarrier/helicarrierTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Laser1
+			Barrel: helicarrierTurret
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+			Barrel: superTankTurret
+		}
+	}
+	Turret {
+		Node: BRT
+		SpriteSheet: enemies/helicarrier/helicarrierTurret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_Laser1
+			Barrel: helicarrierTurret
+		}
+		Weapon {
+			WeaponId: weapon_MissileGuided2
+			Barrel: superTankTurret
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_shrubby_cloud
+	Name:​
+	Description: Cloud
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/cloud.lua
+	CollisionShape: 1,1
+	SpriteSheet: sprites/cloud.xml
+	Regions: 0
+	Speed: 60
+	MaxHealth: 1
+	Tier: 6
+	Morale: 0
+}
+
+Vehicle {
+	Identifier: unit_shrubby_patch
+	Name:​
+	Description: patch
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/dummy.lua
+	CollisionShape: 1,1
+	SpriteSheet: sprites/cloud.xml
+	Regions: 0
+	Speed: 0
+	MaxHealth: 1
+	Tier: 6
+	Morale: 0
+}
+
+Vehicle {
+	Identifier: unit_shrubby_seedling_small
+	Name: Small Seedling
+	Description: A tiny baby Shrubby Seedling
+	Tag: ShrubbySeedling
+	MinionSpriteKey: SeedlingSpritesSmall
+	HasEngineVibration: true
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/seed_minion.lua
+	SpriteSheet: kaiju_shrubby/skin/seedling_body_small.xml
+	Regions: 0
+	Armor: 1
+	AttackDelay: 1
+	Speed: 0
+	MaxHealth: 30
+	Tier: 1
+	Morale: 0
+	Turret {
+		MinionSpriteKey: SeedlingTurretSmall
+		SpriteSheet: kaiju_shrubby/skin/seedling_turret_small.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_seedling_small
+			Barrel: seeding_small_Turret
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_shrubby_seedling
+	Name: Seedling
+	Description: A baby Shrubby Seedling
+	Tag: ShrubbySeedling
+	MinionSpriteKey: SeedlingSpritesNormal
+	HasEngineVibration: true
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/seed_minion.lua
+	SpriteSheet: kaiju_shrubby/skin/seedling_body.xml
+	Regions: 0
+	Armor: 1
+	AttackDelay: 1
+	Speed: 0
+	MaxHealth: 30
+	Tier: 1
+	Morale: 0
+	Turret {
+		MinionSpriteKey: SeedlingTurretNormal
+		SpriteSheet: kaiju_shrubby/skin/seedling_turret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_seedling1
+			Barrel: seeding_Turret
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_shrubby_healing_seedling
+	Name: Feeder Seedling
+	Description: A Shrubby Seedling of Healing
+	Tag: ShrubbySeedling
+	MinionSpriteKey: SeedlingSpritesHealing
+	HasEngineVibration: true
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/seed_heal_minion.lua
+	SpriteSheet: kaiju_shrubby/skin/seedling_body.xml
+	Regions: 0
+	Armor: 1
+	AttackDelay: 1
+	Speed: 0
+	MaxHealth: 30
+	Tier: 1
+	Morale: 0
+	Turret {
+		MinionSpriteKey: SeedlingTurretHealing
+		SpriteSheet: kaiju_shrubby/skin/seedling_turret_healing.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_feeder_heal
+			Barrel: seeding_healing_Turret
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_shrubby_earth_wall
+	Name: Earth Wall
+	Description: A mount of dirt blocking the way
+	Tag: ShrubbySeedling
+	Script: scripts/vehicles/wall.lua
+	VehicleType: Tank
+	DefenseType: None
+	SpriteSheet: sprites/earthwall.xml
+	SpriteAnchor: 0.5,0.1
+	Regions: 0
+	Armor: 1
+	AttackDelay: 1
+	Speed: 0
+	MaxHealth: 100
+	Tier: 1
+	Morale: 0
+}
+
+Vehicle {
+	Identifier: unit_goop_patch
+	Name:​
+	Description: patch
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/dummy.lua
+	CollisionShape: 1,1
+	SpriteSheet: sprites/cloud.xml
+	Regions: 0
+	Speed: 0
+	MaxHealth: 1
+	Tier: 6
+	Morale: 0
+}
+
+Vehicle {
+	Identifier: unit_goop_goopling
+	Name: Goopling
+	Description: A little piece of Deadly Goop
+	Tag: GoopGoopling
+	MinionSpriteKey: GoopGooplingSprite
+	HasEngineVibration: true
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/goopling.lua
+	SpriteSheet: kaiju_goop/skin/goopling_body.xml
+	Regions: 0
+	Armor: 1
+	AttackDelay: 1
+	Speed: 200
+	MaxHealth: 15
+	Tier: 1
+	Morale: 0
+	//				0			1		2			3		4			5		6		  7			8			9		10		  11		12		  13		14		  15
+	Node: EYE: (0, 20, 0)( 0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)(0, 20, 0)
+	Turret {
+		Node: EYE
+		MinionSpriteKey: GoopGooplingTurret
+		SpriteSheet: kaiju_goop/skin/goopling_turret.xml
+		FireArc: 360
+		FireArcOrigin: 0
+		Weapon {
+			WeaponId: weapon_goop_goopling
+			Barrel: goop_goopling_Turret
+		}
+	}
+}
+
+Vehicle {
+	Identifier: unit_goop_goopup
+	Name: Goop
+	Description: A little piece of Goop
+	Tag: GoopGoopUp
+	MinionSpriteKey: GoopGoopupSprite
+	HasEngineVibration: true
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/goopup.lua
+	SpriteSheet: kaiju_goop/skin/goopball_body.xml
+	Regions: 0
+	Armor: 1
+	AttackDelay: 1
+	Speed: 0
+	MaxHealth: 10
+	Tier: 1
+	Morale: 0
+
+}
+
+Vehicle {
+	Identifier: unit_goop_goopicane
+	Name: patch
+	Description: patch
+	VehicleType: Infantry
+	DefenseType: None
+	Script: scripts/vehicles/dummy.lua
+	CollisionShape: 1,1
+	SpriteSheet: sprites/cloud.xml
+	Regions: 0
+	Speed: 50
+	MaxHealth: 1
+	Tier: 6
+	Morale: 0
+}

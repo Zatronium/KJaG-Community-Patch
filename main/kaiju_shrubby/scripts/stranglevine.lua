@@ -1,6 +1,7 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+-- Global values.
+local kaiju = 0;
 local weapon = "weapon_shrubby_stranglevine";
 local weapon_node = "root"
 local damage_per_tick = 6;
@@ -25,28 +26,28 @@ function setupNewVine(vine)
 end
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 -- Target selection is complete.
 function onTargets(position)
 	targetPos = position;
-	target = getAbilityTarget(avatar, abilityData.name);
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
-		local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-		avatar:setWorldFacing(facingAngle);	
-		playAnimation(avatar, "ability_project_1H");
+		local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+		kaiju:setWorldFacing(facingAngle);	
+		playAnimation(kaiju, "ability_project_1H");
 	
-		registerAnimationCallback(this, avatar, "start");
+		registerAnimationCallback(this, kaiju, "start");
 	end
 end
 
 function onAnimationEvent(a)
-	local view = avatar:getView();
-	target = getAbilityTarget(avatar, abilityData.name);
+	local view = kaiju:getView();
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
-		local proj = avatarFireAtTarget(avatar, weapon, weapon_node, target, 90 - view:getFacingAngle());
+		local proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target, 90 - view:getFacingAngle());
 		proj:setCallback(this, 'onHit');
 	
 		vineEffect = setupNewVine(vineEffect);
@@ -55,9 +56,9 @@ function onAnimationEvent(a)
 		vineEffect:activate();
 		
 		playSound("shrubby_ability_StrangleVine");
-		startCooldown(avatar, abilityData.name);	
+		startCooldown(kaiju, abilityData.name);	
 	else
-		NoTargetText(avatar);
+		NoTargetText(kaiju);
 	end
 end
 
@@ -80,10 +81,17 @@ function onHit(proj)
 end
 
 function onTick(aura)
+	if not aura then return end
 	if aura:getElapsed() < number_of_ticks then
-		applyDamage(getPlayerAvatar(), aura:getTarget(), damage_per_tick);
+		applyDamage(kaiju, aura:getTarget(), damage_per_tick);
 	else
 		aura:getTarget():setImmobile(false);
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

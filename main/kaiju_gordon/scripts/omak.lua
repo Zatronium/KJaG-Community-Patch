@@ -4,15 +4,14 @@ local bonusDamagePercent = 0.45;
 local tempHpPercent = 0.25;
 local duration = 20;
 
-local avatar = nil;
+local kaiju = nil;
 local orginalHP = 0;
-local orgMax = 0;
 local bonusHp = 0;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	playAnimation(avatar, "ability_cast");
+	playAnimation(kaiju, "ability_cast");
 		
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('military_tactics');
@@ -24,33 +23,41 @@ function onUse(a)
 	view:attachEffectToNode("root", "effects/omakBack.plist",duration, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/omakFront.plist",duration, 0, 0, true, false);
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
-	orgMax = avatar:getStat("MaxHealth");
-	orginalHp = avatar:getStat("Health");
+	local orgMax = kaiju:getStat("MaxHealth");
+	orginalHp = kaiju:getStat("Health");
 	bonusHp = orgMax * tempHpPercent;
 	
-	avatar:modStat("MaxHealth", bonusHp);
-	avatar:modStat("Health", bonusHp);
-	avatar:modStat("damage_amplify", bonusDamagePercent);
+	kaiju:modStat("MaxHealth", bonusHp);
+	kaiju:modStat("Health", bonusHp);
+	kaiju:modStat("damage_amplify", bonusDamagePercent);
 
 	playSound("OMAK");
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= duration then
-		local a = aura:getOwner();
-		a:modStat("MaxHealth", -bonusHp);
-		local curHealth = a:getStat("Health");
+		kaiju:modStat("MaxHealth", -bonusHp);
+		local curHealth = kaiju:getStat("Health");
 		if curHealth > orginalHP then
 			local diff = curHealth - orginalHp;
 			if diff < bonusHp then
 				bonusHp = diff;
 			end
-			a:modStat("Health", -bonusHp);
+			kaiju:modStat("Health", -bonusHp);
 		end
-		a:modStat("damage_amplify", -bonusDamagePercent);
-		endAbilityUse(avatar, abilityData.name);
-		a:detachAura(aura);
+		kaiju:modStat("damage_amplify", -bonusDamagePercent);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

@@ -1,5 +1,5 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local lastPos = nil;
 
 local distancePatch = 50;
@@ -10,25 +10,31 @@ local dotDamage = 2;
 local dotDuration = 10;
 
 function onUse(a)
-	avatar = a;
-	avatar:addPassiveScript(this);
-	startAbilityUse(avatar, abilityData.name);
-	local aura = createAura(this, avatar, 0);
+	kaiju = a;
+	kaiju:addPassiveScript(this);
+	startAbilityUse(kaiju, abilityData.name);
+	local aura = createAura(this, kaiju, 0);
 	aura:setTickParameters(durationTime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTimeTick");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 end
 
 function onTimeTick(aura)
+	if not aura then return end
 	if aura:getElapsed() >= durationTime then
-		avatar:removePassiveScript(this);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		kaiju:removePassiveScript(this);
+		endAbilityUse(kaiju, abilityData.name);
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return
+		else
+			self:detachAura(aura)
+		end
 	end
 end
 
 function onAvatarMove(a)
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 	if not lastPos then
 		lastPos = worldPos;
 	end
@@ -53,15 +59,16 @@ function DotPatch(pos)
 end
 
 function onPatchTick(aura)
+	if not aura then return end
 	local elapsed = aura:getElapsed();
+	local target = aura:getTarget();
 	if elapsed > patchDuration then
-		local target = aura:getTarget();
 		target:detachAura(aura);
 		removeEntity(target);
 	else
-		local targets = getTargetsInRadius(aura:getTarget():getWorldPosition(), distancePatch, EntityFlags(EntityType.Vehicle ,EntityType.Avatar));
+		local targets = getTargetsInRadius(target:getWorldPosition(), distancePatch, EntityFlags(EntityType.Vehicle ,EntityType.Avatar));
 		for t in targets:iterator() do
-			if canTarget(t) and not isSameEntity(avatar, t) then
+			if canTarget(t) and not isSameEntity(kaiju, t) then
 				local airUnit = false;
 				if getEntityType(t) == EntityType.Vehicle then	
 					local veh = entityToVehicle(t);
@@ -86,12 +93,17 @@ function onPatchTick(aura)
 end
 
 function onDotTick(aura)
-	avatar = getPlayerAvatar();
+	if not aura then return end
 	local elapsed = aura:getElapsed();
 	local target = aura:getTarget();
+	local self = aura:getOwner()
 	if elapsed > dotDuration or not canTarget(target) then
-		target:detachAura(aura);
+		if not self then
+			aura = nil return
+		else
+			self:detachAura(aura);
+		end
 	else
-		applyDamage(avatar, target, dotDamage);
+		applyDamage(kaiju, target, dotDamage);
 	end
 end

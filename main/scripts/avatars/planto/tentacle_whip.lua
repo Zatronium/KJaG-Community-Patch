@@ -1,6 +1,7 @@
 require 'scripts/common'
 
-local avatar = nil;
+-- Global values.
+local kaiju = nil;
 local target = nil;
 
 local radius = 100;
@@ -9,16 +10,16 @@ local tickTime = 1;
 local tickDamage = 10;
 
 function onUse(a, t)
-	avatar = a;
+	kaiju = a;
 	a:setWeakTarget(t);
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), t:getWorldPosition());
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_vinewhip");
-	registerAnimationCallback(this, avatar, "attack");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), t:getWorldPosition());
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_vinewhip");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
-	target = avatar:getWeakTarget();
+	target = kaiju:getWeakTarget();
 	if not canTarget(target) then
 		return;
 	end
@@ -46,7 +47,11 @@ function onAnimationEvent(a)
 end
 
 function debuff(aura)
+	if not aura then return end
 	local owner = aura:getOwner();
+	if not owner then 
+		aura = nil return
+	end
 	if aura:getStat("Speed") > 0 then
 		local count = aura:getStat("Health");
 		count = count + 1;

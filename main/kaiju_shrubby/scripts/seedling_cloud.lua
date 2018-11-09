@@ -1,7 +1,8 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 
-local avatar = 0;
+-- Global values.
+local kaiju = 0;
 local targetPos = 0;
 local seedSpawnRange = 300;
 
@@ -9,20 +10,20 @@ local max_seeds = 5;
 local min_seeds = 3;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_roar");
+	kaiju = a;
+	playAnimation(kaiju, "ability_roar");
 	
 	local amount = randomInt(min_seeds, max_seeds);
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 	while amount > 0 do
 		amount = amount - 1;
 		local targetPos = offsetRandomDirection(worldPos, 0, seedSpawnRange);
-		local proj = avatarFireAtPoint(avatar, "weapon_spawnseedling", "breath_node", targetPos, 0);
+		local proj = avatarFireAtPoint(kaiju, "weapon_spawnseedling", "breath_node", targetPos, 0);
 		proj:setCollisionEnabled(false);
 		proj:setCallback(this, 'onHit');
 	end
 	playSound("shrubby_ability_SeedlingCloud");
-	startCooldown(avatar, abilityData.name);
+	startCooldown(kaiju, abilityData.name);
 end
 
 function onHit(proj)

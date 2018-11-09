@@ -1,5 +1,5 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local bonusArmor = 50;
 local reduceBallistics = 0.5;
 
@@ -9,34 +9,41 @@ local bonusSpeed = 0;
 local duration = 45;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_channel");
-	registerAnimationCallback(this, avatar, "start");
+	kaiju = a;
+	playAnimation(kaiju, "ability_channel");
+	registerAnimationCallback(this, kaiju, "start");
 end
 
 function onAnimationEvent(a)
 	playSound("shrubby_ability_Fortify");
-	startAbilityUse(avatar, abilityData.name);
-	avatar:addPassiveScript(this);
-	bonusSpeed = avatar:getStat("Speed") * bonusSpeedPercent;
-	avatar:modStat("Armor", bonusArmor);
-	avatar:modStat("Speed", bonusSpeed);
-	local aura = createAura(this, avatar, 0);
+	startAbilityUse(kaiju, abilityData.name);
+	kaiju:addPassiveScript(this);
+	bonusSpeed = kaiju:getStat("Speed") * bonusSpeedPercent;
+	kaiju:modStat("Armor", bonusArmor);
+	kaiju:modStat("Speed", bonusSpeed);
+	local aura = createAura(this, kaiju, 0);
 	aura:setTickParameters(duration, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	aura:setTarget(avatar);
-	local view = avatar:getView();
+	aura:setTarget(kaiju);
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/fortifyBack.plist", duration, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/fortify.plist", duration, 0, 0, true, false);
 end
 
 function onTick(aura)
+	if not aura then return end
 	if aura:getElapsed() >= duration then
-		avatar:modStat("Armor", -bonusArmor);
-		avatar:modStat("Speed", -bonusSpeed);
-		endAbilityUse(avatar, abilityData.name);
-		avatar:removePassiveScript(this);
-		aura:getOwner():detachAura(aura);
+		kaiju:modStat("Armor", -bonusArmor);
+		kaiju:modStat("Speed", -bonusSpeed);
+		endAbilityUse(kaiju, abilityData.name);
+		kaiju:removePassiveScript(this);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 

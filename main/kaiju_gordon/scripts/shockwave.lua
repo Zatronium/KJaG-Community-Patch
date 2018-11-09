@@ -1,15 +1,15 @@
 require 'kaiju_gordon/scripts/gordon'
-local avatar = nil;
+local kaiju = nil;
 
 local weaponName = "BlastZone3"
 
 local freezeDuration = 3;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	playAnimation(avatar, "ability_jump");
-	registerAnimationCallback(this, avatar, "end");
+	playAnimation(kaiju, "ability_jump");
+	registerAnimationCallback(this, kaiju, "end");
 end
 
 function onAnimationEvent(a)
@@ -24,27 +24,36 @@ function onAnimationEvent(a)
 	local rebootAura = Aura.create(this, a);
 	rebootAura:setTag('shockwave');
 	rebootAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
-	rebootAura:setTickParameters(freezeDuration, freezeDuration); --updates every second                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+	rebootAura:setTickParameters(freezeDuration, freezeDuration); --updates every second
 	rebootAura:setTarget(a); -- required so aura doesn't autorelease
 	
 	a:loseControl();
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
 	playSound("Shockwave");
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() > freezeDuration then
-		playAnimation(avatar, "ability_stomp");
-		local empower = avatar:hasPassive("enhancement");
-		avatar:removePassive("enhancement", 0);
+		playAnimation(kaiju, "ability_stomp");
+		local empower = kaiju:hasPassive("enhancement");
+		kaiju:removePassive("enhancement", 0);
 		abilityEnhance(empower);
-		BlastZone(avatar, weaponName);
+		BlastZone(kaiju, weaponName);
 		abilityEnhance(0);
-		avatar:regainControl();
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
-		local view = avatar:getView();
+		kaiju:regainControl();
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
+		local view = kaiju:getView();
 		view:attachEffectToNode("root", "effects/shockwave_back.plist", 0, 0, 0, false, true);
 		view:attachEffectToNode("root", "effects/shockwave_front.plist", 0, 0, 0, true, false);		
 	end

@@ -12,7 +12,7 @@ function onHeartbeat(w)
 	owner = getRootEntity(w);
 	
 	local weaponRange = w:getWeaponStat("Range");
-	if owner:hasStat("range_amplify")) then
+	if owner:hasStat("range_amplify") then
 			weaponRange = weaponRange * owner:getStat("range_amplify");
 	end
 	
@@ -54,7 +54,8 @@ end
 -- Callback from attackAura tick.
 -- Verifies line of sight and distance and then fires a projectile.
 -- If we can't fire then it removes the aura.
-function onTick(aura)	
+function onTick(aura)
+	if not aura then return end
 	local w = entityToWeapon(aura:getOwner());
 	local t = w:getTarget();	
 	local owner = getRootEntity(w);
@@ -65,7 +66,7 @@ function onTick(aura)
 	end
 	
 	if t and t:getStat("Health") > 0 and getDistance(owner, t) <= weaponRange and isLineOfSight(owner, t) then
-		if not (w:getAura('burst')) then
+		if not w:getAura('burst') then
 			--do i need to create another "burst" aura
 			g_numShots = 1;
 			g_targetSceneOffset = calcTargetSceneOffset(w, t);
@@ -88,13 +89,13 @@ end
 
 function calcTargetSceneOffset(weapon, target)
 	if weapon:getWeaponType() == WeaponType.Bomb then
-		return Point(0,0); -- even if target is avatar, aim for the ground
+		return Point(0,0); -- even if target is kaiju, aim for the ground
 	end
 
-	local avatar = entityToAvatar(target);
-	if avatar then
+	local kaiju = entityToAvatar(target);
+	if kaiju then
 		local nodeName = 'contactzone0'..tostring(math.random(1, 5));		
-		local nodeOffset = avatar:getView():getAnimationNodePositionOffset(nodeName);
+		local nodeOffset = kaiju:getView():getAnimationNodePositionOffset(nodeName);
 		return nodeOffset;
 	end
 
@@ -105,7 +106,7 @@ function weaponFire(w, t, owner)
 	if w:canFire() and t then
 		local targetSceneOffset = g_targetSceneOffset;
 		local isAvatar = t ~= nil and getEntityType(t) == EntityType.Avatar;
-		local avatar = entityToAvatar(t);
+		local kaiju = entityToAvatar(t);
 		createMuzzleEffect(owner, t, w, targetSceneOffset, 0);
 		local chance = 0;
 	
@@ -127,6 +128,7 @@ end
 
 
 function onBurst(aura)	
+	if not aura then return end
 	local w = entityToWeapon(aura:getOwner());
 	if g_numShots <= 0 then
 		w:detachAura(aura);

@@ -1,6 +1,6 @@
 require 'scripts/common'
 
-local avatar = nil;
+local kaiju = nil;
 local hasUpdated = false;
 local bonusSpeed = 0.0;
 local bonusSpeedPct = 0.15;

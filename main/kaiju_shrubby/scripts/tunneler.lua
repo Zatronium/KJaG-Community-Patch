@@ -1,15 +1,15 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local weapon = "weapon_shrubby_tunneler";
 local bWidth = 120;
 local weaponRange = 0;
 local startPos = nil;
 local targetsSet = false;
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "stomp");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "stomp");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
@@ -17,10 +17,10 @@ function onAnimationEvent(a)
 	weaponRange = getWeaponRange(weapon);
 	local beamWidth = bWidth;
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
 
-	startPos = avatar:getWorldPosition();
-	local beamFacing = avatar:getWorldFacing();
+	startPos = kaiju:getWorldPosition();
+	local beamFacing = kaiju:getWorldFacing();
 	local beamEnd = getBeamEndWithFacing(startPos, weaponRange, beamFacing);
 	local targets = getTargetsInBeam(startPos, beamEnd, beamWidth, targetFlags);
 	local hastargets = false;
@@ -36,10 +36,11 @@ function onAnimationEvent(a)
 	end
 	targetsSet = true;
 	playSound("shrubby_ability_Tunneler");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end
 
 function onTick(aura)
+	if not aura then return end
 	if targetsSet then
 		local t = aura:getTarget();
 		local d = getDistanceFromPoints(t:getWorldPosition(), startPos);
@@ -48,10 +49,15 @@ function onTick(aura)
 			t:attachEffect("effects/tunnelerVines.plist", 1.5, true);
 			t:attachEffect("effects/roots_creeper.plist", 1, true);
 			if canTarget(t) then
-				avatar = getPlayerAvatar();
-				applyDamageWithWeapon(avatar, t, weapon);
+				applyDamageWithWeapon(kaiju, t, weapon);
 			end
-			aura:getOwner():detachAura(aura);
+			
+			local self = aura:getOwner()
+			if not self then
+				aura = nil return;
+			else
+				self:detachAura(aura);
+			end
 		end
 	end
 end

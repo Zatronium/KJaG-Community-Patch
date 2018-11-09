@@ -1,30 +1,31 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 
-local avatar = 0;
+-- Global values.
+local kaiju = 0;
 local targetPos = 0;
 local seedSpawnRange = 400;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTarget', seedSpawnRange);
 end
 
 -- Target selection is complete.
 function onTarget(position)
 	targetPos = position;
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);	
-	playAnimation(avatar, "ability_roar");
-	registerAnimationCallback(this, avatar, "start");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);	
+	playAnimation(kaiju, "ability_roar");
+	registerAnimationCallback(this, kaiju, "start");
 end
 
 function onAnimationEvent(a)
-	local proj = avatarFireAtPoint(avatar, "weapon_spawnsprout", "breath_node", targetPos, 0);
+	local proj = avatarFireAtPoint(kaiju, "weapon_spawnsprout", "breath_node", targetPos, 0);
 	proj:setCollisionEnabled(false);
 	proj:setCallback(this, 'onHit');
 	playSound("shrubby_sprout_muzzle");
-	startCooldown(avatar, abilityData.name);
+	startCooldown(kaiju, abilityData.name);
 end
 
 function onHit(proj)	

@@ -1,6 +1,7 @@
 require 'scripts/common'
 
-local avatar = nil;
+-- Global values.
+local kaiju = nil;
 local target = nil;
 
 local radius = 300;
@@ -8,17 +9,17 @@ local debuffTime = 5;
 local tickTime = 1;
 
 function onUse(a, t)
-	avatar = a;
+	kaiju = a;
 	a:setWeakTarget(t);
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), t:getWorldPosition());
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_sandstorm");
-	registerAnimationCallback(this, avatar, "attack");	
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), t:getWorldPosition());
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_sandstorm");
+	registerAnimationCallback(this, kaiju, "attack");	
 --	_log("duDUdu");
 end
 
 function onAnimationEvent(a)
-	target = avatar:getWeakTarget();
+	target = kaiju:getWeakTarget();
 	if not canTarget(target) then
 		return;
 	end
@@ -41,7 +42,11 @@ function onAnimationEvent(a)
 end
 
 function debuff(aura)
+	if not aura then return end
 	local owner = aura:getOwner();
+	if not owner then
+		aura = nil return
+	end
 	if aura:getElapsed() >= debuffTime then
 		owner:setImmobile(false);
 		owner:detachAura(aura);

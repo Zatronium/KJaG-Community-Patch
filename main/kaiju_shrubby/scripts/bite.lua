@@ -1,12 +1,12 @@
 require 'scripts/avatars/common'
 -- weapon_shrubby_bite1
 local healPerTarget = 2;
-local avatar = nil;
+local kaiju = nil;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_bite");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "ability_bite");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
@@ -14,20 +14,20 @@ function onAnimationEvent(a)
 	local beamRange = 50;
 	local beamWidth = 50;
 	
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/repairCycle_health.plist", .25, 0, 0, true, false);
 	view:attachEffectToNode("breath_node", "effects/bite_shrubby.plist", .25, 0, 0, true, false);
 
-	local beamOrigin = avatar:getWorldPosition();
-	local beamFacing = avatar:getWorldFacing();
+	local beamOrigin = kaiju:getWorldPosition();
+	local beamFacing = kaiju:getWorldFacing();
 	local beamEnd = getBeamEndWithFacing(beamOrigin, beamRange, beamFacing);
 	local targets = getTargetsInBeam(beamOrigin, beamEnd, beamWidth, targetFlags);
 	for t in targets:iterator() do
 		if not getEntityType(t) == EntityType.Zone then
-			avatar:gainHealth(healPerTarget);
+			kaiju:gainHealth(healPerTarget);
 		end
-		applyDamageWithWeapon(avatar, t, "weapon_shrubby_bite1");
+		applyDamageWithWeapon(kaiju, t, "weapon_shrubby_bite1");
 	end
 	playSound("shrubby_ability_Bite");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end

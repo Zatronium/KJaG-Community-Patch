@@ -24,25 +24,24 @@ local dumbfireRange = 400;
 local dumbfireMinRange = 100;
 
 local initialSetup = false
-
-function onSpawn(a)
-	if not initialSetup then
-		doSpawnSetup()
-	end
-end
+local setupFinished = true
 
 function doSpawnSetup(a)
 	initialSetup = true
+	kaiju = getPlayerAvatar()
 	local move = a:getMovement();
 	move:addMovementAnim("jump");
 	move:addMovementAnim("land");
+	setupFinished = true
 end
 
 function onHeartbeat(a, dt)
 	if not initialSetup then
-		doSpawnSetup()
+		doSpawnSetup(a)
 	end
-	kaiju = getPlayerAvatar();
+	if not setupFinished then
+		return
+	end
 	local ctrl = a:getControl();
 	
 	if jumpcd > 0 then
@@ -57,9 +56,6 @@ function onHeartbeat(a, dt)
 	beamcd = beamcd - dt;
 	blastercd = blastercd - dt;
 	dumbfirecd = dumbfirecd - dt;
-	if not canTarget(kaiju) then
-		kaiju = getPlayerTarget(a);
-	end
 	if not kaiju then
 		return;
 	end
@@ -94,18 +90,18 @@ function onStatChanged(e, stat, prev, val)
 end
 
 function onAttack(a)
-	kaiju = getPlayerTarget(a);
 	if not canTarget(kaiju) then
 		return;
 	end
 	if jumpcd < jumpcooldown - 2.0 then
 		local v = a:getView();
 		local jump = false;
-		if jumpcd <= 0 and a:getControl():hasTarget() then
-			local t = a:getControl():getTarget();
+		local ctrl = a:getControl()
+		if jumpcd <= 0 and ctrl:hasTarget() then
+			local t = ctrl:getTarget();
 			if getEntityType(t) == EntityType.Zone then
 				a:setEnablePhysicsBody(false);
-				a:getControl():resetTarget();
+				ctrl:resetTarget();
 				jumpcd = jumpcooldown;
 				v:setAnimation("jump", false);
 				v:addAnimation("land", false);

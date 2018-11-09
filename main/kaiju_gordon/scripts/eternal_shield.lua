@@ -1,13 +1,13 @@
 require 'kaiju_gordon/scripts/personal_shield'
 
-local avatar = nil;
+local kaiju = nil;
 
 local shieldCooldown = 40;
 local onCD = false;
 
 function onSet(a)
-	avatar = a;
-	avatar:addPassiveScript(this);
+	kaiju = a;
+	kaiju:addPassiveScript(this);
 end
 
 function bonusStats(s)
@@ -15,23 +15,29 @@ function bonusStats(s)
 end
 
 function onAvatarAbsorb(a, n, w)
-	if onCD == false and n.y > 0 then
+	if not onCD and n.y > 0 then
 		onCD = true;
-		cdAura = createAura(this, avatar, 0);
+		cdAura = createAura(this, kaiju, 0);
 		cdAura:setTag("personal_shield");
 		cdAura:setTickParameters(shieldCooldown, 0);
 		cdAura:setScriptCallback(AuraEvent.OnTick, "onCooldown");
-		cdAura:setTarget(avatar);
+		cdAura:setTarget(kaiju);
 		onOn();
 	end
 end
 
 function onCooldown(aura)
+	if not aura then return end
 	local elapsed = aura:getElapsed();
-	if  elapsed >= shieldDuration then
-		--avatar:endShield(false);
+	if elapsed >= shieldDuration then
+		--kaiju:endShield(false);
 		onCD = false;
-		avatar:detachAura(aura);
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 

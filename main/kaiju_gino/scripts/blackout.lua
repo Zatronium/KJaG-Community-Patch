@@ -1,4 +1,4 @@
- require 'scripts/common'
+require 'scripts/common'
 local range = 500;
 
 function onUse(a)

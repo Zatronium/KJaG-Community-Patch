@@ -7,9 +7,9 @@ local bonusSpeed = 0.0;
 local coolDownReductionPercent = 0.2;
 local durationtime = 20;
 
-local avatar = 0;
+local kaiju = nil
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	--modify stats first and store the values to remove EXACLTY the same amount 
 	--	(otherwise with %, you run the risk of leaving trace bonuses behind
 	
@@ -24,7 +24,7 @@ function onUse(a)
 	view:attachEffectToNode("foot_01", "effects/booster.plist", durationtime, 0, 0, false, true);
 	view:attachEffectToNode("foot_02", "effects/booster.plist", durationtime, 0, 0, false, true);
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
 	--since this is actually a percent, it will be like this
 	if a:hasStat("CoolDownReductionPercent") then
@@ -38,11 +38,19 @@ function onUse(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationtime then
-		local a = aura:getOwner();
-		a:modStat("Speed", -bonusSpeed);
-		a:modStat("CoolDownReductionPercent", -coolDownReductionPercent);
-		endAbilityUse(avatar, abilityData.name);
-		a:detachAura(aura);
+		kaiju:modStat("Speed", -bonusSpeed);
+		kaiju:modStat("CoolDownReductionPercent", -coolDownReductionPercent);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

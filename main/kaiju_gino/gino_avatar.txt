@@ -1,0 +1,351 @@
+Avatar {
+	Identifier: 8be22742653e30cb9b2f91f6f1e18573
+	Name: avatar_gino
+	DisplayName: Ginormasaurus
+	Role: Player
+	Lair: 29c226a7ed7ba9d80e9e33aa37916be8
+	InitialAttackCity: city_Anchorage
+	InitialMapFocus: 250,-300
+	LandClearEffect:  effects/clearingTile.plist
+	LandClearEffect:  effects/clearingSmoke.plist
+	LandClearEffect:  effects/clearingLeaves.plist
+	
+	Script: kaiju_gino/scripts/gino.lua
+	TrainingAvatarIcon: ui/ability/kaiju_icon_gino.png
+	StatusIcon: kaiju_gino/ui/ginoAvatar.png
+	CityConqueredIcon: kaiju_gino/ui/cityConquered.png
+	OriginText: Mecha
+	InnateAbility: ability_Plasmoid
+	AchievementSurrenderWorld: kagg_worldking
+	AchievementSurrenderWorldEasy: kagg_lilworldking
+	AchievementSurrenderWorldHard: kagg_badworldking
+	AchievementSurrenderWorldVeryHard: kagg_vbadworldking
+	AbilityResource: power
+	AbilitySlots: 8
+	Level {
+		Level: 1
+		Scale: 1
+		SummaryScale: 1
+		SummaryOffset: 0,32
+		Skin: base
+		Armor: 1
+		AttackDelay: 0.25
+		SensorsSignature: 5
+		Speed: 55
+		MapSpeed: 100
+		MaxHealth: 450
+		MaxMoney: 200000
+		MaxPower: 300
+		MaxKnow: 200
+		MaxPurple: 8
+		MaxOrganic: 125
+	}
+	Level {
+		Level: 2
+		Scale: 1
+		SummaryScale: 1
+		SummaryOffset: 0,32
+		Skin: upgrade01
+		Armor: 2
+		AttackDelay: 0.25
+		SensorsSignature: 5
+		Speed: 60
+		MapSpeed: 110
+		MaxHealth: 700
+		MaxMoney: 400000
+		MaxPower: 450
+		MaxKnow: 300
+		MaxPurple: 12
+		MaxOrganic: 175
+	}
+	Level {
+		Level: 3
+		Scale: 1
+		SummaryScale: 1
+		SummaryOffset: 0,32
+		Skin: upgrade02
+		Armor: 3
+		AttackDelay: 0.25
+		SensorsSignature: 10
+		Speed: 65
+		MapSpeed: 120
+		MaxHealth: 1000
+		MaxMoney: 600000
+		MaxPower: 700
+		MaxKnow: 450
+		MaxPurple: 20
+		MaxOrganic: 250
+	}
+	
+	Speaker {
+		Identifier: MadScientist
+		Icon: kaiju_gino/speakers/drnef_neutral_scope.png
+	}
+	Speaker {
+		Identifier: MadScientist_Large
+		Icon: kaiju_gino/speakers/drnef_neutral.png
+	}
+	Speaker {
+		Identifier: MadScientistRage
+		Icon: kaiju_gino/speakers/drnef_rage_scope.png
+	}
+	Speaker {
+		Identifier: MadScientistRage_Large
+		Icon: kaiju_gino/speakers/drnef_rage.png
+	}
+	Speaker {
+		Identifier: MadScientistJoy
+		Icon: kaiju_gino/speakers/drnef_joy_scope.png
+	}
+	Speaker {
+		Identifier: MadScientistJoy_Large
+		Icon: kaiju_gino/speakers/drnef_joy.png
+	}
+	Speaker {
+		Identifier: MadScientistUpset
+		Icon: kaiju_gino/speakers/drnef_upset_scope.png
+	}
+	Speaker {
+		Identifier: MadScientistUpset_Large
+		Icon: kaiju_gino/speakers/drnef_upset.png
+	}
+	Speaker {
+		Identifier: Intern
+		Icon: kaiju_gino/speakers/intern_drnef_scope.png
+	}
+	Speaker {
+		Identifier: Intern_Large
+		Icon: kaiju_gino/speakers/intern_drnef.png
+	}
+	Speaker {
+		Identifier: Engineer
+		Icon: kaiju_gino/speakers/engineer_scope.png
+	}
+	Speaker {
+		Identifier: Engineer_Large
+		Icon: kaiju_gino/speakers/engineer.png
+	}
+	Speaker {
+		Identifier: General
+		Icon: ui/characters/generalsir_scope.png
+	}
+	Speaker {
+		Identifier: General_Large
+		Icon: ui/characters/generalsir.png
+	}
+	Speaker {
+		Identifier: Reporter
+		Icon: ui/characters/reporterman_scope.png
+	}
+	Speaker {
+		Identifier: Reporter_Large
+		Icon: ui/characters/reporterman.png
+	}
+	
+	SplashBaseReturn:				kaiju_gino/splashscreens/arrivalBase.png
+	SplashBaseAttack:				ui/splashscreens/loading_baseattack.png
+	SplashCityAttack:				kaiju_gino/splashscreens/loading_kaijuattack.png
+	SplashInterceptOcean:			kaiju_gino/splashscreens/loading_fleetintercept.png
+	SplashInterceptLand:			kaiju_gino/splashscreens/loading_armyintercept.png
+	SplashKaijuLeavesCity:			kaiju_gino/splashscreens/loading_kaijuleave.png 
+	SplashCitySurrendered:			kaiju_gino/splashscreens/loading_kaijucitysurrender.png 
+	SplashKaijuEscapesPatrol:		kaiju_gino/splashscreens/loading_kaiju_patrolretreat.png 
+	SplashKaijuDefeatsPatrol:		kaiju_gino/splashscreens/loading_kaiju_patrolvictory.png 
+	SplashLairDefended:				kaiju_gino/splashscreens/loading_basedefended.png 
+	SplashKaijuDestroyedByCity:		kaiju_gino/splashscreens/loading_kaijudefeat.png 
+	SplashKaijuDestroyedByPatrol:	kaiju_gino/splashscreens/loading_kaiju_patroldefeat.png 
+	SplashLairDestroyed:			ui/splashscreens/loading_basedestroyed.png
+	SplashRegion1Surrendered:		kaiju_gino/splashscreens/region1_surrender.png
+	SplashRegion2Surrendered:		kaiju_gino/splashscreens/region2_surrender.png
+	SplashRegion3Surrendered:		kaiju_gino/splashscreens/region3_surrender.png
+	SplashRegion4Surrendered:		kaiju_gino/splashscreens/region4_surrender.png
+	SplashRegion5Surrendered:		kaiju_gino/splashscreens/region5_surrender.png
+	SplashRegion6Surrendered:		kaiju_gino/splashscreens/region6_surrender.png
+	SplashPlayerDefeated:			ui/splashscreens/loading_basedestroyed.png
+	SplashPlayerVictory:			kaiju_gino/splashscreens/loading_gamevictory.png
+	SplashNewspaper1:				kaiju_gino/newspapers/newspaper_001.png
+	SplashNewspaper2:				kaiju_gino/newspapers/newspaper_002.png
+	SplashNewspaper3:				kaiju_gino/newspapers/newspaper_003.png
+
+	Skin {
+		Identifier: skin_gino_default
+		DisplayName: Ginormasaurus
+		RepairSprites: kaiju_gino/skin/gino_construct.xml
+		DroneSprites: kaiju_gino/skin/gino_pteranodrone.xml
+		SelectSkinImage: skins/gino_skin_ginormasaurus.png
+		Direction {
+			Direction: 1
+			Atlas: kaiju_gino/skin/gino_nw.atlas
+			Json: kaiju_gino/skin/gino_nw.json
+			Normal: kaiju_gino/skin/gino_nw_normal.png
+			Depth: kaiju_gino/skin/gino_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Atlas: kaiju_gino/skin/gino_sw.atlas
+			Json: kaiju_gino/skin/gino_sw.json
+			Normal: kaiju_gino/skin/gino_sw_normal.png
+			Depth: kaiju_gino/skin/gino_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Atlas: kaiju_gino/skin/gino_n.atlas
+			Json: kaiju_gino/skin/gino_n.json
+			Normal: kaiju_gino/skin/gino_n_normal.png
+			Depth: kaiju_gino/skin/gino_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Atlas: kaiju_gino/skin/gino_s.atlas
+			Json: kaiju_gino/skin/gino_s.json
+			Normal: kaiju_gino/skin/gino_s_normal.png
+			Depth: kaiju_gino/skin/gino_s_depth.png
+		}
+	}
+	Skin {
+		Identifier: skin_gino_gold
+		DisplayName: Gold
+		DlcName: dlc_skins_gold
+		RepairSprites: kaiju_gino/skin_gold/gino_gold_construct.xml
+		DroneSprites: kaiju_gino/skin_gold/gino_gold_pteranodrone.xml
+		SelectSkinImage: skins/gino_skin_gold.png
+		Direction {
+			Direction: 1
+			Atlas: kaiju_gino/skin_gold/gino_gold_nw.atlas
+			Json: kaiju_gino/skin_gold/gino_gold_nw.json
+			Normal: kaiju_gino/skin_gold/gino_gold_nw_normal.png
+			Depth: kaiju_gino/skin_gold/gino_gold_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Atlas: kaiju_gino/skin_gold/gino_gold_sw.atlas
+			Json: kaiju_gino/skin_gold/gino_gold_sw.json
+			Normal: kaiju_gino/skin_gold/gino_gold_sw_normal.png
+			Depth: kaiju_gino/skin_gold/gino_gold_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Atlas: kaiju_gino/skin_gold/gino_gold_n.atlas
+			Json: kaiju_gino/skin_gold/gino_gold_n.json
+			Normal: kaiju_gino/skin_gold/gino_gold_n_normal.png
+			Depth: kaiju_gino/skin_gold/gino_gold_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Atlas: kaiju_gino/skin_gold/gino_gold_s.atlas
+			Json: kaiju_gino/skin_gold/gino_gold_s.json
+			Normal: kaiju_gino/skin_gold/gino_gold_s_normal.png
+			Depth: kaiju_gino/skin_gold/gino_gold_s_depth.png
+		}
+	}
+	Skin {
+		Identifier: skin_gino_steampowered
+		DisplayName: Steam Powered
+		DlcName: dlc_skin_gino_steampowered
+		RepairSprites: kaiju_gino/skin_steampowered/gino_steampowered_construct.xml
+		DroneSprites: kaiju_gino/skin_steampowered/gino_steampowered_pteranodrone.xml
+		SelectSkinImage: skins/gino_skin_steampowered.png
+		Direction {
+			Direction: 1
+			Json: kaiju_gino/skin_steampowered/gino_steampowered_nw.json
+			Atlas: kaiju_gino/skin_steampowered/gino_steampowered_nw.atlas
+			Normal: kaiju_gino/skin_steampowered/gino_steampowered_nw_normal.png
+			Depth: kaiju_gino/skin_steampowered/gino_steampowered_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Json: kaiju_gino/skin_steampowered/gino_steampowered_sw.json
+			Atlas: kaiju_gino/skin_steampowered/gino_steampowered_sw.atlas
+			Normal: kaiju_gino/skin_steampowered/gino_steampowered_sw_normal.png
+			Depth: kaiju_gino/skin_steampowered/gino_steampowered_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Json: kaiju_gino/skin_steampowered/gino_steampowered_n.json
+			Atlas: kaiju_gino/skin_steampowered/gino_steampowered_n.atlas
+			Normal: kaiju_gino/skin_steampowered/gino_steampowered_n_normal.png
+			Depth: kaiju_gino/skin_steampowered/gino_steampowered_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Json: kaiju_gino/skin_steampowered/gino_steampowered_s.json
+			Atlas: kaiju_gino/skin_steampowered/gino_steampowered_s.atlas
+			Normal: kaiju_gino/skin_steampowered/gino_steampowered_s_normal.png
+			Depth: kaiju_gino/skin_steampowered/gino_steampowered_s_depth.png
+		}
+	}
+	Skin {
+		Identifier: skin_gino_hotrod
+		DisplayName: Hot Rod
+		DlcName: dlc_skin_gino_hotrod
+		DlcID: 376800
+		RepairSprites: kaiju_gino/skin_hotrod/gino_hotrod_construct.xml
+		DroneSprites: kaiju_gino/skin_hotrod/gino_hotrod_pteranodrone.xml
+		SelectSkinImage: skins/gino_skin_hotrod.png
+		Direction {
+			Direction: 1
+			Json: kaiju_gino/skin_hotrod/gino_hotrod_nw.json
+			Atlas: kaiju_gino/skin_hotrod/gino_hotrod_nw.atlas
+			Normal: kaiju_gino/skin_hotrod/gino_hotrod_nw_normal.png
+			Depth: kaiju_gino/skin_hotrod/gino_hotrod_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Json: kaiju_gino/skin_hotrod/gino_hotrod_sw.json
+			Atlas: kaiju_gino/skin_hotrod/gino_hotrod_sw.atlas
+			Normal: kaiju_gino/skin_hotrod/gino_hotrod_sw_normal.png
+			Depth: kaiju_gino/skin_hotrod/gino_hotrod_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Json: kaiju_gino/skin_hotrod/gino_hotrod_n.json
+			Atlas: kaiju_gino/skin_hotrod/gino_hotrod_n.atlas
+			Normal: kaiju_gino/skin_hotrod/gino_hotrod_n_normal.png
+			Depth: kaiju_gino/skin_hotrod/gino_hotrod_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Json: kaiju_gino/skin_hotrod/gino_hotrod_s.json
+			Atlas: kaiju_gino/skin_hotrod/gino_hotrod_s.atlas
+			Normal: kaiju_gino/skin_hotrod/gino_hotrod_s_normal.png
+			Depth: kaiju_gino/skin_hotrod/gino_hotrod_s_depth.png
+		}
+	}
+	Skin {
+		Identifier: skin_gino_fossil
+		DisplayName: Fossil
+		DlcName: dlc_skins_halloween
+		DlcID: 415220
+		RepairSprites: kaiju_gino/skin_fossil/gino_fossil_construct.xml
+		DroneSprites: kaiju_gino/skin_fossil/gino_fossil_pteranodrone.xml
+		SelectSkinImage: skins/gino_skin_fossil.png
+		Direction {
+			Direction: 1
+			Json: kaiju_gino/skin_fossil/gino_fossil_nw.json
+			Atlas: kaiju_gino/skin_fossil/gino_fossil_nw.atlas
+			Normal: kaiju_gino/skin_fossil/gino_fossil_nw_normal.png
+			Depth: kaiju_gino/skin_fossil/gino_fossil_nw_depth.png
+		}
+		Direction {
+			Direction: 0
+			Json: kaiju_gino/skin_fossil/gino_fossil_sw.json
+			Atlas: kaiju_gino/skin_fossil/gino_fossil_sw.atlas
+			Normal: kaiju_gino/skin_fossil/gino_fossil_sw_normal.png
+			Depth: kaiju_gino/skin_fossil/gino_fossil_sw_depth.png
+		}
+		Direction {
+			Direction: 2
+			Json: kaiju_gino/skin_fossil/gino_fossil_n.json
+			Atlas: kaiju_gino/skin_fossil/gino_fossil_n.atlas
+			Normal: kaiju_gino/skin_fossil/gino_fossil_n_normal.png
+			Depth: kaiju_gino/skin_fossil/gino_fossil_n_depth.png
+		}
+		Direction {
+			Direction: 3
+			Json: kaiju_gino/skin_fossil/gino_fossil_s.json
+			Atlas: kaiju_gino/skin_fossil/gino_fossil_s.atlas
+			Normal: kaiju_gino/skin_fossil/gino_fossil_s_normal.png
+			Depth: kaiju_gino/skin_fossil/gino_fossil_s_depth.png
+		}
+	}
+}

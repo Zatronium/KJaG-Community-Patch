@@ -1,29 +1,29 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local durationtime = 10;
 local pointdefenserate = 50;
 
-local enemyAcc = 0.2; 
+enemyAcc = 0.2; 
 local enemyAccNum = 0;
 
 function onUse(a)
-	avatar = a;
-	if not avatar:hasStat("PD_Tracking") then
-		avatar:modStat("PD_Tracking", pointdefenserate);
+	kaiju = a;
+	if not(kaiju:hasStat("PD_Tracking"))then
+		kaiju:modStat("PD_Tracking", pointdefenserate);
 	else
-		avatar:addStat("PD_Tracking", pointdefenserate);
+		kaiju:addStat("PD_Tracking", pointdefenserate);
 	end
 	
-	if avatar:hasStat("acc_notrack") then
-		avatar:addStat("acc_notrack", 100);
+	if kaiju:hasStat("acc_notrack") then
+		kaiju:addStat("acc_notrack", 100);
 	end
-	enemyAccNum = avatar:getStat("acc_notrack") * enemyAcc;
-	avatar:modStat("acc_notrack", -enemyAccNum);
+	enemyAccNum = kaiju:getStat("acc_notrack") * enemyAcc;
+	kaiju:modStat("acc_notrack", -enemyAccNum);
 	
 	playSound("shrubby_ability_BlindingLight");
-	startAbilityUse(avatar, abilityData.name);
-	playAnimation(avatar, "ability_cast");
+	startAbilityUse(kaiju, abilityData.name);
+	playAnimation(kaiju, "ability_cast");
 	
 	local aura = Aura.create(this, a);
 	aura:setTag('shrubby_blinding_light');
@@ -39,10 +39,13 @@ function onUse(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationtime then
-		endAbilityUse(avatar, abilityData.name);
-		avatar:modStat("acc_notrack", enemyAccNum);
-		avatar:modStat("PD_Tracking", -pointdefenserate);
-	--	createFloatingNumber(avatar, 1, 255, 255, 0);
+		endAbilityUse(kaiju, abilityData.name);
+		kaiju:modStat("acc_notrack", enemyAccNum);
+		kaiju:modStat("PD_Tracking", -pointdefenserate);
+	--	createFloatingNumber(kaiju, 1, 255, 255, 0);
 	end
 end

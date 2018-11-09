@@ -25,6 +25,9 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	dotOnTick(aura, 0, 0, "effects/onCorrosive.plist", 0.00);
 	dotOnTick(aura, 18, 22, "effects/onCorrosive_smoke.plist", 0.00);
 end

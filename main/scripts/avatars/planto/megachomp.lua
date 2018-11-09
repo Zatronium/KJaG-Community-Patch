@@ -1,21 +1,22 @@
 require 'scripts/common'
 
-local avatar = nil;
+-- Global values.
+local kaiju = nil;
 local target = nil;
 
 function onUse(a, t)
-	avatar = a;
+	kaiju = a;
 	a:setWeakTarget(t);
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), t:getWorldPosition());
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_megachomp");
-	registerAnimationCallback(this, avatar, "attack");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), t:getWorldPosition());
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_megachomp");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
-	target = avatar:getWeakTarget();
+	target = kaiju:getWeakTarget();
 	if not canTarget(target) then
 		return;
 	end
-	applyDamageWithWeapon(avatar, target, "weapon_planto_chomp");
+	applyDamageWithWeapon(kaiju, target, "weapon_planto_chomp");
 end

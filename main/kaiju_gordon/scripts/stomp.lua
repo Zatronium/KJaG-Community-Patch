@@ -1,22 +1,22 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local weapon = "Stomp1";
 local aoeRange = 80;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_stomp");
+	kaiju = a;
+	playAnimation(kaiju, "ability_stomp");
 	
-	registerAnimationCallback(this, avatar, "attack");
+	registerAnimationCallback(this, kaiju, "attack");
 end 
 
 function onAnimationEvent(a, event)
-	avatar = a;
+	kaiju = a;
 	local view = a:getView();
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/stompBack.plist",0, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/stompFront.plist",0, 0, 0, true, false);
 		
@@ -28,11 +28,11 @@ function onAnimationEvent(a, event)
 			flying = veh:isAir();
 		end
 		if not flying then
-			applyDamageWithWeapon(avatar, t, weapon);
+			applyDamageWithWeapon(kaiju, t, weapon);
 		end
 	end
 		
 	playSound("Stomp");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end
 

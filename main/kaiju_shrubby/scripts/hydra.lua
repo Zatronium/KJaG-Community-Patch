@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local targetPos = 0;
 local weapon = "weapon_shrubby_airVine3";
 local weapon_node = "root"
@@ -37,19 +37,19 @@ function setupNewVine()
 	vine:setNoise(10, 20);
 	-- setRetract(delay between vert culling, lower = more culled per update) default  0.0, 30
 	vine:setRetract(0.4, 100);
-	vine:setEndEntity(avatar);
+	vine:setEndEntity(kaiju);
 	return vine;
 end
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "stomp");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "stomp");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent (a)
 	local targetsfound = 0;
-	local avPos = avatar:getWorldPosition()
+	local avPos = kaiju:getWorldPosition()
 	local targets = getTargetsInRadius(avPos, getWeaponRange(weapon), EntityFlags(EntityType.Vehicle));
 	target1_1 = nil;
 	target2_1 = target1_1;
@@ -66,16 +66,16 @@ function onAnimationEvent (a)
 		end
 	end
 	if targetsfound <= 0 then
-		NoTargetText(avatar);
+		NoTargetText(kaiju);
 	else
-		startCooldown(avatar, abilityData.name);
+		startCooldown(kaiju, abilityData.name);
 		playSound("shrubby_ability_Hydra");
-		local view = avatar:getView();
+		local view = kaiju:getView();
 		local proj;
 		if canTarget(target1_1) then
-			proj = avatarFireAtTarget(avatar, weapon, weapon_node, target1_1, 90 - view:getFacingAngle());
+			proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target1_1, 90 - view:getFacingAngle());
 		else
-			proj = avatarFireAtPoint(avatar, weapon, weapon_node, offsetRandomDirection(avPos, jump_range, getWeaponRange(weapon)), 90 - view:getFacingAngle());
+			proj = avatarFireAtPoint(kaiju, weapon, weapon_node, offsetRandomDirection(avPos, jump_range, getWeaponRange(weapon)), 90 - view:getFacingAngle());
 		end
 		vine1 = setupNewVine();
 		vine1:setStartEntity(proj);
@@ -83,9 +83,9 @@ function onAnimationEvent (a)
 		proj:setCallback(this, 'onHit1');	
 		
 		if canTarget(target2_1) then
-			proj = avatarFireAtTarget(avatar, weapon, weapon_node, target2_1, 90 - view:getFacingAngle());
+			proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target2_1, 90 - view:getFacingAngle());
 		else
-			proj = avatarFireAtPoint(avatar, weapon, weapon_node, offsetRandomDirection(avPos, jump_range, getWeaponRange(weapon)), 90 - view:getFacingAngle());
+			proj = avatarFireAtPoint(kaiju, weapon, weapon_node, offsetRandomDirection(avPos, jump_range, getWeaponRange(weapon)), 90 - view:getFacingAngle());
 		end
 		vine2 = setupNewVine();
 		vine2:setStartEntity(proj);
@@ -93,9 +93,9 @@ function onAnimationEvent (a)
 		proj:setCallback(this, 'onHit2');	
 		
 		if canTarget(target3_1) then
-			proj = avatarFireAtTarget(avatar, weapon, weapon_node, target3_1, 90 - view:getFacingAngle());
+			proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target3_1, 90 - view:getFacingAngle());
 		else
-			proj = avatarFireAtPoint(avatar, weapon, weapon_node, offsetRandomDirection(avPos, jump_range, getWeaponRange(weapon)), 90 - view:getFacingAngle());
+			proj = avatarFireAtPoint(kaiju, weapon, weapon_node, offsetRandomDirection(avPos, jump_range, getWeaponRange(weapon)), 90 - view:getFacingAngle());
 		end
 		vine3 = setupNewVine();
 		vine3:setStartEntity(proj);
@@ -118,7 +118,7 @@ function onHit1(proj)
 					if check1(t) then
 						incrementTargets1();
 						target1_1 = t;
-						local proj1 = fireProjectileAtTarget(avatar, t, worldPos, Point(0, 0), weapon);
+						local proj1 = fireProjectileAtTarget(kaiju, t, worldPos, Point(0, 0), weapon);
 						number_targets1 = number_targets1 - 1;
 						proj1:setCallback(this, 'onHit1');	
 						vine1:setStartEntity(proj1);
@@ -149,7 +149,7 @@ function onHit2(proj)
 					if check2(t) then
 						incrementTargets2();
 						target2_1 = t;
-						local proj2 = fireProjectileAtTarget(avatar, t, worldPos, Point(0, 0), weapon);
+						local proj2 = fireProjectileAtTarget(kaiju, t, worldPos, Point(0, 0), weapon);
 						number_targets2 = number_targets2 - 1;
 						proj2:setCallback(this, 'onHit2');
 						vine2:setStartEntity(proj2);
@@ -180,7 +180,7 @@ function onHit3(proj)
 					if check3(t) then
 						incrementTargets3();
 						target3_1 = t;
-						local proj3 = fireProjectileAtTarget(avatar, t, worldPos, Point(0, 0), weapon);
+						local proj3 = fireProjectileAtTarget(kaiju, t, worldPos, Point(0, 0), weapon);
 						number_targets3 = number_targets3 - 1;
 						proj3:setCallback(this, 'onHit3');
 						vine3:setStartEntity(proj3);

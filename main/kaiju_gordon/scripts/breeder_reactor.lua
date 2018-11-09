@@ -1,10 +1,10 @@
 require 'scripts/avatars/common'
 
 local powerPerTick = 2;
-local avatar = nil;
+local kaiju = nil;
 
 function onSet(a)
-	avatar = a;
+	kaiju = a;
 	
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('breeder_reactor');
@@ -18,5 +18,5 @@ function onSet(a)
 end
 
 function onTick(aura)
-	avatar:gainPower(powerPerTick);
+	kaiju:gainPower(powerPerTick);
 end

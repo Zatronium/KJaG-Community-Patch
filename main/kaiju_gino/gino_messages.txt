@@ -1,3 +1,29 @@
+Message {
+	Identifier: msg_FabulosoIsland
+	Comment: Fabuloso Island bugfix placeholder. (Gino version)
+	DisplayText: Seems Fabuloso Island is setting up their own operations. Well, I think we prefer allies with a backbone.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_TarmagantIsland
+	Comment: Tarmagant Island bugfix placeholder. (Gino version)
+	DisplayText: I noticed some radioactive readings at Tarmagant Island. Perhaps there we can find a new power source.
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ParadiseIsland
+	Comment: Paradise Island bugfix placeholder. (Gino version)
+	DisplayText: Paradise Island, huh? It looks like a theme park for plants. Booooring. Engineers! Turn up the smog factory!
+	Speaker: Intern_Large
+	Sound: babble_nicky_normal
+	IsTutorial: false
+}
 
 Message {
 	Identifier: msg_Year1

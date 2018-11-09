@@ -1,36 +1,42 @@
 require 'kaiju_goop/scripts/goop_common'
 
-local target = nil;
-local avatar = nil;
+local kaiju = nil
+local dead = false
 
 local pickupDelay = 3;
 local updateRate = 0.5;
 local pickupRange = 100;
 
--- Entity control logic goes in here. Heartbeats happen every
--- 0.5 seconds, so we have to create an attack aura that ticks
--- faster so we can spam shots.
-function onSpawn(v)
-	avatar = getPlayerAvatar();
+local initialSetup = false
+local setupFinished = false
+
+function doSpawnSetup()
+	initialSetup = true
+	kaiju = getPlayerAvatar()
+	setupFinished = true
 end
 
 function onHeartbeat(v)
-	if combatEnded() then
-		return;
+	if not initialSetup then 
+		doSpawnSetup()
 	end
+	if not setupFinished or combatEnded() then
+		return
+	end
+	
 	if pickupDelay > 0 then
 		pickupDelay = pickupDelay - updateRate;
 		return;
 	end
 	
-	avatar = getPlayerAvatar();
-	if not avatar then
-		return;
+	if not kaiju then
+		return
 	end
 	
-	local dist = getDistance(v, avatar);
-	if dist <= pickupRange and avatar:getStat("Health") < avatar:getStat("MaxHealth") then
-		avatar:gainHealth(10);
+	local dist = getDistance(v, kaiju);
+	if dist <= pickupRange and kaiju:getStat("Health") < kaiju:getStat("MaxHealth") then
+		dead = true
+		kaiju:gainHealth(10);
 		GoopPickedUp();
 		v:getView():setVisible(false);
 		removeEntity(v);
@@ -47,7 +53,9 @@ function onStatChanged(e, stat, prev, val)
 end
 
 function onDeath(self)
-	local pos = self:getView():getPosition();	
-	self:getView():setVisible(false);
-	removeEntity(self);
+	if not dead then
+		dead = true
+		self:getView():setVisible(false);
+		removeEntity(self);
+	end
 end

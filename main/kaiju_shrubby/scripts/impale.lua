@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local weapon = "weapon_shrubby_airVine2";
 local weapon_node = "root"
 local number_targets = 3;
@@ -13,22 +13,22 @@ function setupVine()
 	vine:setNoise(0, 10);
 	-- setRetract(delay between vert culling, lower = more culled per update) default  0.0, 30
 	vine:setRetract(0.0, 100);
-	vine:setEndEntity(avatar);
+	vine:setEndEntity(kaiju);
 	return vine;
 end
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 	local targets = getTargetsInRadius(worldPos, getWeaponRange(weapon), EntityFlags(EntityType.Vehicle));
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	local attacked = false;
 	for t in targets:iterator() do
 		if number_targets > 0 then
 			local v = entityToVehicle(t);
 			if v:isAir() then
-				proj = avatarFireAtTarget(avatar, weapon, weapon_node, t, 90 - view:getFacingAngle());
+				proj = avatarFireAtTarget(kaiju, weapon, weapon_node, t, 90 - view:getFacingAngle());
 				proj:setCallback(this, 'onHit');
 				attacked = true;
 				number_targets = number_targets - 1;
@@ -41,10 +41,10 @@ function onUse(a)
 	end
 	if attacked then
 		playSound("shrubby_ability_Impale");
-		startCooldown(avatar, abilityData.name);
-		playAnimation(avatar, "stomp");
+		startCooldown(kaiju, abilityData.name);
+		playAnimation(kaiju, "stomp");
 	else
-		NoTargetText(avatar);
+		NoTargetText(kaiju);
 	end
 end
 

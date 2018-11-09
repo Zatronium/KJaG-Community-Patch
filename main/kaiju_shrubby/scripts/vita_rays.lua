@@ -1,17 +1,17 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_roar");
-	local view = avatar:getView();
+	kaiju = a;
+	playAnimation(kaiju, "ability_roar");
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/vitarays.plist", 1, 0, 0, true, false);
 	view:attachEffectToNode("root", "effects/vitarays_wave.plist", 1, 0, 0, true, false);
-	local minions = avatar:getMinions();
+	local minions = kaiju:getMinions();
 	for t in minions:iterator() do
 		local m = entityToMinion(t);
 		m:gainHealth(t:getStat("MaxHealth"));
 	end
 	playSound("shrubby_ability_VitaRays");
-	startCooldown(avatar, abilityData.name);
+	startCooldown(kaiju, abilityData.name);
 end

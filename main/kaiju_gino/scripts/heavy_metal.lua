@@ -4,12 +4,12 @@
 
 require 'scripts/common'
 
-local avatar = 0;
+local kaiju = nil
 local durationtime = 10;
 local bonusSpeed = 0.0;
 local bonusArmor = 5;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
 	playAnimation(a, "ability_channel");
 
@@ -17,7 +17,7 @@ function onUse(a)
 	--	(otherwise with %, you run the risk of leaving trace bonuses behind
 	
 	-- create aura that just calls an update to remove
-	boostAura = Aura.create(this, a);
+	local boostAura = Aura.create(this, a);
 	boostAura:setTag("gino_heavy_metal");
 	boostAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
 	boostAura:setTickParameters(durationtime, 0);
@@ -26,23 +26,28 @@ function onUse(a)
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/heavymetal.plist", durationtime, 0, 0,true, false);
 	
-	startAbilityUse(avatar, abilityData.name);
-	
-	--is the stat Armor or Armor? Should be Armor.
-	bonusArmor = 5;
+	startAbilityUse(kaiju, abilityData.name);
+
 	a:modStat("Armor", bonusArmor);
 	
-	--store bonus total (NOTE: may need a "getBaseStat" and go off of that, but minor concern)
 	bonusSpeed = a:getBaseStat("Speed") * 0.5;
 	a:modStat("Speed", -bonusSpeed);
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationtime then
-		avatar = entityToAvatar(aura:getOwner());
-		avatar:modStat("Speed", bonusSpeed);
-		avatar:modStat("Armor", -bonusArmor);
-		endAbilityUse(avatar, abilityData.name);
-		avatar:detachAura(aura);
+		kaiju:modStat("Speed", bonusSpeed);
+		kaiju:modStat("Armor", -bonusArmor);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

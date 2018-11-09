@@ -2,7 +2,7 @@ require 'scripts/common'
 require 'scripts/avatars/common'
 
 -- Global values.
-local avatar = nil;
+local kaiju = nil;
 local targetPos = 0;
 local targetEnt = nil;
 local leftBlaster = false;
@@ -10,17 +10,17 @@ local shotsFire = 2;
 local weaponRange = 600;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', weaponRange);
 end
 
 function onTargets(position)
 	targetPos = position;
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_blasters");
-	registerAnimationCallbackUntilEnd(this, avatar, "attack");		
-	startCooldown(avatar, abilityData.name);
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_blasters");
+	registerAnimationCallbackUntilEnd(this, kaiju, "attack");		
+	startCooldown(kaiju, abilityData.name);
 end
 
 function onAnimationEvent(a)
@@ -35,15 +35,15 @@ function onAnimationEvent(a)
 			animcb = "attack_02";
 			leftBlaster = true;
 		end
-		targetEnt = getAbilityTarget(avatar, abilityData.name);
+		targetEnt = getAbilityTarget(kaiju, abilityData.name);
 		if targetEnt then
 			targetPos = targetEnt:getWorldPosition();
 		end
-		local proj = avatarFireAtPoint(avatar, "weapon_Blaster1", node, targetPos, 0);
+		local proj = avatarFireAtPoint(kaiju, "weapon_Blaster1", node, targetPos, 0);
 		proj:setCallback(this, 'onHit');
 		proj:fromAvatar(true);
 		playSound("blaster");
-		registerAnimationCallbackUntilEnd(this, avatar, animcb);
+		registerAnimationCallbackUntilEnd(this, kaiju, animcb);
 	end
 end
 

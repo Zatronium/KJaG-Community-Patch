@@ -1,40 +1,40 @@
 require 'scripts/avatars/common'
 
 -- Global values.
-local avatar = nil;
+local kaiju = nil;
 
 local shotsFire = 10;
 local shotsPer = 2;
 local weaponRange = 800;
 
 local tickTime = 0.1;
-totalTime = shotsFire * tickTime;
+local totalTime = shotsFire * tickTime;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_launch");
-	registerAnimationCallback(this, avatar, "attack");		
+	kaiju = a;
+	playAnimation(kaiju, "ability_launch");
+	registerAnimationCallback(this, kaiju, "attack");		
 end
 
 function onAnimationEvent(a)
-	local targets = getTargetsInRadius(avatar:getWorldPosition(), weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Projectile));
+	local targets = getTargetsInRadius(kaiju:getWorldPosition(), weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Projectile));
 	local totalshot = shotsFire;
 	for t in targets:iterator() do
 		if totalshot > 0 then
 			local isLegal = false;
 			if getEntityType(t) == EntityType.Vehicle then
 				local veh = entityToVehicle(t);
-				if veh and veh:isAir() then
+				if not veh and veh:isAir() then
 					isLegal = true;
 				end
 			else
 				local pr = entityToProjectile(t);
 				local weap = pr:getWeapon();
-				if weap:isTracking() == true then
+				if weap:isTracking() then
 					isLegal = true;
 				end
 			end
-			if isLegal == true then
+			if isLegal then
 				local aura = createAura(this, t, 0);
 				aura:setTag("aimed");
 				aura:setTickParameters(tickTime, totalTime);
@@ -46,7 +46,7 @@ function onAnimationEvent(a)
 		end
 	end
 	if totalshot < shotsFire then
-		startCooldown(avatar, abilityData.name);
+		startCooldown(kaiju, abilityData.name);
 		local view = a:getView();
 		view:pauseAnimation(totalTime);
 	end
@@ -54,9 +54,14 @@ function onAnimationEvent(a)
 end
 
 function onFireMissile(aura)
-	local proj = avatarFireAtTarget(avatar, "weapon_MissilePD", "gun_node_03", aura:getOwner(), 90);
+	if not aura then return end
+	local self = aura:getOwner()
+	if not self then
+		aura = nil return
+	end
+	local proj = avatarFireAtTarget(kaiju, "weapon_MissilePD", "gun_node_03", self, 90);
 	proj:setCallback(this, 'onHit');
-	aura:getOwner():detachAura(aura);
+	self:detachAura(aura);
 end
 -- Projectile hits a target.
 function onHit(proj)

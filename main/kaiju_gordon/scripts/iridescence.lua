@@ -1,13 +1,13 @@
 require 'kaiju_gordon/scripts/dispersal_field'
 
-local avatar = nil;
+local kaiju = nil;
 
 local shieldCooldown = 20;
 local onCD = false;
 
 function onSet(a)
-	avatar = a;
-	avatar:addPassiveScript(this);
+	kaiju = a;
+	kaiju:addPassiveScript(this);
 end
 
 function bonusStats(s)

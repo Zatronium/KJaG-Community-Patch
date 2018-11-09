@@ -1,12 +1,12 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local Angle = 55;
 local weapon = "weapon_shrubby_poisonSpray1"
 local number_of_ticks = 5;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation(a, "ability_breath");
 	registerAnimationCallback(this, a, "start");
 end
@@ -41,10 +41,16 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
+	if not aura then return end
 	if aura:getElapsed() >= number_of_ticks then
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	else
-		avatar = getPlayerAvatar();
-		applyDamageWithWeapon(avatar, aura:getTarget(), weapon);
+		applyDamageWithWeapon(kaiju, aura:getTarget(), weapon);
 	end
 end

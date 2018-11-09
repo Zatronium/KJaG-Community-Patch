@@ -1,35 +1,35 @@
 require 'scripts/common'
 
 -- Global values.
-local avatar = 0;
+local kaiju = nil
 local targetPos = 0;
 local weaponRange = 500;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', weaponRange);
 end
 
 -- Target selection is complete.
 function onTargets(position)
 	targetPos = position;
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);	
-	playAnimation(avatar, "ability_breath");
-	registerAnimationCallback(this, avatar, "start");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);	
+	playAnimation(kaiju, "ability_breath");
+	registerAnimationCallback(this, kaiju, "start");
 end
 
 -- Animation event 'breath_start'.
 function onAnimationEvent(a)
-	local target = getAbilityTarget(avatar, abilityData.name);
+	local target = getAbilityTarget(kaiju, abilityData.name);
 	if target then
 		targetPos = target:getWorldPosition();
 	end
-	local proj = avatarFireAtPoint(avatar, "weapon_FireBall", "breath_node", targetPos, 0);
+	local proj = avatarFireAtPoint(kaiju, "weapon_FireBall", "breath_node", targetPos, 0);
 	proj:setCallback(this, 'onHit');
 	proj:fromAvatar(true);
 	playSound("fireball");
-	startCooldown(avatar, abilityData.name);
+	startCooldown(kaiju, abilityData.name);
 	
 end
 

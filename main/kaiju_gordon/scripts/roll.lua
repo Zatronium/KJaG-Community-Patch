@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local weaponCollision = "weapon_gordon_atomic_punch_collision"
 
 local kbDistance = 200;
@@ -9,43 +9,43 @@ local kbPower = 400;
 local worldFacing = 0;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 
-	worldFacing = avatar:getWorldFacing();
-	local dEnd = getBeamEndWithFacing(avatar:getWorldPosition(), kbDistance, worldFacing);
-	local dir = getDirectionFromPoints(avatar:getWorldPosition(), dEnd);
+	worldFacing = kaiju:getWorldFacing();
+	local dEnd = getBeamEndWithFacing(kaiju:getWorldPosition(), kbDistance, worldFacing);
+	local dir = getDirectionFromPoints(kaiju:getWorldPosition(), dEnd);
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/leapSmoke.plist",1, 0, 0, false, true);
 	
-	local v = avatar:getView();
+	local v = kaiju:getView();
 	
 	v:lockSWViewOnly(true);
 	v:setAnimation("ability_roll", true);
 	
-	avatar:displaceDirection(dir, kbPower, kbDistance);
-	avatar:setCollisionScript(this);
+	kaiju:displaceDirection(dir, kbPower, kbDistance);
+	kaiju:setCollisionScript(this);
 	
-	avatar:getMovement():moveTo(dEnd);
+	kaiju:getMovement():moveTo(dEnd);
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 end
 
 function onCollide(first, other)
-	avatar = getPlayerAvatar();
+	kaiju = getPlayerAvatar();
 	--	first:resetDisplace();
 	--	first:removeCollisionScript();
-		avatar:getMovement():decreaseDisplace(10);
-		applyDamageWithWeapon(avatar, other, weaponCollision);
-	--	applyDamageWithWeapon(avatar, first, weaponCollision);
+		kaiju:getMovement():decreaseDisplace(10);
+		applyDamageWithWeapon(kaiju, other, weaponCollision);
+	--	applyDamageWithWeapon(kaiju, first, weaponCollision);
 end
 
 function onDisplaceEnd(a)
-	local v = avatar:getView();
-	endAbilityUse(avatar, abilityData.name);
+	local v = kaiju:getView();
+	endAbilityUse(kaiju, abilityData.name);
 	v:lockSWViewOnly(false);
-	avatar:setWorldFacing(worldFacing);
-	avatar:removeCollisionScript();
+	kaiju:setWorldFacing(worldFacing);
+	kaiju:removeCollisionScript();
 	v:setAnimation("idle", true);
-	avatar:getMovement():moveTo(avatar:getWorldPosition());
+	kaiju:getMovement():moveTo(kaiju:getWorldPosition());
 end

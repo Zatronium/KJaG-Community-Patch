@@ -1,0 +1,2140 @@
+Message {
+	Identifier: citymsg_IslandX
+	Comment: IslandX bugfix placeholder. (Grey Goop version)
+	DisplayText: Ooh, IslandX - an island with technology galore. Looks like the perfect target.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_TarmagantIsland
+	Comment: Tarmagant Island bugfix placeholder. (Grey Goop version)
+	DisplayText: These jokers at Tarmagant Island think they can win with mere radiation! Hah, that wouldn't even stop the KDF - never mind us.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ParadiseIsland
+	Comment: Paradise Island bugfix placeholder. (Grey Goop version)
+	DisplayText: What, Paradise Island thinks they can rule the world with plants? Sure! Fine! Then GOOP eats the plants. All of them! It's very simple.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Year1
+	Comment: At the end of the appropriate year. (Grey Goop version)
+	DisplayText: All right! It's our anniversary--one full year of cutting Big Brother down to size! Let's go get some Szechuan and watch Fantastic Voyage again. 
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year2
+	Comment: At the end of the appropriate year. (Grey Goop version)
+	DisplayText: Happy anniversary, Malady Maleficarum! It's been two years since you made me your intern, and I've got to say--you are by far the craziest boss I've ever had. I love this gig! 
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year3
+	Comment: At the end of the appropriate year. (Grey Goop version)
+	DisplayText: Hey--happy anniversary, Mal. I know things are getting intense, what with the Kaiju Defense Forces trying to hunt us down, but... don't worry. Malcolm and I are with you, no matter what comes.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year4
+	Comment: At the end of the appropriate year. (Grey Goop version)
+	DisplayText: Malady! Can you believe it's been four years!? Geez, the time has just flown. It's like someone has been speeding up the clock. Or something.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_Year5
+	Comment: At the end of the appropriate year. (Grey Goop version)
+	DisplayText: Oh, man? Is that today? I'm sorry, Mal--I completely forgot our anniversary. Lately it feels like the whole world is against us, and I'm always worrying about you and GOOP--and Malcolm, too. Man, who would've thought we could last for five years in this crazy racket! 
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuArrives
+	Comment: Kaiju arrives at some city.
+	DisplayText: [kaiju] is on the ouskirts of [city], Mal.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_KaijuArrivesLair
+	Comment: Kaiju returns home.
+	DisplayText: The [kaiju] has returned to [city].
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuDamageWarning
+	Comment: Will accept [kaiju].
+	DisplayText: No, no, no! They're dispersing my precious nanites! Retreat, Goopy! Run to the edge of the map and escape!
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_KaijuDefeated
+	DisplayText: The [kaiju] must return to [city] to be reassembled, Malady.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRebuilt
+	DisplayText: [kaiju] has been completely reassembled.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_KaijuRepaired
+	DisplayText: [kaiju] healing is finished, Malady.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+Message {
+	Identifier: msg_Invasion
+	Comment: Every time an invasion fleet is sent to attack you.
+	DisplayText: They launched an invasion fleet, Mal!
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_CitySurrenders
+	DisplayText: Good news, Mal! [city] has surrendered. All their money goes into our coffers, from now on.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_RegionSurrenders
+	DisplayText: Region [region] has surrendered! A true milestone--you've conquered one-sixth of the world! I have never been more proud of you.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingCompleteDefault
+	DisplayText: Training complete, my progeny.  [kaiju] has acquired [ability].
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_TrainingFacilityShutdown
+	DisplayText: Insufficient resources to support [zone], Malady.  [kaiju] training for [ability] aborted.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_ClearingComplete
+	DisplayText: We've finished up that yard work, dearest. The brush is all clear.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_NewAbilities
+	DisplayText: New Kaiju abilities are available, Malady.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: msg_invasion
+	Comment: Every time an invasion fleet is sent to attack you.
+	DisplayText: An invasion fleet has been launched!
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_success
+	Comment: when you successfully threaten a city
+	DisplayText: [city] sent a big suitcase full of cash and a couple of pizzas, Mal. I sent the food down to the programming pit. To be tested! For... uh... poison? 
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail
+	Comment: when you unsuccessfully threaten a city
+	DisplayText: [city] doesn't even answer my threatening emails now?  Oh, it is ON.
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail01
+	Comment: when you unsuccessfully threaten a city with "Pay you"
+	DisplayText: [city] won't pay their tribute? Fine. The Goop will have to demolish at least 30% of the city this month. We'll see if they feel a little more giving when their assets are a little more... liquid.
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail02
+	Comment: when you unsuccessfully threaten a city with "Opt out"
+	DisplayText: [city] doesn't take my threats seriously!  Mister Gill, remind me to convert at least 15% of that burg into ashes and insurance claims to show them I mean business.
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: threat_fail03
+	Comment: when you unsuccessfully threaten a city with "Disable Alarms"
+	DisplayText: [city] won't turn off that annoying air raid siren? Fine.  We'll see if they feel more cooperative after I've destroyed at least 25 defense units within their city limits.
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: threat_fail04
+	Comment: when you unsuccessfully threaten a city with "Surrender"
+	DisplayText: [city] thinks they're too big to surrender to the Grey Goop? Then we'll just have to cut them down to size!
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Djibouti
+	Comment: When you click on a city for the first time (Grey Goop version)
+	DisplayText: Djibouti! One of the smallest countries on the entire African continent! I almost hate up to beat up on this place, Mal--we're not about beating up on the little guy, right?
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_Ulaanbaatar
+	Comment: When you click on a city for the first time (Grey Goop version)
+	DisplayText: Ulaanbaatar, Mongolia! A surprisingly exciting place for nanotech fans. They have a National Center for Nanostuff at the local university, and they even have nanotech art in the Mongolian Modern Art Gallery. Mongolians are forward thinking folk, if you ask me.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_Moscow
+	Comment: When you click on a city for the first time
+	DisplayText: Moscow. Now there's a nanotech town. Competing programs at Mendeleev and Moscow State Universities, home of the Russian Corporation of Nanotechnologies... we should totally drop by and see if we can pick up a load of those nice Russian composites.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_MexicoCity
+	Comment: When you click on a city for the first time
+	DisplayText: Mexico City! Oh, yeah. Home to the UNAM, the largest university in all of Latin America. They've got their own nanoscience and nanotechnology center. Plus we can get those tamales you like.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_NewYork
+	Comment: When you click on a city for the first time
+	DisplayText: New York city? No problem. We can turn the Big Apple into a Big Apple Fritter if we wanna. The State University of New York built their Nanotech Complex up in Albany, so the city contains nothing vital.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Albuquerque
+	Comment: When you click on a city for the first time
+	DisplayText: Albuquerque, New Mexico! Home to CINT, the Center for Integrated Nanotechnologies. Their motto is "Big Science at the Nanoscale"--they're going to be sorry they were so small-minded when we hit them up for funding!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Anchorage
+	Comment: When you click on a city for the first time
+	DisplayText: Anchorage, Alaska. Just think... if I hadn't gone to that Nanotech Materials and Devices conference they held back in 2015, I never would have met you and joined your mad scheme for world domination. We should stomp it for our anniversary! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Barcelona
+	Comment: When you click on a city for the first time
+	DisplayText: Barcelona, Spain. You know, they're having the fourth World Congress and Expo on Nanotechnology and Materials Science there in 2017... and WE didn't receive an invitation. I'm just sayin'.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Cairo
+	Comment: When you click on a city for the first time
+	DisplayText: Cairo, Egypt. They just finished building the Egyptian Nanotechnology Center at Cairo University! I hear they're working on solar energy and desalinization there. Can't imagine why...
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Calgary
+	Comment: When you click on a city for the first time
+	DisplayText: Calgary, Alberta. Had my first summer job there, working for a company called Nanoslick. They were kind of obsessed with... lubricating things? Oh man, don't get me started...
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_CapeTown
+	Comment: When you click on a city for the first time
+	DisplayText: Cape Town, South Africa. Groote Schuur Hospital in Cape Town just installed the world's smallest pacemaker--just two centimeters long! Prior to that, this city had nothing going for them but Tom Thumb, the word's smallest ostrich.  
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Dubai
+	Comment: When you click on a city for the first time
+	DisplayText: Dubai, United Arab Emirates! They have ten nanotechonlogy conferences a year in that city. Any time we go there, we're bound to be stomping the competition.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Halifax
+	Comment: When you click on a city for the first time
+	DisplayText: Halifax, Nova Scotia. Home of the Smallest Halifax Art Gallery... SHAG for short. I love this town already. I hope they surrender fast.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: msg_FabulosoIsland
+	Comment: When you click on your home base for the first time
+	DisplayText: Fabuloso Island! This place is going to be great, Mal! We can build some processing facilities, a few labs, a scorpion sanctuary...what's not to love!?
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_London
+	Comment: When you click on a city for the first time
+	DisplayText: London, England! Home of your alma mater, the London Centre for Nanotechnology. Just think... every professor who ever called you irresponsible or gave you a "B", all in one place. How can we resist...?
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_PanamaCity
+	Comment: When you click on a city for the first time
+	DisplayText: Panama City, Panama. Not a lot of tiny science happening, but they do have a thriving economy. Also, Panama recently won the coveted title of Happiest Country in the World. Maybe they'd like to hold onto that title by being first to surrender to you and the Goop.  
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Paris
+	Comment: When you click on a city for the first time
+	DisplayText: Paris, France. Home of the Paris Institute of Nanoscience at the Sorbonne. Let's grab all the research we can, and some of that awesome melted cheese.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_QuebecCity
+	Comment: When you click on a city for the first time
+	DisplayText: Quebec City, Quebec. Oooh, I want to go to that exhibit at the Museum of Civilization. "Nanotech, the Invisible Revolution!" Never fear, Canada--we're coming. And seeing is believing!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_RioDeJaneiro
+	Comment: When you click on a city for the first time
+	DisplayText: Rio de Janeiro, Brazil. Home of awesome barbecue, and the world's smallest orchid, just half a millimeter across. I wonder if they would grow here on Fabuloso Island?
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Santiago
+	Comment: When you click on a city for the first time
+	DisplayText: Santiago, Chile. Home of CEDENNA, the Center for the Development of Nanoscience and Tech. Once we conquer the city, we should go through their research and see if there's anything we can throw into the Goop.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Seoul
+	Comment: When you click on a city for the first time
+	DisplayText: Seoul, capital of South Korea. Oh, I love this town. The fourth largest nanotech complex in the world. Billions of dollars invested in research and development. We've got to roll into this place with the Goop, just on general principles!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Stockholm
+	Comment: When you click on a city for the first time
+	DisplayText: Stockholm, Sweden. The local university made a big breakthrough in twelve-sided crystallography recently! You know how much faster you can communicate information with beams of light between little crystals, instead of slowpokey old electrons on a wire? We're talking EPIC FAST DOWNLOADS, Mal. 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Sydney
+	Comment: When you click on a city for the first time
+	DisplayText: Sydney, Australia. Home of the Australian Institute of Nanoscale Science and Technology, but also a city built on the world's largest natural harbor. In general Australians seem to have an obsession with GREAT BIG THINGS--have you noticed? I think the whole country must have some kaiju-sized insecurities.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Toronto
+	Comment: When you click on a city for the first time
+	DisplayText: Toronto, Ontario. Home of the Centre for "Advanced" Nanotechnology at University of Toronto. Advanced? Seriously? A little work in electronics and photonics, and suddenly we're "advanced"? 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Vancouver
+	Comment: When you click on a city for the first time
+	DisplayText: Vancouver, British Columbia. I love this town! Eighteen different nanotech companies, four university labs, a venture capital company just for nanotech funding... I don't know what to squish first!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: citymsg_Wellington
+	Comment: When you click on a city for the first time
+	DisplayText: Wellington, New Zealand. Home of the MacDiarmid Institute, with six solid branches of nanotech research, include soft and hybrid materials. If you hadn't beat them to the punch, Mal, the Grey Goop would have come rolling out of this place.   
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_BuenosAires
+	Comment: When you click on a city for the first time
+	DisplayText: Buenos Aires, Argentina. Good choice, Mal! This is the home of a great nanochemistry database and a really nice Center of Nanoscience and Tech. A town well worth stomping!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Tokyo
+	Comment: When you click on a city for the first time
+	DisplayText: Tokyo, Japan! Home of the International Nanotechnology Exhibition and Conference. We have GOT to crash that party, Mal. Yeah boys--we got your Exhibit right here...  
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Detroit
+	Comment: When you click on a city for the first time
+	DisplayText: Detroit, Michigan! This is where they developed the M3 computers we use, back in 2015--processors the size of a grain of rice. Takes a whole lotta Michigan Rice to fire up a Construct the size of the Goop!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vientiane
+	Comment: When you click on a city for the first time
+	DisplayText: Vientiane, Laos! A beautiful capital city full of temples and cool tourist attractions. No, they have no nanotech facilities. But they DO serve deep-fried scorpions at the local restaurants, and I'm dying to try them.  
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Vladivostok
+	Comment: When you click on a city for the first time
+	DisplayText: Vladivostok, Russia! They've had a Center of Nanophysics and Technology at the Far Eastern National University for almost a decade now. We should check in and see if they've learned anything useful.    
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_HongKong
+	Comment: When you click on a city for the first time
+	DisplayText: Hong Kong, China! The name means "Fragrant Harbor", but it's a surprisingly stinky burg for nanoscience buffs. Maybe we should just stomp it flat and grab some dim sum on the way out of town.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Dakar
+	Comment: When you click on a city for the first time
+	DisplayText: Dakar, Senegal! This is the Atlantic port on the Cap-Vert peninsula. Not the brand of socks that uses nanosilver fibers for their antimicrobial function. Although if you want to attack a nanosilver sock factory in Czechoslavakia at some point, I'm totally down with that...
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Manila
+	Comment: When you click on a city for the first time
+	DisplayText: Manila, capitol of the Philippines! Home to the world's smallest giant flower, Rafflesia consueloae. Nice and red and fleshy. Personally I think they look a lot like the Grey Goop's eyeball...
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_NewDelhi
+	Comment: When you click on a city for the first time
+	DisplayText: New Delhi? Yes! Cool Centre for Nanoscience at Jamia Millia Islamia University. Structures, materials, devices, fabrication--everything a growing Goop needs!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Seattle
+	Comment: When you click on a city for the first time
+	DisplayText: Seattle, Washington! The largest concentration of nanotech companies on the west coast of North America, all of which refused to fund your research and give you that sparkly tiara. Let's crush 'em twice, just on principle.    
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Lisbon
+	Comment: When you click on a city for the first time
+	DisplayText: Lisbon. Home of the INL, Europe's only fully international research organization for nanoscience and tech! We should totally pick this town up by the heels and shake it. Just to see what rolls out of its pockets.  
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Caracas
+	Comment: When you click on a city for the first time
+	DisplayText: Caracas. The largest city in Venezuela, and home to the infamous Tower of David--the world's tallest slum. Let's leave that one standing when we cut the city down to size. It'll be the tallest building in town.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Johannesburg
+	Comment: When you click on a city for the first time
+	DisplayText: Johannesburg. A super swinging nanotech town, Mal! They've got the Centre for Nanomaterials Research, the Mintek Innovation Centre, lots of fun architecture to smash--we should pay them a visit.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: citymsg_Fukuoka
+	Comment: When you click on a city for the first time
+	DisplayText: Fukuoka. They're doing good work at Kyushu University, if you ask me. Maybe we can nab some of those nice nitrogen-doped carbon nanofibers and a bowl of delicious Tonkatsu ramen before we flatten the place. 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: eventmsg_CivilUnrest
+	DisplayText: Citizens are losing faith in their governments and violent protests break out across [city].  People doing the kaiju`s work for them?! Surely things cannot get any darker!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Drought
+	DisplayText: With the city water reserves at an all time low in [city], a fire ban is in effect.  Only you can prevent city-wide conflagrations!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Earthquake
+	DisplayText: Earthquakes have hit [city]; even Chuck Heston can't be everywhere at once. Be prepared for a lot of city damage.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_ElectricalStorm
+	DisplayText: There is never a founding father around when you need one. No kite flying during the storms in [city].
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_LaborUnrest
+	DisplayText: Workers angry at the poor performance of the KDF in [city] go on strike and drive reconstruction costs through the roof.  Which will also have to be fixed.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_MeteorShower
+	DisplayText: Hey Mal! There's going to be a meteor shower in [city]! We have a month to drop in, collect meteor fragments and stomp things.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PatrioticSurge
+	DisplayText: The citizenry of [city] stand tall and in full support of the KDF in this struggle.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_PerfectWeather
+	DisplayText: Scientists are claiming that this recent run of good weather in [city] is not good weather at all; it`s perfect weather. The impact of this discovery on the scientific community remains to be seen.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Rainstorms
+	DisplayText: Forecast for [city] the this week: rain, rain, then rain, followed by rain, and finally some rain.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_SevereStorms
+	DisplayText: In what is being called one of the worst storm seasons of the decade, people of [city] are left with only one question: Can it possibly get worse?
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_Tornadoes
+	DisplayText: Tornadoes have been spotted touching down near [city]. People are being reminded that the land of Oz does not, in fact, exist; do not approach the tornadoes.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_KaijuSympathizers
+	DisplayText: People in [city] have been asking for a visit from the Grey Goop! We shouldn't let them down, Mal. Every supervillainess needs a fan club.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_CivilDefenceWatch
+	DisplayText: The civilian population of [city] has stepped up in this time of crisis, standing ready to do their part for the war effort.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_VolunteerLabour
+	DisplayText: In [city] news, people have been signing up by the thousands for a new volunteer labour force! These brave men and women stand ready to rebuild this city at a moment's notice. 
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KDFOverwatch
+	DisplayText: The KDF is committed to protecting [city], and to make this clear we have permanently stationed extra attack aircraft here. 
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_KaijuProof
+	DisplayText: In the face of upcoming re-elections, the Mayor of [city] has declared it Kaiju proof! I suspect we'll find out if that's true or not soon enough.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_TrafficCongestion
+	DisplayText: Defence analysts are saying that congestion problems in [city] have gotten so bad, we wont be able to respond properly in case of a kaiju attack.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_RollingBlackouts
+	DisplayText: It looks like Kerberos Productions has released another hit game. In [city] this game is so popular that the extra power consumption is causing rolling blackouts. We're calling it the "Kerpocalypse."
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_DonationArmy
+	DisplayText: I'd personally like to thank the dutiful people of [city]. With their generous donations and fund-raising we have been able to significantly bolster our military ground presence in that area.  
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: eventmsg_NavalObsolescence
+	DisplayText: Here in [city] I would like to announce our new "Soldiers, not Boats" program. Why? because people belong on land, not Kaiju! Let that monster splash around in the sea like a namby-pamby sea monkey, this land is OURS!
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_EconomicBoom
+	DisplayText: In their latest issue Furbs magazine referred to [city] as an "Economic powerhouse" and an "Investor's paradise". No one can say for sure how long this economic boom will last, but I for one say SPEND SPEND SPEND!
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_MilitaryWithdrawal
+	DisplayText: It's important that the people of [city] realize that our military withdrawal isn't so much about "abandoning them to their terrible fate" as it is a tactical redeployment of forces. The chances of a kaiju attack here are slim, at best.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+
+Message {
+	Identifier: eventmsg_RefugeeFlood
+	DisplayText: Refugees have been flooding in to [city] for days now, straining our resources and flooding our shelters. However many of these brave souls have enlisted in the city's defence and hopefully, in time, this city can become their home.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: eventmsg_InspiredLeadership
+	DisplayText: Today. Today... At the edge of our hope, at the end of our time, we find time for hope. I hope, in time, that time will give us hope. Today we are renewing our subscription... to a cancelled apocalypse.
+	Speaker: General
+	Sound: babble_general_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_ResistanceCollapse
+	DisplayText: In disturbing news, morale in [city] is at an all time low. When interviewed, on man was quoted saying "What's the point man, that monster is totally OP." We at channel 5 news are inclined to agree with him. Kaiju OP. Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+Message {
+	Identifier: eventmsg_Panic
+	DisplayText: I'm here in [city] with a special report. This just in: WE'RE DOOMED. WE'RE ALL DOOMED! THE ABOMINATION WILL RISE FROM THE SEA AND END OUR PITIFUL LIVES! SAVE YOURSELF! RUN! RUN! THE TIME FOR MASS HYSTARIA HAS COME! *ahem* Back to you, Jane.
+	Speaker: Reporter
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+
+
+
+
+Message {
+	Identifier: msg_BuildingComplete
+	DisplayText: Construction complete for [zone], Mal.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteTrees
+	DisplayText: We got trees! They're finished growing.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompleteCommunicationsArray
+	DisplayText: [zone] construction complete.  Now we can make professional-quality threats! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_BuildingCompletePropaganda
+	Comment: play when you first build a propaganda satellite.
+	DisplayText: Our new Grey Goop video is about to go viral! Just launch the propaganda satellite over the zone of your choice, and we will crush their will to resist with every Share and Re-Tweet!
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteMindControl
+	Comment: play when you first build a mind control satellite.
+	DisplayText: The mind control satellite is finished! Launch this satellite to get an edge when threatening a city. It posts to Youtube, Facebook, Twitter and Instagram automatically!
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteECM
+	Comment: play when you first build a ECM satellite.
+	DisplayText: Got a little gift for the KDF! This satellite will disrupt a region's surveillance and intelligence systems, giving the Grey Goop a nice extra edge when "sneaking" up on a city. 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteDropShip
+	Comment: play when you first build a DropShip satellite.
+	DisplayText: These new Drop Ships are going to be fun toys, Mal. When attacking a city, we'll attach them to the Grey Goop and speed up the journey to the target.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_BuildingCompleteLaunchPad
+	Comment: play when you finish building your first launch pad.
+	DisplayText: I've built you a Launch Pad, my dearest! Now you can build and launch a variety of satellites. Left click on the launch pad and select "build" to begin.
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAssignAbilities
+	Comment: Play this the first time you enter the Assign Abilities screen.
+	DisplayText: This panel shows all the abilities that you have unlocked thus far. Click and drag active icons into the bar below to fit the Costruct for combat.
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack01
+	Comment: This pops up at the very beginning. I Deleted the old IntroAttack message, hope that doesn't break anything.
+	DisplayText: The Wireless Overwatch and Remote Leadership Device is finally on line, Malady! The [kaiju] is approaching our first target. Take a look through the W.O.R.L.D. viewer and see!
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroAttack02
+	Comment: Immediately after IntroAttack01
+	DisplayText: Yes! My quest for world domination begins with [city].  Attack, Grey Goop! Let's cut the bigshots of this world down to size!
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding
+	Comment: Play this the first time you enter the building screen.
+	DisplayText: From here you can lay out plans for new structures. There are four categories of building that you can choose from, and many will unlock new and improved buildings when you construct them. The training facility is especially important, because it lets you upgrade the [kaiju].
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroBuilding02
+	Comment: After introBuilding
+	DisplayText: When we have the necessary resources, click on the build button to construct a new building. To place it, click on the highlighted building image, move it to a clear location, and click confirm. It will then begin construction.
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity01
+	Comment: Pops up as soon as you enter anchorage.
+	DisplayText: [city] may not surrender on the first attack run, but any resources we capture will be useful back at the base for building new structures and developing the [kaiju]'s abilities.
+	Speaker: MadScientist_Large
+	Sound: babble_malady_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity02
+	Comment: immediately after IntroCity01
+	DisplayText: All systems go, Malady! Left click where you want the [kaiju] to go; you will automatically attack anything that gets in your path. When it's time to leave, just walk to any edge of the map. If you right click on a unit, you can target it so that your aimed abilities will automatically fire in that direction. 
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity03
+	Comment: when gino is at 75% Health.
+	DisplayText: Hmm... the Goop is doing well, but I think we need to explore more durable materials. Make a note of that, Mister Gill.
+	Speaker: MadScientist_Large
+	Sound: babble_malady_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroCity04
+	Comment: The first time you get a city down to 90% morale
+	DisplayText: Boo-yah! That's the spirit! If we can get this city's Morale down below 40%, there's a good chance they'll surrender to you! A city that surrenders is basically your property, a permanent donor to the cause. If they don't surrender right away, we'll just keep stomping them. They'll come around eventually.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_CityReminder
+	Comment: If after 3 months, you have not yet conquered a city.
+	DisplayText: Malady, we have to chase this dream more aggressively if we really want to rule the world. Gotta conquer some cities. Let's get out there and attack! I'm sure if we keep smashing things, one of them will surrender!
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+
+Message {
+	Identifier: tutmsg_IntroClearing
+	Comment: When you first click on the clearing button
+	DisplayText: Need more space, my child? Click on the area you want to clear, and we'll prepare the land in that area for construction.
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroDeath
+	Comment: Play the first time your monster dies
+	DisplayText: What a disaster! Call me when you've reassembled the [kaiju]. I'll be working on my victory speech.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_malady_angry
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: tutmsg_IntroKaiju
+	Comment: Play this the first time you enter the Kaiju screen.
+	DisplayText: Status update for your Grey Goop, Malady.
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat
+	Comment: Play this the first time you successfully retreat from a city.
+	DisplayText: Don't dream this is over, [city]. I'll build up my base, upgrade my Kaiju, and reduce you all to a stain on the pavement!
+	Speaker: MadScientist_Large
+	Sound: babble_malady_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroRetreat02
+	Comment: Play this the first time you successfully retreat from a city, after IntroRetreat.
+	DisplayText: It's going to take a while for [kaiju] to return to base, Mal. You can use the arrows in the top left corner, beside the clock, to advance time faster or slower. You can do that at the base as well! I know how you hate to wait.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSecretBase
+	Comment: Play this the first time you enter your base.
+	DisplayText: Beautiful Fabuloso Island! Our new base of operations. Bit of a fixer-upper, but we got it for a steal. Click on any tile to assign a work crew to clear away the jungle and prepare the ground for construction.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroSecretBase02
+	Comment: Play after IntroSecretBase
+	DisplayText: You can build facilities, heal, and train the [kaiju] here. If you want to expedite things, don't forget you can speed up the clock by pressing the arrows in the top left hand corner. Consider it a caffeine button for the space-time continuum!
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroSummary
+	Comment: Play this the first time you enter the Summary screen.
+	DisplayText: My status report is finished! This is the latest scoop on the Morale, GDP, and destruction level of every region of the globe.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_IntroTraining
+	Comment: Play this the first time you enter the training screen.
+	DisplayText: Malady, this is where you will instruct me and your other loyal minions on how to upgrade [kaiju]. To get more upgrades, you will need to build new training facilities in your base. Advancements in nanotechnology and materials science come at a price!
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_MonthlyUpdate
+	Comment: Play this the first time there is a monthly update.
+	DisplayText: The bean-counters have prepared a monthly report of all resources, gains, and losses. Base buildings can produce resources, but they also cost money to maintain. Also, cities will repair the damage we've done over time! We can't expect cities to stay ruined for long.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_AttackGroup
+	Comment: play the first time that a city generates an invasion group
+	DisplayText: KDF has launched invasion forces against me?! Oh, I have HAD it with these people! If they come near this island, I'm gonna make some RED goop!
+	Speaker: MadScientistRage_Large
+	Sound: babble_malady_angry
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_PatrolGroup
+	Comment: play the first time that a city generates a patrol group
+	DisplayText: So KDF has sent out a patrol, hoping to catch my Precious in transit? Never! The more they squeeze, the more the Goop will slip between their fingers!
+	Speaker: MadScientist_Large
+	Sound: babble_malady_normal
+	IsTutorial: true
+}
+
+
+Message {
+	Identifier: tutmsg_SearchGroup
+	Comment: play the first time that a city generates a search group
+	DisplayText: The KDF is searching for Fabuloso Island? Cretins! They'll never find me. I should still build defenses, though. For...decorative purposes.
+	Speaker: MadScientistUpset_Large
+	Sound: babble_malady_angry
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_LairDiscovered
+	Comment: play this when a search group discovers the island.
+	DisplayText: They found our base! The KDF will be coming for us soon enough. We should whip up a few surprises for when they get here. Nasty ones.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: tutmsg_PatrolCombat
+	Comment: play the first time that Gino is detected by a patrol group, before they enter combat.
+	DisplayText: Breaking news! [kaiju] has been intercepted. Will the monster be turned away, Or will it push forward through the K.D.F. line? Stay tuned to find out.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_PatrolCombat02
+	Comment: play the first time that Goop enters combat with a patrol group.
+	DisplayText: We don't have to fight this out if you don't want to, Mal. Walk [kaiju] to the red line if you want to return to base, to the green line if you want to move forward. Or...just crush them all and giggle maniacally? That works too.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat
+	Comment: play the first time the player attempts to threaten a city.
+	DisplayText: Nice one, Mal! I bet they're quaking in their boots now. And if they don't get with the program, we can always send the Goop to persuade them.
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroThreat02
+	Comment: play five days before a failed threat is going to expire.
+	DisplayText: The citizens of [city] are calling you a "a blue-haired lunatic with delusions of godhood". They couldn't be more wrong--your hair is CLEARLY green! 
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: tutmsg_IntroUpgrade
+	Comment: play when you first train all teir 1 abilities.
+	DisplayText: Mal, we've run out of ideas for new upgrades. But if we build an Advanced Training Facility, we can unlock WAY more of the Grey Goop's potential! 
+	Speaker: Intern_Large
+	Sound: babble_malady-intern_normal
+	IsTutorial: true
+}
+
+Message {
+	Identifier: msg_IntroUpkeep
+	Comment: play each month one of your buildings can no longer be maintained.
+	DisplayText: I'm sorry dearest, but we are short on supplies! It's impossible to support all these buildings this month. You must bring home more resources. I told you from the start--if you're going to have all these minions, you'd have to feed them and clean up after them yourself. 
+	Speaker: Engineer_Large
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_LaunchDropShip
+	Comment: play when you try to launch a drop ship via the launch button.
+	DisplayText: You can't launch from here, Malady. Go to the map, select a city, and attack via Drop Ship. The Construct will arrive in 30 minutes or less, like any good weapon of mass destruction. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_SuperTank
+	Comment: play the first time a Super Tank is built.
+	DisplayText: Breaking news! The Kaiju Defense Force has unveiled it's newest anti-kaiju weapon, the aptly named SUPER TANK, in [city]. The KDF thanks everyone who's homes will be crushed under it's massive treads, and promises that their sacrifices will not be in vain.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Planto
+	Comment: play the first time a Planto is built.
+	DisplayText: Breaking news! The Kaiju Defense Force scientists have created a new anti kaiju weapon in [city], a bipedal mutant plant creature called Planto. Planto is fully under the control of the KDF, and absolutely, definitely, probably, won't go crazy and wreak havoc on it's own masters.  
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Helicarrier
+	Comment: Play the first time a Helicarrier is built.
+	DisplayText: Breaking news! The newest anti-kaiju weapon has been announced in [city] by the Kaiju Defense Force, The KDF Helicarrier! This new weapon will be used as a "Shield around the world, to avenge those who have fallen." Or at least that's what they said in the press release.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_Ultrasan
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! "The Ultimate Hero" has been created in [city] by the Kaiju Defence Force, known only as Ultrasan! KDF scientists credit an "out of this world discovery" for their success with this program, but refuse to say more.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_RockMonster
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! A gigantic stone guardian has appeared in [city] today, but is showing no signs of hostility. The Kaiju Defense Force is claiming responsibility for this creature, saying only that ancient forces and unconventional "sciences" have made this possible.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_MiniMechs
+	Comment: Play the first time super unit is built.
+	DisplayText: Breaking news! The Kaiju Defense Force has announced a new anti-kaiju Mecha Task Force in [city]. The pilots of this force may seem young, but the KDF assures us that these teenagers have what it takes to fight monsters, defeat evil, and make it back in time for class.
+	Speaker: Reporter_Large
+	Sound: babble_news_normal
+	IsTutorial: false
+}
+
+// ABILITIES
+/// OFFENSIVE ABILITIES /// 
+
+Message {
+	Identifier: msg_goop_GOOP
+	DisplayText: The Construct's own body is a destructive force, my child. Trigger this attack and it will disperse a 200-meter wave of corrosive nanites behind it. Worse than your uncle Malodorous after a bean supper!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+/// ATTACK ///
+Message {
+	Identifier: msg_goop_Spit
+	DisplayText:  Research is complete on the Spit attack, Malady. When you trigger it, the Construct will eject a ball of nanites. The range is 400 meters, and the impact will have a 100-meter radius. Best of all, the Construct can go and collect its own sputum later as a health bonus! Isn't that thoroughly disgusting?
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Snap
+	DisplayText: I taught the Goop to use its pincers as a proper weapon! Trigger the Snap Command, and it will target anything in front of it with sweeping nanite-sharp blades. Just like Nature's Perfect Killing Machine, the Scorpion!
+	Speaker: Intern
+	Sound: babble_malady-intern_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ShockGlare
+	DisplayText:  The new beam weapon we've been working on is now operational. When you use the Shock Glare, the Construct will five pulses of destructive energy beam from its viewing orb. Sometimes, looks CAN kill.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Sting
+	DisplayText:  Check this out! I've trained the GOOP to use its stinger, just like a real scorpion! When you use the Sting command, the tail will inject any ground target in front of it with nanite venom! And if the nanites manage to completely dissolve the enemy to component parts, GOOP can pick the nanite blob back up as a health bonus. HOW COOL IS THAT!?
+	Speaker: Intern
+	Sound: babble_malady-intern_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_DoubleSnap
+	DisplayText:  I decided to make an improvement on the Snap attack by uploading some old martial arts movies into the GOOP Matrix. Now the Construct can use its pincers to Double Snap, like Bruce Lee. Wa-chow! 
+	Speaker: Intern
+	Sound: babble_malady-intern_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Splat
+	DisplayText: This is a messy one, my dear. The Construct will release three waves of nanites in succession, increasing in area each time. Use the Splat command and you will become the Jackson Pollock of Kaiju Violence. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Barrage
+	DisplayText:  I've made an improvement on the Spit attack, Malady. Use the new Barrage command to fire not one but THREE nanite projectiles in rapid succession, which do damage over time and leave recoverable nanite clusters on the battlefield.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_WideGlare
+	DisplayText:  The new lens architecture we've designed for the GOOP is working brilliantly! Use the new Wide Glare to engage up to five targets in a 90-degree arc in front of the Construct's eye.   
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ViralGoop
+	DisplayText:  Me and the boys came up with an improvement on the GOOP's nanite Sting, Mal. You can use our new Viral GOOP command to inject targets as usual--but if the enemy is destroyed by the venom, the nanites can move on to infect other targets nearby!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ExplosiveGoop
+	DisplayText:  Ha! Oh, this one is mean. We programmed the nanite venom to convert a certain volume of its matter into unstable isotopes, just for laughs. Trigger the Explosive GOOP and they'll explode and deal damage equal to their original health!
+	Speaker: Intern
+	Sound: babble_malady-intern_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_VorpalSnap
+	DisplayText: I just couldn't leave the pincers alone. Tightened up a few lines of code, dropped in some new microprocessors, and now the new Vorpal Snap will slice and dice everything in front of the GOOP with a triple attack!
+	Speaker: Intern
+	Sound: babble_malady-intern_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_BodySlam
+	DisplayText:  A happy accident in the laboratory, my dear. The Construct happened to...slip, during routine maintenance. No damage to the GOOP whatsoever, but we lost the nearby cafeteria and a few service trucks...so we've decided to use it as an attack from now on. We call it "Body Slam", but only because "I Meant to Do That" wouldn't fit on the instrument panel. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Blob
+	DisplayText:  Despite Mister Gill's scorpion fetish, there is no real reason we HAVE to confine the Construct to a solid arachnid shape! Use the Blob command to have the GOOP assume a more fluid form, and deal damage to everything it touches.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Corrosives
+	DisplayText:  I've given the Construct a new weapon, Malady, a trail of devouring nanite slime that it leaves in its wake, like a snail. I call it the Corrosives attack, but if you like we can rename it after the politician of your choice.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_GoopBomb
+	DisplayText:  Another inprovement to the old Spit command! The GOOP Bomb is a fragmentation projectile. Launch a blob of nanites with a range of 650 meters, and on impact it will split into three smaller blobs that fire at nearby targets. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Artillery
+	DisplayText:  A veritable fussilade of sputum! With the Artillery command, the Construct will emit five rapid-fire projectiles with a range of 700 meters, which do damage to your enemies and then become collectible nanite health bonuses for the kaiju! 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Lougies
+	DisplayText:  A new variant on an old favorite! The Lougies attack is an anti-aircraft battery--use it to target every aerial enemy within 500 meters with high-speed nanite flak.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Zap
+	DisplayText:  You know how you always love to scuff your fuzzy socks back and forth over the carpet until you come over and shock me with the electrostatic discharge? Well, now the GOOP can do that to your enemies. It's called the Zap command. Thought it would make you smile.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ViralBarrage
+	DisplayText:  I've been working with the boys in the pit on a new improvement of GOOP's tail attack. The Viral Barrage triples the effectiveness of the old Viral GOOP command--you can sting three ground units with viral venom! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Spew
+	DisplayText:  We've been working on the problem of targeting structures rather than mobile units! Use the Spew command to spray every building within 300 meters with nanite vomit. Like when your aunt Malefica ate those bad shrimp at your cousin's wedding--except that every Building destroyed will become a recoverable GOOP ball. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ExplosiveBarrage
+	DisplayText:  A new variation on the old favorite--Explosive GOOP! Now you can inject three targets at once, and watch them turn into ticking timb bombs of nanite fun and profit!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_GoopFog
+	DisplayText:  I've been working with your father's old Corrosives command! I figured there was no reason we couldn't make the nanite snail trail into an airborne cloud--it was really just a programming issue. Now you can use the GOOP Fog command to emit a gaseous cloud behind the Construct that damages everything it touches, and then conveniently collapses into a recoverable GOOPball. 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_OhMegaSnap
+	DisplayText:  The ultimate pincer attack! We've been working on the GOOP's ability to follow through, and the results are so awesome it's appalling. This new Oh Mega Snap command is like Vorpal Snap but with a one hundred percent chance to repeat! Each subsequent attack is ten percent less likely to repeat, but with a little luck one push of a button turns the Construct into a kaiju-sized hibachi chef!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_SeismicSlam
+	DisplayText:  It's all about follow-through! Seismic Slam is the old Body Slam attack, with a one hundred percent chance to repeat. Each successive slam loses the probability to repeat by twenty percent, but you should get at least two or three good thumps out of this one. It's like having your own kaiju-sized pro wrestler to play with!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_AbsorboGlob
+	DisplayText:  Mister Gill and his programming minions were quite helpful with this one! They have re-programmed the old Blob command, and given the Construct the power to regenerate ten percent of any damage received while in Blob form. He really is quite supportive, Malady. Perhaps you should promote him from Intern someday? Put the proverbial ring on that thing? 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ElectroGoop
+	DisplayText: The boys in the programming pit are still playing with your Dad's old weapon designs. We figured out how to electrify the snail trail! Use the ElectroGOOP command and the Construct will leave behind a nanite slick that stuns ground vehicles and zaps the OVERLOVING HECK out of ground units. Useful AND funny!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_UnstopoGoop
+	DisplayText:  Mister Gill and I worked together on this one! I've upgraded the range of a Spit projectile to 600 meters, with a nice impact radius of 75 meters. But then Mister Gill used his recursive programming to recycle the kinetic energy and make it bounce on impact! With each bounce, the projectile loses 20 percent of its likelihood to repeat, but with a little luck the UnstopaGOOP can skip ike a stone! 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopnado
+	DisplayText:  The ultimate Spit command! The Construct launches ten projectiles in random directions! A tornado of nanite sputum! We call the GOOPnado.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Apocalougies
+	DisplayText:  The final upgrade to the aerial Lougies, my offspring! Fifteen rounds of nanite flak, with a range of 500 meters. Let these Apocalougies be a lesson to you, miscreants! That'll teach you to mess with my daughter's career!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Feedback
+	DisplayText:  The final evolution of the old Zap command, Mal. Use the Feedback failsafe to turn on an unstoppable electrostatic attack to all neighboring enemies. The assault will continue until the GOOP is completely drained of power.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Infestation
+	DisplayText:  The code monkeys and I have put the finishing touches on GOOP's venom, Mal. Infestation works like the old Viral Barrage, attacks three targets at once and turns them into potential nanite zombies...but now, the viral power of the venom won't degrade over time. It's going to be Night of the Living GOOP out there. 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Splork
+	DisplayText:  We've now maximized the range and power of the Construct's destructive nanite vomit. This new attack has a range of 600 meters and a 45-degree arc of attack! Unfortunately we'd run of names for disgusting bodily functions, so we decided to call this one "Splork". 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_GodGoop
+	DisplayText:  Unleash a single nanite projectile that will chew through an enemy building, reduce it to dust, and fire off three new projectiles into neighboring structures! The resulting wave of destruction can spread like wildfire and demolish a whole city, if the buildings are packed too close together. This weapon is truly GOOPerdammerung--God GOOP for short!    
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopicane
+	DisplayText:  A killing fog of hungry nanites, smothering the countryside like a Biblical plague! Your new GOOPicane attack will be particularly nasty versus aircraft--it leaves behind nothing but a useful GOOPball to collect, and the fresh scent of pine. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+/// DEFENSE ///
+
+Message {
+	Identifier: msg_goop_ThickGoop
+	DisplayText:  Decided the GOOP needed a little more durability, Mal--it's hard to take a hit when you're basically just a cloud of tiny machines. I've altered the density with this new nanite brew--the GOOP will always be a little thicker from now on.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Harden
+	DisplayText:  Work continues on the Construct's defensive capabilities! With this new Harden command, the GOOP will be able to increase the density of its outer carapace. It vastly improves armor, but slows movement by 50 percent. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Absorption
+	DisplayText:  I'm particularly proud of this one, my dearest! I've tweaked the Construct's acquisition mode to incorporate high-speed nickel, lead, copper, steel, plastic--even dupleted uranium! When you trigger this Absorption command, the GOOP will incorporate incoming ballistics for 30 whole seconds! Isn't that nifty?!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Diffuse
+	DisplayText:  Controlling the density of the nanite matrix has a lot of potential, Mal. I've programmed a new Diffuse command that will let you make the kaiju a little more "cloud-like". It reduces the damage output, but for 30 seconds any attacks against the Construct will have a 50/50 chance of being negated.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Durability
+	DisplayText:  After a brief refresher course on the principles of composite armor coating, I've made some modifications to the Construct. Your precioius GOOP should be better armored versus ballistic attacks, from now on.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Stability
+	DisplayText:  Been working on the problem of energy attacks--the GOOP really doesn't like those! I've worked out a new Stability command, which should give the GOOP improved resistance for about 30 seconds. Still longer than most sunscreen lasts!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_AbsorptionMatrix
+	DisplayText:  I've completed my work on the Absorption subroutine as ordered, Malady. The new Absorption Matrix is a stable, permanent ability--the kaiju will always incorporate a certain percentage of ballistic fire from now on.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Regenerative
+	DisplayText:  My work on the materials acquisition properties of the Construct continues. This new Regenerative command will allow the GOOP to incorporate substance from its surroundings for thirty seconds, "healing" itself as it soaks up smoke, dust and vapor from the surrounding air.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Dispersal
+	DisplayText:  Oh man, these density changes are a ton of fun! We've made the GOOP's ability to spread itself out for defensive purposes a reflexive trait--Disperal is now automatic. Lowers the damage output a tiny bit, but that permanent 15 percent boost to dodge ability is going to be worth it! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_AmorpheusForm
+	DisplayText:  Much as I hate to give up that rockin' scorpion shape, there are some advantages to letting the GOOP get goopy. If you Trigger the Amorphous Form ability, your enemies only have a 50-50 chance of hitting you. Of course, we can only sustain that level of GOOPitude for 60 seconds!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Solidity
+	DisplayText:  A further refinement of my earlier work on the density of the carapace. If you use this command for Solidity, the kaiju will redirect a great deal of its mass to its outer shell. It greatly increases armor, but reduces the speed of movement by at least 80 percent.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ReactiveSolidarity
+	DisplayText:  The GOOP is developing a sense of self-preservation, Malady. When the Construct is damaged, Reactive Solidity now kicks in automatically, diverting power from movement to armor. There are little surges of defense at 75, 50 and 25 percent health. Isn't that adorable? It wants to live!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Redistribution
+	DisplayText:  Still working on the problem of energy attacks. Couldn't reduce the damage of the hit, but I've taught the GOOP to divert some of the energy to its own locomotion. With Redistribution, a laser strike is like being hit with a cattle prod. Gets that GOOP moving!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_AbsorptionCarapace
+	DisplayText:  A further refinement of the Absorption Matrix--as it turned out, it was possible for the GOOP to incorporate more mass per projectile! It will be gaining more health from enemy ballistic attacks from now on.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_SplashDamage
+	DisplayText:  Mister Gill showed me a film the other night about a construct trapped in space with a crew of aggressive humans. When I saw its blood eat through four decks of their ship, I was inspired! I've incorporated the idea into the Splash Damage ability. When the GOOP is hit, it will "bleed" a cloud of corrosive nanites. What fun, eh!?
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Assimilation
+	DisplayText:  Ah, beautiful! Your Dad made a tweak on my pincer weapon, Mal. Now when the Grey Goop makes a snap attack, it will Assimilate any destroyed enemies and gain a little health from them! That is so cool. I think the old buzzard is warming up to me.  
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_SlowRoll
+	DisplayText:  Patience is a virtue, my dear. I discovered when I slowed the Construct down, it was able to devote much more energy to collecting resources. Trigger this Slow Roll ability to reduce speed for a while, and increase the GOOP's rate of healing.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_AtomicDiffusion
+	DisplayText:  Ye gods, look what Mister Gill and his code monkeys have done! This Atomic Diffusion failsafe is a 30 second window of immunity to attack. The GOOP exists briefly as coherent smoke! 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_SpoofGoop
+	DisplayText:  You were right, Malady--that paper on nanocrystallography WAS enlightening. I've programmed the Goop to form a communications array that can mess with enemy guidance systems. This new Spoof command should break missile lock on anything currently tracking the Construct.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_MemoryGOOP
+	DisplayText: I read that meditation book you gave me, and it gave me a groovy idea. What if the GOOP's body WAS really just a state of mind? I've programmed a new Memory feature, which records the GOOP's physical state. Then 30 seconds later, the Construct automatically reverts to that earlier state! Pretty cool, eh? Mind IS matter!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Shed
+	DisplayText:  Mister Gill has shown me another film. A construct trapped in an Antarctic facility, trying to evade or outsmart its paranoid human captors! Once again, the fiction has stirred my own creativity. Now, when your enemies blow off portions of the Construct, they will be Shed as recoverable GOOP. Because all GOOP is good GOOP!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Crystallization
+	DisplayText:  I've implemented the Crystallization ability you asked for, Mal. The GOOP's overland speed is reduced, but there will be a permanent increase to armor from now on.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_NanoPerfection
+	DisplayText:  One final tweak to the GOOP on the level of materials science. This upgrade will raise your GOOP to the peak of Nano Perfection, and confer a permanent increase to the armor value of the Construct.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_CastleGoop
+	DisplayText:  The self-preservation instincts of the Construct have only increased over time, Malady. This new defensive ability causes the GOOP to divert energy to armor and regeneration, when it falls below 20 percent health. The new Castle GOOP mode will continue until the Construct has recovered at least half of its operating mass.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Empower
+	DisplayText:  Managed to make some major improvements to that old Redistribution ability, Mal! Now when the GOOP is hit with an energy attack, the energy will actually Empower the Construct--increase both speed AND damage, to a maximum of 200 percent. What do you think--am I the greatest, or merely the best!?
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopsplosion
+	DisplayText:  Weaponizing the Construct's blood against its attackers continues to amuse me. This new GOOPsplosion increases the range and power of the splash attack when the kaiju is hurt--the harder you hit the GOOP, the harder it GOOPs everything around it! Oh, it makes me laugh like a schoolboy every time. Science keeps me young! 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_EngulfingForm
+	DisplayText:  This is the final upgrade of the GOOP's Assimilation ability for melee attacks. Now that we've upgraded to Engulfing Form, the Construct's pincers should be able to absorb materiel from buildings as well as enemy units, and the efficiency of the healing effect should be greatly increased.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopernaut
+	DisplayText:  I've finally stabilized the Slow Roll ability! It should always be in effect from now on, a passive power that constantly collects resources and adds substance to the Construct. It will waddle through cities like a leisurely swine at an All-You-Can-Eat Buffet! A true GOOPernaut!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopnami
+	DisplayText:  The final transformation of the Construct's form--a surging tidal wave of nanites, invulnerable and unstoppable as the Biblical Flood! I call it the GOOPnami. Catchy, eh?
+	Speaker: Engineer
+	Sound: babble_malady-engineer_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_GoopedUp
+	DisplayText:  I've been working with GOOP's communication array, and tweaked it to be even more hilarious. Instead of just breaking missile lock, the new GOOPed Up command will re-direct them onto random enemy targets! I can't wait to try this in the field. I may need to bring an extra pair of pants.
+	Speaker: Intern
+	Sound: babble_malady-intern_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Replicate
+	DisplayText:  Made a final upgrade to the GOOP's Memory system. Replicate is a full system reboot--it will reintegrate the Construct in its previous form, even if it was completely destroyed!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_GoopPoop
+	DisplayText:  It occurred to me the other day--why should the Construct ever stop assimilating resources? If it doesn't need them for repairs, it can just do what we do--expel them! It can leave balls of GOOP all over the battlefield to be recovered when needed. It's genius! Brilliance! I've invented GOOP POOP!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_MassMeals
+	DisplayText:  The ability to absorb ballistic attacks is useful, of course, but I thought it might be nice to gain more resources from the process. My new Mass Meals protocol will enable the Construct to digest bullets more efficiently, and gain more health from them.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_NanoCohesion
+	DisplayText:  The relationship between neighboring nanites could stand to be a bit closer, don't you think? I've been working on improved Nano Cohesion, which should improve the Construct's armor--good neighbors stick together! 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+///METABO///
+
+Message {
+	Identifier: msg_goop_RegeniGoop
+	DisplayText:  In order to retain coherence, the GOOP must constantly rebuild its own nanomachine components. I have increased the rate slightly, a mild healing effect. We call it RegeniGOOP.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopnormasaurus1
+	DisplayText: Guess who got a classified set of schematics for the Great Machine? Your intern, that's who! Now that we have them, we can have the Grey Goop assume the form of Ginormasaurus whenever we want! For 30 seconds we can stop around and use basic robot dinosaur powers. Kaiju Cosplay! Let's make a GOOPnormasaurus! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopy1
+	DisplayText:  You wanna know how I acquired internal scans of the great and powerful plant kaiju, Shrub-Ziggurath? Or do you just want to have the Grey Goop assume her form and do killer impressions of Shrubby at parties? I know what my answer's gonna be...go GOOPy!  
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Armagoopdon1
+	DisplayText:  Boo-ya! It was tough, but I finally got a full MRI and blood-work for Wyrdstrom's Wonder, Armagordon. Let's teach Grey Goop to walk on two legs and roar with a fake German accent! It'll be a blast playing with ArmaGOOPdon--maybe literally!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopnormasaurus2
+	DisplayText: Ah, Farious changed his password, but he's no match for the amazing Mister Gill. I've got the plans for the Great Machine's second-level upgrade, including a few weapon improvements. GOOPnormasaurus 2, here we come! I think we'll be able to hold the form a little longer now as well.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Dismantlers
+	DisplayText: The key to increasing the damage of the Construct's attacks will be teaching the nanites to attack enemy molecules more efficiently. These next-generation nanites I've designed are born Dismantlers, and should increase all melee damage by 20 percent. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopy2
+	DisplayText: BOOM! Got a full 3D scan of Shrubby's second stage of plant growth, including some of her upgrades. Let's upload the specs and try attacking someone with GOOPy 2! We should have a full 45 seconds to try out ol' Plantzilla's improved abilities in combat. 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_NanoDensifiers
+	DisplayText: I have made a breakthrough in miniaturization, my dear! This will allow me to pack a great deal more GOOP into the control field, which should greatly increase the maximum health of the Construct. Nano Densifiers--just one more way that less is more!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Armagoopdon2
+	DisplayText: I didn't think I was going to be able to swing this, but I managed to get the latest imaging data for Armagordon's recent evolution. Just let me do a new build and we should be able to play with ArmaGOOpdon 2 whenever we want.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Gooplings
+	DisplayText: Behold my latest invention! I have taught the Construct to reproduce itself, and create a miniature Goopling that will attack your enemies in battle, and carry on the family name. *cough* Now if only I could teach my own spawn to do the same...*cough*
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopnormasaurus3
+	DisplayText:  Bad news is that the firewall Farious installed works perfectly. Good news that his niece can still be bribed with purpletonium and help with her homework! I've got the latest blueprints for Ginormasaurus, she's got a working point defense system--I call it win-win. Now let's take GOOPnormasaurus 3 for a spin! 
+	Speaker: Intern
+	Sound: babble_malady-intern_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_NanoBooster
+	DisplayText:  Even the best nanites have room for improvement, my dear. I've upgraded the Construct with Nano Boosters, which should help it to dissipate waste heat more quickly in battle--this will decrease cooldown times for all its abilities.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Disassemblers
+	DisplayText:  I've upgraded the Construct's ability to tear apart enemy molecules! These new Dissasemblers should increase all melee damage by at least 25 percent.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Hunger
+	DisplayText: I was in the cafeteria the other day and it occurred to me--what if we could increase the Grey Goop's appetite? I tried speeding up the metabolism of the nanites, and sure enough--their Hunger makes them WAY more destructive per second. Stands to reason, though. I mean, we know what happens when I let your blood sugar drop too low... 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopy3
+	DisplayText: Ah, good old Berkinstock! Can always count on him to upload Doctor Belladonna's latest scans to the Kaiju Leaks website. Thanks to his fits of conscience, we get to play with the latest and greatest version of the Mean Green Mother! Let's go have some fun with GOOPy 3! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_RecomboGoop
+	DisplayText:  I've increased the rate of replication for the nanites once more, which should provide the Construct with an improved ability to regenerate. I call the new protocol RecomboGOOP!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_RepairaGoop
+	DisplayText:  The Construct definitely seems alive at times, doesn't it? This new healing protocol is self-generated--the kaiju slows down 75 percent and re-routes its energies to healing for 30 seconds, bringing its health back to full. I call it RepairaGOOP. Kaiju self care! Isn't that amazing?
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_NanoReserves
+	DisplayText: Once again I've reduced the component size of the GOOP swarm, allowing the Construct to pack more mass into its control field! These new Nano Reserves will increase the overall maximum health of the Grey Goop significantly. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Armagoopdon3
+	DisplayText:  The good news is...I worked out a deal with Julius Urkelberg to download all the latest medical data from Armagordon for a while. The bad news is... I had to cough some of our nanites to seal the deal. So the Atomic Menace is going to end up having some nanotech abilities--and we're going to get to play with ArmoGOOPdon 3!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_SpeedGoop
+	DisplayText:  I've made a new advance in materials science, my dearest. The new generation of GOOP nanites are significantly lighter, which should increase the overall land speed of the Construct by a fair margin.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Denselings
+	DisplayText: Since I've been improving the GOOP itself, why not tinker with the GOOPlings as well? My new Denselings have significantly more mass than their predecessors, and should be a bit more durable in battle. 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_RecycloGoop
+	DisplayText:  A bit more puttering about with the GOOPling concept. Why should the Construct be unable to re-absorb its nanites if a GOOPling is destroyed? I've solved that problem with this simple ReycloGOOP protocol, which will convert dead GOOPlings into useful GOOP balls for recovery.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopnormasaurus4
+	DisplayText:  Ah, the kid drove a hard bargain--I ended up having to hand over my PhD thesis AND my favorite purple scorpion! But here they are, the final schematics for Ginormasaurus. Give me a sec to upload them to the Construct, and we'll have GOOPnormasaurus 4 at our disposal! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_EnerGoop
+	DisplayText:  You remember that work I was doing on electrifying various things and redirecting energy? Well, this time I really hit the jackpot! This new code jazzes up the GOOP's ability to cycle all its powers. As long as the Construct has health under 75 percent, it should be attacking way faster from now on!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Annihilators
+	DisplayText:  The final stage of my deconstruction design--Annihilators! With these next-generation nanites, all of the GOOP's attacks will be much more damaging!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_happy
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Ravenous
+	DisplayText: I made another pass on the metabolic speed of the nanites, Mal, and...this time I even scared myself. These little buggers aren't just hungry now--they're Ravenous. Damage per second for all corrosive attacks has jumped 50 percent, across the board! 
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Goopy4
+	DisplayText:  Every day brings another surprise. Lillian Belladonna sent you the latest scans of Shrubby via our private FTP site! She said she loves the work you've been doing, and apparently she likes your hair--turns out green is her favorite color. What do you say? Shall I do a virus scan and then fire up GOOPy Mark 4?
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_RevivaGoop
+	DisplayText:  Just working on a failsafe system to try and avoid losing the GOOP in battle. This RevivaGOOP protocol prevents the Construct from dispersing for an extra 15 seconds, giving it a chance to regenerate or restore its health before death. If it can't get up to 25 percent health before the clock runs out, though--our Grey buddy is gonna go splat.
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_ImmortaGoop
+	DisplayText:  One last boost to nanite replication. The Construct itself and all of its GOOPlings should benefit from increased regeneration with this new ImmortaGOOP.
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_SuperGoop
+	DisplayText: One final compression pass, my dearest, to reduce the nanites to the smallest possible diameter. This new SuperGOOP is my last stab at increasing the density and the maximum health of the Construct. Use these nanites wisely, and chase your dreams!
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_Armagoopdon4
+	DisplayText:  Ah, man. Julius bent me over a barrel on this one, but I finally got the scoop on Armagordon's latest upgrade. I had to help them implement that Grabatron thing, but check this out--we've got ArmaGOOPdon 4! 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_StealthGoop
+	DisplayText: Another pass on the nanite matrix today, this time looking at ways to reduce the Construct's radar visibility and friction. Your new Stealth GOOP should be a significant advantage during strategic movement, and allow the Grey Goop to travel more swiftly around the globe, with a reduced chance of detection by enemy forces.  
+	Speaker: Engineer
+	Sound: babble_malady-engineer_normal
+	IsTutorial: false
+}
+
+
+Message {
+	Identifier: msg_goop_ReGoop
+	DisplayText:  Your Dad has been doing some good work with those GOOPlings, Mal. I decided to work with him this weekend to see if I could upgrade them with some of my memory code, and sure enough--it worked! This new ReGOOP ability means that the GOOPlings have a chance to repawn when they die. That should keep the KDF busy!
+	Speaker: Intern
+	Sound: babble_malady-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_goop_TheGoopening
+	DisplayText:  What's better for a healthy kaiju than a big, happy family? I've increased the rate of reproduction for the Construct: so long as the Grey Goop is at full health, it will continue to generate new GOOPlings. Mazel Tov, my kaiju friend! 
+	Speaker: Engineer
+	Sound: babble_malady-engineer_happy
+	IsTutorial: false
+}
+

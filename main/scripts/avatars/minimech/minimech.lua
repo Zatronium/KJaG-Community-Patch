@@ -1,3 +1,4 @@
+
 local kaiju = nil
 local stopdist = 500;
 
@@ -15,17 +16,10 @@ local moving = false
 local initialSetup = false
 local setupFinished = false
 
-function onSpawn(a)
-	if not initialSetup then
-		doSpawnSetup(a)
-	end
-end
-
 function doSpawnSetup(a)
-		initialSetup = true
-		kaiju = getPlayerAvatar()
-		setupFinished = true
-	end
+  initialSetup = true
+  kaiju = getPlayerAvatar()
+  setupFinished = true
 end
 
 function onHeartbeat(a, dt)

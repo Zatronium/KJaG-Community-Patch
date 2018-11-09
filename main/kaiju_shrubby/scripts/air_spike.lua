@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local targetPos = 0;
 local weapon = "weapon_shrubby_airVine3";
 local weapon_node = "root"
@@ -15,23 +15,23 @@ local target4 = nil;
 local vine = nil;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "stomp");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "stomp");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 
 function onAnimationEvent (a)
 
-	target = getClosestAirTargetInRadius(avatar:getWorldPosition(), getWeaponRange(weapon), EntityFlags(EntityType.Vehicle));
+	target = getClosestAirTargetInRadius(kaiju:getWorldPosition(), getWeaponRange(weapon), EntityFlags(EntityType.Vehicle));
 	target1 = target;
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	local proj;
 	if canTarget(target) then
-		proj = avatarFireAtTarget(avatar, weapon, weapon_node, target, 90 - view:getFacingAngle());
+		proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target, 90 - view:getFacingAngle());
 		
 		playSound("shrubby_ability_AirSpike");
-		startCooldown(avatar, abilityData.name);
+		startCooldown(kaiju, abilityData.name);
 		
 		--vine = createRope("sprite", segments, strokeWidth, tipUV, endUV);
 		vine = createRope("sprites/placehold_vine.png", 20, 45);
@@ -42,11 +42,11 @@ function onAnimationEvent (a)
 		-- setRetract(delay between vert culling, lower = more culled per update) default  0.0, 30
 		vine:setRetract(0.2, 50);
 		vine:setStartEntity(proj);
-		vine:setEndEntity(avatar);
+		vine:setEndEntity(kaiju);
 		vine:activate();
 		proj:setCallback(this, 'onHit');
 	else
-		NoTargetText(avatar);
+		NoTargetText(kaiju);
 	end
 end
 
@@ -78,7 +78,7 @@ function onHit(proj)
 					if ret then
 						incrementTargets();
 						target1 = t;
-						local nproj = fireProjectileAtTarget(avatar, t, worldPos, Point(0, 0), weapon);
+						local nproj = fireProjectileAtTarget(kaiju, t, worldPos, Point(0, 0), weapon);
 						number_targets = number_targets - 1;
 						nproj:setCallback(this, 'onHit');
 

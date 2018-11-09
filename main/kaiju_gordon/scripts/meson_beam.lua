@@ -1,7 +1,7 @@
 require 'scripts/avatars/common'
 
 -- Global values.
-local avatar = nil
+local kaiju = nil
 local weapon = "Meson1_track";
 
 local weapon_node = "breath_node"
@@ -17,14 +17,13 @@ local aoeRange = 150;
 local empower = 0;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 -- Target selection is complete.
 function onTargets(position)
-	targetPos = position;
-	target = getAbilityTarget(avatar, abilityData.name);
+	target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
 		local entType = getEntityType(target);
 		local invalid = false;
@@ -38,18 +37,17 @@ function onTargets(position)
 		if invalid then
 			createFloatingText(target, "Invalid Target", 255, 0, 0);
 		else
-			local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-			avatar:setWorldFacing(facingAngle);	
-			playAnimation(avatar, "ability_cast");
-			registerAnimationCallback(this, avatar, "start");
+			local facingAngle = getFacingAngle(kaiju:getWorldPosition(), position);
+			kaiju:setWorldFacing(facingAngle);	
+			playAnimation(kaiju, "ability_cast");
+			registerAnimationCallback(this, kaiju, "start");
 		end
 	end
 end
 
 function onAnimationEvent(a)
-	target = getAbilityTarget(avatar, abilityData.name);
 	if canTarget(target) then
-		local view = avatar:getView();
+		local view = kaiju:getView();
 		local pos = getScenePosition(target:getWorldPosition()):add( getSceneOffset(target));
 		view:doBeamEffectFromNode('breath_node', pos, 'effects/beam_meson.plist', 0 );
 		view:doEffectFromNode('breath_node', 'effects/eyeBeam_muzzleGlow.plist', 0);
@@ -64,9 +62,9 @@ function onAnimationEvent(a)
 		target:attachEffect("effects/destabilizer_charge.plist", duration, true);
 		
 		playSound("MesonBeam");
-		startCooldown(avatar, abilityData.name);		
-		empower = avatar:hasPassive("enhancement");
-		avatar:removePassive("enhancement", 0);
+		startCooldown(kaiju, abilityData.name);		
+		empower = kaiju:hasPassive("enhancement");
+		kaiju:removePassive("enhancement", 0);
 	end
 end
 
@@ -74,14 +72,15 @@ function onTick(aura)
 	if not aura then
 		return
 	end
-	local self = aura:getOwner()
-	if not self then
-		stableAura:setScriptCallback(AuraEvent.OnTick, nil)
-		return
-	end
 	if aura:getElapsed() > 0 then
-		explode(self:getWorldPosition(), self);
-		self:detachAura(aura);
+		explode(kaiju:getWorldPosition(), kaiju);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 
@@ -91,12 +90,12 @@ function explode(pos, targ)
 		local health = targ:getStat("Health");
 		abilityEnhance(empower);
 		for t in targets:iterator() do
-			if not isSameEntity(t, avatar) then
+			if not isSameEntity(t, kaiju) then
 				local entType = getEntityType(t)
-				if entType = EntityType.Avatar or (entType == EntityType.Vehicle and entityToVehicle(t):isSuper()) then
-					applyDamage(avatar, t, math.floor(health * 0.35))
+				if entType == EntityType.Avatar or (entType == EntityType.Vehicle and entityToVehicle(t):isSuper()) then
+					applyDamage(kaiju, t, math.floor(health * 0.35))
 				else
-					applyDamage(avatar, t, health)
+					applyDamage(kaiju, t, health)
 				end
 			end
 		end

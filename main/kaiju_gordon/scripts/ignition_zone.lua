@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local angle = 45;
 local weapon = "weapon_gordon_placehold"
 
@@ -13,32 +13,32 @@ local worldPosition = nil;
 local worldFacing = nil;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation(a, "ability_stomp");
 	registerAnimationCallback(this, a, "attack");
 end
 
 function onAnimationEvent(a)
-	avatar = a;
-	startCooldown(avatar, abilityData.name);
+	kaiju = a;
+	startCooldown(kaiju, abilityData.name);
 	playSound("IgnitionZone");
-	local view = avatar:getView();
-	worldPosition = avatar:getWorldPosition();
-	worldFacing = avatar:getWorldFacing();
-	local sceneFacing = avatar:getSceneFacing();
+	local view = kaiju:getView();
+	worldPosition = kaiju:getWorldPosition();
+	worldFacing = kaiju:getWorldFacing();
+	local sceneFacing = kaiju:getSceneFacing();
 	view:doEffectFromNode('breath_node', 'effects/ignitionZone.plist', sceneFacing);
 	local zones = getTargetsInCone(worldPosition, range, angle, worldFacing, EntityFlags(EntityType.Zone));
-	empower = avatar:hasPassive("enhancement");
-	avatar:removePassive("enhancement", 0);
+	empower = kaiju:hasPassive("enhancement");
+	kaiju:removePassive("enhancement", 0);
 	abilityEnhance(empower);
 	for z in zones:iterator() do
-		applyDamageWithWeapon(avatar, z, weapon);
+		applyDamageWithWeapon(kaiju, z, weapon);
 	end
 	abilityEnhance(0);
-	local aura = createAura(this, avatar, 0);
+	local aura = createAura(this, kaiju, 0);
 	aura:setTickParameters(0.1, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "delayedDamage");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 	
 end
 
@@ -53,20 +53,33 @@ function delayedDamage(aura)
 				aura:setTickParameters(1, 0);
 				aura:setScriptCallback(AuraEvent.OnTick, "onTick");
 				aura:setTarget(t);
-				t = nil; -- onTick may have killed target at this point
 			end
 		end
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= dotDuration then
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	else
 		abilityEnhance(empower);
-		avatar = getPlayerAvatar();
-		applyDamageWithWeapon(avatar, aura:getTarget(), DotWeapon);
+		applyDamageWithWeapon(kaiju, aura:getTarget(), DotWeapon);
 		abilityEnhance(0);
 	end
 end

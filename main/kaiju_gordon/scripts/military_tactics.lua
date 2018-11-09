@@ -4,12 +4,12 @@ local CDRPercent = 0.2;
 local bonusDamagePercent = 0.3;
 local duration = 15;
 
-local avatar = nil;
+local kaiju = nil;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	playAnimation(avatar, "ability_stomp");
+	playAnimation(kaiju, "ability_stomp");
 	
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('military_tactics');
@@ -23,20 +23,28 @@ function onUse(a)
 	view:attachEffectToNode("foot_01", "effects/militaryTacticsFire.plist", duration, 0, 0, false, true);
 	view:attachEffectToNode("foot_02", "effects/militaryTacticsFire.plist", duration, 0, 0, false, true);
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
-	avatar:modStat("damage_amplify", bonusDamagePercent);
-	avatar:modStat("CoolDownReductionPercent", CDRPercent);
+	kaiju:modStat("damage_amplify", bonusDamagePercent);
+	kaiju:modStat("CoolDownReductionPercent", CDRPercent);
 	
 	playSound("MilitaryTactics");
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= duration then
-		endAbilityUse(avatar, abilityData.name);
-		local a = aura:getOwner();
-		a:modStat("damage_amplify", -bonusDamagePercent);
-		a:modStat("CoolDownReductionPercent", -CDRPercent);
-		a:detachAura(aura);
+		endAbilityUse(kaiju, abilityData.name);
+		kaiju:modStat("damage_amplify", -bonusDamagePercent);
+		kaiju:modStat("CoolDownReductionPercent", -CDRPercent);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

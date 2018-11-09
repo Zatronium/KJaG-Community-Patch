@@ -1,12 +1,15 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local weapon = "ForcePunch2"
 local weaponFirst = "ForcePunch2_first"
 local firstTarget = true;
 
+
+
+
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation( a, "ability_punch");
 	registerAnimationCallback(this, a, "attack");
 	startCooldown(a, abilityData.name);
@@ -30,23 +33,23 @@ function onAnimationEvent(a)
 	local beamEnd = getBeamEndWithFacing(beamOrigin, beamRange, beamFacing);
 	local targets = getTargetsInBeam(beamOrigin, beamEnd, beamWidth, targetFlags);
 	
-	local empower = avatar:hasPassive("enhancement");
-	avatar:removePassive("enhancement", 0);
+	local empower = kaiju:hasPassive("enhancement");
+	kaiju:removePassive("enhancement", 0);
 	abilityEnhance(empower);
 	
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	local offset = beamOrigin;
 	offset = offset:add(Point(25, 25));
 
 	fireProjectileAtPoint(nil, offset, beamEnd, weapon);
 	
 	for t in targets:iterator() do
-		if not isSameEntity(t, avatar) then				
+		if not isSameEntity(t, kaiju) then				
 			if firstTarget == true then
-				applyDamageWithWeapon(avatar, t, weaponFirst);
+				applyDamageWithWeapon(kaiju, t, weaponFirst);
 				firstTarget = false;
 			else
-				applyDamageWithWeapon(avatar, t, weapon);
+				applyDamageWithWeapon(kaiju, t, weapon);
 			end
 		end
 	end

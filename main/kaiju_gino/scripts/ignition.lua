@@ -3,15 +3,15 @@ require 'scripts/common'
 local range = 170;
 local minDamage = 10;
 local maxDamage = 15;
-local avatar = nil;
+local kaiju = nil;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation(a, "stomp");
 	registerAnimationCallback(this, a, "attack");
 end
 
 function onAnimationEvent(a)
-	avatar = a;
+	kaiju = a;
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/ignition_back.plist",0, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/ignition_front.plist",0, 0, 0, true, false);
@@ -19,7 +19,7 @@ function onAnimationEvent(a)
 	startCooldown(a, abilityData.name);
 	local targets = getTargetsInRadius(a:getWorldPosition(), range, EntityFlags(EntityType.Zone, EntityType.Vehicle,EntityType.Avatar));
 	for t in targets:iterator() do
-		applyFire(avatar, t, 1.0);
-		applyDamage(avatar, t, math.random(minDamage, maxDamage));
+		applyFire(kaiju, t, 1.0);
+		applyDamage(kaiju, t, math.random(minDamage, maxDamage));
 	end
 end

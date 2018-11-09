@@ -1,21 +1,21 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local durationTime = 30;
 local convertEnergy = 0.20;
 
 local absorbEnable = false;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	absorbEnable = true;
 
-	avatar:addPassiveScript(this);
-	startAbilityUse(avatar, abilityData.name);
-	local aura = createAura(this, avatar, 0);
+	kaiju:addPassiveScript(this);
+	startAbilityUse(kaiju, abilityData.name);
+	local aura = createAura(this, kaiju, 0);
 	aura:setTickParameters(durationTime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
 	aura:setTarget(a);
-	effectsON(avatar);
+	effectsON(kaiju);
 end
 
 function effectsON(a)
@@ -24,35 +24,53 @@ function effectsON(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationTime then	
-		if avatar:hasPassive("absorption_infusion") > 0 then
-			local aura = createAura(this, avatar, 0);
-			aura:setTickParameters(avatar:hasPassive("absorption_infusion"), 0);
-			aura:setScriptCallback(AuraEvent.OnTick, "onCD");
-			aura:setTarget(a);
+		if kaiju:hasPassive("absorption_infusion") > 0 then
+			local auraB = createAura(this, kaiju, 0);
+			auraB:setTickParameters(kaiju:hasPassive("absorption_infusion"), 0);
+			auraB:setScriptCallback(AuraEvent.OnTick, "onCD");
+			auraB:setTarget(a);
 			absorbEnable = false;
 		else
-			avatar:removePassiveScript(this);
-			endAbilityUse(avatar, abilityData.name);
+			kaiju:removePassiveScript(this);
+			endAbilityUse(kaiju, abilityData.name);
 		end
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 
 function onCD(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationTime then	
-		avatar:setPassive("absorption_infusion_ready", 1);
-		aura:getOwner():detachAura(aura);
+		kaiju:setPassive("absorption_infusion_ready", 1);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 
 function onAvatarAbsorb(a, n, w)
-	if avatar:hasPassive("absorption_infusion_ready") > 0 then
-		local aura = createAura(this, avatar, 0);
+	if kaiju:hasPassive("absorption_infusion_ready") > 0 then
+		local aura = createAura(this, kaiju, 0);
 		aura:setTickParameters(durationTime, 0);
 		aura:setScriptCallback(AuraEvent.OnTick, "onTick");
 		aura:setTarget(a);
-		avatar:removePassive("absorption_infusion_ready", 0);
+		kaiju:removePassive("absorption_infusion_ready", 0);
 		absorbEnable = true;
 		effectsON(a);
 	end
@@ -69,7 +87,7 @@ function onAvatarAbsorb(a, n, w)
 		if weap:getWeaponClass() == WeaponClass.Energy then
 			local amount = n.x * convertEnergy;
 			n.x = n.x - amount;
-			avatar:gainPower(amount);
+			kaiju:gainPower(amount);
 		end
 	end
 end

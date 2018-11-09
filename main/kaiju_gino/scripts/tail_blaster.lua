@@ -1,7 +1,7 @@
 require 'scripts/avatars/common'
 
 -- Global values.
-local avatar = nil;
+local kaiju = nil;
 local targetPos = 0;
 local targetEnt = nil;
 local shotsFire = 2;
@@ -12,15 +12,15 @@ local weaponRange = 600;
 local beamEnd = nil;
 local shotAngle = 25;
 function onUse(a)
-	avatar = a;
---	local facingAngle = getFacingAngle(targetPos, avatar:getWorldPosition());
---	avatar:setWorldFacing(facingAngle);
-	local beamFacing = avatar:getView():getTailFacingAngle();
-	local beamOrigin = avatar:getWorldPosition();
+	kaiju = a;
+--	local facingAngle = getFacingAngle(targetPos, kaiju:getWorldPosition());
+--	kaiju:setWorldFacing(facingAngle);
+	local beamFacing = kaiju:getView():getTailFacingAngle();
+	local beamOrigin = kaiju:getWorldPosition();
 	beamEnd = getBeamEndWithFacing(beamOrigin, weaponRange, beamFacing - 45.0);
-	playAnimation(avatar, "ability_tailblaster");
-	registerAnimationCallbackUntilEnd(this, avatar, "attack");		
-	startCooldown(avatar, abilityData.name);
+	playAnimation(kaiju, "ability_tailblaster");
+	registerAnimationCallbackUntilEnd(this, kaiju, "attack");		
+	startCooldown(kaiju, abilityData.name);
 --	local targets = getTargetsInBeam(beamOrigin, beamEnd, beamWidth, targetFlags);
 	local targets = getTargetsInCone(beamOrigin, weaponRange, shotAngle, beamFacing - 45.0, EntityFlags(EntityType.Vehicle, EntityType.Zone, EntityType.Avatar));
 	positionVector = PointVector();
@@ -60,10 +60,10 @@ function onAnimationEvent(a)
 		else
 			targetPos = beamEnd;
 		end
-		local proj = avatarFireAtPoint(avatar, "weapon_Blaster1", node, targetPos, 0);
+		local proj = avatarFireAtPoint(kaiju, "weapon_Blaster1", node, targetPos, 0);
 		proj:setCallback(this, 'onHit');
 		proj:fromAvatar(true);
-		registerAnimationCallbackUntilEnd(this, avatar, animcb);
+		registerAnimationCallbackUntilEnd(this, kaiju, animcb);
 		playSound("blaster");
 		hasFired = hasFired + 1;
 	end

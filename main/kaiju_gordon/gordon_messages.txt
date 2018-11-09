@@ -1,3 +1,31 @@
+
+Message {
+	Identifier: msg_FabulosoIsland
+	Comment: Fabuloso Island bugfix placeholder. (Gordon version)
+	DisplayText: I heard about a place called Fabuloso Island recently. What's so fabulous about piles of goop? Whatever.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: msg_ParadiseIsland
+	Comment: Paradise Island bugfix placeholder. (Gordon version)
+	DisplayText: Have you seen Paradise Island? The local flora is heart-stoppingly beautiful. It's perfect for nuclear experimentation.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
+Message {
+	Identifier: citymsg_IslandX
+	Comment: IslandX bugfix placeholder. (Gordon version)
+	DisplayText: I've caught wind of a new paramilitary installation at Island X. Manmade, modern, well-defended. We'll wreck it soon enough.
+	Speaker: Intern_Large
+	Sound: babble_ivo-intern_normal
+	IsTutorial: false
+}
+
 Message {
 	Identifier: msg_Year1
 	Comment: At the end of the appropriate year. (Gordon version)

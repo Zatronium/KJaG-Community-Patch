@@ -58,9 +58,12 @@ end
 -- Verifies line of sight and distance and then fires a projectile.
 -- If we can't fire then it removes the aura.
 function onTick(aura)	
+	if not aura then return end
 	local w = entityToWeapon(aura:getOwner());
+	if not w then return end
 	local t = w:getTarget();	
 	local owner = getRootEntity(w);
+	if not owner then return end
 	
 	local weaponRange = w:getWeaponStat("Range");
 	if owner:hasStat("range_amplify") then
@@ -98,13 +101,13 @@ end
 
 function calcTargetSceneOffset(weapon, target)
 	if weapon:getWeaponType() == WeaponType.Bomb then
-		return Point(0,0); -- even if target is avatar, aim for the ground
+		return Point(0,0); -- even if target is kaiju, aim for the ground
 	end
 
-	local avatar = entityToAvatar(target);
-	if avatar then
+	local kaiju = entityToAvatar(target);
+	if kaiju then
 		local nodeName = 'contactzone0'..tostring(math.random(1, 5));		
-		local nodeOffset = avatar:getView():getAnimationNodePositionOffset(nodeName);
+		local nodeOffset = kaiju:getView():getAnimationNodePositionOffset(nodeName);
 		return nodeOffset;
 	end
 
@@ -125,7 +128,7 @@ function weaponFire(w, t, owner)
 		if not skip then	
 			local targetSceneOffset = g_targetSceneOffset;
 			local isAvatar = t ~= nil and getEntityType(t) == EntityType.Avatar;
-			local avatar = entityToAvatar(t);
+			local kaiju = entityToAvatar(t);
 			createMuzzleEffect(owner, t, w, targetSceneOffset, 0);
 			local chance = 0;
 		
@@ -142,7 +145,7 @@ function weaponFire(w, t, owner)
 				end
 				-- evade is 0 if none and 75 when active
 				if hit == 0 and isAvatar then
-					chance = avatar:getEvasion();
+					chance = kaiju:getEvasion();
 					local evaderoll = math.random (0,100);
 					if evaderoll < chance then
 			--			hit = "miss";
@@ -193,7 +196,7 @@ function weaponFire(w, t, owner)
 						end
 					end
 					if isAvatar then
-						chance = avatar:getEvasion();
+						chance = kaiju:getEvasion();
 						local evaderoll = math.random (0,100);
 						if evaderoll < chance then
 							proj:miss();
@@ -214,13 +217,19 @@ end
 
 
 function onBurst(aura)	
-	local w = entityToWeapon(aura:getOwner());
+	if not aura then return end
+	local own = aura:getOwner()
+	if not own then aura = nil return end
+	local w = entityToWeapon(own);
+	if not w then aura = nil return end
 	if g_numShots <= 0 then
 		w:detachAura(aura);
 	else
 		local t = w:getTarget();	
 		local owner = getRootEntity(w);
-		weaponFire(w, t, owner);
+		if owner then
+			weaponFire(w, t, owner);
+		end
 		g_numShots = g_numShots - 1;
 	
 		if g_numShots <= 0 then

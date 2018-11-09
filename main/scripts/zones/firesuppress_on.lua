@@ -1,7 +1,8 @@
 require 'scripts/common'
 require 'scripts/zones/common'
 
-function onSpawn(self)
+function doSpawnSetup(self)
+	if not self then return end
 	zoneFireSuppress(self, true);
 
 	local sizeClass = self:getStat("FireSuppressClass");
@@ -14,4 +15,8 @@ function onSpawn(self)
 
 	local pos = self:getScenePosition();
 	zoneAttachEffectBottom(self, effectName,  pos);
+end
+
+function onSpawn(self) 
+	doSpawnSetup(self)
 end

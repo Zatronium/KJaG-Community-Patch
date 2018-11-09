@@ -4,13 +4,13 @@ local CDRPercent = 0.05;
 local increaseAoe = 0.3;
 
 
-local avatar = nil;
+local kaiju = nil;
 
 
 function onSet(a)
-	avatar = a;
+	kaiju = a;
 	
-	avatar:modStat("CoolDownReductionPercent", CDRPercent);
-	avatar:addPassive("increased_range", increaseAoe);
+	kaiju:modStat("CoolDownReductionPercent", CDRPercent);
+	kaiju:addPassive("increased_range", increaseAoe);
 
 end

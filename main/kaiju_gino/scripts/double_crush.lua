@@ -1,8 +1,8 @@
 require 'scripts/avatars/common'
 local count = 0;
-local avatar = nil;
+local kaiju = nil;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation(a, "ability_doublecrush");
 	registerAnimationCallback(this, a, "attack");
 	startCooldown(a, abilityData.name);
@@ -27,10 +27,18 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
-	avatar = getPlayerAvatar();
-	applyDamageWithWeapon(avatar, aura:getTarget(), "weapon_Plasmaclaw2");
+	if not aura then
+		return
+	end
+	applyDamageWithWeapon(kaiju, aura:getTarget(), "weapon_Plasmaclaw2");
 	count = count + 1;
 	if count >= 3 then
-		aura:getOwner():detachAura(aura);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil
+		else
+			self:detachAura(aura);
+		end
 	end
 end

@@ -1,6 +1,7 @@
 require 'scripts/common'
 
-local avatar = 0;
+-- Global values.
+local kaiju = 0;
 local weapon = "weapon_shrubby_Sweeper";
 
 local vine1 = nil;
@@ -17,17 +18,17 @@ function setupNewVine()
 	-- setRetract(delay between vert culling, lower = more culled per update) default  0.0, 30
 	vine:setRetract(0.4, 30);
 	vine:setPathSpeed(20);
-	vine:setEndEntity(avatar);
+	vine:setEndEntity(kaiju);
 	return vine;
 end
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 
-	--playAnimation(avatar, "ability_project_2H");
-	playAnimation(avatar, "ability_bite");
+	--playAnimation(kaiju, "ability_project_2H");
+	playAnimation(kaiju, "ability_bite");
 	
-	registerAnimationCallback(this, avatar, "attack");
+	registerAnimationCallback(this, kaiju, "attack");
 
 end
 
@@ -36,8 +37,8 @@ function onAnimationEvent(a)
 	local weapRange = getWeaponRange(weapon);
 	local beamRange = weapRange;
 
-	local beamOrigin = avatar:getWorldPosition();
-	local beamFacing = avatar:getWorldFacing();
+	local beamOrigin = kaiju:getWorldPosition();
+	local beamFacing = kaiju:getWorldFacing();
 	local beamWidth = 200;
 	local beamEnd = getBeamEndWithFacing(beamOrigin, beamRange, beamRange);
 	
@@ -59,8 +60,8 @@ function onAnimationEvent(a)
 		
 	local targets = getTargetsInBeam(beamOrigin, beamEnd, beamWidth, targetFlags);
 	for t in targets:iterator() do
-		applyDamageWithWeapon(avatar, t, weapon);
+		applyDamageWithWeapon(kaiju, t, weapon);
 	end
 	playSound("shrubby_ability_VineSweeper");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end

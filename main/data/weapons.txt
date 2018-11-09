@@ -1353,8 +1353,8 @@ Weapon {
 	Deviation: 0.2
 	Range: 700
 	Speed: 400
-	MinDamage: 50
-	MaxDamage: 80
+	MinDamage: 20
+	MaxDamage: 40
 	ROF: 5
 	DumbFire: 0
 	FireIgniteOdds: 0
@@ -1379,10 +1379,10 @@ Weapon {
 	ImpactEffect: effects/impactFire_medium.plist
 	ImpactEffect: effects/impactSmoke_grey.plist
 	Deviation: 0.2
-	Range: 550
+	Range: 650
 	Speed: 450
-	MinDamage: 6
-	MaxDamage: 10
+	MinDamage: 4
+	MaxDamage: 8
 	ROF: 4
 	DumbFire: 0
 	FireIgniteOdds: 0
@@ -1404,8 +1404,8 @@ Weapon {
 	Range: 1000
 	Duration: 0.5
 	Speed: 1200
-	MinDamage: 40
-	MaxDamage: 60
+	MinDamage: 20
+	MaxDamage: 40
 	ROF: 4
 	DumbFire: 0
 	FireIgniteOdds: 80
@@ -1580,10 +1580,10 @@ Weapon {
 	ImpactEffect: effects/explosion_SmokeLayer.plist
 	ImpactEffect: effects/explosion_BoomLayer.plist
 	Deviation: 0.15
-	Range: 1200
+	Range: 1000
 	Speed: 500
-	MinDamage: 35
-	MaxDamage: 50
+	MinDamage: 25
+	MaxDamage: 40
 	ROF: 9
 	AP: 6, 0
 	DumbFire: 0

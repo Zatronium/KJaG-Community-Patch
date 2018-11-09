@@ -20,20 +20,15 @@ local specialRange = 500;
 local specialMinRange = 0;
 
 local moving = false;
-
-function onSpawn(a)
-	if not initialSetup then
-		doSpawnSetup(a)
-	end
-end
+local initialSetup = false
+local setupFinished = false
 
 function doSpawnSetup(a)
-		initialSetup = true
-		kaiju = getPlayerAvatar()
-		local move = a:getMovement();
-		move:addMovementAnim("float");
-		setupFinished = true
-	end
+	initialSetup = true
+	kaiju = getPlayerAvatar()
+	local move = a:getMovement();
+	move:addMovementAnim("float");
+	setupFinished = true
 end
 
 function onHeartbeat(a, dt)
@@ -124,7 +119,7 @@ function onStatChanged(e, stat, prev, val)
 		if val <= 0 then
 			e:getView():doDeathEffect()
 			e:setEnablePhysicsBody(false);
-		elseif val > e:getStat("MaxHealth")) then
+		elseif val > e:getStat("MaxHealth") then
 			e:setStat("Health", maxHealth);
 		end
 	end

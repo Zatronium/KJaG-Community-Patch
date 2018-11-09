@@ -1,27 +1,29 @@
 require 'kaiju_goop/scripts/goop_common'
 
 local target = nil;
-local avatar = nil;
+local kaiju = nil;
 local reviveChance = 0;
 local spawnGoop = 0;
 local regen = 0;
 
-local reviveBlob = nil;
+local initialSetup = false
+local setupFinished = false
 
 -- Entity control logic goes in here. Heartbeats happen every
 -- 0.5 seconds, so we have to create an attack aura that ticks
 -- faster so we can spam shots.
-function onSpawn(v)
+function doSpawnSetup(v)
+	initialSetup = true
 	target = nil;
-	avatar = getPlayerAvatar();
-	local maxHp = v:getStat("MaxHealth") + (avatar:hasPassive("minion_health_bonus_flat"));
+	kaiju = getPlayerAvatar();
+	local maxHp = v:getStat("MaxHealth") + (kaiju:hasPassive("minion_health_bonus_flat"));
 	v:setStat("MaxHealth", maxHp);
 	v:setStat("Health", maxHp);
 	
 	v:setStat("ExtraDamage_Fire", 0.2);
 	v:setStat("ExtraDamage_Cold", 0.2);
 	
-	regen = avatar:hasPassive("minion_health_regen");
+	regen = kaiju:hasPassive("minion_health_regen");
 	if regen > 0 then
 		scriptAura = Aura.create(this, v);
 		scriptAura:setTag('goopling_heal');
@@ -30,20 +32,30 @@ function onSpawn(v)
 		scriptAura:setTarget(v); -- required so aura doesn't autorelease
 	end
 	
-	reviveChance = avatar:hasPassive("minion_revive_chance");
-	spawnGoop = avatar:hasPassive("minion_spawn_goop");
+	reviveChance = kaiju:hasPassive("minion_revive_chance");
+	spawnGoop = kaiju:hasPassive("minion_spawn_goop");
 	
-	avatar:addMinion(v);
+	kaiju:addMinion(v);
+	setupFinished = true
 end
 
 function onHealTick(aura)
+	if not aura then
+		return
+	end
 	local self = aura:getOwner();
+	if not self then
+		scriptAura = nil return
+	end
 	self:modStat("Health", regen);
 end
 
 function onHeartbeat(v)
-	if combatEnded() then
-		return;
+	if not initialSetup then
+		doSpawnSetup(v)
+	end
+	if not setupFinished or combatEnded() then
+		return
 	end
 		
 	local minion = entityToMinion(v);
@@ -54,8 +66,8 @@ function onHeartbeat(v)
 	if canTarget(target) then
 		local distance = getDistance(v, target);
 		local weaponRange = v:getMinWeaponRange();
-		if distance < weaponRange * 0.75 and isLineOfSight(v, target) then
-			-- Avatar in range and LoS, stop movement and create attack aura.
+		if distance < weaponRange * 0.75 and isLineOfSight(v, target ) then
+			-- kaiju in range and LoS, stop movement and create attack aura.
 			vc:stop();
 		else
 			-- Try to get in range.
@@ -90,9 +102,10 @@ function onStatChanged(e, stat, prev, val)
 		local maxHealth = e:getStat("MaxHealth");
 		if val <= 0 and reviveChance > 0 and reviveChance > randomFloat(0, 1) then
 			e:setStat("Health", maxHealth);
+			local pos = e:getWorldPosition()
 			-- revive effects here
-			createEffectInWorld("effects/goopball_splortsplash.plist", e:getWorldPosition(), 0);
-			createEffectInWorld("effects/goopball_splort.plist", e:getWorldPosition(), 0);
+			createEffectInWorld("effects/goopball_splortsplash.plist", pos, 0);
+			createEffectInWorld("effects/goopball_splort.plist", pos, 0);
 			--reviveBlob = CreateBlob(pos, spawnGoop, spawnGoop);	
 		elseif val > maxHealth then
 			e:setStat("Health", maxHealth);
@@ -101,9 +114,10 @@ function onStatChanged(e, stat, prev, val)
 end
 
 function onDeath(self)
-	local pos = self:getView():getPosition();	
+	local view = self:getView()
+	local pos = view:getPosition();	
 	local worldpos = self:getWorldPosition();
-	self:getView():setVisible(false);
+	view:setVisible(false);
 	removeEntity(self);
 	
 	playSound("explosion");

@@ -1,5 +1,5 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local lastPos = nil;
 
 local aoeRange = 600;
@@ -8,13 +8,13 @@ local dotDamage = 4;
 local dotDuration = 10;
 
 function onUse(a)
-	avatar = a;
-	startCooldown(avatar, abilityData.name);
-	local empower = avatar:hasPassive("enhancement");
-	avatar:removePassive("enhancement", 0);
+	kaiju = a;
+	startCooldown(kaiju, abilityData.name);
+	local empower = kaiju:hasPassive("enhancement");
+	kaiju:removePassive("enhancement", 0);
 	dotDamage = dotDamage + dotDamage * empower;
 
-	DotPatch(avatar:getWorldPosition());
+	DotPatch(kaiju:getWorldPosition());
 end
 
 
@@ -40,7 +40,7 @@ function onPatchTick(aura)
 	else
 		local targets = getTargetsInRadius(aura:getTarget():getWorldPosition(), aoeRange, EntityFlags(EntityType.Vehicle ,EntityType.Avatar));
 		for t in targets:iterator() do
-			if canTarget(t) and not isSameEntity(avatar, t) then
+			if canTarget(t) and not isSameEntity(kaiju, t) then
 				local airUnit = false;
 				if getEntityType(t) == EntityType.Vehicle then	
 					local veh = entityToVehicle(t);
@@ -72,7 +72,7 @@ function onDotTick(aura)
 		target:detachAura(aura);
 	else
 		target:attachEffect("effects/radioactiveCloud.plist", 1, true);
-		avatar = getPlayerAvatar();
-		applyDamage(avatar, target, dotDamage);
+		kaiju = getPlayerAvatar();
+		applyDamage(kaiju, target, dotDamage);
 	end
 end

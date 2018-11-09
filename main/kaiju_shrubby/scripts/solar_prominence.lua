@@ -1,6 +1,6 @@
 require 'kaiju_shrubby/scripts/shrubby'
 
-local avatar = nil;
+local kaiju = nil;
 local ShieldHealthPct = 0.5;
 local SolarAura = nil;
 
@@ -9,7 +9,7 @@ local aoeDamageMin = 10;
 local aoeDamageMax = 15;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	a:setPassive("shield", a:getStat("Health") * ShieldHealthPct);
 	startAbilityUse(a, abilityData.name);
 	ToggleShields(a, false);
@@ -23,19 +23,18 @@ function onUse(a)
 	playSound("shrubby_ability_SolarProminence");
 	a:setShieldScript(this);
 	
-	SolarAura = createAura(this, avatar, 0);
+	SolarAura = createAura(this, kaiju, 0);
 	SolarAura:setTag("solar_prominence");
 	SolarAura:setTickParameters(1, 0);
 	SolarAura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	SolarAura:setTarget(avatar);
+	SolarAura:setTarget(kaiju);
 end
 
 function onTick(aura)
-	local targets = getTargetsInRadius(avatar:getWorldPosition(), aoeRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar));
-	avatar = getPlayerAvatar();
+	local targets = getTargetsInRadius(kaiju:getWorldPosition(), aoeRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar));
 	for t in targets:iterator() do
-		if canTarget(t) and not isSameEntity(avatar, t) then
-			applyDamage(avatar, t, math.random(aoeDamageMin, aoeDamageMax));
+		if canTarget(t) and not isSameEntity(kaiju, t) then
+			applyDamage(kaiju, t, math.random(aoeDamageMin, aoeDamageMax));
 		end
 	end
 end
@@ -43,7 +42,7 @@ end
 function onShieldEnd(a, broken)
 	endAbilityUse(a, abilityData.name);
 	ToggleShields(a, true);
-	avatar:detachAura(SolarAura);
+	kaiju:detachAura(SolarAura);
 end
 
 function onShieldHit(a, n, w)

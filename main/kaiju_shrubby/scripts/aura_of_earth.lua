@@ -1,16 +1,16 @@
 require 'kaiju_shrubby/scripts/shrubby'
 
 local ShieldHealth = 50;
-local avatar = 0;
+local kaiju = 0;
 
 local bonusArmor = 2;
 local bonusSpeedPercent = -0.1;
 local bonusSpeed = 0;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "stomp");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "stomp");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
@@ -36,7 +36,7 @@ function onShieldEnd(a, broken)
 end
 
 function onShieldHit(a, n, w)
-	if w and w:getWeaponType() == WeaponType.Beam then
+	if not w and w:getWeaponType() == WeaponType.Beam then
 		n.x = 0;
 	else
 		local view = a:getView();

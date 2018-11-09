@@ -1,3 +1,4 @@
+-- PHYSICSTODO: OK
 require 'scripts/common'
 
 -- Provides default entity setup.

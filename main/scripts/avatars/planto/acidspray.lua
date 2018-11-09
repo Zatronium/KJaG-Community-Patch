@@ -1,19 +1,20 @@
 require 'scripts/common'
 
-local avatar = nil;
+-- Global values.
+local kaiju = nil;
 local target = nil;
 
 function onUse(a, t)
-	avatar = a;
+	kaiju = a;
 	a:setWeakTarget(t);
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), t:getWorldPosition());
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_acidspray");
-	registerAnimationCallback(this, avatar, "start");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), t:getWorldPosition());
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_acidspray");
+	registerAnimationCallback(this, kaiju, "start");
 end
 
 function onAnimationEvent(a)
-	target = avatar:getWeakTarget();
+	target = kaiju:getWeakTarget();
 	if not canTarget(target) then
 		return;
 	end
@@ -21,7 +22,7 @@ function onAnimationEvent(a)
 	local worldPosition = a:getWorldPosition();
 	local worldFacing = a:getWorldFacing();
 	local sceneFacing = a:getSceneFacing();
---
+
 	local targets = getTargetsInCone(worldPosition, 300, 20, worldFacing, EntityFlags(EntityType.Avatar, EntityType.Zone));
 	view:doEffectFromNode('breath_node', 'effects/acidSpray_wide.plist', sceneFacing);
 	view:doEffectFromNode('breath_node', 'effects/acidSpray_core.plist', sceneFacing);
@@ -40,5 +41,10 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
-	applyDamageWithWeapon(avatar, aura:getOwner(), "weapon_planto_acid");
+	if not aura then return end
+	local self = aura:getOwner()
+	if not self then
+		aura = nil return;
+	end
+	applyDamageWithWeapon(kaiju, self, "weapon_planto_acid");
 end

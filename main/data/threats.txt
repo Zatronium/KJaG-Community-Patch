@@ -1,0 +1,54 @@
+Threat {
+	Identifier: threat_money
+	DisplayName: Money
+	Modifier: 0
+	TimeLimit: 60
+	Description: Give the player the city's monthly wage.
+	SuccessMessage: threat_success
+	FailMessage: threat_fail01
+	CityWage: 0.0
+	GivePlayer: 0.3
+
+	RequireDamage: 0.5
+}
+
+Threat {
+	Identifier: threat_optout
+	DisplayName: Opt Out
+	Modifier: 20
+	TimeLimit: 60
+	Description: Do not give region the city's wage next month.
+	SuccessMessage: threat_success
+	FailMessage: threat_fail02
+	CityWage: 0.0
+
+	RequireDamage: 0.15
+}
+
+Threat {
+	Identifier: threat_noalarms
+	DisplayName: No Alarms
+	Modifier: 10
+	TimeLimit: 60
+	Description: set the city's alert to total suprise at the cost of 20K per tier.
+	SuccessMessage: threat_success
+	FailMessage: threat_fail03
+	CostPerTier: 20000
+
+	CityAlert: 0	
+
+	RequireDefense: 25
+}
+
+Threat {
+	Identifier: threat_surrender
+	DisplayName: Surrender
+	Modifier: -10
+	TimeLimit: 60
+	Description: Give the player the city's monthly wage.
+	SuccessMessage: threat_success
+	FailMessage: threat_fail04
+	Surrender: 1.0
+
+	RequireSurrender: 1.0
+}

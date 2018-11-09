@@ -1,31 +1,31 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = nil
 local targetPos = 0;
 local weaponRange = 700;
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', weaponRange);
 end
 
 function onTargets(position)
 	targetPos = position;
 	
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);	
-	playAnimation(avatar, "ability_breath")
-	registerAnimationCallback(this, avatar, "start")
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);	
+	playAnimation(kaiju, "ability_breath")
+	registerAnimationCallback(this, kaiju, "start")
 
 	resetMouseCursor();
 end
 
 function onAnimationEvent (a)
-	local target = getAbilityTarget(avatar, abilityData.name);
+	local target = getAbilityTarget(kaiju, abilityData.name);
+	local proj;
+	local view = a:getView();
 	if not target then
 		target = getClosestAirTargetInRadius(targetPos, 200.0, EntityFlags(EntityType.Vehicle));
 	end
-	local view = a:getView();
-	local proj;
 	if target then
 		proj = avatarFireAtTarget(a, "weapon_MissileGuided1", "breath_node", target, 90 - view:getFacingAngle());
 	else

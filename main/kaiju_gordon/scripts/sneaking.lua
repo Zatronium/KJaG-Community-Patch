@@ -1,14 +1,14 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local bonusSpeedPercent = -0.2;
 local zoneDodge = 0.5;
 function onUse(a)
-	avatar = a;
-	if avatar:hasPassive("sneaking") == 0 then --if off then on
-		avatar:setPassive("sneaking", 0);
-		onON(avatar);
+	kaiju = a;
+	if kaiju:hasPassive("sneaking") == 0 then --if off then on
+		kaiju:setPassive("sneaking", 0);
+		onON(kaiju);
 	else -- else if on then off
-		onOFF(avatar);
+		onOFF(kaiju);
 	end
 end
 
@@ -36,7 +36,7 @@ end
 function onOFF(a)
 	abilityInUse(a, abilityData.name, false);
 	startOnlyCooldown(a, abilityData.name);
-	local bonusSpeed = avatar:hasPassive("sneaking");
+	local bonusSpeed = kaiju:hasPassive("sneaking");
 	a:removePassive("sneaking", 0);
 	
 	a:modStat("Speed", -bonusSpeed);

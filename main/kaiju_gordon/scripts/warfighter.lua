@@ -1,8 +1,8 @@
 enemyAcc = 0.9; 
-local avatar = nil;
+local kaiju = nil;
 function onSet(a)
-	avatar = a;
-	local def = avatar:getStat("acc_notrack");
+	kaiju = a;
+	local def = kaiju:getStat("acc_notrack");
 	def = def * enemyAcc;
-	avatar:setStat("acc_notrack", def);
+	kaiju:setStat("acc_notrack", def);
 end

@@ -1,4 +1,4 @@
-local avatar = nil;
+local kaiju = nil;
 
 function onUse(a)
 	

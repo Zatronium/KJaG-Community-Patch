@@ -1,12 +1,12 @@
 require 'scripts/avatars/common'
-local avatar = nil;
-local damageBonus = 0.1; 
+local kaiju = nil;
+damageBonus = 0.1; 
 local fearDuration = 5;
 
 function onSet(a)
-	avatar = a;
+	kaiju = a;
 	a:modStat("damage_amplify", damageBonus);
-	avatar:addPassiveScript(this);
+	kaiju:addPassiveScript(this);
 end
 	
 function onAttackDodged(a, ent)

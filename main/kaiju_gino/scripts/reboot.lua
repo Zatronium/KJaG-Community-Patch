@@ -1,14 +1,14 @@
 require 'scripts/common'
 
-local avatar = nil;
+local kaiju = nil;
 
 local freezeDuration = 5;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	playAnimation(avatar, "roar");
-	registerAnimationCallback(this, avatar, "start");
+	playAnimation(kaiju, "roar");
+	registerAnimationCallback(this, kaiju, "start");
 	
 end
 
@@ -21,26 +21,34 @@ function onAnimationEvent(a)
 	local rebootAura = Aura.create(this, a);
 	rebootAura:setTag('reboot');
 	rebootAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
-	rebootAura:setTickParameters(freezeDuration, 0); --updates every second                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+	rebootAura:setTickParameters(freezeDuration, 0)
 	rebootAura:setTarget(a); -- required so aura doesn't autorelease
-	
 	a:loseControl();
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= freezeDuration then
-		local maxHealth = avatar:getStat("MaxHealth");
-		avatar:gainHealth(maxHealth);
+		local maxHealth = kaiju:getStat("MaxHealth");
+		kaiju:gainHealth(maxHealth);
 		local curPower = getKaijuResource("power");
 		local lostPower = 0.5 * curPower;
 		addKaijuResource("power", -lostPower);
-		avatar:regainControl();
-		local view = avatar:getView();
+		kaiju:regainControl();
+		local view = kaiju:getView();
 		view:attachEffectToNode("root", "effects/pulseVertical_back.plist", 0, 0, 0, false, true);
 		view:attachEffectToNode("root", "effects/pulseVertical_front.plist", 0, 0, 0, true, false);
 		view:attachEffectToNode("root", "effects/reboot_health.plist", 0, 0, 0, true, false);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

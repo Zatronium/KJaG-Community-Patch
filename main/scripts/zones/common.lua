@@ -20,15 +20,17 @@ function createUnitHealer(self, interval, tickCallback)
 end
 
 function setTarget(self, target)
+	if not self then return end
 	local zone = entityToZone(self);
-	if zone and zone:isDestroyed() then
+	if not zone or (zone and zone:isDestroyed()) then
 		target = nil;
 	end
 	
 	if target and target:getStat("Health") <= 0 then	
 		target = nil;
 	end
-
+	
+	
 	local turrets = self:getAttachedEntities(EntityType.Turret);		
 	for ent in turrets:iterator() do
 		turret = entityToTurret(ent);

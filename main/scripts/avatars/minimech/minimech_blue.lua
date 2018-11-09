@@ -24,19 +24,12 @@ local moving = false;
 local initialSetup = false
 local setupFinished = false
 
-function onSpawn(a)
-	if not initialSetup then
-		doSpawnSetup(a)
-	end
-end
-
 function doSpawnSetup(a)
-		initialSetup = true
-		kaiju = getPlayerAvatar()
-		local move = a:getMovement();
-		move:addMovementAnim("float");
-		setupFinished = true
-	end
+  initialSetup = true
+  kaiju = getPlayerAvatar()
+  local move = a:getMovement();
+  move:addMovementAnim("float");
+  setupFinished = true
 end
 
 function onHeartbeat(a, dt)

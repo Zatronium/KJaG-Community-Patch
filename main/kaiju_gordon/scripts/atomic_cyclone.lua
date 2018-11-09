@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 
 local weapon = "Pummel2"
 local attackAnim1 = "ability_punchone"
@@ -20,12 +20,12 @@ local fx1 = 0;
 local fx2 = 0;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	local v = a:getView();
 	v:setAnimation(attackAnim1, false);
-	--registerAnimationCallback(this, avatar, "attack");
-	registerAnimationCallbackContinuous(this, avatar, "attack");
-	startAbilityUse(avatar, abilityData.name);
+	--registerAnimationCallback(this, kaiju, "attack");
+	registerAnimationCallbackContinuous(this, kaiju, "attack");
+	startAbilityUse(kaiju, abilityData.name);
 	
 	startingAngle = a:getWorldFacing();
 	playSound("AtomicCyclone");
@@ -33,8 +33,8 @@ function onUse(a)
 	local view = a:getView();
 	fx1 = view:attachEffectToNode("palm_node_01", "effects/atomicCyclone.plist", -1,  0, 0,false, false);
 	fx2 = view:attachEffectToNode("palm_node_02", "effects/atomicCyclone.plist", -1, 0, 0, false, false);
-	local empower = avatar:hasPassive("enhancement");
-	avatar:removePassive("enhancement", 0);
+	local empower = kaiju:hasPassive("enhancement");
+	kaiju:removePassive("enhancement", 0);
 	abilityEnhance(empower);
 end
 
@@ -45,7 +45,7 @@ function onAnimationEvent(a, event)
 
 	local beamOrigin = a:getWorldPosition();
 	local beamFacing = startingAngle;
-	avatar:setWorldFacing(beamFacing);
+	kaiju:setWorldFacing(beamFacing);
 	local beamEnd = getBeamEndWithFacing(beamOrigin, beamRange, beamFacing);
 	local targets = getTargetsInBeam(beamOrigin, beamEnd, beamWidth, targetFlags);
 	local dir = getDirectionFromPoints(beamOrigin, beamEnd);
@@ -56,12 +56,12 @@ function onAnimationEvent(a, event)
 	fireProjectileAtPoint(nil, offset, beamEnd, weaponEffect);
 	
 	for t in targets:iterator() do
-		if not isSameEntity(t, avatar) then
-			applyDamageWithWeapon(avatar, t, weapon);
+		if not isSameEntity(t, kaiju) then
+			applyDamageWithWeapon(kaiju, t, weapon);
 		end
 	end
 	
-	local v = avatar:getView();
+	local v = kaiju:getView();
 	if randomFloat(0, 1) < initialChance then
 	--	v:setAnimation("idle", false);
 		if animBool then
@@ -82,6 +82,6 @@ function onAnimationEvent(a, event)
 		v:endEffect(fx2);
 		abilityEnhance(0);
 		removeAnimationCallback(this, a);
-		endAbilityUse(avatar, abilityData.name);
+		endAbilityUse(kaiju, abilityData.name);
 	end
 end

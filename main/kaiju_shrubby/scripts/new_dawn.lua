@@ -1,5 +1,5 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local centerPoint = nil;
 local duration = 30;
 local healPerSecond = 5;
@@ -7,15 +7,15 @@ local healRange = 200;
 
 function onUse(a)
 
-	avatar = a;
-	playAnimation(avatar, "ability_channel");
+	kaiju = a;
+	playAnimation(kaiju, "ability_channel");
 	playSound("shrubby_ability_NewDawn");
-	startCooldown(avatar, abilityData.name);
+	startCooldown(kaiju, abilityData.name);
 	
-	local healAura = createAura(this, avatar, 0);
+	local healAura = createAura(this, kaiju, 0);
 	healAura:setTickParameters(1, duration);
 	healAura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	healAura:setTarget(avatar);
+	healAura:setTarget(kaiju);
 
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/newDawnSun.plist", duration, 0, 200, true, false);	
@@ -24,12 +24,12 @@ function onUse(a)
 end
 
 function onTick(aura)
-	centerPoint = avatar:getWorldPosition();
-	--local dist = getDistanceFromPoints(avatar:getWorldPosition(), centerPoint);
+	centerPoint = kaiju:getWorldPosition();
+	--local dist = getDistanceFromPoints(kaiju:getWorldPosition(), centerPoint);
 	--if dist < healRange then
-	avatar:gainHealth(healPerSecond);
+	kaiju:gainHealth(healPerSecond);
 	--end
-	local minions = avatar:getMinions();
+	local minions = kaiju:getMinions();
 	for t in minions:iterator() do
 		local mdist = getDistanceFromPoints(t:getWorldPosition(), centerPoint);
 		if mdist < healRange then

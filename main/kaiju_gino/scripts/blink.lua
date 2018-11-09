@@ -1,10 +1,9 @@
 local hasUpdated = false;
 local duration = 2;
-local avatar = nil;
+local kaiju = nil;
 local distance = 1000;
 function onUse(a)
-	avatar = a;
-	hasUpdated = false;
+	kaiju = a;
 	a:misdirectMissiles(1.0, false);
 	a:setEnablePhysicsBody(false);
 	a:getView():setKaijuVisible(false);
@@ -39,10 +38,19 @@ function onUse(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if hasUpdated then
-		avatar:setEnablePhysicsBody(true);
-		avatar:getView():setKaijuVisible(true);
-		aura:getOwner():detachAura(aura);
+		kaiju:setEnablePhysicsBody(true);
+		kaiju:getView():setKaijuVisible(true);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 	hasUpdated = true;
 end

@@ -1,8 +1,8 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 
 function onSet(a)
-	avatar = a;
-	avatar:setPassive("gord_meltdown", 1);
+	kaiju = a;
+	kaiju:setPassive("gord_meltdown", 1);
 end

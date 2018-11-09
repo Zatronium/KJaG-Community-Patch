@@ -1,11 +1,11 @@
-local avatar = nil;
-local enemyAcc = 0.95; 
+local kaiju = nil;
+enemyAcc = 0.95; 
 local bonusSpeedPercent = 0.1;
 function onSet(a)
-	avatar = a;
-	local def = avatar:getStat("acc_notrack");
+	kaiju = a;
+	local def = kaiju:getStat("acc_notrack");
 	def = def * enemyAcc;
-	avatar:setStat("acc_notrack", def);
+	kaiju:setStat("acc_notrack", def);
 end
 
 function bonusStats(s)

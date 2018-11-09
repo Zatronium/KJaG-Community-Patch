@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local aoeRange = 200;
 local ROFDebuff = -0.5;
 
@@ -8,12 +8,12 @@ local dotDamage = 1;
 local dotDuration = 30;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_stomp");
+	kaiju = a;
+	playAnimation(kaiju, "ability_stomp");
 	local view = a:getView();
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/radioactiveField_back.plist",0, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/radioactiveField_front.plist",0, 0, 0, true, false);
 	view:attachEffectToNode("root", "effects/radioactiveFieldPulse_back.plist",0, 0, 0, false, true);
@@ -38,7 +38,7 @@ function onUse(a)
 	end
 		
 --	playSound("shrubby_ability_VineWave");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end
 
 function onDotTick(aura)
@@ -46,7 +46,7 @@ function onDotTick(aura)
 	if not canTarget(target) then
 		target:detachAura(aura);
 	else
-		avatar = getPlayerAvatar();
-		applyDamage(avatar, target, dotDamage);
+		kaiju = getPlayerAvatar();
+		applyDamage(kaiju, target, dotDamage);
 	end
 end

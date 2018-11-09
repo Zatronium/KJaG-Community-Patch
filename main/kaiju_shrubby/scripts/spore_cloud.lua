@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local targetPos = nil;
 local weapon = "weapon_shrubby_poisonCloud1"
 
@@ -11,21 +11,21 @@ local cloudaoe = 60;
 local dotDamge = 5;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end 
 	
 function onTargets(position)
 	targetPos = position;
 	
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);	
-	playAnimation(avatar, "ability_breath");
-	registerAnimationCallback(this, avatar, "start");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);	
+	playAnimation(kaiju, "ability_breath");
+	registerAnimationCallback(this, kaiju, "start");
 end
 
 function onAnimationEvent(a)
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 	playSound("shrubby_ability_SporeCloud");
 	local cloud = spawnEntity(EntityType.Minion, "unit_shrubby_cloud", targetPos);
 	setRole(cloud, "Player");
@@ -39,11 +39,11 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
+	if not aura then return end
 	local targets = getTargetsInRadius(aura:getTarget():getWorldPosition(), cloudaoe, EntityFlags(EntityType.Vehicle, EntityType.Avatar));
-	avatar = getPlayerAvatar();
 	for t in targets:iterator() do
-		if canTarget(t) and isOrganic(t) and not isSameEntity(avatar, t) then
-			applyDamageWithWeapon(avatar, t, weapon);
+		if canTarget(t) and isOrganic(t) and not isSameEntity(kaiju, t) then
+			applyDamageWithWeapon(kaiju, t, weapon);
 		end
 	end
 end

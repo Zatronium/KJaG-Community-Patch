@@ -1,25 +1,25 @@
 require 'scripts/common'
 
 -- Global values.
-local avatar = 0;
+local kaiju = nil
 local targetPos = 0;
 local weaponRange = 1500;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', weaponRange);
 end
 
 function onTargets(position)
 	targetPos = position;
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);	
-	playAnimation(avatar, "ability_breath");
-	registerAnimationCallback(this, avatar, "start");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);	
+	playAnimation(kaiju, "ability_breath");
+	registerAnimationCallback(this, kaiju, "start");
 end
 
 function onAnimationEvent(a)
-	local proj = avatarFireAtPoint(avatar, "weapon_mortar1", "breath_node", targetPos, 90);
+	local proj = avatarFireAtPoint(kaiju, "weapon_mortar1", "breath_node", targetPos, 90);
 	proj:setCallback(this, 'onHit');
 	proj:fromAvatar(true);
 	playSound("starcannon");
@@ -27,9 +27,8 @@ function onAnimationEvent(a)
 end
 
 function onHit(proj)
-	local worldPos = proj:getWorldPosition();
 	local scenePos = proj:getView():getPosition();
 	playSound("explosion");
 	local weapon = proj:getWeapon();
-	createImpactEffect(proj:getWeapon(), scenePos);
+	createImpactEffect(weapon, scenePos);
 end

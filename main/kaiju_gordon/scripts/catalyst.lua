@@ -2,12 +2,12 @@ require 'scripts/avatars/common'
 
 local hpPerSecond = 2;
 local durationTime = 90;
-local avatar = nil;
+local kaiju = nil;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	playAnimation(avatar, "ability_stomp");
+	playAnimation(kaiju, "ability_stomp");
 	
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('catalyst');
@@ -17,20 +17,29 @@ function onUse(a)
 
 	local view = a:getView();
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
 	view:attachEffectToNode("root", "effects/catalyst.plist", durationTime, 0, 0, true, false);
 
 end
 
 function onTickActive(aura)
-	if aura:getElapsed() > durationTime then
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+	if not aura then
+		return
 	end
-	avatar:gainHealth(hpPerSecond);
+	if aura:getElapsed() > durationTime then
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
+	end
+	kaiju:gainHealth(hpPerSecond);
 end
 
 function onTick(aura)
-	avatar:gainHealth(hpPerSecond);
+	kaiju:gainHealth(hpPerSecond);
 end

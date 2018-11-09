@@ -1,23 +1,23 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local wallRadius = 250;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "stomp");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "stomp");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
 
-	local origin = avatar:getWorldPosition();
+	local origin = kaiju:getWorldPosition();
 	local radius = wallRadius;
 	local unitSize = 100;
 	local unitSpacing = 0;
 	local targetHealthLimit = 20;
 	createHenge("unit_shrubby_earth_wall", origin, radius, unitSize, unitSpacing, targetHealthLimit);
 	
-	startCooldown(avatar, abilityData.name);
+	startCooldown(kaiju, abilityData.name);
 	playSound("shrubby_ability_WallOfEarth");
 end

@@ -1,6 +1,6 @@
 require 'scripts/common'
 
-local avatar = 0;
+local kaiju = nil
 local targetPos = 0;
 local weaponRange = 800;
 
@@ -16,25 +16,25 @@ local fireballRange 	= 0
 local offset 			= 0
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTarget', weaponRange);
 end
 
 -- Target selection is complete.
 function onTarget(position)
 	targetPos = position;
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);	
-	playAnimation(avatar, "ability_launch");
-	registerAnimationCallback(this, avatar, "attack");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);	
+	playAnimation(kaiju, "ability_launch");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
-	local proj = avatarFireAtPoint(avatar, "weapon_VolcanoShell", "gun_node_03", targetPos, 0);
+	local proj = avatarFireAtPoint(kaiju, "weapon_VolcanoShell", "gun_node_03", targetPos, 0);
 	proj:setCollisionEnabled(false);
 	proj:setCallback(this, 'onShellHit');
 	playSound("volcano");
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 end
 
 function onShellHit(proj)
@@ -64,27 +64,27 @@ function RandomFloat(v1, v2, divisor)
 end
 
 function onTick(aura)
-	local self = aura:getOwner();
-	if not self then
-		aura:setScriptCallback(AuraEvent.OnTick, nil)
-		return
-	end
 	local firePos = offsetRandomDirection(targetPos, offset, fireballRange);
-	local proj = fireProjectileAtPoint(getPlayerAvatar(), targetPos, firePos, "weapon_FireBall");
+	local proj = fireProjectileAtPoint(kaiju, targetPos, firePos, "weapon_FireBall");
 	proj:setCallback(this, 'onHit');
 	proj:fromAvatar(true);
 	playSound("incoming");
 	if aura:getElapsed() >= duration then
-		endAbilityUse(getPlayerAvatar(), abilityData.name);
-		self:detachAura(aura);
-		removeEntity(self);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+			removeEntity(self);
+		end
 	end
 end
 
 function onHit(proj)
-	local worldPos = proj:getWorldPosition();
 	local scenePos = proj:getView():getPosition();
 	local weapon = proj:getWeapon();
 	
-	createImpactEffect(proj:getWeapon(), scenePos);
+	createImpactEffect(weapon, scenePos);
 end

@@ -1,7 +1,7 @@
 require 'scripts/common'
 
 -- Global values.
-local avatar = 0;
+local kaiju = nil
 
 local targetPos = 0;
 local distance = 1;
@@ -12,22 +12,22 @@ local shotsper = 2;
 local deviation = 300; 
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', weaponRange);
 end
 
 function onTargets(position)
 	targetPos = position;
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 	distance = getDistanceFromPoints(worldPos, targetPos) / weaponRange;
 	local facingAngle = getFacingAngle(worldPos, targetPos);
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_launch");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_launch");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
-	furyAura = Aura.create(this, a);
+	local furyAura = Aura.create(this, a);
 	furyAura:setTag('nova_mortar');
 	furyAura:setTickParameters(weaponInterval, weaponInterval * (burst - 1));
 	furyAura:setScriptCallback(AuraEvent.OnTick, 'onTick');	
@@ -39,7 +39,7 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
-	local targetEnt = getAbilityTarget(avatar, abilityData.name);
+	local targetEnt = getAbilityTarget(kaiju, abilityData.name);
 	if targetEnt then
 		targetPos =  targetEnt:getWorldPosition();
 	end
@@ -50,17 +50,16 @@ function onTick(aura)
 		local locPos = targetPos;
 		locPos["x"] = targetPos["x"] + math.random(-offset, offset);
 		locPos["y"] = targetPos["y"] + math.random(-offset, offset);
-		local proj = avatarFireAtPoint(avatar, "weapon_mortar2", "gun_node_03", locPos, 0);
+		local proj = avatarFireAtPoint(kaiju, "weapon_mortar2", "gun_node_03", locPos, 0);
 		proj:fromAvatar(true);
 		proj:setCallback(this, 'onHit');
 	end
 end
 
 function onHit(proj)
-	local worldPos = proj:getWorldPosition();
 	local scenePos = proj:getView():getPosition();
-	createImpactEffect(proj:getWeapon(), scenePos);
 	local weapon = proj:getWeapon();
+	createImpactEffect(weapon, scenePos);
 	playSound("explosion");
 	createEffect('effects/explosion_BoomLayer.plist', scenePos);
 end

@@ -1,0 +1,3321 @@
+Ability {
+	Identifier: revert_gino
+	Name: revert_gino
+	Icon: kaiju_goop/ability_icons/metabolism/RevertToGoop.png
+	DisplayName: GOOPatize
+
+	Script: kaiju_goop/scripts/revert.lua
+
+	IsPassive: false
+	SkillIndex: -1
+	
+	SkillTier: -1
+	SkillQuad: -1
+	CostTime: 0
+	Cooldown: 1
+	
+	Description: Revert to Goop!
+
+	Kaiju: 8be22742653e30cb9b2f91f6f1e18573 
+}
+
+Ability {
+	Identifier: revert_shrubby
+	Name: revert_shrubby
+	Icon: kaiju_goop/ability_icons/metabolism/RevertToGoop.png
+	DisplayName: GOOPatize	
+
+	Script: kaiju_goop/scripts/revert.lua
+
+	IsPassive: false
+	SkillIndex: -1
+	
+	SkillTier: -1
+	SkillQuad: -1
+	CostTime: 0
+	Cooldown: 1
+	
+	Description: Revert to Goop!
+
+	Kaiju: avatar_shrubby
+}
+
+Ability {
+	Identifier: revert_gordon
+	Name: revert_gordon
+	Icon: kaiju_goop/ability_icons/metabolism/RevertToGoop.png
+	DisplayName: GOOPatize	
+
+	Script: kaiju_goop/scripts/revert.lua
+
+	IsPassive: false
+	SkillIndex: -1
+	
+	SkillTier: -1
+	SkillQuad: -1
+	CostTime: 0
+	Cooldown: 1
+	
+	Description: Revert to Goop!
+
+	Kaiju: avatar_gordon 
+}
+
+Ability {
+	Identifier: ability_goop_TheGoop
+	Name: ability_goop_TheGoop
+	Icon: kaiju_goop/ability_icons/attack/TheGoop.png
+	DisplayName: The GOOP
+	Description: A wave of nanites that deals damage over time in an area around the Kaiju. 
+	BulletPoint: Damage: 3/s
+	BulletPoint: Duration: 5s
+	BulletPoint: AP: 2
+	BulletPoint: Range: 200m
+	Script: kaiju_goop/scripts/the_goop.lua
+	UIElementName: innate_ability
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+	
+	ResourceHealth: 5
+
+	SkillQuad: 2
+	SkillTier: 0
+	SkillIndex: 0
+
+	Cooldown: 5
+
+	CostTime: 0
+}
+
+Ability {
+	Identifier: ability_goop_Spit
+	Name: ability_goop_Spit
+	TrainingCompleteMessageId: msg_goop_Spit
+	Icon: kaiju_goop/ability_icons/attack/Spit.png
+	DisplayName: Spit
+	Description: A long range nanite projectile that does damage in an 100m area and leaves behind GOOPballs that can be reclaimed for health.
+	BulletPoint: Range: 400m
+	BulletPoint: Damage: 3/s
+	BulletPoint: Damage: 3/s
+	BulletPoint: Duration: 5s
+	BulletPoint: Goop: low
+
+	Script: kaiju_goop/scripts/spit.lua
+
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 1
+	SkillIndex: 1
+	
+	ResourceHealth: 8
+	Cooldown: 8
+	
+	CostTime:    5
+	CostMoney:   1200
+	CostPower:   12
+	CostKnow:    20
+	CostOrganic: 30
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Snap
+	Name: ability_goop_Snap
+	TrainingCompleteMessageId: msg_goop_Snap
+	Icon: kaiju_goop/ability_icons/attack/Snap.png
+	DisplayName: Snap
+	Description: GOOP cuts through everything in front of it with razer sharp pincers.
+	BulletPoint: Damage: 12-20
+	BulletPoint: Area: 75m Cone
+
+	Script: kaiju_goop/scripts/snap.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop 
+
+	SkillQuad: 2
+	SkillTier: 2
+	SkillIndex: 1
+	Requires: ability_goop_Spit
+
+	ResourceHealth: 3
+	Cooldown: 10
+	
+	CostTime:	 13
+	CostMoney:   20000
+	CostPower:   30
+	CostKnow:    20
+	CostOrganic: 20
+	CostPurple:  0
+}
+
+
+
+
+
+Ability {
+	Identifier: ability_goop_ShockGlare
+	Name: ability_goop_ShockGlare
+	TrainingCompleteMessageId: msg_goop_ShockGlare
+	Icon: kaiju_goop/ability_icons/attack/ShockGlare.png
+	DisplayName: Shock Glare
+	Description: GOOP emits a beam of energy from its gigantic eye in several pulses.
+	BulletPoint: Damage: 3
+	BulletPoint: Shots: 5
+	BulletPoint: Range: 400m
+	BulletPoint: AP: 2
+	Script: kaiju_goop/scripts/shock_glare.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 2
+	SkillIndex: 2
+	Requires: ability_goop_Spit
+
+	ResourceHealth: 20
+	Cooldown: 15
+	
+	CostTime:    13
+	CostMoney:   20000
+	CostPower:   30
+	CostKnow:    30
+	CostOrganic: 10
+	CostPurple:  0
+}
+
+
+
+
+
+Ability {
+	Identifier: ability_goop_Sting
+	Name: ability_goop_Sting
+	TrainingCompleteMessageId: msg_goop_Sting
+	Icon: kaiju_goop/ability_icons/attack/Sting.png
+	DisplayName: Sting
+	Description: GOOP strikes a ground unit in front of it with its stinger, injecting it with nanites that deal damage over time. If the target is destroyed while this ability is active, the target will drop a GOOPball that can be collected for health.
+	BulletPoint: Damage: 10/s
+	BulletPoint: Duration: 10s
+	BulletPoint: Range: 150m
+	Script: kaiju_goop/scripts/sting.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 2
+	SkillIndex: 3
+	Requires: ability_goop_Spit
+
+	ResourceHealth: 30
+	Cooldown: 18	
+
+	CostTime:	 13
+	CostMoney:   20000
+	CostPower:   30
+	CostKnow:    30
+	CostOrganic: 10
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_DoubleSnap
+	Name: ability_goop_DoubleSnap
+	TrainingCompleteMessageId: msg_goop_DoubleSnap
+	Icon: kaiju_goop/ability_icons/attack/DoubleSnap.png
+	DisplayName: Double Snap
+	Description: GOOP cuts through everything in front of it, twice in rapid succession.
+	BulletPoint: Damage: 12-20
+	BulletPoint: Shots: 2
+	BulletPoint: Area: 75m Cone
+	
+
+	Script: kaiju_goop/scripts/double_snap.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 3
+	SkillIndex: 1
+	Requires: ability_goop_Snap
+
+	ResourceHealth: 8
+	Cooldown: 13	
+
+	CostTime:	20
+	CostMoney:   60000
+	CostPower:   70
+	CostKnow:    50
+	CostOrganic: 50
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Splat
+	Name: ability_goop_Splat
+	TrainingCompleteMessageId: msg_goop_Splat
+	Icon: kaiju_goop/ability_icons/attack/Splat.png
+	DisplayName: Splat
+	Description: Three waves of nanites that deals damage in an area around the Kaiju, increasing in area each time.
+	BulletPoint: Damage: 3/s
+	BulletPoint: Duration: 10s
+	BulletPoint: Range 1: 100m
+	BulletPoint: Range 2: 150m
+	BulletPoint: Range 3: 200m
+	
+	Script: kaiju_goop/scripts/splat.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 3
+	SkillIndex: 2
+	Requires: ability_goop_Snap
+
+	ResourceHealth: 15
+	Cooldown: 10
+
+	CostTime:	20
+	CostMoney:   60000
+	CostPower:   70
+	CostKnow:    50
+	CostOrganic: 50
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_Barrage
+	Name: ability_goop_Barrage
+	TrainingCompleteMessageId: msg_goop_Barrage
+	Icon: kaiju_goop/ability_icons/attack/Barrage.png
+	DisplayName: Barrage
+	Description: Three long range nanite projectiles that do damage in an area, and leave behind GOOPballs that can be collected for health.
+	BulletPoint: Damage: 3/s
+	BulletPoint: Duration:5s
+	BulletPoint: Shots: 3
+	BulletPoint: Range: 500m
+	BulletPoint: AP: 2
+
+	Script: kaiju_goop/scripts/barrage.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 3
+	SkillIndex: 3
+	Requires: ability_goop_ShockGlare
+
+	ResourceHealth: 60
+	Cooldown: 25
+
+	CostTime:	20
+	CostMoney:   70000
+	CostPower:   80
+	CostKnow:    80
+	CostOrganic: 30
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_WideGlare
+	Name: ability_goop_WideGlare
+	TrainingCompleteMessageId: msg_goop_WideGlare
+	Icon: kaiju_goop/ability_icons/attack/WideGlare.png
+	DisplayName: Wide Glare
+	Description: GOOP emits multiple beams of energy from its gigantic eye, dealing damage to a number of targets in front of it.
+	BulletPoint: Damage: 20/Pulse
+	BulletPoint: Pulses: 5
+	BulletPoint: Angle: 90
+	BulletPoint: Range: 500m
+	Script: kaiju_goop/scripts/wide_glare.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 3
+	SkillIndex: 4
+	Requires: ability_goop_ShockGlare
+
+	ResourceHealth: 55
+	Cooldown: 17	
+
+	CostTime:	20
+	CostMoney:   80000
+	CostPower:   70
+	CostKnow:    70
+	CostOrganic: 30
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_ViralGoop
+	Name: ability_goop_ViralGoop
+	TrainingCompleteMessageId: msg_goop_ViralGoop
+	Icon: kaiju_goop/ability_icons/attack/ViralGoop.png
+	DisplayName: Viral GOOP
+	Description: GOOP strikes out at a ground unit in front of it, injecting it with nanites that deal damage over time. If a target is destroyed by the virus, the virus will spread to a nearby target, growing weaker each time it spreads.
+	BulletPoint: Damage: 10/s
+	BulletPoint: 1st Duration: 10s
+	BulletPoint: 2st Duration: 5s
+	BulletPoint: 3rd Duration: 2s
+
+	Script: kaiju_goop/scripts/viral_goop.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 3
+	SkillIndex: 5
+	Requires: ability_goop_Sting
+
+	ResourceHealth: 70
+	Cooldown: 25
+
+	CostTime:	20
+	CostMoney:   80000
+	CostPower:   70
+	CostKnow:    70
+	CostOrganic: 30
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_ExplosiveGoop
+	Name: ability_goop_ExplosiveGoop
+	TrainingCompleteMessageId: msg_goop_ExplosiveGoop
+	Icon: kaiju_goop/ability_icons/attack/ExplosiveGoop.png
+	DisplayName: Explosive GOOP
+	Description: GOOP strikes out at a ground unit in front of it, injecting it with nanites that deal damage over time. If the target is destroyed while this ability is active the target will explode, dealing damage around it equal to the targets health.
+	BulletPoint: Damage: = Targets Health
+	BulletPoint: Area: = Targets Health
+	
+
+	Script: kaiju_goop/scripts/explosive_goop.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 3
+	SkillIndex: 6
+	Requires: ability_goop_Sting
+
+	ResourceHealth: 30
+	Cooldown: 20
+
+	CostTime:	20
+	CostMoney:   90000
+	CostPower:   90
+	CostKnow:    80
+	CostOrganic: 30
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_VorpalSnap
+	Name: ability_goop_VorpalSnap
+	TrainingCompleteMessageId: msg_goop_VorpalSnap
+	Icon: kaiju_goop/ability_icons/attack/VorpalSnap.png
+	DisplayName: Vorpal Snap
+	Description: GOOP cuts through everything in front of it three times in rapid succession, carving through the target's armor.
+	BulletPoint: Damage: 20-30
+	BulletPoint: Shots: 3
+	BulletPoint: Area: 75m Cone
+	BulletPoint: AP: 10
+	Script: kaiju_goop/scripts/vorpal_snap.lua
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 1
+	Requires: ability_goop_DoubleSnap
+
+	ResourceHealth: 12
+	Cooldown: 15
+
+	CostTime:    32
+	CostMoney:   260000
+	CostPower:   280
+	CostKnow:    220
+	CostOrganic: 120
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_BodySlam
+	Name: ability_goop_BodySlam
+	TrainingCompleteMessageId: msg_goop_BodySlam
+	Icon: kaiju_goop/ability_icons/attack/BodySlam.png
+	DisplayName: Body Slam
+	Description: The kaiju throws itself to the ground with a powerful impact, dealing damage to buildings and ground units nearby.
+	BulletPoint: Building Damage: 75-125
+	BulletPoint: Unit Damage: 25-50
+	BulletPoint: Area: 300m
+	Script: kaiju_goop/scripts/body_slam.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 2
+	Requires: ability_goop_DoubleSnap
+
+	ResourceHealth: 45
+	Cooldown: 25
+
+	CostTime:    32
+	CostMoney:   260000
+	CostPower:   240
+	CostKnow:    260
+	CostOrganic: 170
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Blob
+	Name: ability_goop_Blob
+	TrainingCompleteMessageId: msg_goop_Blob
+	Icon: kaiju_goop/ability_icons/attack/Blob.png
+	DisplayName: BLOB
+	Description: GOOP takes the form of a blob (losing abilities that require it's original form), taking 75% less damage and dealing damage to everything it touches for a short time.
+	BulletPoint: Duration: 30s
+	BulletPoint: Damage: 10-15/s
+	BulletPoint: Damage Reduction: 75%
+	
+	Script: kaiju_goop/scripts/blob.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 3
+	Requires: ability_goop_Splat
+
+	ResourceHealth: 80
+	Cooldown: 80
+
+	CostTime:    32
+	CostMoney:   240000
+	CostPower:   250
+	CostKnow:    250
+	CostOrganic: 170
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Corrosives
+	Name: ability_goop_Corrosives
+	TrainingCompleteMessageId: msg_goop_Corrosives
+	Icon: kaiju_goop/ability_icons/attack/Corrosives.png
+	DisplayName: Corrosives
+	Description: GOOP leaves a trail of corrosive nanites behind it as it moves.
+	BulletPoint: Damage: 5/s
+	BulletPoint: Duration: 5s
+	BulletPoint: Area: 25m
+
+	Script: kaiju_goop/scripts/corrosives.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 4
+	Requires: ability_goop_Splat
+
+	CostTime:    32
+	CostMoney:   260000
+	CostPower:   250
+	CostKnow:    240
+	CostOrganic: 180
+	CostPurple:  0
+}
+
+
+
+
+
+Ability {
+	Identifier: ability_goop_GoopBomb
+	Name: ability_goop_GoopBomb
+	TrainingCompleteMessageId: msg_goop_GoopBomb
+	Icon: kaiju_goop/ability_icons/attack/GoopBomb.png
+	DisplayName: GOOP Bomb
+	Description: A long range nanite projectile that does a large amount of damage in an area and leaves behind GOOPballs that can be collected for health. On impact, fires 3 "Spit" projectiles at random nearby targets.
+	BulletPoint: Range: 650m
+	BulletPoint: Damage: 15-20/s
+	BulletPoint: Duration: 5s
+	BulletPoint: Goop: moderate
+	
+
+	Script: kaiju_goop/scripts/goop_bomb.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 5
+	Requires: ability_goop_Barrage
+
+	ResourceHealth: 100
+	Cooldown: 85
+	
+	CostTime:    32
+	CostMoney:   250000
+	CostPower:   290
+	CostKnow:    260
+	CostOrganic: 120
+	CostPurple:  0
+}
+
+
+
+
+
+
+Ability {
+	Identifier: ability_goop_Artillery
+	Name: ability_goop_Artillery
+	TrainingCompleteMessageId: msg_goop_Artillery
+	Icon: kaiju_goop/ability_icons/attack/Artillery.png
+	DisplayName: Artillery
+	Description: Five long range nanite projectiles that do damage in an area, and leave behind GOOPballs that can be collected for health.
+	BulletPoint: Range: 700m
+	BulletPoint: Radius: 100m
+	BulletPoint: Shots: 100m
+	BulletPoint: Damage: 3/s
+	BulletPoint: Duration: 5s
+	BulletPoint: AP: 2
+	BulletPoint: Goop: low
+
+
+
+	Script: kaiju_goop/scripts/artillery.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 6
+	Requires: ability_goop_Barrage
+
+	ResourceHealth: 80
+	Cooldown: 40
+
+	CostTime:    32
+	CostMoney:   240000
+	CostPower:   260
+	CostKnow:    250
+	CostOrganic: 120
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Lougies
+	Name: ability_goop_Lougies
+	TrainingCompleteMessageId: msg_goop_Lougies
+	Icon: kaiju_goop/ability_icons/attack/Lougies.png
+	DisplayName: Lougies
+	Description: GOOP launches high speed nanite projectiles at all nearby aircraft.
+	BulletPoint: Damage: 10-15
+	BulletPoint: Range: 500m
+	Script: kaiju_goop/scripts/lougies.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 7
+	Requires: ability_goop_WideGlare
+
+	ResourceHealth: 50
+	Cooldown: 18
+
+	CostTime:    32
+	CostMoney:   260000
+	CostPower:   290
+	CostKnow:    290
+	CostOrganic: 120
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Zap
+	Name: ability_goop_Zap
+	TrainingCompleteMessageId: msg_goop_Zap
+	Icon: kaiju_goop/ability_icons/attack/Zap.png
+	DisplayName: Zap
+	Description: For a short time GOOP becomes electrically charged, zapping every nearby target with electricity damage.
+	BulletPoint: Damage: 10-20
+	BulletPoint: Range: 200m
+	BulletPoint: Duration: 30s
+	Script: kaiju_goop/scripts/zap.lua
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 8
+	Requires: ability_goop_WideGlare
+
+	ResourceHealth: 60
+	Cooldown: 90
+
+	CostTime:    32
+	CostMoney:   240000
+	CostPower:   290
+	CostKnow:    290
+	CostOrganic: 140
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_ViralBarrage
+	Name: ability_goop_ViralBarrage
+	TrainingCompleteMessageId: msg_goop_ViralBarrage
+	Icon: kaiju_goop/ability_icons/attack/ViralBarrage.png
+	DisplayName: Viral Barrage
+	Description: GOOP strikes out at three targeted ground units, injecting them with nanites that deal damage over time. If a target is destroyed by the virus, the virus will spread to a nearby target, growing weaker each time it spreads.
+	BulletPoint: Targets: 3
+	BulletPoint: Damage: 10/s
+	BulletPoint: 1st Duration: 10s
+	BulletPoint: 2st Duration: 5s
+	BulletPoint: 3rd Duration: 2s
+
+	Script: kaiju_goop/scripts/viral_barrage.lua
+
+	
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 9
+	Requires: ability_goop_ViralGoop
+
+	ResourceHealth: 85
+	Cooldown: 65
+
+	CostTime:    32
+	CostMoney:   290000
+	CostPower:   290
+	CostKnow:    290
+	CostOrganic: 120
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Spew
+	Name: ability_goop_Spew
+	TrainingCompleteMessageId: msg_goop_Spew
+	Icon: kaiju_goop/ability_icons/attack/Spew.png
+	DisplayName: SPEW
+	Description: A spray of nanites covers buildings in a cone in front of GOOP, dealing damage over time. If any buildings die they leave behind a GOOPball that can be collected for health.
+	BulletPoint: Range: 300m
+	BulletPoint: Building Damage: 15/s
+	BulletPoint: Duration:10s
+	BulletPoint: Goop: moderate
+	Script: kaiju_goop/scripts/spew.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 10
+	Requires: ability_goop_ViralGoop
+
+	ResourceHealth: 75
+	Cooldown: 60
+
+	CostTime:    32
+	CostMoney:   220000
+	CostPower:   240
+	CostKnow:    220
+	CostOrganic: 120
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_ExplosiveBarrage
+	Name: ability_goop_ExplosiveBarrage
+	TrainingCompleteMessageId: msg_goop_ExplosiveBarrage
+	Icon: kaiju_goop/ability_icons/attack/ExplosiveBarrage.png
+	DisplayName: Explosive Barrage
+	Description: GOOP strikes out at three targeted ground units, injecting them with nanites that deal damage over time. If the target is destroyed by this ability the target will explode, dealing damage around it equal to the targets health.
+	BulletPoint: Targets: 3
+	BulletPoint: Damage: = Targets Health
+	BulletPoint: Area: = Targets Health
+	Script: kaiju_goop/scripts/explosive_barrage.lua
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 11
+	Requires: ability_goop_ExplosiveGoop
+
+	ResourceHealth: 90
+	Cooldown: 90
+
+	CostTime:    32
+	CostMoney:   240000
+	CostPower:   290
+	CostKnow:    290
+	CostOrganic: 120
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_GoopFog
+	Name: ability_goop_GoopFog
+	TrainingCompleteMessageId: msg_goop_GoopFog
+	Icon: kaiju_goop/ability_icons/attack/GoopFog.png
+	DisplayName: GOOP Fog
+	Description: A cloud of airborne nanites forms behind the Kaiju, dealing damage to anything it touches. When the fog expires, it leaves behind a GOOPball that can be collected for health.
+	BulletPoint: Damage: 5/s
+	BulletPoint: Duration: 20s
+	BulletPoint: Area: 300m	
+	Script: kaiju_goop/scripts/goop_fog.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 4
+	SkillIndex: 12
+	Requires: ability_goop_ExplosiveGoop
+
+	ResourceHealth: 80
+	Cooldown: 50
+
+	CostTime:    32
+	CostMoney:   240000
+	CostPower:   300
+	CostKnow:    240
+	CostOrganic: 140
+	CostPurple:  0
+}
+
+// ATTACK T5
+
+Ability {
+	Identifier: ability_goop_OhMegaSnap
+	Name: ability_goop_OhMegaSnap
+	TrainingCompleteMessageId: msg_goop_OhMegaSnap
+	Icon: kaiju_goop/ability_icons/attack/OhMegaSnap.png
+	DisplayName: Oh-Mega Snap!
+	Description: GOOP cuts through everything in front of it with a 100% chance to strike again. -10% odds after each repeat.
+	BulletPoint: Damage: 20-30
+	Script: kaiju_goop/scripts/oh_mega_snap.lua
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 1
+	Requires: ability_goop_VorpalSnap
+
+	ResourceHealth: 25
+	Cooldown: 25
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_SeismicSlam
+	Name: ability_goop_SeismicSlam
+	TrainingCompleteMessageId: msg_goop_SeismicSlam
+	Icon: kaiju_goop/ability_icons/attack/SeismicSlam.png
+	DisplayName: Seismic Slam
+	Description: The Kaiju throws itself to the ground with a devastating impact, dealing damage to buildings and ground units nearby leaving a reoccurring quake that repeats up to 5 times.
+	BulletPoint: Damage: 75-125
+	BulletPoint: Area: 300m
+	Script: kaiju_goop/scripts/seismic_slam.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 2
+	Requires: ability_goop_BodySlam
+
+	ResourceHealth: 70
+	Cooldown: 50
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_AbsorboGlob
+	Name: ability_goop_AbsorboGlob
+	TrainingCompleteMessageId: msg_goop_AbsorboGlob
+	Icon: kaiju_goop/ability_icons/attack/AbsorboGlob.png
+	DisplayName: Absorbo-Glob
+	Description: The "Blob" ability is upgraded. It now regenerates 1 tenth of all damage dealt to it while in blob form.
+	
+	Script: kaiju_goop/scripts/absorbo_glob.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 3
+	Requires: ability_goop_Blob
+
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_ElectroGoop
+	Name: ability_goop_ElectroGoop
+	TrainingCompleteMessageId: msg_goop_ElectroGoop
+	Icon: kaiju_goop/ability_icons/attack/ElectroGoop.png
+	DisplayName: ElectroGOOP
+	Description: The "Corrosives" ability is now upgraded. The electrified nanite trail now stuns ground vehicles and deals extra damage to infantry.
+
+
+	Script: kaiju_goop/scripts/electrogoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 4
+	Requires: ability_goop_Corrosives
+
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+
+
+
+Ability {
+	Identifier: ability_goop_UnstopoGoop
+	Name: ability_goop_UnstopoGoop
+	TrainingCompleteMessageId: msg_goop_UnstopoGoop
+	Icon: kaiju_goop/ability_icons/attack/Unstopogoop.png
+	DisplayName: UnstopoGOOP
+	Description: A long range nanite projectile that does damage in an area and has a chance to bounce forward up to 5 times.
+	BulletPoint: Range: 400m
+	BulletPoint: Damage: 50/s
+	BulletPoint: Duration: 3s
+	BulletPoint: Goop: moderate
+
+	Script: kaiju_goop/scripts/unstopogoop.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 5
+	Requires: ability_goop_GoopBomb
+
+	ResourceHealth: 150
+	Cooldown: 80
+	
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_Goopnado
+	Name: ability_goop_Goopnado
+	TrainingCompleteMessageId: msg_goop_Goopnado
+	Icon: kaiju_goop/ability_icons/attack/Goopnado.png
+	DisplayName: GOOPnado
+	Description: The GOOP becomes a whirling storm of destructive nanite particles, launching ten "Spit" projectiles in random directions.
+	BulletPoint: Range: 400m
+	BulletPoint: Damage: 3/s
+	BulletPoint: Duration: 5s
+	BulletPoint: Goop: moderate
+
+
+	Script: kaiju_goop/scripts/goopnado.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 6
+	Requires: ability_goop_Artillery
+
+	ResourceHealth: 80
+	Cooldown: 45
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Apocalougies
+	Name: ability_goop_Apocalougies
+	TrainingCompleteMessageId: msg_goop_Apocalougies
+	Icon: kaiju_goop/ability_icons/attack/Apocalougies.png
+	DisplayName: Apocalougies
+	Description: GOOP launches high speed nanite projectiles at all nearby aircraft repeatedly for a short time.
+	BulletPoint: Damage: 20-30
+	BulletPoint: Range: 500m
+	BulletPoint: Shots: 15
+	Script: kaiju_goop/scripts/apocalougies.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 7
+	Requires: ability_goop_Lougies
+
+	ResourceHealth: 100
+	Cooldown: 40
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Feedback
+	Name: ability_goop_Feedback
+	TrainingCompleteMessageId: msg_goop_Feedback
+	Icon: kaiju_goop/ability_icons/attack/Feedback.png
+	DisplayName: Feedback
+	Description: Using its stored Power Resource GOOP becomes electrically charged, zapping every nearby target with electricity damage. This ability remains in effect until the Kaiju is drained of power in its storage.
+	BulletPoint: Damage: 30
+	BulletPoint: Range: 1000m
+	Script: kaiju_goop/scripts/feedback.lua
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 8
+	Requires: ability_goop_Zap
+
+	ResourceHealth: 90
+	Cooldown: 90
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Infestation
+	Name: ability_goop_Infestation
+	TrainingCompleteMessageId: msg_goop_Infestation
+	Icon: kaiju_goop/ability_icons/attack/Infestation.png
+	DisplayName: Infestation
+	Description: GOOP strikes out at three targeted ground units, injecting them with nanites that deal damage over time. If a target is destroyed by the virus, the virus will spread to a nearby target.
+	BulletPoint: Targets: 3
+	BulletPoint: Damage: 10/s
+	BulletPoint: Duration: 10s
+
+	Script: kaiju_goop/scripts/infestation.lua
+	
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 9
+	Requires: ability_goop_ViralBarrage
+
+	ResourceHealth: 120
+	Cooldown: 90
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Splork
+	Name: ability_goop_Splork
+	TrainingCompleteMessageId: msg_goop_Splork
+	Icon: kaiju_goop/ability_icons/attack/Splork.png
+	DisplayName: Splork
+	Description: The GOOP unleashes a huge spray of nanites that cover all buildings in a large area, dealing damage over time. If any buildings die they leave behind a GOOPball that can be collected for health. 
+	BulletPoint: Building Damage: 15/s
+	BulletPoint: Duration:10s
+	BulletPoint: Goop: high
+	BulletPoint: Area: 600m
+	Script: kaiju_goop/scripts/splork.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 10
+	Requires: ability_goop_Spew
+
+	ResourceHealth: 85
+	Cooldown: 70
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_GodGoop
+	Name: ability_goop_GodGoop
+	TrainingCompleteMessageId: msg_goop_GodGoop
+	Icon: kaiju_goop/ability_icons/attack/GodGoop.png
+	DisplayName: God GOOP
+	Description: A Purpletonium-imbued self-replicating nanite projectile that damages a building over time until it is destroyed. After destroying a building, new projectiles will fire off and continue the process on any building they hit.
+	BulletPoint: Damage: 20/s
+	BulletPoint: Range: 500m
+	Script: kaiju_goop/scripts/god_goop.lua
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 11
+	Requires: ability_goop_ExplosiveBarrage
+
+	ResourceHealth: 200
+	Cooldown: 120
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Goopicane
+	Name: ability_goop_Goopicane
+	TrainingCompleteMessageId: msg_goop_Goopicane
+	Icon: kaiju_goop/ability_icons/attack/Goopicane.png
+	DisplayName: GOOPicane
+	Description: A cloud of airborne nanites travelling in a direction, dealing damage to anything they touch. When the fog expires, it leaves behind a GOOPball that can be collected for health. Double damage against aircraft.
+	BulletPoint: Damage: 5/s
+	BulletPoint: Area: 600m	
+	BulletPoint: Duration: 20s
+	Script: kaiju_goop/scripts/goopicane.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 2
+	SkillTier: 5
+	SkillIndex: 12
+	Requires: ability_goop_GoopFog
+
+	ResourceHealth: 110
+	Cooldown: 70
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ATTACK END     ////////  DEFENSE START
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Ability {
+	Identifier: ability_goop_ThickGoop
+	Name: ability_goop_ThickGoop
+	TrainingCompleteMessageId: msg_goop_ThickGoop
+	Icon: kaiju_goop/ability_icons/defense/ThickGoop.png
+	DisplayName: Thick GOOP
+	Description: GOOPs armor level is increased.
+	BulletPoint: Armor: +1
+	Script: kaiju_goop/scripts/thick_goop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 1
+	SkillIndex: 1
+	
+	CostTime:	4
+	CostMoney:   10000
+	CostPower:   5
+	CostKnow:    10
+	CostOrganic: 20
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_Harden
+	Name: ability_goop_Harden
+	TrainingCompleteMessageId: msg_goop_Harden
+	Icon: kaiju_goop/ability_icons/defense/Harden.png
+	DisplayName: Harden
+	Description: For a short time the Kaiju moves at half speed, but has highly improved armor.
+	BulletPoint: Armor: +5
+	BulletPoint: Duration: 30s
+	BulletPoint: Movement: -50%
+
+	Script: kaiju_goop/scripts/harden.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop 
+
+	SkillQuad: 1
+	SkillTier: 2
+	SkillIndex: 1
+	Requires: ability_goop_ThickGoop
+	
+	ResourceHealth: 5
+	Cooldown: 120
+	
+	CostTime:	9
+	CostMoney:   20000
+	CostPower:   15
+	CostKnow:    15
+	CostOrganic: 35
+	CostPurple:  0
+}
+
+
+
+
+
+Ability {
+	Identifier: ability_goop_Absorption
+	Name: ability_goop_Absorption
+	TrainingCompleteMessageId: msg_goop_Absorption
+	Icon: kaiju_goop/ability_icons/defense/Absorption.png
+	DisplayName: Absorption
+	Description: For a period of time, whenever GOOP is struck with a ballistic attack it gains a small amount of health.
+	BulletPoint: Health: +1/ballistic
+	BulletPoint: Duration: 60s
+
+	
+
+	Script: kaiju_goop/scripts/absorption.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 2
+	SkillIndex: 2
+	Requires: ability_goop_ThickGoop
+
+	ResourceHealth: 5
+	Cooldown: 120
+
+	CostTime:	11
+	CostMoney:   20000
+	CostPower:   30
+	CostKnow:    30
+	CostOrganic: 20
+	CostPurple:  0
+}
+
+
+
+
+
+Ability {
+	Identifier: ability_goop_Diffuse
+	Name: ability_goop_Diffuse
+	TrainingCompleteMessageId: msg_goop_Diffuse
+	Icon: kaiju_goop/ability_icons/defense/Diffuse.png
+	DisplayName: Diffuse
+	Description: For a short time GOOP deals less damage, but there is a 50/50 chance that any attack made against it is negated.
+	BulletPoint: Dodge: +50%
+	BulletPoint: Damage: -30%
+	BulletPoint: Duration: 30s
+
+	Script: kaiju_goop/scripts/diffuse.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 2
+	SkillIndex: 3
+	Requires: ability_goop_ThickGoop
+
+	ResourceHealth: 5
+	Cooldown: 60
+	
+	CostTime:	9
+	CostMoney:   20000
+	CostPower:   80
+	CostKnow:    70
+	CostOrganic: 30
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Durability
+	Name: ability_goop_Durability
+	TrainingCompleteMessageId: msg_goop_Durability
+	Icon: kaiju_goop/ability_icons/defense/Durability.png
+	DisplayName: Durability
+	Description: Increased armor against ballistic attacks.
+	BulletPoint: Ballistic Armor: +2
+	
+
+	Script: kaiju_goop/scripts/durability.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 3
+	SkillIndex: 1
+	Requires: ability_goop_Harden
+
+	CostTime:	8
+	CostMoney:   60000
+	CostPower:   50
+	CostKnow:    50
+	CostOrganic: 70
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Stability
+	Name: ability_goop_Stability
+	TrainingCompleteMessageId: msg_goop_Stability
+	Icon: kaiju_goop/ability_icons/defense/Stability.png
+	DisplayName: Stability
+	Description: Reduce energy damage taken for a period of time. Take 25% less damage for the duration.
+
+	
+	Script: kaiju_goop/scripts/stability.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 3
+	SkillIndex: 2
+	Requires: ability_goop_Harden
+
+	ResourceHealth: 20
+	Cooldown: 90
+
+	CostTime:    17
+	CostMoney:   50000
+	CostPower:   50
+	CostKnow:    60
+	CostOrganic: 60
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_AbsorptionMatrix
+	Name: ability_goop_AbsorptionMatrix
+	TrainingCompleteMessageId: msg_goop_AbsorptionMatrix
+	Icon: kaiju_goop/ability_icons/defense/AbsorptionMatrix.png
+	DisplayName: Absorption Matrix
+	Description: The "Absorption" ability becomes permanent and passive.
+
+	
+
+	Script: kaiju_goop/scripts/absorption_matrix.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 3
+	SkillIndex: 3
+	Requires: ability_goop_Absorption
+
+	CostTime:	14
+	CostMoney:   60000
+	CostPower:   80
+	CostKnow:    90
+	CostOrganic: 50
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_Regenerative
+	Name: ability_goop_Regenerative
+	TrainingCompleteMessageId: msg_goop_Regenerative
+	Icon: kaiju_goop/ability_icons/defense/Regenerative.png
+	DisplayName: Regenerative
+	Description: GOOP regains health every second for a short time.
+	BulletPoint: Health: +2/s
+	BulletPoint: Duration: 30s
+	Script: kaiju_goop/scripts/regenerative.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 3
+	SkillIndex: 4
+	Requires: ability_goop_Absorption
+	
+	Cooldown: 90
+
+	CostTime:	14
+	CostMoney:   70000
+	CostPower:   80
+	CostKnow:    70
+	CostOrganic: 30
+	CostPurple:  0
+
+}
+
+Ability {
+	Identifier: ability_goop_Dispersal
+	Name: ability_goop_Dispersal
+	TrainingCompleteMessageId: msg_goop_Dispersal
+	Icon: kaiju_goop/ability_icons/defense/Dispersal.png
+	DisplayName: Dispersal
+	Description: GOOP deals less damage, but has an increased chance to avoid attacks.
+	BulletPoint: Dodge: +15%
+	BulletPoint: Damage: -5%
+	
+
+	Script: kaiju_goop/scripts/dispersal.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 3
+	SkillIndex: 5
+	Requires: ability_goop_Diffuse
+
+	CostTime:	14
+	CostMoney:   70000
+	CostPower:   60
+	CostKnow:    80
+	CostOrganic: 50
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_AmorpheusForm
+	Name: ability_goop_AmorpheusForm
+	TrainingCompleteMessageId: msg_goop_AmorpheusForm
+	Icon: kaiju_goop/ability_icons/defense/AmorpheusForm.png
+	DisplayName: Amorphous Form
+	Description: For a period of time all enemies are much less likely to hit GOOP with attacks.
+	BulletPoint: Dodge: +50%
+	BulletPoint: Duration: 60s
+
+	Script: kaiju_goop/scripts/amorpheus_form.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 3
+	SkillIndex: 6
+	Requires: ability_goop_Diffuse
+	
+	ResourceHealth: 20
+	Cooldown: 120
+		
+	CostTime:	14
+	CostMoney:   70000
+	CostPower:   50
+	CostKnow:    60
+	CostOrganic: 60
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Solidity
+	Name: ability_goop_Solidity
+	TrainingCompleteMessageId: msg_goop_Solidity
+	Icon: kaiju_goop/ability_icons/defense/Solidity.png
+	DisplayName: Solidity
+	Description: For a short period of time GOOP moves slower, but has a massive increase to its armor.
+	BulletPoint: Armor: +10
+	BulletPoint: Speed: -80%
+	BulletPoint: Duration: 30s
+	
+
+	Script: kaiju_goop/scripts/solidity.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 1
+	Requires: ability_goop_Durability
+	
+	ResourceHealth: 25
+	Cooldown: 60
+	
+	CostTime:	24
+	CostMoney:	200000
+	CostPower:	200
+	CostKnow:	240
+	CostOrganic:200
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_NanoCohesion
+	Name: ability_goop_NanoCohesion
+	TrainingCompleteMessageId: msg_goop_NanoCohesion
+	Icon: kaiju_goop/ability_icons/defense/NanoCohesion.png
+	DisplayName: Nano-Cohesion
+	Description: GOOP's armor is further increased.
+	BulletPoint: Armor: +1
+
+	Script: kaiju_goop/scripts/nano_cohesion.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 2
+	Requires: ability_goop_Durability
+	
+	CostTime:	24
+	CostMoney:	280000
+	CostPower:	210
+	CostKnow:	260
+	CostOrganic:140
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_ReactiveSolidarity
+	Name: ability_goop_ReactiveSolidarity
+	TrainingCompleteMessageId: msg_goop_ReactiveSolidarity
+	Icon: kaiju_goop/ability_icons/defense/ReactiveSolidarity.png
+	DisplayName: Reactive Solidarity
+	Description: As GOOP's health decreases, its speed decreases and its armor increases. Triggers at 75%, 50%, and 25% of maximum health. 	
+
+	Script: kaiju_goop/scripts/reactive_solidarity.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 3
+	Requires: ability_goop_Stability
+	
+	CostTime:32
+	CostMoney:240000
+	CostPower:220
+	CostKnow:260
+	CostOrganic:160
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Redistribution
+	Name: ability_goop_Redistribution
+	TrainingCompleteMessageId: msg_goop_Redistribution
+	Icon: kaiju_goop/ability_icons/defense/Redistribution.png
+	DisplayName: Redistribution
+	Description: Whenever GOOP takes energy damage it gains a short term bonus to speed based on how much damage it took. Per 5 damage taken; +1% speed.
+	BulletPoint: Duration: 10s
+	BulletPoint: Max Speed Bonus: 100%
+	
+
+	Script: kaiju_goop/scripts/redistribution.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 4
+	Requires: ability_goop_Stability
+	
+	CostTime:28
+	CostMoney:240000
+	CostPower:250
+	CostKnow:230
+	CostOrganic:170
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_AbsorptionCarapace
+	Name: ability_goop_AbsorptionCarapace
+	TrainingCompleteMessageId: msg_goop_AbsorptionCarapace
+	Icon: kaiju_goop/ability_icons/defense/AbsorptionCarapace.png
+	DisplayName: Absorption Carapace
+	Description: "Absorption" healing increased.
+
+	
+
+	Script: kaiju_goop/scripts/absorption_carapace.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 5
+	Requires: ability_goop_AbsorptionMatrix
+
+	CostTime:24
+	CostMoney:290000
+	CostPower:290
+	CostKnow:290
+	CostOrganic:120
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_SplashDamage
+	Name: ability_goop_SplashDamage
+	TrainingCompleteMessageId: msg_goop_SplashDamage
+	Icon: kaiju_goop/ability_icons/defense/SplashDamage.png
+	DisplayName: Splash Damage
+	Description: When GOOP is attacked, it splashes targets around it. Damage dealt is based on the amount of damage taken. Deals 1 damage per 5 damage taken. 
+	BulletPoint: Area: 100m
+	
+
+	Script: kaiju_goop/scripts/splash_damage.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 6
+	Requires: ability_goop_AbsorptionMatrix
+	
+	CostTime:28
+	CostMoney:240000
+	CostPower:250
+	CostKnow:280
+	CostOrganic:140
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Assimilation
+	Name: ability_goop_Assimilation
+	TrainingCompleteMessageId: msg_goop_Assimilation
+	Icon: kaiju_goop/ability_icons/defense/Assimilation.png
+	DisplayName: Assimilation
+	Description: Whenever GOOP destroys an enemy unit with a melee attack it gains a small amount of health.
+	BulletPoint: Health: +5
+
+	Script: kaiju_goop/scripts/assimilation.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 7
+	Requires: ability_goop_Regenerative
+	
+	CostTime:28
+	CostMoney:270000
+	CostPower:260
+	CostKnow:250
+	CostOrganic:120
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_SlowRoll
+	Name: ability_goop_SlowRoll
+	TrainingCompleteMessageId: msg_goop_SlowRoll
+	Icon: kaiju_goop/ability_icons/defense/SlowRoll.png
+	DisplayName: Slow Roll
+	Description: For a period of time GOOP rolls along at half speed, gaining health.
+	BulletPoint: Speed: -50%
+	BulletPoint: Health: +5/s
+	BulletPoint: Duration: 45s
+
+	Script: kaiju_goop/scripts/slow_roll.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 8
+	Requires: ability_goop_Regenerative
+	
+	ResourceHealth: 5
+	Cooldown: 60
+	
+	CostTime:28
+	CostMoney:240000
+	CostPower:270
+	CostKnow:260
+	CostOrganic:120
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_AtomicDiffusion
+	Name: ability_goop_AtomicDiffusion
+	TrainingCompleteMessageId: msg_goop_AtomicDiffusion
+	Icon: kaiju_goop/ability_icons/defense/AtomicDiffusion.png
+	DisplayName: Atomic Diffusion
+	Description: For a period of time GOOP diffuses it's body and moves faster, cannot attack, and prevents all damage taken.
+	BulletPoint: Invulnerable:Cannot Attack
+	BulletPoint: Speed: +25%
+	BulletPoint: Duration: 30s
+	
+
+	Script: kaiju_goop/scripts/atomic_diffusion.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 9
+	Requires: ability_goop_Dispersal
+	
+	ResourceHealth: 50
+	Cooldown: 90
+	
+	CostTime:24
+	CostMoney:270000
+	CostPower:230
+	CostKnow:270
+	CostOrganic:170
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_SpoofGoop
+	Name: ability_goop_SpoofGoop
+	TrainingCompleteMessageId: msg_goop_SpoofGoop
+	Icon: kaiju_goop/ability_icons/defense/SpoofGoop.png
+	DisplayName: Spoof GOOP
+	Description: GOOP emits a signal that disrupts all missiles currently tracking it.
+	
+
+	Script: kaiju_goop/scripts/spoof_goop.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 10
+	Requires: ability_goop_Dispersal
+	
+	ResourceHealth: 20
+	Cooldown: 30
+	
+	CostTime:24
+	CostMoney:240000
+	CostPower:260
+	CostKnow:260
+	CostOrganic:140
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_MemoryGOOP
+	Name: ability_goop_MemoryGOOP
+	TrainingCompleteMessageId: msg_goop_MemoryGOOP
+	Icon: kaiju_goop/ability_icons/defense/MemoryGOOP.png
+	DisplayName: Memory GOOP
+	Description: When activated, GOOP's current state is recorded at the nanoscopic level. After a short time GOOP reverts to the previously recorded condition.
+	BulletPoint: Duration: 30s
+	
+	Script: kaiju_goop/scripts/memory_goop.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 11
+	Requires: ability_goop_AmorpheusForm
+	
+	Cooldown: 120
+	ResourceHealth: 20
+	
+	CostTime:28
+	CostMoney:220000
+	CostPower:220
+	CostKnow:250
+	CostOrganic:150
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Shed
+	Name: ability_goop_Shed
+	TrainingCompleteMessageId: msg_goop_Shed
+	Icon: kaiju_goop/ability_icons/defense/Shed.png
+	DisplayName: Shed
+	Description: If GOOP takes 5% or more of its health in damage, drop a GOOPball nearby that can be collected for health.
+	
+	Script: kaiju_goop/scripts/shed.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 4
+	SkillIndex: 12
+	Requires: ability_goop_AmorpheusForm
+	
+	CostTime:24
+	CostMoney:220000
+	CostPower:220
+	CostKnow:250
+	CostOrganic:170
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Crystallization
+	Name: ability_goop_Crystallization
+	TrainingCompleteMessageId: msg_goop_Crystallization
+	Icon: kaiju_goop/ability_icons/defense/Crystallization.png
+	DisplayName: Crystallization
+	Description: GOOPs speed is decreased and its armor is increased. 
+	BulletPoint: Speed: -15%
+	BulletPoint: Armor: +3
+
+	
+	Script: kaiju_goop/scripts/crystallization.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 1
+	Requires: ability_goop_Solidity
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_NanoPerfection
+	Name: ability_goop_NanoPerfection
+	TrainingCompleteMessageId: msg_goop_NanoPerfection
+	Icon: kaiju_goop/ability_icons/defense/NanoPerfection.png
+	DisplayName: Nano-Perfection
+	Description: GOOP's armor level is further increased.
+	BulletPoint: Armor: +2
+
+	
+	Script: kaiju_goop/scripts/nano_perfection.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 2
+	Requires: ability_goop_NanoCohesion
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_CastleGoop
+	Name: ability_goop_CastleGoop
+	TrainingCompleteMessageId: msg_goop_CastleGoop
+	Icon: kaiju_goop/ability_icons/defense/CastleGoop.png
+	DisplayName: Castle GOOP
+	Description:  When below 20% health GOOP will gain increased armor levels and health regeneration, remaining in effect until GOOPs health is restored to at least 50%.
+	BulletPoint: Armor: +5
+	BulletPoint: Health: +10/s
+	
+	Script: kaiju_goop/scripts/castle_goop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 3
+	Requires: ability_goop_ReactiveSolidarity
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Empower
+	Name: ability_goop_Empower
+	TrainingCompleteMessageId: msg_goop_Empower
+	Icon: kaiju_goop/ability_icons/defense/Empower.png
+	DisplayName: Empower
+	Description: "Redistribution" is upgraded. It now has a 2% bonus to speed and damage per level, to a maximum of 200%.
+
+	
+	Script: kaiju_goop/scripts/empower.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 4
+	Requires: ability_goop_Redistribution
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_MassMeals
+	Name: ability_goop_MassMeals
+	TrainingCompleteMessageId: msg_goop_MassMeals
+	Icon: kaiju_goop/ability_icons/defense/MassMeals.png
+	DisplayName: Mass Meals
+	Description: "Absorption" healing further increased on heavier damage.
+	Script: kaiju_goop/scripts/mass_meals.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 5
+	Requires: ability_goop_AbsorptionCarapace
+
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Goopsplosion
+	Name: ability_goop_Goopsplosion
+	TrainingCompleteMessageId: msg_goop_Goopsplosion
+	Icon: kaiju_goop/ability_icons/defense/Goopsplosion.png
+	DisplayName: GOOPsplosion
+	Description: When GOOP is attacked and hit for a large amount of damage it splashes targets around it. Damage dealt is based on the amount of damage taken.
+
+	Script: kaiju_goop/scripts/goopsplosion.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 6
+	Requires: ability_goop_SplashDamage
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_EngulfingForm
+	Name: ability_goop_EngulfingForm
+	TrainingCompleteMessageId: msg_goop_EngulfingForm
+	Icon: kaiju_goop/ability_icons/defense/EngulfingForm.png
+	DisplayName: Engulfing Form
+	Description: "Assimilation" is upgraded, it now includes buildings and has improved health gain.
+	BulletPoint: Health: +10
+	Script: kaiju_goop/scripts/engulfing_form.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 7
+	Requires: ability_goop_Assimilation
+	
+	CostTime:30
+	CostMoney:1400000
+	CostPower:1600
+	CostKnow:1600
+	CostOrganic:800
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Goopernaut
+	Name: ability_goop_Goopernaut
+	TrainingCompleteMessageId: msg_goop_Goopernaut
+	Icon: kaiju_goop/ability_icons/defense/Goopernaut.png
+	DisplayName: GOOPernaut
+	Description: "Slow Roll" is upgraded. It is now passive and permanent.
+	
+	Script: kaiju_goop/scripts/goopernaut.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 8
+	Requires: ability_goop_SlowRoll
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Goopnami
+	Name: ability_goop_Goopnami
+	TrainingCompleteMessageId: msg_goop_Goopnami
+	Icon: kaiju_goop/ability_icons/defense/Goopnami.png
+	DisplayName: GOOPnami
+	Description: For a few seconds GOOP transforms in to a flood of nanites, becomes invulnerable, and surges forward. 
+	BulletPoint: Duration: 5s
+	
+	Script: kaiju_goop/scripts/goopnami.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 9
+	Requires: ability_goop_AtomicDiffusion
+
+	Cooldown: 120
+	ResourceHealth: 30
+	
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_GoopedUp
+	Name: ability_goop_GoopedUp
+	TrainingCompleteMessageId: msg_goop_GoopedUp
+	Icon: kaiju_goop/ability_icons/defense/GoopedUp.png
+	DisplayName: GOOPed Up
+	Description: When Activated, all nearby homing missiles are redirected to a nearby enemy.
+	BulletPoint: Range: 500m
+	
+	Script: kaiju_goop/scripts/gooped_up.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 10
+	Requires: ability_goop_SpoofGoop
+	
+	Cooldown: 45
+	ResourceHealth: 35
+	
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Replicate
+	Name: ability_goop_Replicate
+	TrainingCompleteMessageId: msg_goop_Replicate
+	Icon: kaiju_goop/ability_icons/defense/Replicate.png
+	DisplayName: Replicate
+	Description: "Memory GOOP" is upgraded. Upon reverting, it will now restore GOOP to life if dead.
+	BulletPoint: Duration: 30s
+	
+	Script: kaiju_goop/scripts/replicate.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 11
+	Requires: ability_goop_MemoryGOOP
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_GoopPoop
+	Name: ability_goop_GoopPoop
+	TrainingCompleteMessageId: msg_goop_GoopPoop
+	Icon: kaiju_goop/ability_icons/defense/GoopPoop.png
+	DisplayName: GOOP POOP
+	Description: While GOOP is at full health it will regularly leave behind GOOPballs that can be collected for health.
+
+
+	
+	Script: kaiju_goop/scripts/goop_poop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 1
+	SkillTier: 5
+	SkillIndex: 12
+	Requires: ability_goop_Shed
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// DEFENSE END     ////////  META START
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Ability {
+	Identifier: ability_goop_RegeniGoop
+	Name: ability_goop_RegeniGoop
+	TrainingCompleteMessageId: msg_goop_RegeniGoop
+	Icon: kaiju_goop/ability_icons/metabolism/RegeniGoop.png
+	DisplayName: RegeniGOOP
+	Description: Self-repairing nanites provide a small amount of health regeneration.
+	BulletPoint: Health: +1/s 
+	Script: kaiju_goop/scripts/regenigoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 1
+	SkillIndex: 1
+	
+	CostTime:	4
+	CostMoney:   10000
+	CostPower:   5
+	CostKnow:    10
+	CostOrganic: 20
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_Goopnormasaurus1
+	Name: ability_goop_Goopnormasaurus1
+	TrainingCompleteMessageId: msg_goop_Goopnormasaurus1
+	Icon: kaiju_goop/ability_icons/metabolism/Goopnormasaurus1.png
+	DisplayName: GOOPnormasaurus
+	Description: For a short time GOOP mimics the form of the machine Kaiju, Ginormasaurus. GOOP's abilities are replaced by basic Ginormasaurus abilities.
+	BulletPoint: Duration: 30s 
+	Script: kaiju_goop/scripts/goopnormasaurus1.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop 
+
+	SkillQuad: 0
+	SkillTier: 2
+	SkillIndex: 1
+	Requires: ability_goop_RegeniGoop
+	
+	ResourceHealth: 25
+	Cooldown: 90
+	
+	CostTime:	9
+	CostMoney:   20000
+	CostPower:   15
+	CostKnow:    15
+	CostOrganic: 35
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Goopy1
+	Name: ability_goop_Goopy1
+	TrainingCompleteMessageId: msg_goop_Goopy1
+	Icon: kaiju_goop/ability_icons/metabolism/Goopy1.png
+	DisplayName: GOOPy
+	Description: For a short time GOOP mimics the form of the nature Kaiju, Shrubby. GOOP's abilities are replaced by basic Shrubby abilities.
+	BulletPoint: Duration: 30s
+	Script: kaiju_goop/scripts/goopy1.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop 
+
+	SkillQuad: 0
+	SkillTier: 2
+	SkillIndex: 2
+	Requires: ability_goop_RegeniGoop
+	
+	ResourceHealth: 25
+	Cooldown: 90
+	
+	CostTime:	9
+	CostMoney:   20000
+	CostPower:   15
+	CostKnow:    15
+	CostOrganic: 35
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Armagoopdon1
+	Name: ability_goop_Armagoopdon1
+	TrainingCompleteMessageId: msg_goop_Armagoopdon1
+	Icon: kaiju_goop/ability_icons/metabolism/Armagoopdon1.png
+	DisplayName: ArmaGOOPdon
+	Description: For a short time GOOP mimics the form of the mutation Kaiju, Armagordon. GOOP's abilities are replaced by basic Armagordon abilities.
+	BulletPoint: Duration: 30s
+	
+
+	Script: kaiju_goop/scripts/armagoopdon1.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop 
+
+	SkillQuad: 0
+	SkillTier: 2
+	SkillIndex: 3
+	Requires: ability_goop_RegeniGoop
+	
+	ResourceHealth: 25
+	Cooldown: 90
+	
+	CostTime:	9
+	CostMoney:   20000
+	CostPower:   15
+	CostKnow:    15
+	CostOrganic: 35
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Goopnormasaurus2
+	Name: ability_goop_Goopnormasaurus2
+	TrainingCompleteMessageId: msg_goop_Goopnormasaurus2
+	Icon: kaiju_goop/ability_icons/metabolism/Goopnormasaurus2.png
+	DisplayName: GOOPnormasaurus II
+	Description: For a short time GOOP mimics the form of the machine Kaiju, Ginormasaurus. GOOP's abilities are replaced by low-level Ginormasaurus abilities.
+	BulletPoint: Duration: 45s
+	
+
+	Script: kaiju_goop/scripts/goopnormasaurus2.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 3
+	SkillIndex: 1
+	Requires: ability_goop_Goopnormasaurus1
+
+	ResourceHealth: 50
+	Cooldown: 90
+	
+	CostTime:	8
+	CostMoney:   60000
+	CostPower:   50
+	CostKnow:    50
+	CostOrganic: 70
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Dismantlers
+	Name: ability_goop_Dismantlers
+	TrainingCompleteMessageId: msg_goop_Dismantlers
+	Icon: kaiju_goop/ability_icons/metabolism/Dismantlers.png
+	DisplayName: Dismantlers
+	Description: Specialized nano-robots dismantle all they touch, giving the Kaiju a bonus to Melee damage.
+	BulletPoint: Melee Damage: +20%
+	
+	Script: kaiju_goop/scripts/dismantlers.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 3
+	SkillIndex: 2
+	Requires: ability_goop_Goopnormasaurus1
+
+	CostTime:    17
+	CostMoney:   50000
+	CostPower:   50
+	CostKnow:    60
+	CostOrganic: 60
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_Goopy2
+	Name: ability_goop_Goopy2
+	TrainingCompleteMessageId: msg_goop_Goopy2
+	Icon: kaiju_goop/ability_icons/metabolism/Goopy2.png
+	DisplayName: GOOPy II
+	Description: For a short time GOOP mimics the form of the nature Kaiju, Shrubby. GOOP's abilities are replaced by low-level Shrubby abilities.
+	BulletPoint: Duration: 45s
+	
+	Script: kaiju_goop/scripts/goopy2.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 3
+	SkillIndex: 3
+	Requires: ability_goop_Goopy1
+	
+	ResourceHealth: 50
+	Cooldown: 90
+
+	CostTime:	14
+	CostMoney:   60000
+	CostPower:   80
+	CostKnow:    90
+	CostOrganic: 50
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_NanoDensifiers
+	Name: ability_goop_NanoDensifiers
+	TrainingCompleteMessageId: msg_goop_NanoDensifiers
+	Icon: kaiju_goop/ability_icons/metabolism/NanoDensifiers.png
+	DisplayName: Nano Densifiers
+	Description: GOOP's density is increased, providing a bonus to maximum health.
+	BulletPoint: Health: +20%
+
+	Script: kaiju_goop/scripts/nano_densifiers.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 3
+	SkillIndex: 4
+	Requires: ability_goop_Goopy1
+
+	CostTime:	14
+	CostMoney:   70000
+	CostPower:   80
+	CostKnow:    70
+	CostOrganic: 30
+	CostPurple:  0
+
+}
+
+Ability {
+	Identifier: ability_goop_Armagoopdon2
+	Name: ability_goop_Armagoopdon2
+	TrainingCompleteMessageId: msg_goop_Armagoopdon2
+	Icon: kaiju_goop/ability_icons/metabolism/Armagoopdon2.png
+	DisplayName: ArmaGOOPdon II
+	Description: For a short time GOOP mimics the form of the mutation Kaiju, Armagordon. GOOP's abilities are replaced by low-level Armagordon abilities.
+	BulletPoint: Duration: 45s
+
+	
+
+	Script: kaiju_goop/scripts/armagoopdon2.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 3
+	SkillIndex: 5
+	Requires: ability_goop_Armagoopdon1
+	
+	ResourceHealth: 50
+	Cooldown: 90
+
+	CostTime:	14
+	CostMoney:   70000
+	CostPower:   60
+	CostKnow:    80
+	CostOrganic: 50
+	CostPurple:  0
+}
+
+
+
+Ability {
+	Identifier: ability_goop_Gooplings
+	Name: ability_goop_Gooplings
+	TrainingCompleteMessageId: msg_goop_Gooplings
+	Icon: kaiju_goop/ability_icons/metabolism/Gooplings.png
+	DisplayName: GOOP-lings
+	Description: Creates a GOOPling that will attack the Kaiju's enemies until it dies.
+
+	Script: kaiju_goop/scripts/gooplings.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 3
+	SkillIndex: 6
+	Requires: ability_goop_Armagoopdon1
+	
+	ResourceHealth: 15
+	Cooldown: 20
+		
+	CostTime:	14
+	CostMoney:   70000
+	CostPower:   50
+	CostKnow:    60
+	CostOrganic: 60
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Goopnormasaurus3
+	Name: ability_goop_Goopnormasaurus3
+	TrainingCompleteMessageId: msg_goop_Goopnormasaurus3
+	Icon: kaiju_goop/ability_icons/metabolism/Goopnormasaurus3.png
+	DisplayName: GOOPnormasaurus III
+	Description: For a short time GOOP mimics the form of the machine Kaiju, Ginormasaurus. GOOP's abilities are replaced by mid-level Ginormasaurus abilities.
+	BulletPoint: Duration: 60s
+	
+
+	Script: kaiju_goop/scripts/goopnormasaurus3.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 1
+	Requires: ability_goop_Goopnormasaurus2
+	
+	ResourceHealth: 75
+	Cooldown: 90
+	
+	CostTime:	24
+	CostMoney:	200000
+	CostPower:	200
+	CostKnow:	240
+	CostOrganic:200
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_NanoBooster
+	Name: ability_goop_NanoBooster
+	TrainingCompleteMessageId: msg_goop_NanoBooster
+	Icon: kaiju_goop/ability_icons/metabolism/NanoBooster.png
+	DisplayName: Nano Booster
+	Description: GOOPs abilities recover faster. Ability cooldown reduced.
+	BulletPoint: Cooldown: -15%
+	Script: kaiju_goop/scripts/nano_booster.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 2
+	Requires: ability_goop_Goopnormasaurus2
+	
+	CostTime:	24
+	CostMoney:	280000
+	CostPower:	210
+	CostKnow:	260
+	CostOrganic:140
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Disassemblers
+	Name: ability_goop_Disassemblers
+	TrainingCompleteMessageId: msg_goop_Disassemblers
+	Icon: kaiju_goop/ability_icons/metabolism/Disassemblers.png
+	DisplayName: Disassemblers
+	Description: The "Dismantlers" are improved, giving the Kaiju more of a bonus to Melee damage.
+	BulletPoint: Melee Damage: +25%
+	
+
+	Script: kaiju_goop/scripts/disassemblers.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 3
+	Requires: ability_goop_Dismantlers
+	
+	CostTime:32
+	CostMoney:240000
+	CostPower:220
+	CostKnow:260
+	CostOrganic:160
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Hunger
+	Name: ability_goop_Hunger
+	TrainingCompleteMessageId: msg_goop_Hunger
+	Icon: kaiju_goop/ability_icons/metabolism/Hunger.png
+	DisplayName: Hunger
+	Description: Increases the overall damage done by GOOP's DoT (damage over time) effects.
+	BulletPoint: DoT Damage: +15%
+	
+
+	Script: kaiju_goop/scripts/hunger.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 4
+	Requires: ability_goop_Dismantlers
+	
+	CostTime:28
+	CostMoney:240000
+	CostPower:250
+	CostKnow:230
+	CostOrganic:170
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Goopy3
+	Name: ability_goop_Goopy3
+	TrainingCompleteMessageId: msg_goop_Goopy3
+	Icon: kaiju_goop/ability_icons/metabolism/Goopy3.png
+	DisplayName: GOOPy III
+	Description: For a short time GOOP mimics the form of the nature Kaiju, Shrubby. GOOP's abilities are replaced by mid-level Shrubby abilities.
+	BulletPoint: Duration: 60s
+	
+
+	Script: kaiju_goop/scripts/goopy3.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 5
+	Requires: ability_goop_Goopy2
+	
+	ResourceHealth: 75
+	Cooldown: 90
+
+	CostTime:24
+	CostMoney:290000
+	CostPower:290
+	CostKnow:290
+	CostOrganic:120
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_RecomboGoop
+	Name: ability_goop_RecomboGoop
+	TrainingCompleteMessageId: msg_goop_RecomboGoop
+	Icon: kaiju_goop/ability_icons/metabolism/RecomboGoop.png
+	DisplayName: RecomboGOOP
+	Description: GOOP's nano-structure replicates faster, providing health regeneration.
+	BulletPoint: Health: +3/s
+	
+
+	Script: kaiju_goop/scripts/recombogoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 6
+	Requires: ability_goop_Goopy2
+	
+	CostTime:28
+	CostMoney:240000
+	CostPower:250
+	CostKnow:280
+	CostOrganic:140
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_RepairaGoop
+	Name: ability_goop_RepairaGoop
+	TrainingCompleteMessageId: msg_goop_RepairaGoop
+	Icon: kaiju_goop/ability_icons/metabolism/RepairaGoop.png
+	DisplayName: RepairaGOOP
+	Description: For a short time GOOP goes in to a regenerative state moving at -75% speed.  At the end of the duration recovers all its missing health at the time of activation.
+	BulletPoint: Duration: 30s
+	
+
+	Script: kaiju_goop/scripts/repairagoop.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 7
+	Requires: ability_goop_NanoDensifiers
+	
+	Cooldown: 120
+	
+	CostTime:28
+	CostMoney:270000
+	CostPower:260
+	CostKnow:250
+	CostOrganic:120
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_NanoReserves
+	Name: ability_goop_NanoReserves
+	TrainingCompleteMessageId: msg_goop_NanoReserves
+	Icon: kaiju_goop/ability_icons/metabolism/NanoReserves.png
+	DisplayName: Nano Reserves
+	Description: More nanites means more health. GOOP has increased maximum health.
+	BulletPoint: Health: +100
+	Script: kaiju_goop/scripts/nano_reserves.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 8
+	Requires: ability_goop_NanoDensifiers
+	
+	CostTime:28
+	CostMoney:240000
+	CostPower:270
+	CostKnow:260
+	CostOrganic:120
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Armagoopdon3
+	Name: ability_goop_Armagoopdon3
+	TrainingCompleteMessageId: msg_goop_Armagoopdon3
+	Icon: kaiju_goop/ability_icons/metabolism/Armagoopdon3.png
+	DisplayName: ArmaGOOPdon III
+	Description: For a short time GOOP mimics the form of the mutation Kaiju, Armagordon. GOOP's abilities are replaced by mid-level Armagordon abilities.
+	BulletPoint: Duration: 60s
+	
+
+	Script: kaiju_goop/scripts/armagoopdon3.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 9
+	Requires: ability_goop_Armagoopdon2
+	
+	ResourceHealth: 75
+	Cooldown: 90
+	
+	CostTime:24
+	CostMoney:270000
+	CostPower:230
+	CostKnow:270
+	CostOrganic:170
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_SpeedGoop
+	Name: ability_goop_SpeedGoop
+	TrainingCompleteMessageId: msg_goop_SpeedGoop
+	Icon: kaiju_goop/ability_icons/metabolism/SpeedGoop.png
+	DisplayName: Speed GOOP
+	Description: GOOP moves faster, gaining movement speed.
+	BulletPoint: Speed: +20%
+	
+
+	Script: kaiju_goop/scripts/speed_goop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 10
+	Requires: ability_goop_Armagoopdon2
+	
+	CostTime:24
+	CostMoney:240000
+	CostPower:260
+	CostKnow:260
+	CostOrganic:140
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Denselings
+	Name: ability_goop_Denselings
+	TrainingCompleteMessageId: msg_goop_Denselings
+	Icon: kaiju_goop/ability_icons/metabolism/Denselings.png
+	DisplayName: Denselings
+	Description: Created GOOPlings are now more durable, with increased health.
+	BulletPoint: Health: +10
+
+	
+	Script: kaiju_goop/scripts/denselings.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 11
+	Requires: ability_goop_Gooplings
+	
+	CostTime:28
+	CostMoney:220000
+	CostPower:220
+	CostKnow:250
+	CostOrganic:150
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_RecycloGoop
+	Name: ability_goop_RecycloGoop
+	TrainingCompleteMessageId: msg_goop_RecycloGoop
+	Icon: kaiju_goop/ability_icons/metabolism/RecycloGoop.png
+	DisplayName: RecycloGOOP
+	Description: When a GOOPling dies it leaves behind a GOOPball that can be collected for health.
+
+	
+	Script: kaiju_goop/scripts/recyclogoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 4
+	SkillIndex: 12
+	Requires: ability_goop_Gooplings
+	
+	CostTime:24
+	CostMoney:220000
+	CostPower:220
+	CostKnow:250
+	CostOrganic:170
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_Goopnormasaurus4
+	Name: ability_goop_Goopnormasaurus4
+	TrainingCompleteMessageId: msg_goop_Goopnormasaurus4
+	Icon: kaiju_goop/ability_icons/metabolism/Goopnormasaurus4.png
+	DisplayName: GOOPnormasaurus IV
+	Description: For a short time GOOP mimics the form of the machine Kaiju, Ginormasaurus. GOOP's abilities are replaced by high-level Ginormasaurus abilities.
+	BulletPoint: Duration: 60s
+
+	
+	Script: kaiju_goop/scripts/goopnormasaurus4.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 1
+	Requires: ability_goop_Goopnormasaurus3
+
+	ResourceHealth: 150
+	Cooldown: 90
+	
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+Ability {
+	Identifier: ability_goop_EnerGoop
+	Name: ability_goop_EnerGoop
+	TrainingCompleteMessageId: msg_goop_EnerGoop
+	Icon: kaiju_goop/ability_icons/metabolism/EnerGoop.png
+	DisplayName: EnerGOOP
+	Description: The Kaiju is infused with energy. While under 75% health, all of GOOP's abilities recover faster.
+	BulletPoint: Cooldown: -20%
+
+	
+	Script: kaiju_goop/scripts/energoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 2
+	Requires: ability_goop_NanoBooster
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Annihilators
+	Name: ability_goop_Annihilators
+	TrainingCompleteMessageId: msg_goop_Annihilators
+	Icon: kaiju_goop/ability_icons/metabolism/Annihilators.png
+	DisplayName: Annihilators
+	Description: Specialized nano-robots annihilate all they touch, giving the Kaiju even more of a bonus to melee damage.
+	BulletPoint: Melee Damage: +25%
+	
+	Script: kaiju_goop/scripts/annihilators.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 3
+	Requires: ability_goop_Disassemblers
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Ravenous
+	Name: ability_goop_Ravenous
+	TrainingCompleteMessageId: msg_goop_Ravenous
+	Icon: kaiju_goop/ability_icons/metabolism/Ravenous.png
+	DisplayName: Ravenous
+	Description: Massively increases the overall damage done by GOOPs DoT (damage over time) effects.
+	BulletPoint: DoT Damage: +50%
+	
+	Script: kaiju_goop/scripts/ravenous.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 4
+	Requires: ability_goop_Hunger
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Goopy4
+	Name: ability_goop_Goopy4
+	TrainingCompleteMessageId: msg_goop_Goopy4
+	Icon: kaiju_goop/ability_icons/metabolism/Goopy4.png
+	DisplayName: GOOPy IV
+	Description: For a short time GOOP mimics the form of the nature Kaiju, Shrubby. GOOP's abilities are replaced by high-level Shrubby abilities.
+	BulletPoint: Duration: 60s	
+	
+	Script: kaiju_goop/scripts/goopy4.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 5
+	Requires: ability_goop_Goopy3
+
+	ResourceHealth: 150
+	Cooldown: 90
+
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_RevivaGoop
+	Name: ability_goop_RevivaGoop
+	TrainingCompleteMessageId: msg_goop_RevivaGoop
+	Icon: kaiju_goop/ability_icons/metabolism/RevivaGoop.png
+	DisplayName: RevivaGOOP
+	Description: The first time GOOP dies while attacking a city, it has a short amount of time to raise their health back up to at least 25%. If it succeeds, GOOP can continue the attack, otherwise GOOP dies as normal.
+	BulletPoint: Duration: 15s
+	
+	Script: kaiju_goop/scripts/revivagoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 6
+	Requires: ability_goop_RecomboGoop
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_ImmortaGoop
+	Name: ability_goop_ImmortaGoop
+	TrainingCompleteMessageId: msg_goop_ImmortaGoop
+	Icon: kaiju_goop/ability_icons/metabolism/ImmortaGoop.png
+	DisplayName: ImmortaGOOP
+	Description: All nanites that make up GOOP and its GOOPlings replicate faster, gaining a small amount of health regeneration.
+	BulletPoint: Health: +3/s	
+	Script: kaiju_goop/scripts/immortagoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 7
+	Requires: ability_goop_RepairaGoop
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_SuperGoop
+	Name: ability_goop_SuperGoop
+	TrainingCompleteMessageId: msg_goop_SuperGoop
+	Icon: kaiju_goop/ability_icons/metabolism/SuperGoop.png
+	DisplayName: SuperGOOP
+	Description: Even more nanites means even more health. GOOP has highly increased maximum health.
+	BulletPoint: Health: +200
+	
+	Script: kaiju_goop/scripts/supergoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 8
+	Requires: ability_goop_NanoReserves
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_Armagoopdon4
+	Name: ability_goop_Armagoopdon4
+	TrainingCompleteMessageId: msg_goop_Armagoopdon4
+	Icon: kaiju_goop/ability_icons/metabolism/Armagoopdon4.png
+	DisplayName: ArmaGOOPdon IV
+	Description: For a short time GOOP mimics the form of the mutation Kaiju, Armagordon. GOOP's abilities are replaced by high-level Armagordon abilities.
+	BulletPoint: Duration: 60s
+	
+	Script: kaiju_goop/scripts/armagoopdon4.lua
+
+	IsPassive: false
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 9
+	Requires: ability_goop_Armagoopdon3
+
+	Cooldown: 90
+	ResourceHealth: 150
+	
+	CostTime:    40
+	CostMoney:   1200000
+	CostPower:   1250
+	CostKnow:    1200
+	CostOrganic: 1000
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_StealthGoop
+	Name: ability_goop_StealthGoop
+	TrainingCompleteMessageId: msg_goop_StealthGoop
+	Icon: kaiju_goop/ability_icons/metabolism/StealthGoop.png
+	DisplayName: Stealth GOOP
+	Description: GOOP moves swiftly and silently across the planet. Faster movement speed on the strategic map, and GOOP is harder for cities to detect.
+	BulletPoint: Signature: -20%
+	BulletPoint: Map Speed: +20%
+	
+	Script: kaiju_goop/scripts/stealth_goop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 10
+	Requires: ability_goop_SpeedGoop
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_ReGoop
+	Name: ability_goop_ReGoop
+	TrainingCompleteMessageId: msg_goop_ReGoop
+	Icon: kaiju_goop/ability_icons/metabolism/ReGoop.png
+	DisplayName: ReGOOP
+	Description: GOOPlings just don't know when to quit. 25% chance GOOPlings will re-spawn when they die.
+
+	
+	Script: kaiju_goop/scripts/regoop.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 11
+	Requires: ability_goop_Denselings
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}
+
+
+Ability {
+	Identifier: ability_goop_TheGoopening
+	Name: ability_goop_TheGoopening
+	TrainingCompleteMessageId: msg_goop_TheGoopening
+	Icon: kaiju_goop/ability_icons/metabolism/TheGoopening.png
+	DisplayName: The GOOPening
+	Description: The Kaiju creates new GOOPlings every 5-15 seconds whenever it is at full health. 
+
+	
+	Script: kaiju_goop/scripts/the_goopening.lua
+
+	IsPassive: true
+
+	Kaiju: avatar_goop
+
+	SkillQuad: 0
+	SkillTier: 5
+	SkillIndex: 12
+	Requires: ability_goop_RecycloGoop
+	
+	CostTime:    40
+	CostMoney:   1400000
+	CostPower:   1300
+	CostKnow:    1300
+	CostOrganic: 600
+	CostPurple:  0
+}

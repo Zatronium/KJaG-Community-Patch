@@ -1,30 +1,39 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local durationTime = 20;
 local energyReduction = 0.5;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
 	--local view = a:getView();
 
-	avatar:addPassiveScript(this);
-	startAbilityUse(avatar, abilityData.name);
-	local aura = createAura(this, avatar, 0);
+	kaiju:addPassiveScript(this);
+	startAbilityUse(kaiju, abilityData.name);
+	local aura = createAura(this, kaiju, 0);
 	aura:setTickParameters(durationTime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
 	aura:setTarget(a);
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	view:attachEffectToNode("root", "effects/energyAbsorber_coreElectric.plist",durationTime, 0, 0, true, false);
 	playSound("DispersalField");
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationTime then	
-		endAbilityUse(avatar, abilityData.name);
-		avatar:removePassiveScript(this);
-		aura:getOwner():detachAura(aura);
+		endAbilityUse(kaiju, abilityData.name);
+		kaiju:removePassiveScript(this);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 

@@ -1,6 +1,9 @@
+
+
 require 'scripts/common'
 
-local avatar = nil;
+-- Global values.
+local kaiju = nil;
 local target = nil;
 
 local weaponRange = 1000;
@@ -8,20 +11,20 @@ local weaponRange = 1000;
 local debuffTime = 3;
 
 function onUse(a, t)
-	avatar = a;
+	kaiju = a;
 	a:setWeakTarget(t);
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), t:getWorldPosition());
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_beam");
-	registerAnimationCallback(this, avatar, "attack");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), t:getWorldPosition());
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_beam");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
-	target = avatar:getWeakTarget();
+	target = kaiju:getWeakTarget();
 	if not canTarget(target) then
 		return;
 	end
-	local view = avatar:getView();
+	local view = kaiju:getView();
     
 	local pos = getScenePosition(target:getWorldPosition());
 	
@@ -44,14 +47,15 @@ function onAnimationEvent(a)
 	
 --	target:attachEffect("effects/onFreeze.plist"  ,debuffTime, true);
 	
-	applyDamageWithWeapon(avatar, target, "weapon_EyeBeam1");
+	applyDamageWithWeapon(kaiju, target, "weapon_EyeBeam1");
 end
 
 function debuff(aura)
+	if not aura then return end
 	if aura:getTag() == 'minimech_first' then
 		aura:setTag('minimech_second');
 		local val = 0.9;
-		if target:hasStat("damage_amplify") == true then
+		if target:hasStat("damage_amplify") then
 			val = val * target:getStat("damage_amplify");
 		else
 			target:addStat("damage_amplify", 1.0);
@@ -61,6 +65,11 @@ function debuff(aura)
 		local val = target:getStat("damage_amplify");
 		val = val / 0.9;
 		target:setStat("damage_amplify", val);
-		aura:getOwner():detachAura(aura);
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return
+		else
+			self:detachAura(aura)
+		end
 	end
 end

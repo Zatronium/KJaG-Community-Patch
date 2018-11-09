@@ -1,9 +1,9 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local laserDamage = 0.5;
 function onSet(a)
-	avatar = a;
+	kaiju = a;
 	a:addPassiveScript(this);
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/glitter.plist", -1, 0, 0, true, false);

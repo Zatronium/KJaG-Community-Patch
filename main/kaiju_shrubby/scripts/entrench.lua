@@ -1,29 +1,35 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local bonusArmor = 50;
 local duration = 5;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_root");
+	kaiju = a;
+	playAnimation(kaiju, "ability_root");
 	playSound("shrubby_ability_Entrench");
-	avatar:modStat("Armor", bonusArmor);
-	avatar:setImmobile(true);
-	startAbilityUse(avatar, abilityData.name);
-	local aura = createAura(this, avatar, 0);
+	kaiju:modStat("Armor", bonusArmor);
+	kaiju:setImmobile(true);
+	startAbilityUse(kaiju, abilityData.name);
+	local aura = createAura(this, kaiju, 0);
 	aura:setTickParameters(duration, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 end
 
 function onTick(aura)
-	
+	if not aura then return end
 	
 	if aura:getElapsed() >= duration then
-		endAbilityUse(avatar, abilityData.name);
-		avatar:setImmobile(false);
-		avatar:modStat("Armor", -bonusArmor);
-		playAnimation(avatar, "ability_unroot");
-		aura:getOwner():detachAura(aura);
+		endAbilityUse(kaiju, abilityData.name);
+		kaiju:setImmobile(false);
+		kaiju:modStat("Armor", -bonusArmor);
+		playAnimation(kaiju, "ability_unroot");
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

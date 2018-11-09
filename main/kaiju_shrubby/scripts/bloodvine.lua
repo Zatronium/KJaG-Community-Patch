@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local weapon = "weapon_shrubby_bloodvine";
 local bWidth = 120;
 local heal_per_target = 30;
@@ -8,10 +8,10 @@ local weaponRange = 0;
 local startPos = nil;
 local targetsSet = false;
 function onUse(a)
-	avatar = a;
-	--playAnimation(avatar, "ability_project_2H");
-	playAnimation(avatar, "stomp");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	--playAnimation(kaiju, "ability_project_2H");
+	playAnimation(kaiju, "stomp");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
@@ -19,15 +19,15 @@ function onAnimationEvent(a)
 	weaponRange = getWeaponRange(weapon);
 	local beamWidth = bWidth;
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
 
-	startPos = avatar:getWorldPosition();
-	local beamFacing = avatar:getWorldFacing();
+	startPos = kaiju:getWorldPosition();
+	local beamFacing = kaiju:getWorldFacing();
 	local beamEnd = getBeamEndWithFacing(startPos, weaponRange, beamFacing);
 	local targets = getTargetsInBeam(startPos, beamEnd, beamWidth, targetFlags);
 	local hastargets = false;
 	for t in targets:iterator() do
-		if not isSameEntity(t, avatar) then
+		if not isSameEntity(t, kaiju) then
 			local aura = createAura(this, t, 0);
 			aura:setTickParameters(0.2, 0);
 			aura:setScriptCallback(AuraEvent.OnTick, "onTick");
@@ -40,12 +40,11 @@ function onAnimationEvent(a)
 	end
 	targetsSet = true;
 	playSound("shrubby_ability_BloodVine");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end
 
 function onTick(aura)
-	if targetsSet then
-		avatar = getPlayerAvatar();
+	if targetsSet and aura then
 		local t = aura:getTarget();
 		local pos = t:getWorldPosition();
 		local d = getDistanceFromPoints(pos, startPos);
@@ -59,11 +58,17 @@ function onTick(aura)
 					if heal > lifeleft then
 						heal = lifeleft;
 					end
-					avatar:gainHealth(heal);
+					kaiju:gainHealth(heal);
 				end
-				applyDamageWithWeapon(avatar, t, weapon);
+				applyDamageWithWeapon(kaiju, t, weapon);
 			end
-			aura:getOwner():detachAura(aura);
+			
+			local self = aura:getOwner()
+			if not self then
+				aura = nil return;
+			else
+				self:detachAura(aura);
+			end
 		end
 	end
 end

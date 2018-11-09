@@ -1,6 +1,6 @@
 require 'scripts/common'
 
-local avatar = nil;
+local kaiju = nil;
 
 local range = 500;
 local disableDuration = 25;
@@ -9,7 +9,7 @@ local freezeDuration = 5;
 local shieldDuration = 30;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	startAbilityUse(a, abilityData.name);
 	a:setPassive("shield", 200);
 	abilityEnabled(a, abilityData.name, false);
@@ -24,14 +24,23 @@ function onUse(a)
 	local shieldAura = Aura.create(this, a);
 	shieldAura:setTag('saturation_field');
 	shieldAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
-	shieldAura:setTickParameters(shieldDuration, 0); --updates every second                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+	shieldAura:setTickParameters(shieldDuration, 0) -- Zat: This line was corrupted
 	shieldAura:setTarget(a); -- required so aura doesn't autorelease
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= shieldDuration then
-		avatar:endShield(false);
-		aura:getOwner():detachAura(aura);
+		kaiju:endShield(false);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 
@@ -40,12 +49,12 @@ function onShieldEnd(a, broken)
 	abilityEnabled(a, "Force Shield", true); -- turn on force shield 
 	abilityEnabled(a, "Blackout", true);
 	endAbilityUse(a, abilityData.name);
-	if broken == true then
+	if broken then
 		local view = a:getView();
 		view:attachEffectToNode("root", "effects/saturationField_burst.plist", 0, 0, 0, true, false);
 		view:attachEffectToNode("root", "effects/saturationField_shockwave.plist", 0, 0, 0, true, false);
 		view:pauseAnimation(freezeDuration);
-		local worldPos = avatar:getWorldPosition();
+		local worldPos = kaiju:getWorldPosition();
 		local targets = getTargetsInRadius(worldPos, range, EntityFlags(EntityType.Vehicle));
 		for t in targets:iterator() do
 			local v = entityToVehicle(t);

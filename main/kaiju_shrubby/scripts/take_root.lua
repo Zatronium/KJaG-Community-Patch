@@ -1,54 +1,54 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local organicPerSecond = 10;
 local healAura = nil;
 local passiveName = "take_root"
 function onUse(a)
-	avatar = a;
-	local curr = avatar:hasPassive(passiveName); -- only need to check 1, we're assuming everything is cleaned and created at the same time
+	kaiju = a;
+	local curr = kaiju:hasPassive(passiveName); -- only need to check 1, we're assuming everything is cleaned and created at the same time
 	if curr == 0 then --if off then on
-		onON(avatar);
+		onON(kaiju);
 	else -- else if on then off
-		onOFF(avatar);
+		onOFF(kaiju);
 	end
 end
 
-function onON(a)
+function onON()
 	playSound("shrubby_ability_TakeRoot");
-	useResources(avatar, abilityData.name);
-	abilityInUse(avatar, abilityData.name, true);
-	avatar:setImmobile(true);
+	useResources(kaiju, abilityData.name);
+	abilityInUse(kaiju, abilityData.name, true);
+	kaiju:setImmobile(true);
 	
-	healAura = createAura(this, avatar, 0);
+	healAura = createAura(this, kaiju, 0);
 	healAura:setTickParameters(1, 0);
 	healAura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	healAura:setTarget(avatar);
+	healAura:setTarget(kaiju);
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	view:setAnimation("ability_root", false);
 	view:addAnimation("idle", true);
 	
 	local effectID = view:attachEffectToNode("root", "effects/take_root_regen.plist", -1, 0, 0, false, true);
-	a:setPassive(passiveName, effectID); -- use a differnet core shield with the next id eg "core_shield_1"	
+	kaiju:setPassive(passiveName, effectID); -- use a differnet core shield with the next id eg "core_shield_1"	
 end
 
-function onOFF(a)
-	abilityInUse(avatar, abilityData.name, false);
-	startOnlyCooldown(a, abilityData.name);
-	avatar:setImmobile(false);
-	avatar:detachAura(healAura);
-	local view = avatar:getView();
+function onOFF()
+	abilityInUse(kaiju, abilityData.name, false);
+	startOnlyCooldown(kaiju, abilityData.name);
+	kaiju:setImmobile(false);
+	kaiju:detachAura(healAura);
+	local view = kaiju:getView();
 	view:setAnimation("ability_unroot", false);
 	view:addAnimation("idle", true);
 	
-	view:endEffect(a:hasPassive(passiveName)); -- make sure to do these 2 lines for each "core_sheld_x" you used
-	a:removePassive(passiveName, 0); -- make sure to do these 2 lines for each "core_sheld_x" you used
+	view:endEffect(kaiju:hasPassive(passiveName)); -- make sure to do these 2 lines for each "core_sheld_x" you used
+	kaiju:removePassive(passiveName, 0); -- make sure to do these 2 lines for each "core_sheld_x" you used
 end
 
 function onTick(aura)
-	if avatar:isImmobile() then
-		avatar:gainOrganic(organicPerSecond);
+	if kaiju:isImmobile() then
+		kaiju:gainOrganic(organicPerSecond);
 	else
-		onOFF(avatar);
+		onOFF();
 	end
 end

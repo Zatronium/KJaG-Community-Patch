@@ -4,7 +4,7 @@ require 'scripts/avatars/common'
 -- if health < 10 instant kill.
 -- else punch dealing 25 damage.
 
-local avatar = nil;
+local kaiju = nil;
 local alevel = 1;
 
 function calcAttackDamage()
@@ -19,8 +19,8 @@ function calcAttackDamage()
 end
 
 function onInitStat(a, lv)
-	if not avatar then
-		avatar = a;
+	if not kaiju then
+		kaiju = a;
 		alevel = lv;
 		
 		local stomp = a:hasPassive("stomp_damage");;
@@ -51,27 +51,28 @@ function onAttack(a)
 		buildingThreshhold = 50;
 	end
 	
-	local t = a:getControl():getTarget();	
+	local t = a:getControl():getTarget();
 	local currentHealth = t:getStat("Health");
 	if currentHealth > 0 then
 		local maxHealth = t:getStat("MaxHealth");
 		if getEntityType(t) == EntityType.Zone and maxHealth <= buildingThreshhold then 
 			t:modStat("Health", -maxHealth); 
 		else
-			v = entityToVehicle(t);
-			if getEntityType(t) == EntityType.Vehicle and v then -- is vehicle						
-					if v:isAir() then -- is air
-						playAnimation(a, "punch_crit");
-					elseif alevel == 1 then -- is ground 
+			if getEntityType(t) == EntityType.Vehicle then -- is vehicle						
+				v = entityToVehicle(t);
+				if not v then return end
+				if v:isAir() then -- is air
+					playAnimation(a, "punch_crit");
+				elseif alevel == 1 then -- is ground 
+					playAnimation(a, "stomp");
+				else
+					local animRand = math.random(1, 3);
+					if animRand == 1 then
 						playAnimation(a, "stomp");
 					else
-						local animRand = math.random(1, 3);
-						if animRand == 1 then
-							playAnimation(a, "stomp");
-						else
-							playAnimation(a, "stomp");
-						end
+						playAnimation(a, "stomp");
 					end
+				end
 			elseif alevel == 1 or alevel == 2 then-- is zone
 				local animRand = math.random(1, 4);
 				if animRand == 1 then	
@@ -99,12 +100,16 @@ function onAttack(a)
 	end
 end
 
+function getLevel()
+	return alevel
+end
+
 function onStatChanged(e, stat, prev, val)
 	playerStatChanged(e, stat, prev, val);
 end
 
 function onStomp(a, inwater)
-	if inwater == true then
+	if inwater then
 		playSound("gino_footfall_water");
 	else
 		playSound("gino_footfall_land");
@@ -127,8 +132,9 @@ function onStomp(a, inwater)
 end
 
 function onAnimAttack(a)
-	if a:getControl():hasTarget() then
-		local t = a:getControl():getTarget();
+	local ctrl = a:getControl()
+	if ctrl:hasTarget() then
+		local t = ctrl:getTarget();
 		local damage = a:modifyDamage(t, calcAttackDamage());
 		if getEntityType(t) == EntityType.Zone then
 			playSound("building_hit");		

@@ -1,12 +1,12 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local durationtime = 15;
 local negateChance = 0.2;
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_cast");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "ability_cast");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
@@ -15,8 +15,8 @@ function onAnimationEvent(a)
 	view:attachEffectToNode("root", "effects/blossomPetals.plist", durationtime, 0, 0, true, false);
 	a:addPassiveScript(this);
 	playSound("shrubby_ability_Blossoms");
-	startAbilityUse(avatar, abilityData.name);
-	local aura = createAura(this, avatar, 0);
+	startAbilityUse(kaiju, abilityData.name);
+	local aura = createAura(this, kaiju, 0);
 	aura:setTag("shrubby_blossoms");
 	aura:setTickParameters(durationtime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
@@ -24,16 +24,25 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= durationtime then
-		endAbilityUse(avatar, abilityData.name);
-		avatar:removePassiveScript(this);
-		aura:getOwner():detachAura(aura);
+		endAbilityUse(kaiju, abilityData.name);
+		kaiju:removePassiveScript(this);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end
 
 function onAvatarAbsorb(a, n, w)
 	if math.random(0, 1) < (negateChance) then
-		createFloatingText(avatar, "Negate", 255, 25, 255); --TODO Localization
+		createFloatingText(kaiju, "Negate", 255, 25, 255); --TODO Localization
 		n.x = 0;	
 	end
 end

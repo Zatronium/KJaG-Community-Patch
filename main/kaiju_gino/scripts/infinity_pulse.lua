@@ -1,10 +1,10 @@
 require 'scripts/common'
-local avatar = nil;
+local kaiju = nil;
 local duration = 20;
 
 function onUse(a)
-	avatar = a;
-	startAbilityUse(avatar, abilityData.name);
+	kaiju = a;
+	startAbilityUse(kaiju, abilityData.name);
 	a:setPassive("infinity_pulse", 1);
 	local timeAura = Aura.create(this, a);
 	timeAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
@@ -17,9 +17,18 @@ function onUse(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	if aura:getElapsed() >= duration then
-		avatar:setPassive("infinity_pulse", 0);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		kaiju:setPassive("infinity_pulse", 0);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end

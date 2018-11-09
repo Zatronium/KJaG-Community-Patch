@@ -1,6 +1,5 @@
 require 'scripts/avatars/common'
-local buffAura = nil;
-local avatar = nil;
+local kaiju = nil;
 
 local zoneRange = 100;
 local durationtime = 5;
@@ -11,35 +10,44 @@ local healthThreshold = 50;
 local explosioncd = false;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	explosioncd = false;
 	
-	local buffAura = createAura(this, avatar, 0);
+	local buffAura = createAura(this, kaiju, 0);
 	buffAura:setTickParameters(1, 0);
 	buffAura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	buffAura:setTarget(avatar);
+	buffAura:setTarget(kaiju);
 	
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
 	a:addPassiveScript(this);
 end
 
 function onZoneDestroyed(a, zone)
 	if not explosioncd then
-		local dist = getDistance(avatar, zone);
+		local dist = getDistance(kaiju, zone);
 		if dist < zoneRange and zone:getStat("MaxHealth") > healthThreshold then
 			explosioncd = true;
 			local zonePos = zone:getWorldPosition();
-			fireProjectileAtPoint(avatar, avatar:getWorldPosition(), zonePos, weapon);
+			fireProjectileAtPoint(kaiju, kaiju:getWorldPosition(), zonePos, weapon);
 		end
 	end
 end
 	
 function onTick(aura)
+	if not aura then
+		return
+	end
 	explosioncd = false;
 	if aura:getElapsed() >= durationtime then
-		avatar:removePassiveScript(this);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+		kaiju:removePassiveScript(this);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
 	end
 end	

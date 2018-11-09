@@ -1,7 +1,7 @@
 require 'scripts/avatars/common'
 
 -- Global values.
-local avatar = nil;
+local kaiju = nil;
 local targetPos = 0;
 local beamDuration = 1.0;
 local tickTime = 0.125;
@@ -18,26 +18,26 @@ local damageAmount = 50;
 local damageDecay = 5;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 function onTargets(position)
 	targetPos = position;
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_breath");
-	registerAnimationCallback(this, avatar, "start");
-	startCooldown(avatar, abilityData.name);
-	local empower = avatar:hasPassive("enhancement");
-	avatar:removePassive("enhancement", 0);
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_breath");
+	registerAnimationCallback(this, kaiju, "start");
+	startCooldown(kaiju, abilityData.name);
+	local empower = kaiju:hasPassive("enhancement");
+	kaiju:removePassive("enhancement", 0);
 	damageAmount = damageAmount + damageAmount * empower;
 end
 
 function onAnimationEvent(a)
-	avatar = a;
-	beamOrigin = avatar:getWorldPosition();
-	local view = avatar:getView();
+	kaiju = a;
+	beamOrigin = kaiju:getWorldPosition();
+	local view = kaiju:getView();
 	view:pauseAnimation(beamDuration);
 	
 	playSound("PiercingBeam");
@@ -47,7 +47,7 @@ function onAnimationEvent(a)
 	end
 	beamEnd = getBeamEndWithPoint(beamOrigin, getWeaponRange(weapon), targetPos);
 	
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	local sceneBeamOrigin = view:getAnimationNodePosition('breath_node');
 	sceneBeamEnd = getScenePosition(beamEnd);
 	sceneBeamFacing = getFacingAngle(sceneBeamOrigin, sceneBeamEnd);
@@ -56,7 +56,7 @@ function onAnimationEvent(a)
 	
 	local targets = getTargetsInBeam(beamOrigin, beamEnd, 35, EntityFlags(EntityType.Vehicle, EntityType.Avatar, EntityType.Zone));
 	for t in targets:iterator() do
-		if damageAmount > 0 and (not isSameEntity(t, avatar)) then
+		if damageAmount > 0 and t and not isSameEntity(t, kaiju) then
 			fired = true;
 			local pos = getScenePosition(t:getWorldPosition());
 		
@@ -72,8 +72,8 @@ function onAnimationEvent(a)
 			createEffect("effects/explosion_SparkLayer.plist",		pos);
 			createEffect("effects/explosion_SparkFireLayer.plist",	pos);
 			
-			applyFire(avatar, t, 0.75);
-			applyDamageWithWeaponDamage(avatar, t, weapon, damageAmount);
+			applyFire(kaiju, t, 0.75);
+			applyDamageWithWeaponDamage(kaiju, t, weapon, damageAmount);
 							
 			damageAmount = damageAmount - damageDecay;
 		end

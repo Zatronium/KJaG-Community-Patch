@@ -1,16 +1,16 @@
 require 'scripts/avatars/common'
 
-local avatar = nil;
+local kaiju = nil;
 local aoeRange = 500;
 
 local fearChance = 50;
 local fearDuration = 5;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_cast");
+	kaiju = a;
+	playAnimation(kaiju, "ability_cast");
 	local view = a:getView();
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 	view:attachEffectToNode("root", "effects/terrorize_back.plist",0, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/terrorize_front.plist",0, 0, 0, true, false);
 
@@ -32,5 +32,5 @@ function onUse(a)
 	end
 		
 --	playSound("shrubby_ability_VineWave");
-	startCooldown(avatar, abilityData.name);	
+	startCooldown(kaiju, abilityData.name);	
 end

@@ -1,5 +1,5 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local buildingMult = 1;
 local rangeMult = 1;
 

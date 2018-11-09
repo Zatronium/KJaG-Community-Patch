@@ -1,6 +1,9 @@
+
+
 require 'scripts/common'
 
-local avatar = nil;
+-- Global values.
+local kaiju = nil;
 local target = nil;
 
 local weaponRange = 1000;
@@ -8,20 +11,20 @@ local weaponRange = 1000;
 local debuffTime = 3;
 
 function onUse(a, t)
-	avatar = a;
+	kaiju = a;
 	a:setWeakTarget(t);
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), t:getWorldPosition());
-	avatar:setWorldFacing(facingAngle);
-	playAnimation(avatar, "ability_beam");
-	registerAnimationCallback(this, avatar, "attack");
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), t:getWorldPosition());
+	kaiju:setWorldFacing(facingAngle);
+	playAnimation(kaiju, "ability_beam");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
-	target = avatar:getWeakTarget();
+	target = kaiju:getWeakTarget();
 	if not canTarget(target) then
 		return;
 	end
-	local view = avatar:getView();
+	local view = kaiju:getView();
     
 	local pos = getScenePosition(target:getWorldPosition());
 	
@@ -33,5 +36,5 @@ function onAnimationEvent(a)
 	
 	createEffect("effects/freezeImpact.plist",	pos);
 	playSound("sfx_weap_freeze_ray_muzzle");
-	applyDamageWithWeapon(avatar, target, "weapon_FreezeRay");
+	applyDamageWithWeapon(kaiju, target, "weapon_FreezeRay");
 end

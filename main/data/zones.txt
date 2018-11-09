@@ -5855,7 +5855,7 @@ Zone {
 	Identifier: ffec85d7fce5763a41e9ef3edb2ab2ca
 	Name: base_overhaulSilo
 	DisplayName: Overhaul Silo
-	Description: The latest and greatest in Kaiju repair technology!  Increases the repair rate of Mecha and Cyborg class Kaiju.
+	Description: The latest and greatest in Kaiju repair technology!  Increases the repair rate of Mecha and Cyborg class Kaiju by 50%. Stacks with other repair facilities.
 	ZoneType: Building
 	
 	Script: scripts/zones/base_default.lua
@@ -5973,7 +5973,7 @@ Zone {
 	Identifier: base_regrowthChamber
 	Name: base_regrowthChamber
 	DisplayName: Regrowth Chamber
-	Description: An advanced growth stimulation chamber that speeds the healing of Organic and Cyborg class Kaiju.
+	Description: An advanced growth stimulation chamber that speeds the healing of Organic and Cyborg class Kaiju by 40%. Stacks with other repair facilities.
 	ZoneType: Building
 	
 	Script: scripts/zones/base_default.lua
@@ -6017,7 +6017,7 @@ Zone {
 	Identifier: base_recombinationVat
 	Name: base_recombinationVat
 	DisplayName: Recombination Vat
-	Description: A massive recombinant DNA facility that greatly boosts the repair rate of Organic and Cyborg class Kaiju.
+	Description: A massive recombinant DNA facility that greatly boosts the repair rate of Organic and Cyborg class Kaiju by 50%. Stacks with other repair facilities.
 	ZoneType: Building
 	
 	Script: scripts/zones/base_default.lua
@@ -6099,7 +6099,7 @@ Zone {
 	Identifier: c210cadb59abce2750901fb2b71de7fd
 	Name: base_repairPad
 	DisplayName: Repair Pad
-	Description: A basic repair facility that boosts the repair rate of Mecha and Cyborg class Kaiju.
+	Description: A basic repair facility that boosts the repair rate of Mecha and Cyborg class Kaiju by 30%. Stacks with other repair facilities.
 	ZoneType: Building
 	
 	Script: scripts/zones/base_default.lua
@@ -6873,14 +6873,6 @@ Zone {
 		FireArcOrigin: 0
 		SceneOffset: 80,165
 		WorldOffset: -0,0
-		Weapon {
-			WeaponId: weapon_lair_Cannon
-			Barrel: gunTower_Cannon
-		}
-		Weapon {
-			WeaponId: weapon_lair_AutoCannon
-			Barrel: gunTower_AutoCannon
-		}
 	}
 }
 
@@ -6953,6 +6945,7 @@ Zone {
 	DestroyedSprite: rubbleMid
 	UnderConstructionSprite: underConstruction_small
 	BuildCategory: Defense
+	BuildRequirement: base_gunTower
 	Width: 1
 	Depth: 1
 	Height: 1
@@ -6979,15 +6972,6 @@ Zone {
 		FireArcOrigin: 0
 		SceneOffset: 80,180
 		WorldOffset: -0,0
-		Weapon {
-			WeaponId: weapon_MissileGuidedAA
-			Barrel: AATower
-		}
-		
-		Weapon {
-			WeaponId: weapon_MissileGuidedAAGround
-			Barrel: AATower
-		}
 	}
 }
 

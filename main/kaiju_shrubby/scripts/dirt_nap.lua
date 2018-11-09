@@ -1,8 +1,7 @@
 require 'kaiju_shrubby/scripts/shrubby'
 
-local avatar = nil;
+local kaiju = nil;
 local healPerSecond = 10;
-local healAura = nil;
 local passiveName = "dirt_nap"
 local shieldHealth = 300;
 local maxHealth = 0;
@@ -10,43 +9,43 @@ local hasShields = true;
 local terminateSequence = false;
 
 function onUse(a)
-	avatar = a;
-	local curr = avatar:hasPassive(passiveName); -- only need to check 1, we're assuming everything is cleaned and created at the same time
+	kaiju = a;
+	local curr = kaiju:hasPassive(passiveName); -- only need to check 1, we're assuming everything is cleaned and created at the same time
 	if curr == 0 then --if off then on
-		onON(avatar);
+		onON(kaiju);
 	else -- else if on then off
-		onOFF(avatar);
+		onOFF(kaiju);
 	end
 end
 
 function onON(a)
-	avatar:getMovement():moveTo(avatar:getWorldPosition());
+	kaiju:getMovement():moveTo(kaiju:getWorldPosition());
 	hasShields = true;
 	useResources(a, abilityData.name);
 	abilityInUse(a, abilityData.name, true);
-	avatar:setShieldScript(this);
-	avatar:addPassiveScript(this);
-	avatar:setPassive("shield", shieldHealth);
-	ToggleShields(avatar, false);
+	kaiju:setShieldScript(this);
+	kaiju:addPassiveScript(this);
+	kaiju:setPassive("shield", shieldHealth);
+	ToggleShields(kaiju, false);
 	
-	maxHealth = avatar:getStat("MaxHealth");
-	healAura = createAura(this, avatar, 0);
+	maxHealth = kaiju:getStat("MaxHealth");
+	local healAura = createAura(this, kaiju, 0);
 	healAura:setTickParameters(1, 0);
 	healAura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	healAura:setTarget(avatar);
+	healAura:setTarget(kaiju);
 
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	view:setAnimation("ability_root", false);
 	view:addAnimation("idle", true);
 	
 	local shieldEffect = view:attachEffectToNode("root", "effects/dirtnap.plist", -1, 0, 0, true, false);
-	avatar:setPassive(passiveName, shieldEffect);
+	kaiju:setPassive(passiveName, shieldEffect);
 	
 	view:attachEffectToNode("root", "effects/dirtnap_spawn.plist", 0.1, 0, 0, true, false);
 
 	playSound("shrubby_ability_DirtNap");
 	
-	avatar:setImmobile(true);
+	kaiju:setImmobile(true);
 end
 
 function onOFF(a)
@@ -55,22 +54,22 @@ function onOFF(a)
 		playSound("shrubby_ability_DirtNap");
 		startOnlyCooldown(a, abilityData.name);
 		abilityInUse(a, abilityData.name, false);
-		avatar:removePassiveScript(this);
-		avatar:setPassive("shield", 0);
-		ToggleShields(avatar, true);
+		kaiju:removePassiveScript(this);
+		kaiju:setPassive("shield", 0);
+		ToggleShields(kaiju, true);
 		if hasShields then
-			avatar:endShield(false);
+			kaiju:endShield(false);
 		end
-		avatar:detachAura(healAura);	
+		kaiju:detachAura(healAura);	
 		
-		local view = avatar:getView();
+		local view = kaiju:getView();
 		view:attachEffectToNode("root", "effects/dirtnap_despawn.plist", 0.1, 0, 0, true, false);
 		view:setAnimation("ability_unroot", false);
 		view:addAnimation("idle", true);
 		
-		avatar:setImmobile(false);
-		view:endEffect(avatar:hasPassive(passiveName));
-		avatar:removePassive(passiveName, 0); 
+		kaiju:setImmobile(false);
+		view:endEffect(kaiju:hasPassive(passiveName));
+		kaiju:removePassive(passiveName, 0); 
 	end
 end
 
@@ -79,23 +78,24 @@ function onAvatarMove(a)
 end
 
 function onTick(aura)
+	if not aura then return end
 	if aura:getElapsed() > 0 then
-		avatar:gainHealth(healPerSecond);
-		if avatar:getStat("Health") >= maxHealth then
-			onOFF(avatar);
+		kaiju:gainHealth(healPerSecond);
+		if kaiju:getStat("Health") >= maxHealth then
+			onOFF(kaiju);
 		end
 	end
 end
 
 function onShieldEnd(a, broken)
-	if broken == true then
+	if broken then
 		hasShields = false;
-		onOFF(avatar);
+		onOFF(kaiju);
 	end
 end
 
 function onShieldHit(a, n, w)
-	if w and w:getWeaponType() == WeaponType.Beam then
+	if not w and w:getWeaponType() == WeaponType.Beam then
 		n.x = 0;
 	else
 		local view = a:getView();

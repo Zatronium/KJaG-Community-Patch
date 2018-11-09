@@ -5,7 +5,7 @@ function onSet(a)
 	a:addPassiveScript(this);
 end
 
-function onAvatarAttacked(avatar, attacker)
+function onAvatarAttacked(kaiju, attacker)
 	if attacker then
 		local counterable = true;
 		if getEntityType(attacker) == EntityType.Vehicle then
@@ -15,9 +15,9 @@ function onAvatarAttacked(avatar, attacker)
 			end
 		end
 		if counterable then
-			local dist = getDistance(avatar, attacker);
+			local dist = getDistance(kaiju, attacker);
 			if dist < range then
-				applyDamage(avatar, attacker, damage);
+				applyDamage(kaiju, attacker, damage);
 			end
 		end
 	end

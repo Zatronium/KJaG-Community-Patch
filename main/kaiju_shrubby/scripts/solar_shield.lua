@@ -19,7 +19,7 @@ function onShieldEnd(a, broken)
 end
 
 function onShieldHit(a, n, w)
-	if w and w:getWeaponType() == WeaponType.Beam then
+	if not w and w:getWeaponType() == WeaponType.Beam then
 		n.x = 0;
 	else
 		local view = a:getView();

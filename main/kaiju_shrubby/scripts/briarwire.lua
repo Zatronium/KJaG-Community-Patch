@@ -1,6 +1,6 @@
 require 'kaiju_shrubby/scripts/shrubby'
 
-local avatar = nil;
+local kaiju = nil;
 local pos1 = nil;
 local pos2 = nil;
 local pos3 = nil;
@@ -9,25 +9,26 @@ local distancePatch = 100;
 local number_zones = 10;
 
 function onUse(a)
-	avatar = a;
-	playAnimation(avatar, "ability_cast");
-	registerAnimationCallback(this, avatar, "attack");
+	kaiju = a;
+	playAnimation(kaiju, "ability_cast");
+	registerAnimationCallback(this, kaiju, "attack");
 end
 
 function onAnimationEvent(a)
 	playSound("shrubby_ability_Briarwire");
-	startCooldown(avatar, abilityData.name);
-	pos1 = avatar:getWorldPosition();
-	pos2 = avatar:getWorldPosition();
-	pos3 = avatar:getWorldPosition();
-	pos4 = avatar:getWorldPosition();
-	local aura = createAura(this, avatar, 0);
+	startCooldown(kaiju, abilityData.name);
+	pos1 = kaiju:getWorldPosition();
+	pos2 = kaiju:getWorldPosition();
+	pos3 = kaiju:getWorldPosition();
+	pos4 = kaiju:getWorldPosition();
+	local aura = createAura(this, kaiju, 0);
 	aura:setTickParameters(1, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onBriarwire");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 end
 
 function onBriarwire(aura)
+	if not aura then return end
 	pos1.x = pos1.x + distancePatch;
 	ThornPatch(pos1);
 	
@@ -43,6 +44,11 @@ function onBriarwire(aura)
 	number_zones = number_zones - 1;
 	
 	if number_zones < 1 then
-		aura:getTarget():detachAura(aura);
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return
+		else
+			self:detachAura(aura)
+		end
 	end
 end

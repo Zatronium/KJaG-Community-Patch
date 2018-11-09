@@ -4,7 +4,7 @@ require 'scripts/avatars/common'
 -- if health < 10 instant kill.
 -- else punch dealing 25 damage.
 
-local avatar = nil;
+local kaiju = nil;
 local alevel = 1;
 function calcAttackDamage()
 	local retnum = 0;
@@ -15,19 +15,19 @@ function calcAttackDamage()
 	elseif alevel == 3 then
 		retnum = (math.random (50,75));
 	end
-	retnum = retnum * avatar:getStat("melee_damage_amplify");
+	retnum = retnum * kaiju:getStat("melee_damage_amplify");
 	return retnum;
 end
 
 function onInitStat(a, lv)
-	if not avatar then
-		avatar = a;
+	if not kaiju then
+		kaiju = a;
 		alevel = lv;
-		avatar:addStat("damage_resist", 1);
-		avatar:addStat("acc_notrack", 100);
-		avatar:addStat("damage_amplify", 1);
-		avatar:addStat("melee_damage_amplify", 1);
-		avatar:addStat("CoolDownReductionPercent", 0);
+		kaiju:addStat("damage_resist", 1);
+		kaiju:addStat("acc_notrack", 100);
+		kaiju:addStat("damage_amplify", 1);
+		kaiju:addStat("melee_damage_amplify", 1);
+		kaiju:addStat("CoolDownReductionPercent", 0);
 		--a:setStat("ExtraDamage_Fire", -1);
 	end
 end
@@ -108,9 +108,8 @@ function onStomp(a, inwater)
 end
 
 function onAnimAttack(a)
-	local ctrl = a:getControl()
-	if ctrl:hasTarget() then
-		local t = ctrl:getTarget();
+	if a:getControl():hasTarget() then
+		local t = a:getControl():getTarget();
 		local damage = a:modifyDamage(t, calcAttackDamage());
 		if getEntityType(t) == EntityType.Zone then
 			playSound("building_hit");		
@@ -119,16 +118,16 @@ function onAnimAttack(a)
 	end	
 end
 
-function BlastZone(avatar, weapon)
+function BlastZone(kaiju, weapon)
 
-	local view = avatar:getView();	
+	local view = kaiju:getView();	
 	view:attachEffectToNode("root", "effects/blastZone_back.plist",0, 0, 0, false, true);
 	view:attachEffectToNode("root", "effects/blastZone_front.plist",0, 0, 0, true, false);
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 		
 	local targets = getTargetsInRadius(worldPos, getWeaponRange(weapon), EntityFlags(EntityType.Vehicle, EntityType.Zone, EntityType.Avatar));
 	for t in targets:iterator() do
-		applyDamageWithWeapon(avatar, t, weapon);
+		applyDamageWithWeapon(kaiju, t, weapon);
 	end
 	--	playSound("shrubby_ability_VineWave");
 end

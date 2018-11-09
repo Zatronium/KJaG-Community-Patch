@@ -1,5 +1,5 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local detonateRange = 50;
 local detonateDamage = 50;
 function onSet(a)

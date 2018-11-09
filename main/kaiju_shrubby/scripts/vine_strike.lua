@@ -1,6 +1,6 @@
 require 'scripts/avatars/common'
 
-local avatar = 0;
+local kaiju = 0;
 local weapon = "weapon_shrubby_airVine1";
 local weapon_node = "root"
 
@@ -21,25 +21,25 @@ function setupNewVine(vine)
 end
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 
-	local worldPos = avatar:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition();
 	local target = getClosestAirTargetInRadius(worldPos, getWeaponRange(weapon), EntityFlags(EntityType.Vehicle));
-	local view = avatar:getView();
+	local view = kaiju:getView();
 	if canTarget(target) then
-		proj = avatarFireAtTarget(avatar, weapon, weapon_node, target, 90 - view:getFacingAngle());
+		proj = avatarFireAtTarget(kaiju, weapon, weapon_node, target, 90 - view:getFacingAngle());
 		proj:setCallback(this, 'onHit')
 		playSound("shrubby_ability_VineStrike");
-		startCooldown(avatar, abilityData.name);
+		startCooldown(kaiju, abilityData.name);
 		
 		vineEffect = setupNewVine(vineEffect);
 		vineEffect:setStartEntity(proj);
 		vineEffect:setEndPoint(proj:getWorldPosition());
 		vineEffect:activate();
 		
-		playAnimation(avatar, "stomp")
+		playAnimation(kaiju, "stomp")
 	else
-		NoTargetText(avatar);
+		NoTargetText(kaiju);
 	end	
 end
 

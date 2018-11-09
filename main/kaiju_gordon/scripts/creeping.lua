@@ -1,16 +1,16 @@
 require 'scripts/avatars/common'
-local avatar = nil;
+local kaiju = nil;
 local bonusSpeedPercent = -0.2;
 local zoneDodge = 0.2;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	
-	if avatar:hasPassive("creeping") == 0 then --if off then on
-		avatar:setPassive("creeping", 0);
-		onON(avatar);
+	if kaiju:hasPassive("creeping") == 0 then --if off then on
+		kaiju:setPassive("creeping", 0);
+		onON(kaiju);
 	else -- else if on then off
-		onOFF(avatar);
+		onOFF(kaiju);
 	end
 end
 

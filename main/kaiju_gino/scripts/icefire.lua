@@ -5,9 +5,9 @@ local range = 200;
 local minDamage = 18;
 local maxDamage = 23;
 local disableTime = 5;
-local avatar = 0;
+local kaiju = nil
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	playAnimation(a, "ability_breath");
 	registerAnimationCallback(this, a, "start");
 end
@@ -38,11 +38,18 @@ function onAnimationEvent(a)
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	local target = aura:getTarget();
-	local owner = aura:getOwner();
-	if not target then
-		owner:detachAura(aura);
+	local self = aura:getOwner()
+	if not target or not self then
+		if not self then
+			aura = nil
+		else
+			self:detachAura(aura);
+		end
 	else
-		applyDamage(owner, target, math.random (minDamage,maxDamage));
+		applyDamage(self, target, math.random (minDamage,maxDamage));
 	end
 end

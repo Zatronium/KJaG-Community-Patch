@@ -20,24 +20,18 @@ local triggerDistance = 800;
 local initialSetup = false
 local setupComplete = false
 
-function doSpawnSetup(self)
+function doSpawnSetup(v)
 	initialSetup = true
 	kaiju = getPlayerAvatar()
 	local tickCallback = "onLaunchTick";
 	local interval = 10; -- in seconds
 	local initialDelay = randomInt(5, 15); -- in seconds, to stagger spawning
-	local aura = createAura(this, self, 'heliAura');
+	local aura = createAura(this, v, 'heliAura');
 	aura:setScriptCallback(AuraEvent.OnTick, tickCallback);
 	aura:setTickParameters(interval, 0);
 	aura:setUpdateDelay(initialDelay);
-	aura:setTarget(self); -- required so aura doesn't autorelease
+	aura:setTarget(v); -- required so aura doesn't autorelease
 	setupComplete = true
-end
-
-function onSpawn(self)
-	if not initialSetup then
-		doSpawnSetup(self)
-	end
 end
 
 function onLaunchTick(aura)
@@ -47,8 +41,7 @@ function onLaunchTick(aura)
 	end
 	
 	if not self then
-		aura:setScriptCallback(AuraEvent.OnTick, nil)
-		return
+		aura = nil return
 	end
 	
 	-- don't spawn unless kaiju is nearby.

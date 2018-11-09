@@ -1,7 +1,7 @@
 require 'scripts/avatars/common'
 
 -- Global values.
-local avatar = nil;
+local kaiju = nil;
 local targetPos = 0;
 local beamDuration = 1.0;
 local tickTime = 0.125;
@@ -15,61 +15,60 @@ local shot = 0;
 local weapon = "RadBeam1"
 local beamNode = "breath_node"
 
-local sceneBeamFacing = 0;
-local sceneBeamEnd = nil;
 local beamEnd = nil;
 local beamOrigin = nil;
-local beamAura = nil;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 function onTargets(position)
 	targetPos = position;
-	local facingAngle = getFacingAngle(avatar:getWorldPosition(), targetPos);
-	avatar:setWorldFacing(facingAngle);
-	local view = avatar:getView();
+	local facingAngle = getFacingAngle(kaiju:getWorldPosition(), targetPos);
+	kaiju:setWorldFacing(facingAngle);
+	local view = kaiju:getView();
 	view:setAnimation("ability_breath", false);
-	registerAnimationCallback(this, avatar, "start");
-	startCooldown(avatar, abilityData.name);
+	registerAnimationCallback(this, kaiju, "start");
+	startCooldown(kaiju, abilityData.name);
 end
 
 function onAnimationEvent(a, event)
-	beamOrigin = avatar:getWorldPosition();
-	local view = avatar:getView();
+	beamOrigin = kaiju:getWorldPosition();
+	local view = kaiju:getView();
 	view:pauseAnimation(beamDuration * numberOfPulses + (numberOfPulses - 1) * waitTime);
 	
-	local empower = avatar:hasPassive("enhancement");
-	avatar:removePassive("enhancement", 0);
+	local empower = kaiju:hasPassive("enhancement");
+	kaiju:removePassive("enhancement", 0);
 	abilityEnhance(empower);
 	
-	beamAura = Aura.create(this, avatar);
+	local beamAura = Aura.create(this, kaiju);
 	beamAura:setTag('eyeBeam');
 	beamAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
 	beamAura:setTickParameters(tickTime, 0);
-	beamAura:setTarget(avatar); -- required so aura doesn't autorelease
+	beamAura:setTarget(kaiju); -- required so aura doesn't autorelease
 	playSound("PulsedRads");
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	local elapsed = aura:getElapsed();
 
 	if elapsed <= beamDuration then
-		avatar = getPlayerAvatar();
-		local targetEnt = getAbilityTarget(avatar, abilityData.name);
+		local targetEnt = getAbilityTarget(kaiju, abilityData.name);
 		if targetEnt then
 			targetPos =  targetEnt:getWorldPosition();
 		end
-		beamEnd = getBeamEndWithPoint(beamOrigin, getWeaponRange(weapon), targetPos);
+		local beamEnd = getBeamEndWithPoint(beamOrigin, getWeaponRange(weapon), targetPos);
 		
-		local view = avatar:getView();
+		local view = kaiju:getView();
 		local sceneBeamOrigin = view:getAnimationNodePosition('breath_node');
-		sceneBeamEnd = getScenePosition(beamEnd);
-		sceneBeamFacing = getFacingAngle(sceneBeamOrigin, sceneBeamEnd);
+		local sceneBeamEnd = getScenePosition(beamEnd);
+		local sceneBeamFacing = getFacingAngle(sceneBeamOrigin, sceneBeamEnd);
 		
-		local currentTarget = getClosestTargetInBeam(beamOrigin, beamEnd, 35, EntityFlags(EntityType.Vehicle, EntityType.Avatar), avatar);
+		local currentTarget = getClosestTargetInBeam(beamOrigin, beamEnd, 35, EntityFlags(EntityType.Vehicle, EntityType.Avatar), kaiju);
 		if currentTarget then	
 			local pos = getScenePosition(currentTarget:getWorldPosition());
 			
@@ -81,8 +80,8 @@ function onTick(aura)
 			createEffect("effects/explosion_SparkLayer.plist",		pos);
 			createEffect("effects/explosion_SparkFireLayer.plist",	pos);
 			
-			applyFire(avatar, currentTarget, 0.75);
-			applyDamageWithWeapon(avatar, currentTarget, weapon);
+			applyFire(kaiju, currentTarget, 0.75);
+			applyDamageWithWeapon(kaiju, currentTarget, weapon);
 		else 
 			view:doBeamEffectFromNode(beamNode, sceneBeamEnd, 'effects/beam_rad.plist', sceneBeamFacing );
 			view:doEffectFromNode(beamNode, 'effects/muzzle_radBeam.plist', 0);
@@ -97,9 +96,15 @@ function onTick(aura)
 	if elapsed >= beamDuration + waitTime then
 		pulseNumber = pulseNumber + 1;
 		if pulseNumber >= numberOfPulses then
-			local view = avatar:getView();
+			local view = kaiju:getView();
 			view:addAnimation("idle", true);
-			aura:getOwner():detachAura(aura);
+		
+			local self = aura:getOwner()
+			if not self then
+				aura = nil return;
+			else
+				self:detachAura(aura);
+			end
 			abilityEnhance(0);
 		else
 			aura:resetElapsed();

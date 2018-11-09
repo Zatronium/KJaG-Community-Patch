@@ -3,7 +3,7 @@ require 'kaiju_gino/scripts/gino' --need to include this so that the "onAttack" 
 -- this is a script to show how to use an ability to automatically apply an effect
 --	(eg: shrubby's roots)
 -- pick a time frame
-delay = 3.0; -- lets say every 3 seconds it will apply the effect
+local delay = 3.0; -- lets say every 3 seconds it will apply the effect
 
 -- onHeartbeat updates every 0.5 seconds
 function onHeartbeat(a)

@@ -1,13 +1,12 @@
 require 'kaiju_gordon/scripts/gordon'
 
-local avatar = nil;
+local kaiju = nil;
 local shieldBase = 50;
 local shieldDuration = 20;
-local shieldAura = nil;
 local abilityName = "passive"
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	onOn();
 	abilityName = abilityData.name;
 	useResources(a, abilityName);
@@ -17,28 +16,31 @@ function onUse(a)
 end
 
 function onOn()
-	if avatar:hasPassive("shield") == 0 then
-		avatar:setShield(shieldBase);
-		avatar:setShieldScript(this);
-		avatar:createShieldEffect("root", "effects/solarShield_core.plist", 0, 0, true, false);
+	if kaiju:hasPassive("shield") == 0 then
+		kaiju:setShield(shieldBase);
+		kaiju:setShieldScript(this);
+		kaiju:createShieldEffect("root", "effects/solarShield_core.plist", 0, 0, true, false);
 		playSound("PersonalShield");
 		
-		shieldAura = createAura(this, avatar, 0);
+		local shieldAura = createAura(this, kaiju, 0);
 		shieldAura:setTag("personal_shield");
 		shieldAura:setTickParameters(1, 0);
 		shieldAura:setScriptCallback(AuraEvent.OnTick, "onTick");
-		shieldAura:setTarget(avatar);
+		shieldAura:setTarget(kaiju);
 		
-		if avatar:hasPassive("impentrable_shield") > 0 then
-			avatar:setInvulnerableTime(avatar:hasPassive("impentrable_shield"));
+		if kaiju:hasPassive("impentrable_shield") > 0 then
+			kaiju:setInvulnerableTime(kaiju:hasPassive("impentrable_shield"));
 		end
 	end
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
 	local elapsed = aura:getElapsed();
 	if  elapsed >= shieldDuration then
-		avatar:endShield(false);
+		kaiju:endShield(false);
 	end
 end
 
@@ -55,7 +57,7 @@ end
 -- y is how much is remaining total eg dampened
 -- x is how much to subtract from the shield eg actual damage
 function onShieldHit(a, n, w)
-	if w and w:getWeaponType() == WeaponType.Beam then
+	if not w and w:getWeaponType() == WeaponType.Beam then
 		n.x = 0;
 	else
 		local view = a:getView();

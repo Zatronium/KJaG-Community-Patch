@@ -1,18 +1,18 @@
-local ticktime = 1.0; 
+ticktime = 1.0; 
 local healpertick = 2;
-local avatar = 0;
+local kaiju = nil
 local maxHealth = 0;
 
 function onSet(a)
-	avatar = a;
-	maxHealth = avatar:getStat("MaxHealth");
+	kaiju = a;
+	maxHealth = kaiju:getStat("MaxHealth");
 	
-	local aura = createAura(this, avatar, "gino_repairbots");
+	local aura = createAura(this, kaiju, "gino_repairbots");
 	aura:setTickParameters(ticktime, 0);
 	aura:setScriptCallback(AuraEvent.OnTick, "onTick");
-	aura:setTarget(avatar);
+	aura:setTarget(kaiju);
 end
 
 function onTick(aura)
-	avatar:gainHealth(healpertick);
+	kaiju:gainHealth(healpertick);
 end

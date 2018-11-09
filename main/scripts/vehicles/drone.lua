@@ -20,27 +20,31 @@ local kStateStrafe = 2;
 local gState = kStateMoveAway;
 local gEncircleStopTime = 0;
 
-local target = nil;
 local hasUpdated = false;
 local initialSetup = false
+local setupFinished = false
 
-function onSpawn(v)
-	if not initialSetup then
-		doSpawnSetup()
-	end
-end
+local kaiju = nil
 
 function doSpawnSetup(v)
 	initialSetup = true
+	kaiju = getPlayerAvatar()
 	local timeaura = createAura(this, v, 0);
 	timeaura:setTickParameters(gDroneLifetime, gDroneLifetime);
 	timeaura:setScriptCallback(AuraEvent.OnTick, "onTick");
 	timeaura:setTarget(v);
+	setupFinished = true
 end
 
 function onTick(aura)
+	if not aura then
+		return
+	end
+	local self = aura:getOwner()
+	if not self then 
+		aura = nil return
+	end
 	if hasUpdated then
-		local self = aura:getOwner();
 		onDeath(self);
 	end
 	hasUpdated = true;
@@ -48,17 +52,16 @@ end
 
 function onHeartbeat(v)
 	if not initialSetup then
-		doSpawnSetup()
+		doSpawnSetup(v)
 	end
-	local a = getPlayerAvatar();
 	vc = v:getControl();
 	
 	-- if our target died
 	local drone = entityToMinion(v);
-	target = drone:getTarget();
+	local target = drone:getTarget();
 	-- get a new target
 	local at = getSelectedTarget();
-	if at and gState ~= kStateStrafe then
+	if not at and gState ~= kStateStrafe then
 		target = at;
 	end
 
@@ -109,13 +112,13 @@ function startStrafe(v, a)
 end
 
 function onStrafeDone(v)
-	local a = getPlayerAvatar();
-	startEncircle(v, a);
+	startEncircle(v, kaiju);
 end
 
 function onDeath(self)
-	local pos = self:getView():getPosition();	
-	self:getView():setVisible(false);
+	local view = self:getView()
+	local pos = view:getPosition();	
+	view:setVisible(false);
 	removeEntity(self);
 	
 	playSound("explosion");

@@ -1,14 +1,13 @@
-local hasUpdated = false;
+
 local duration = 5;
-local avatar = nil;
+local kaiju = nil;
 function onUse(a)
-	avatar = a;
-	hasUpdated = false;
+	kaiju = a;
 	a:misdirectMissiles(1.0, false);
 	a:setEnablePhysicsBody(false);
-	avatar:setPassive("ignore_proj", 100);
+	kaiju:setPassive("ignore_proj", 100);
 	a:getView():setKaijuVisible(false);
-	startAbilityUse(avatar, abilityData.name);
+	startAbilityUse(kaiju, abilityData.name);
 	
 	local view = a:getView();
 	view:attachEffectToNode("root", "effects/vanish_trailing.plist", 0, 0, 0, true, false);
@@ -27,12 +26,20 @@ function onUse(a)
 end
 
 function onTick(aura)
-	if aura:getElapsed() >= duration then
-		avatar:setEnablePhysicsBody(true);
-		avatar:removePassive("ignore_proj", 0);
-		avatar:getView():setKaijuVisible(true);
-		endAbilityUse(avatar, abilityData.name);
-		aura:getOwner():detachAura(aura);
+	if not aura then
+		return
 	end
-	hasUpdated = true;
+	if aura:getElapsed() >= duration then
+		kaiju:setEnablePhysicsBody(true);
+		kaiju:removePassive("ignore_proj", 0);
+		kaiju:getView():setKaijuVisible(true);
+		endAbilityUse(kaiju, abilityData.name);
+		
+		local self = aura:getOwner()
+		if not self then
+			aura = nil return;
+		else
+			self:detachAura(aura);
+		end
+	end
 end

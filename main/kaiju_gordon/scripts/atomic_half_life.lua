@@ -5,23 +5,23 @@ local bonusSpeedPercent = 0.2;
 local CDRPercent = 0.2;
 
 local thresholdPercent = 0.5;
-local --duration = 20;
+--duration = 20;
 -- this ability has no definate duration
 
 local hpLossPerSecond = -2;
 
-local avatar = nil;
+local kaiju = nil;
 local bonusSpeed = 0;
 local HealthThreshold = 0;
 
 local buffAura = nil;
 
 function onUse(a)
-	avatar = a;
+	kaiju = a;
 	if not buffAura then --if off then on
-		onON(avatar);
+		onON(kaiju);
 	else -- else if on then off
-		onOFF(avatar);
+		onOFF(kaiju);
 	end
 end
 
@@ -51,18 +51,22 @@ function onON(a)
 end
 
 function onOFF(a)
+	if not buffAura then
+		return
+	end
 	a:modStat("Speed", -bonusSpeed);
 	a:modStat("CoolDownReductionPercent", -CDRPercent);
 	a:modStat("damage_amplify", -bonusDamagePercent);
 	abilityInUse(a, abilityData.name, false);
 	startOnlyCooldown(a, abilityData.name);
+	
 	a:detachAura(buffAura);
 	buffAura = nil;
 end
 
 function onTick(aura)
-	avatar:modStat("Health", hpLossPerSecond);
-	if avatar:getStat("Health") <  HealthThreshold then
-		onOFF(avatar);
+	kaiju:modStat("Health", hpLossPerSecond);
+	if kaiju:getStat("Health") <  HealthThreshold then
+		onOFF(kaiju);
 	end
 end
