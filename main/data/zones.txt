@@ -5571,7 +5571,7 @@ Zone {
 	Identifier: base_healingVat
 	Name: base_healingVat
 	DisplayName: Healing Vat
-	Description: This biological growth facility boosts the repair rate of Organic and Cyborg class Kaiju.
+	Description: This biological growth facility boosts the repair rate of Organic and Cyborg class Kaiju by 30%. Stacks with other repair facilities.
 	ZoneType: Building
 	
 	Script: scripts/zones/base_default.lua
@@ -5855,7 +5855,7 @@ Zone {
 	Identifier: ffec85d7fce5763a41e9ef3edb2ab2ca
 	Name: base_overhaulSilo
 	DisplayName: Overhaul Silo
-	Description: The latest and greatest in Kaiju repair technology!  Increases the repair rate of Mecha and Cyborg class Kaiju by 50%. Stacks with other repair facilities.
+	Description: The latest and greatest in Kaiju repair tech! Increases the repair rate of Mecha and Cyborg class Kaiju by 50%. Stacks with other repair facilities.
 	ZoneType: Building
 	
 	Script: scripts/zones/base_default.lua

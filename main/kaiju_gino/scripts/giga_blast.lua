@@ -60,13 +60,12 @@ function onTick(aura)
 		targetEnt = getTargetInEntityRadius(kaiju, weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar, EntityType.Minion), TargetFlags(TargetType.Air, TargetType.Land, TargetType.Sea), weaponFiringArc)
 	end
 	
+	local beamEnd = getBeamEndWithFacing(worldPos, weaponRange, kaijuFacing)
 	if targetEnt and canTarget(targetEnt) then
 		newTargetPos = targetEnt:getWorldPosition();
-	end
-	
-	local beamEnd = getBeamEndWithFacing(worldPos, weaponRange, kaijuFacing)
-	if newTargetPos then
-		beamEnd = getBeamEndWithPoint(worldPos, weaponRange, newTargetPos)
+		if newTargetPos then
+			beamEnd = newTargetPos
+		end
 	end
 	
 	local view = kaiju:getView();

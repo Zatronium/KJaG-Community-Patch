@@ -59,13 +59,12 @@ function onTick(aura)
 		targetEnt = getTargetInEntityRadius(kaiju, weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar, EntityType.Minion), TargetFlags(TargetType.Air, TargetType.Land, TargetType.Sea), weaponFiringArc)
 	end
 	
+	local beamEnd = getBeamEndWithFacing(worldPos, weaponRange, kaijuFacing)
 	if targetEnt and canTarget(targetEnt) then
 		newTargetPos = targetEnt:getWorldPosition();
-	end
-	
-	local beamEnd = getBeamEndWithFacing(worldPos, weaponRange, kaijuFacing)
-	if newTargetPos then
-		beamEnd = getBeamEndWithPoint(worldPos, weaponRange, newTargetPos)
+		if newTargetPos then
+			beamEnd = newTargetPos
+		end
 	end
 	
 	local view = kaiju:getView();
@@ -75,7 +74,7 @@ function onTick(aura)
 	
 	if targetEnt then
 		applyDamageWithWeapon(kaiju, targetEnt, "weapon_EyeBeam2");
-		createEffect("effects/onRadiated.plist", position);
+		createEffect("effects/onRadiated.plist", sceneBeamEnd);
 	end
 	view:doBeamEffectFromNode('eye_node_01', sceneBeamEnd, 'effects/deathStare.plist', sceneBeamFacing);
 	view:doBeamEffectFromNode('eye_node_02', sceneBeamEnd, 'effects/deathStare.plist', sceneBeamFacing);

@@ -129,6 +129,8 @@ function getTargetInEntityRadius(scannerEntity, radius, entityFlags, targetFlags
 	local location 			= scannerEntity:getWorldPosition()
 	local kaiju 			= getPlayerAvatar()
 	local scannerIsKaiju 	= isSameEntity(scannerEntity, kaiju)
+	local lairAttack		= isLairAttack()
+	local scannerEntityType = getEntityType(scannerEntity)
 	if not radius then
 		radius = 10000.0
 	end
@@ -141,16 +143,15 @@ function getTargetInEntityRadius(scannerEntity, radius, entityFlags, targetFlags
 			local isAirUnit			= (targetEntityType == EntityType.Vehicle and entityToVehicle(t):isAir())
 			if not (not targetFlags.Player and targetIsKaiju) and ((targetFlags.Player and (targetIsKaiju or targetEntityType == TargetType.Minion)) or (targetFlags.Sea and isOnWater) or (targetFlags.Land and not isAirUnit) or (targetFlags.Air and isAirUnit) or (targetFlags.Buildable and t:hasStat('BuildTime'))) then
 				local targetAngleRelativeToEntity = nil
-				if firingArc and scannerIsKaiju then
+				if firingArc and scannerEntityType == EntityType.Avatar then
 					targetAngleRelativeToEntity = getFacingAngle(location, t:getWorldPosition()) - kaiju:getWorldFacing()
 					if targetAngleRelativeToEntity < 0 then
 						targetAngleRelativeToEntity = 0 - targetAngleRelativeToEntity
 					end
 				end
-				local scannerEntityType = getEntityType(scannerEntity)
 				
 				if (not targetAngleRelativeToEntity or targetAngleRelativeToEntity <= firingArc / 2)
-				and not (isLairAttack() and scannerIsKaiju and targetEntityType == EntityType.Zone) then
+				and not (lairAttack and scannerIsKaiju and targetEntityType == EntityType.Zone) then
 					return t
 				end
 			end
@@ -228,6 +229,18 @@ function fireWeaponWithPoint(self, point, weapon, callback, fireFromPoint)
 	end
 	proj:setCallback(this, callback);
 	return proj
+end
+
+function waterCheckMidpoint(self, point)
+	local firePos = self:getWorldPosition()
+	firePos.x = (firePos.x + point.x) / 2
+	firePos.y = (firePos.y + point.y) / 2
+	proj = fireProjectileAtPoint(self, firePos, point, 'nullweapon')
+	proj:setCallback(this, 'fakeCallback') -- ... Seriously?
+	return isEntityOnWater(proj)
+end
+
+function fakeCallback()
 end
 
 -----------------------

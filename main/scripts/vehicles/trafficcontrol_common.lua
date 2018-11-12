@@ -16,7 +16,6 @@ local soundRangeMultiplier	= 1.25
 local vehicleWorldFacing	= 0.0
 local isAvoiding			= false
 local lastWaypoint			= nil
-local currentPatrolWaypoint	= nil
 local defaultSnapAngle		= 90.0
 local initialSetup			= false
 local setupFinished			= false
@@ -29,14 +28,16 @@ local farRange				= nil
 local vehicleController		= nil
 local vehicle				= nil
 local vehiclePosition		= nil
-local landUnit				= nil
+local isLandUnit			= nil
 local isSuper				= nil
 local isStopped				= true
 local distanceFromTarget	= 0.0
 local lairAttack			= nil
 local kaiju					= nil
+local worldSize 			= nil
+local worldEdge 			= 20.0
 
-function DoSpawnSetup(v, isLandUnit, idle, move, rev)
+function DoSpawnSetup(v, landUnit, idle, move, rev)
 	initialSetup 		= true
 	vehicle 			= v
 	weaponRange			= vehicle:getMinWeaponRange()
@@ -44,7 +45,7 @@ function DoSpawnSetup(v, isLandUnit, idle, move, rev)
 	idealRange			= math.floor(weaponRange * 0.50)
 	limitRange			= math.floor(weaponRange * 0.95)
 	farRange			= math.floor(weaponRange * 1.5)
-	landUnit			= isLandUnit
+	isLandUnit			= landUnit
 	idleSoundName		= idle
 	moveSoundName		= move
 	revSoundName		= rev
@@ -52,6 +53,7 @@ function DoSpawnSetup(v, isLandUnit, idle, move, rev)
 	isSuper				= vehicle:isSuper()
 	lairAttack			= isLairAttack()
 	kaiju				= getPlayerAvatar()
+	worldSize			= getWorldSize()
 	setupFinished		= true
 end
 
@@ -64,33 +66,36 @@ function SetupFinished()
 end
 
 function DoVehicleHeartbeat()
-	vehiclePosition 		= vehicle:getWorldPosition()
+	vehiclePosition 	= vehicle:getWorldPosition()
 	if not lairAttack then
-		target 				= getTargetInEntityRadius(vehicle, nil, EntityFlags(EntityType.Avatar, EntityType.Minion), TargetFlags(TargetType.Player))
+		if isLandUnit then
+			target 		= getTargetInEntityRadius(vehicle, nil, EntityFlags(EntityType.Avatar, EntityType.Minion), TargetFlags(TargetType.Player))
+		else
+			target 		= getPlayerTarget(vehicle)
+		end
 	else
 		if isLandUnit and getDistance(vehicle, kaiju) < idealRange then
-			target			= kaiju
+			target		= kaiju
 		else
-			target 			= getTargetInEntityRadius(vehicle, nil, EntityFlags(EntityType.Zone), TargetFlags(TargetType.Buildable))
+			target 		= getTargetInEntityRadius(vehicle, nil, EntityFlags(EntityType.Zone), TargetFlags(TargetType.Buildable))
 			if not target or getDistance(vehicle, target) > limitRange then
-				target 		= getPlayerTarget(vehicle)
+				target 	= getPlayerTarget(vehicle)
 			end
 			if not target then
-				target 		= kaiju
+				target 	= kaiju
 			end
 		end
 	end
-	distanceFromTarget 		= getDistance(vehicle, target)
-	local targetPosition 	= target:getWorldPosition()
+	
+	distanceFromTarget 	= getDistance(vehicle, target)
+	targetPosition 		= target:getWorldPosition()
 	
 	if heartbeatCount == -1 then
-		if  distanceFromTarget < idealRange then
+		if distanceFromTarget and distanceFromTarget < idealRange then
 			createEffect('effects/impact_sparksLots.plist', vehicle:getView():getPosition())
 			spawnFlee = true
 		end
-	
-		local patrolValue 	= math.random(1, 100)
-		if patrolChance >= patrolValue and not isSuper then
+		if patrolChance >= math.random(1, 100) and not isSuper or not isLandUnit then
 			patrolOrigin 	= vehiclePosition
 		end
 	end
@@ -105,18 +110,8 @@ function DoVehicleHeartbeat()
 	end
 	heartbeatCount = heartbeatCount + 1
 	
-	if patrolOrigin and ((isLandUnit and isEntityOnWater(vehicle)) or (not isLandUnit and not isEntityOnWater(vehicle))) then
-		patrolOrigin = nil
-	end
-	
-	if canTarget(target) and not isAvoiding then
-		local vehicleTarget				= nil
-		if distanceFromTarget <= weaponRange and not spawnFlee then
-			--If we're in range, target the enemy
-			vehicleTarget 				= target
-		end
-		
-		if distanceFromTarget < closeRange or (distanceFromTarget < idealRange and spawnFlee) then
+	if not isAvoiding then
+		if distanceFromTarget and (distanceFromTarget < closeRange or (distanceFromTarget < idealRange and spawnFlee)) then
 			-- Too close. Flee!
 			local direction 			= getFacingAngle(targetPosition, vehiclePosition)
 			local desiredRange			= idealRange
@@ -125,39 +120,27 @@ function DoVehicleHeartbeat()
 			end
 			local desiredPosition 		= getBeamEndWithFacing(targetPosition, desiredRange, direction)
 			BeginMove(desiredPosition)
-			vehicleTarget 				= nil
-			isAvoiding = true
-			heartbeatCount = 0
-			return
-		elseif patrolOrigin and (not lastWaypoint or (getDistanceFromPoints(vehiclePosition, patrolOrigin) > farRange or distanceFromTarget > limitRange)) then
-			if not lastWaypoint or lastWaypoint == vehiclePosition then
-				local patrolFacing 		= SnapToFacing(getFacingAngle(vehiclePosition, patrolOrigin), defaultSnapAngle) + 90.0
+			target 						= nil
+			isAvoiding 					= true
+			heartbeatCount				= 0
+		elseif patrolOrigin and (not lastWaypoint or not distanceFromTarget or getDistanceFromPoints(vehiclePosition, patrolOrigin) > farRange or distanceFromTarget > limitRange
+		or (not isLandUnit and target and not waterCheckMidpoint(vehicle, targetPosition) and not isEntityOnWater(target))) then
+			if not lastWaypoint or getDistanceFromPoints(lastWaypoint, vehiclePosition) < 1 then
+				local patrolFacing 			= SnapToFacing(getFacingAngle(vehiclePosition, patrolOrigin) + 90.0, defaultSnapAngle)
+				if not lastWaypoint then
+					patrolFacing 			= patrolFacing + math.random(0, 360)
+				end
 				if patrolFacing > 360.0 then
-					patrolFacing = patrolFacing % 360
+					patrolFacing 			= patrolFacing % 360
 				end
-				currentPatrolWaypoint	= getBeamEndWithFacing(patrolOrigin, weaponRange, patrolFacing)
-				local worldSize 		= getWorldSize()
-				local worldEdge 		= 20.0
-				if currentPatrolWaypoint.x > worldSize.x - worldEdge then
-					currentPatrolWaypoint.x = worldSize.x - worldEdge
-				end
-				if currentPatrolWaypoint.y > worldSize.y - worldEdge then
-					currentPatrolWaypoint.y = worldSize.y - worldEdge
-				end
-				if currentPatrolWaypoint.x < worldEdge then
-					currentPatrolWaypoint.x = worldEdge
-				end
-				if currentPatrolWaypoint.y < worldEdge then
-					currentPatrolWaypoint.y = worldEdge
-				end
-				vehicleTarget 			= nil
-				DirectMove(currentPatrolWaypoint)
+				local currentPatrolWaypoint	= getBeamEndWithFacing(patrolOrigin, weaponRange, patrolFacing)
+				ForceMove(currentPatrolWaypoint)
 			end
-		elseif distanceFromTarget < limitRange and isLineOfSight(vehicle, target) then
+		elseif distanceFromTarget and distanceFromTarget < limitRange and isLineOfSight(vehicle, target) then
 			-- Target in range and LoS, stop movement.
 			local desiredFacing = getFacingAngle(vehiclePosition, targetPosition)
 			StopMove(desiredFacing)
-		elseif distanceFromTarget < limitRange then
+		elseif distanceFromTarget and distanceFromTarget < limitRange then
 			-- Can't see the target, but there's no point continuing the approach.
 			local direction 			= getFacingAngle(targetPosition, vehiclePosition)
 			local offset				= 90.0
@@ -166,22 +149,18 @@ function DoVehicleHeartbeat()
 			end
 			local desiredPosition 		= getBeamEndWithFacing(targetPosition, idealRange, offset)
 			BeginMove(desiredPosition)
-		else
+		elseif targetPosition then
 			-- Get closer to the target.
-			local direction 			= getFacingAngle(targetPosition, vehiclePosition)
-			local desiredPosition 		= getBeamEndWithFacing(targetPosition, idealRange, direction)
-		
-			BeginMove(desiredPosition)
+			BeginMove(targetPosition)
 		end
-		
 		lastWaypoint = vehiclePosition
-		setTarget(vehicle, vehicleTarget)
+		setTarget(vehicle, target)
 	end
 end
 
 function CheckForTraffic()
 	local trafficRadius			= 100
-	local targets 				= getTargetsInRadius(vehiclePosition, trafficRadius, EntityFlags(EntityType.Vehicle)) 
+	local targets 				= getTargetInEntityRadius(vehicle, trafficRadius, EntityFlags(EntityType.Vehicle), TargetFlags(TargetType.Land, TargetType.Sea)) 
 	for t in targets:iterator() do
 		if canTarget(t) then
 			local tempVehicle 	= entityToVehicle(t)
@@ -194,7 +173,7 @@ function CheckForTraffic()
 					-- Land vehicles try to stay on the road and navigate a different direction. Otherwise try to go elsewhere. If all diversions are blocked then give up.
 					local offset 				= nil
 					local desiredPosition		= nil
-					if landUnit then
+					if isLandUnit then
 						offset 				= 180.0
 						desiredPosition 		= GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offset, defaultSnapAngle)
 						if desiredPosition then
@@ -208,7 +187,7 @@ function CheckForTraffic()
 					end
 					desiredPosition 			= GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offset, defaultSnapAngle / 3.0)
 					if desiredPosition then
-						DirectMove(desiredPosition)
+						ForceMove(desiredPosition)
 						return true
 					end
 				end
@@ -251,14 +230,32 @@ end
 
 function BeginMove(desiredPosition)
 	MoveSound()
+	desiredPosition = MapBounding(desiredPosition)
 	vehicleWorldFacing = SnapToFacing(getFacingAngle(vehiclePosition, desiredPosition), defaultSnapAngle)
 	vehicleController:seekToPosition(desiredPosition)
 end
 
-function DirectMove(desiredPosition)
+function ForceMove(desiredPosition)
 	MoveSound()
+	desiredPosition = MapBounding(desiredPosition)
 	vehicleWorldFacing = SnapToFacing(getFacingAngle(vehiclePosition, desiredPosition), defaultSnapAngle)
 	vehicleController:directMove(desiredPosition)
+end
+
+function MapBounding(coords)
+	if coords.x > worldSize.x - worldEdge then
+		coords.x = worldSize.x - worldEdge
+	end
+	if coords.y > worldSize.y - worldEdge then
+		coords.y = worldSize.y - worldEdge
+	end
+	if coords.x < worldEdge then
+		coords.x = worldEdge
+	end
+	if coords.y < worldEdge then
+		coords.y = worldEdge
+	end
+	return coords
 end
 
 function MoveSound()
@@ -299,7 +296,7 @@ function StopMove(desiredFacing)
 	isStopped = true
 	vehicleWorldFacing = SnapToFacing(desiredFacing, defaultSnapAngle / 4.0)
 	local fakeFacingPosition = getBeamEndWithFacing(vehiclePosition, 5, desiredFacing)
-	vehicleController:seekToPosition(fakeFacingPosition)
+	vehicleController:moveTo(fakeFacingPosition)
 	vehicleController:stop()
 end
 
