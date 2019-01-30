@@ -39,3 +39,7 @@ function onTickActive(aura)
 	end
 	kaiju:gainHealth(hpPerSecond);
 end
+
+function getCatalystHPTick()
+	return hpPerSecond
+end

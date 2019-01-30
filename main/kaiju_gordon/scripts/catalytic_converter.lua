@@ -1,9 +1,11 @@
 require 'kaiju_gordon/scripts/catalyst'
 
 local kaiju = nil;
+local hpPerSecond = nil
 
 function onSet(a)
 	kaiju = a;
+	hpPerSecond = getCatalystHPTick()
 	local buffAura = Aura.create(this, a);
 	buffAura:setTag('catalyst');
 	buffAura:setScriptCallback(AuraEvent.OnTick, 'onTick');
