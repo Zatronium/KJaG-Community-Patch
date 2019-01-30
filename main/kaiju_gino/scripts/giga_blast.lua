@@ -1,5 +1,4 @@
 require 'scripts/common'
-require 'scripts/abstraction'
 
 local kaiju = nil;
 local weaponRange = 1000;

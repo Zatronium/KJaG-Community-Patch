@@ -7,18 +7,6 @@ function defaultSpawn(e)
 	e:setStat('Energy', 100);
 end
 
-function defaultStatChanged(e, stat, prev, val)
-	if stat == "Health" and prev > 0 then
-		local maxHealth = e:getStat("MaxHealth");
-		if val <= 0 then
-			e:getView():doDeathEffect()
-			print 'Kaiju Dead';
-		elseif val > maxHealth then
-			e:setStat("Health", maxHealth);
-		end
-	end
-end
-
 ------------------------------------------------------------
 -- Generic event handlers.
 ------------------------------------------------------------

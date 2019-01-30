@@ -49,7 +49,7 @@ function onTick(aura)
 				fly = true;
 			end
 		end
-		if not isSameEntity(kaiju, t) and fly then
+		if not isSameEntity(kaiju, t) and not fly then
 			if not t:hasAura("entangle") then
 				t:attachEffect("effects/rootCluster.plist", immobileDuration, true);
 				t:attachEffect("effects/entangleWave.plist", .2, true);

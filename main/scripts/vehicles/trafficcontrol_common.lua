@@ -1,5 +1,3 @@
-require 'scripts/abstraction'
-
 --Offloads all vehicle traffic control to a common file for easy maintence
 
 local heartbeatCount 		= -1

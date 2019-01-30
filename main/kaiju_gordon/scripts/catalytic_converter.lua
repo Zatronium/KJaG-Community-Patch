@@ -20,4 +20,6 @@ function bonusStats(s)
 	setAbilityToPassive("ability_gordon_Catalyst");
 end
 
-
+function onTick(aura)
+	kaiju:gainHealth(hpPerSecond);
+end

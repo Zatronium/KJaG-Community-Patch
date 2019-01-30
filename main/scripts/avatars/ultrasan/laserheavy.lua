@@ -1,5 +1,4 @@
 require 'scripts/common'
-require 'scripts/abstraction'
 
 -- Global values.
 local kaiju = nil;

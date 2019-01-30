@@ -1,6 +1,5 @@
 require 'scripts/common'
 require 'scripts/zones/common'
-require 'scripts/abstraction'
 
 local weaponLaser = 'weapon_lair_AnnihilatorRay'
 local initialSetup = false

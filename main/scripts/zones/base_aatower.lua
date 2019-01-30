@@ -1,6 +1,5 @@
 require 'scripts/common'
 require 'scripts/zones/common'
-require 'scripts/abstraction'
 
 local weaponAA 		= 'weapon_MissileGuidedAA'
 local weaponGround 	= 'weapon_MissileGuidedAAGround'

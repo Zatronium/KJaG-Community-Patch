@@ -39,7 +39,3 @@ function onTickActive(aura)
 	end
 	kaiju:gainHealth(hpPerSecond);
 end
-
-function onTick(aura)
-	kaiju:gainHealth(hpPerSecond);
-end

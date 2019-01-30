@@ -1,6 +1,5 @@
 require 'scripts/common'
 require 'scripts/zones/common'
-require 'scripts/abstraction'
 
 local weaponAA 		= 'weapon_lair_AutoCannon'
 local weaponGround 	= 'weapon_lair_Cannon'

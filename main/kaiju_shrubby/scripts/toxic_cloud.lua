@@ -81,7 +81,7 @@ function onTickProtected(aura)
 end
 
 function onTickUnProtected(aura)
-	if not aura then return
+	if not aura then return end
 	if aura:getElapsed() > poisonduration then
 		
 		local self = aura:getOwner()
