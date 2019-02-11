@@ -1,6 +1,8 @@
+--NoTargetText 'scripts/avatars/common.lua'
+
 require 'scripts/avatars/common'
 
-local kaiju = 0;
+local kaiju = nil
 local weapon = "weapon_shrubby_airVine2";
 local weapon_node = "root"
 local number_targets = 3;

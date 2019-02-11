@@ -1,4 +1,4 @@
-require 'scripts/common'
+--[==[require 'scripts/common'
 require 'scripts/avatars/common'
 
 function onUse(a)
@@ -16,4 +16,4 @@ end
 function onTick(aura)
 	if not aura then return end
 	dotOnTick(aura, 7, 7);
-end
+end]==]

@@ -110,7 +110,7 @@ function changeAuraOwner(backer, owner, script)
 	return newBacker
 end
 
-local function setupBacker(backer)
+function setupBacker(backer)
 	local data = backer.data
 	backer.aura:setTag(data.name)
 	backer.eventCallbackName = nil
@@ -262,8 +262,7 @@ local ZeroMQ = nil
 function enableCommunication()
 	if not ZeroMQ then
 		ZeroMQ = require "zmq"
-		print(tostring(ZeroMQ))
-		--print("Current 0MQ version is " .. table.concat(ZeroMQ.version(), '.'))
+		print("Current 0MQ version is " .. table.concat(ZeroMQ.version(), '.'))
 	end
 	return ZeroMQ
 end
@@ -299,68 +298,120 @@ end--]=]
 --- Automated target scanning for only the most refined warmongers.
 ---
 
-function getTargetInEntityRadius(scannerEntity, radius, entityFlags, targetFlags, firingArc)
-	local canTarget_L		= canTarget
-	local isSameEntity_L	= isSameEntity
-	local getEntityType_L	= getEntityType
-	local getFacingAngle_L	= getFacingAngle
-	local isEntityOnWater_L	= isEntityOnWater
+function getTargetsInEntityRadius(scannerEntity, radius, entityFlags, targetFlags, firingArc)
+	return getTargetInEntityRadius(scannerEntity, radius, entityFlags, targetFlags, firingArc, true)
+end
 
-	local location 			= scannerEntity:getWorldPosition()
-	local kaiju 			= getPlayerAvatar()
-	local scannerIsKaiju 	= isSameEntity_L(scannerEntity, kaiju)
-	local lairAttack		= isLairAttack()
-	local scannerEntityType = getEntityType_L(scannerEntity)
+function getTargetInEntityRadius(scannerEntity, radius, entityFlags, targetFlags, firingArc, returnAll)
+	local targetArray				= {}
+	local canTarget_L				= canTarget
+	
+	if not scannerEntity or not canTarget_L(scannerEntity) then
+		return nil
+	end
+	
+	if not targetFlags then
+		targetFlags 				= TargetFlags(TargetType.All)
+	end
+	
+	local isSameEntity_L			= isSameEntity
+	local getEntityType_L			= getEntityType
+	local getFacingAngle_L			= getFacingAngle
+	local isEntityOnWater_L			= isEntityOnWater
+		
+	local location 					= scannerEntity:getWorldPosition()
+	local kaiju 					= getPlayerAvatar()
+	local scannerIsKaiju 			= isSameEntity_L(scannerEntity, kaiju)
+	local scannerFacing				= nil
+	local lairAttack				= isLairAttack()
+	local scannerEntityType 		= getEntityType_L(scannerEntity)
+	if scannerEntityType == EntityType.Avatar and firingArc then		
+		scannerFacing				= scannerEntity:getWorldFacing()
+	else
+		firingArc					= 0
+	end
 	if not radius then
 		radius = 10000.0
 	end
 	local newTargets = getTargetsInRadius(location, radius, entityFlags)
 	for t in newTargets:iterator() do
-		if t and canTarget(t) and not isSameEntity_L(t, scannerEntity) then
+		if t and canTarget_L(t) and not isSameEntity_L(t, scannerEntity) then
 			local targetEntityType	= getEntityType_L(t)
 			local isOnWater			= isEntityOnWater_L(t)
 			local targetIsKaiju		= isSameEntity_L(t, kaiju)
 			local isAirUnit			= (targetEntityType == EntityType.Vehicle and entityToVehicle(t):isAir())
-			if not (not targetFlags.Player and targetIsKaiju) and ((targetFlags.Player and (targetIsKaiju or targetEntityType == TargetType.Minion)) or (targetFlags.Sea and isOnWater) or (targetFlags.Land and not isAirUnit) or (targetFlags.Air and isAirUnit) or (targetFlags.Buildable and t:hasStat('BuildTime'))) then
+			if targetFlags.All or (targetFlags.Player and targetIsKaiju) or (targetFlags.Player and (targetIsKaiju or targetEntityType == TargetType.Minion)) or (targetFlags.Land and not isAirUnit) or (targetFlags.Air and isAirUnit) or (targetFlags.Sea and isOnWater) or (targetFlags.Buildable and t:hasStat('BuildTime')) then
 				local targetAngleRelativeToEntity = nil
-				if firingArc and scannerEntityType == EntityType.Avatar then
-					targetAngleRelativeToEntity = getFacingAngle_L(location, t:getWorldPosition()) - kaiju:getWorldFacing()
+				if firingArc > 0 then
+					targetAngleRelativeToEntity = getFacingAngle_L(location, t:getWorldPosition()) - scannerFacing
 					if targetAngleRelativeToEntity < 0 then
 						targetAngleRelativeToEntity = 0 - targetAngleRelativeToEntity
 					end
 				end
-				
-				if (not targetAngleRelativeToEntity or targetAngleRelativeToEntity <= firingArc / 2)
-				and not (lairAttack and scannerIsKaiju and targetEntityType == EntityType.Zone) then
+				if not (scannerIsKaiju and lairAttack and targetEntityType == EntityType.Zone) and (not targetAngleRelativeToEntity or targetAngleRelativeToEntity <= firingArc / 2) then
+					if returnAll then
+						targetArray[#targetArray + 1] = t
+					else
+						return t
+					end
+				end
+			end
+		end
+	end
+	if returnAll and #targetArray > 0 then
+		return targetArray
+	end
+	return nil
+end
+
+function getTargetsInPointRadius(location, radius, entityFlags, targetFlags)
+	return getTargetInPointRadius(location, radius, entityFlags, targetFlags,  true)
+end
+
+function getTargetInPointRadius(location, radius, entityFlags, targetFlags, returnAll)
+	local targetArray				= {}
+	local canTarget_L				= canTarget
+	local isSameEntity_L			= isSameEntity
+	local getEntityType_L			= getEntityType
+	local isEntityOnWater_L			= isEntityOnWater
+	local entityToVehicle_L			= entityToVehicle
+	
+	local kaiju						= getPlayerAvatar()
+
+	if not targetFlags then
+		targetFlags 				= TargetFlags(TargetType.All)
+	end
+
+	if not radius then
+		radius = 10000.0
+	end
+	local newTargets = getTargetsInRadius(location, radius, entityFlags)
+	for t in newTargets:iterator() do
+		if t and canTarget_L(t) then
+			local targetEntityType	= getEntityType_L(t)
+			local isOnWater			= isEntityOnWater_L(t)
+			local targetIsKaiju		= isSameEntity_L(t, kaiju)
+			local isAirUnit			= (targetEntityType == EntityType.Vehicle and entityToVehicle_L(t):isAir())
+			if targetFlags.All or (targetFlags.Player and isSameEntity_L(t, kaiju)) or (targetFlags.Player and (targetIsKaiju or targetEntityType == TargetType.Minion)) or (targetFlags.Land and not isAirUnit) or (targetFlags.Air and isAirUnit) or (targetFlags.Sea and isOnWater) or (targetFlags.Buildable and t:hasStat('BuildTime')) then
+				if returnAll then
+					targetArray[#targetArray + 1] = t
+				else
 					return t
 				end
 			end
 		end
 	end
-end
-
-function getTargetInPointRadius(location, radius, entityFlags, targetFlags)
-	if not radius then
-		radius = 10000.0
+	if returnAll and #targetArray > 0 then
+		return targetArray
 	end
-	local newTargets = getTargetsInRadius(location, radius, entityFlags)
-	for t in newTargets:iterator() do
-		if t and canTarget(t) then
-			local targetEntityType	= getEntityType(t)
-			local isOnWater			= isEntityOnWater(t)
-			local isAirUnit			= (targetEntityType == EntityType.Vehicle and entityToVehicle(t):isAir())
-			if (targetFlags.Player and isSameEntity(t, getPlayerAvatar())) or (targetFlags.Sea and isOnWater) or (targetFlags.Land and not isAirUnit) or (targetFlags.Air and isAirUnit) or (targetFlags.Buildable and t:hasStat('BuildTime')) then
-				return t
-			end
-		end
-	end
+	return nil
 end
 
 --Mimics EntityFlags
-TargetType = {Land = 'Land', Sea = 'Sea', Air = 'Air', Player = 'Player', Buildable = 'Buildable'}
+TargetType = {Land = 'Land', Sea = 'Sea', Air = 'Air', Player = 'Player', Buildable = 'Buildable', All = 'All'}
 function TargetFlags(...)
 	local arr = {}
-	for i=1,5 do
+	for i=1,6 do
 		local var = select(i, ...)
 		if var then
 			arr[var] = true
@@ -471,6 +522,19 @@ function getFormattedDate()
 	formattedDate[11] = ':'
 	formattedDate[12] = currentDate.sec
 	return table.concat(formattedDate)
+end
+
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
 end
 
 function logError(...)

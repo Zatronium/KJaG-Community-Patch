@@ -1,22 +1,22 @@
+-- ThornPatch 'kaiju_shrubby/scripts/shrubby'
 require 'kaiju_shrubby/scripts/shrubby'
-local kaiju = nil;
-local lastPos = nil;
-
-local distancePatch = 50;
+local kaiju = nil
+local lastPos = nil
+local distancePatch = 50
 
 function onSet(a)
-	kaiju = a;
-	kaiju:addPassiveScript(this);
+	kaiju = a
+	kaiju:addPassiveScript(this)
 end
 
 function onAvatarMove(a)
-	local worldPos = kaiju:getWorldPosition();
+	local worldPos = kaiju:getWorldPosition()
 	if not (lastPos) then
-		lastPos = worldPos;
+		lastPos = worldPos
 	end
-	local dist = getDistanceFromPoints(lastPos, worldPos);
+	local dist = getDistanceFromPoints(lastPos, worldPos)
 	if dist > distancePatch then
-		ThornPatch(lastPos);
-		lastPos = worldPos;
+		ThornPatch(lastPos)
+		lastPos = worldPos
 	end
 end

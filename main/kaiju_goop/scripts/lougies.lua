@@ -1,3 +1,5 @@
+--NoTargetText 'scripts/avatars/common.lua'
+
 require 'kaiju_goop/scripts/goop'
 -- Global values.
 local kaiju = nil

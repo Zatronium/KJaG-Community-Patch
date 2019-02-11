@@ -4,6 +4,7 @@ require 'scripts/common'
 require 'scripts/vehicles/common'
 require 'scripts/vehicles/trafficcontrol_common'
 
+
 function onHeartbeat(vehicle)
 	if vehicle and not InitialSetup() then
 		DoSpawnSetup(vehicle, true, "tank_idle", "tank_move", nil)
@@ -36,15 +37,15 @@ function onDeath(self)
 end
 
 --Everything past this line is test code
---[==[
+--
 
-local iS = false
+--[=[local iS = false
 local whoAmI = nil
 local sentCrap = nil
 
 function onHeartbeat(vehicle)
 	if not iS then
-		iS = true
+		--iS = true
 		whoAmI = vehicle
 		local func = {}
 		func[1] = [[return function(vehicle, str)]]
@@ -52,22 +53,19 @@ function onHeartbeat(vehicle)
 		func[3] = [[end]]
 		_G['f'] = select(2, pcall(load(table.concat(func))))
 		
-		local ZeroMQ = enableCommunication()
-		--[[local aura = Aura.create(this, vehicle)
+		--local ZeroMQ = enableCommunication()
+		--[==[local aura = Aura.create(this, vehicle)
 		aura:setTag('test')
 		aura:setTickParameters(1, 0)
 		aura:setScriptCallback(AuraEvent.OnTick, 'fakeCallback')
-		aura:setTarget(vehicle)
-		aura:setStat('ExtraAbilitySlot', -1)]]
-	end
-	if sentCrap then
-		retMyRand1(sentCrap)
-	else
-		retMyRand1("nil")
+		aura:setTarget(vehicle)]==]
+		whoAmI:addPassive('BonusArmorPenPhysical', 10)
+		
+		retMyRand1(whoAmI:hasPassive('BonusArmorPenPhysical'))
 	end
 end
 
 function retMyRand1(data)
 	_G['f'](whoAmI, tostring(data))
-end]==]
-
+end
+]=]

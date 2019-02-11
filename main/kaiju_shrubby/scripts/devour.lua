@@ -1,17 +1,18 @@
 require 'scripts/avatars/common'
+
 local life_per_drain = 25;
 local damage_per_tick = 25;
 local number_of_ticks = 3;
 local weapon = "weapon_shrubby_devour";
 local kaiju = nil;
-local target = nil;
+
 function onUse(a)
 	kaiju = a;
 	enableTargetSelection(this, abilityData.name, 'onTargets', getWeaponRange(weapon));
 end
 
 function onTargets(position)
-	target = getAbilityTarget(kaiju, abilityData.name);
+	local target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then
 		local facingAngle = getFacingAngle(kaiju:getWorldPosition(), position);
 		kaiju:setWorldFacing(facingAngle);	
@@ -21,7 +22,7 @@ function onTargets(position)
 end
 
 function onAnimationEvent(a)
-	target = getAbilityTarget(kaiju, abilityData.name);
+	local target = getAbilityTarget(kaiju, abilityData.name);
 	if canTarget(target) then	
 		local aura = createAura(this, target, 0);
 		aura:setTickParameters(1, number_of_ticks - 1);

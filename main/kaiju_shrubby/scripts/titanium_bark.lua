@@ -1,10 +1,10 @@
-local speedDecrease = -0.05;
-local armorBonus = 2;
-local maxHealthBonus = 50;
+local speedDecrease = -0.05
+local armorBonus = 2
+local maxHealthBonus = 50
 
 function bonusStats(s)
-	s:modStat("MaxHealth", maxHealthBonus);
-	local bonusSpeed = s:getStat("Speed") * speedDecrease;
-	s:modStat("Speed", bonusSpeed);
-	s:modStat("Armor", armorBonus);
+	s:modStat("MaxHealth", maxHealthBonus)
+	local bonusSpeed = s:getStat("Speed") * speedDecrease
+	s:modStat("Speed", bonusSpeed)
+	s:modStat("Armor", armorBonus)
 end

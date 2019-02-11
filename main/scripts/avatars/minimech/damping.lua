@@ -62,7 +62,12 @@ function debuff(aura)
 		end
 		target:setStat("damage_amplify", val);
 	else
+		if not target or not canTarget(target) then return end
 		local val = target:getStat("damage_amplify");
+		if not val then 
+			val = 1.0
+			target:addStat("damage_amplify", 1.0)
+		end
 		val = val / 0.9;
 		target:setStat("damage_amplify", val);
 		local self = aura:getOwner()

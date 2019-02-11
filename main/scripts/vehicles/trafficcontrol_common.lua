@@ -34,6 +34,27 @@ local lairAttack			= nil
 local kaiju					= nil
 local worldSize 			= nil
 local worldEdge 			= 20.0
+local isValidVehicle		= true
+
+local coinFlip					= coinFlip
+local canTarget					= canTarget
+local setTarget					= setTarget
+local playSound					= playSound
+local loopSound					= loopSound
+local stopSound					= stopSound
+local getDistance				= getDistance
+local createEffect				= createEffect
+local isSameEntity				= isSameEntity
+local getFacingAngle			= getFacingAngle
+local entityToVehicle			= entityToVehicle
+local getPlayerTarget			= getPlayerTarget
+local isEntityOnWater			= isEntityOnWater
+local getBeamEndWithFacing		= getBeamEndWithFacing
+local getDistanceFromPoints		= getDistanceFromPoints
+local getClosestTargetInBeam	= getClosestTargetInBeam
+local getTargetInEntityRadius	= getTargetInEntityRadius
+local getTargetsInEntityRadius	= getTargetsInEntityRadius
+
 
 function DoSpawnSetup(v, landUnit, idle, move, rev)
 	initialSetup 		= true
@@ -64,22 +85,32 @@ function SetupFinished()
 end
 
 function DoVehicleHeartbeat()
+	if not isValidVehicle or not vehicle then return end
+	if not vehicleController then
+		vehicleController = vehicle:getControl()
+		if not vehicleController then
+			logError("trafficcontrol_common.lua: Detected an invalid vehicle, removing AI.")
+			isValidVehicle = false
+		end
+	end
 	vehiclePosition 	= vehicle:getWorldPosition()
 	if not lairAttack then
-		if isLandUnit then
-			target 		= getTargetInEntityRadius(vehicle, nil, EntityFlags(EntityType.Avatar, EntityType.Minion), TargetFlags(TargetType.Player))
-		else
-			target 		= getPlayerTarget(vehicle)
+		target 		= getPlayerTarget(vehicle)
+		if not target or not canTarget(target) then
+			target 	= getTargetInEntityRadius(vehicle, farRange, EntityFlags(EntityType.Avatar, EntityType.Minion), TargetFlags(TargetType.Player))
+		end
+		if not target or not canTarget(target) then
+			target		= kaiju
 		end
 	else
 		if isLandUnit and getDistance(vehicle, kaiju) < idealRange then
 			target		= kaiju
 		else
 			target 		= getTargetInEntityRadius(vehicle, nil, EntityFlags(EntityType.Zone), TargetFlags(TargetType.Buildable))
-			if not target or getDistance(vehicle, target) > limitRange then
+			if not target or not canTarget(target) or getDistance(vehicle, target) > limitRange then
 				target 	= getPlayerTarget(vehicle)
 			end
-			if not target then
+			if not target or not canTarget(target) then
 				target 	= kaiju
 			end
 		end
@@ -158,36 +189,35 @@ end
 
 function CheckForTraffic()
 	local trafficRadius			= 100
-	local targets 				= getTargetInEntityRadius(vehicle, trafficRadius, EntityFlags(EntityType.Vehicle), TargetFlags(TargetType.Land, TargetType.Sea)) 
-	for t in targets:iterator() do
-		if canTarget(t) then
-			local tempVehicle 	= entityToVehicle(t)
-			if not isSameEntity(vehicle, tempVehicle) and not tempVehicle:isAir() then
-				local angleRelativeToVehicle 	= getFacingAngle(vehiclePosition, tempVehicle:getWorldPosition()) - vehicleWorldFacing
-				if angleRelativeToVehicle < 0 then
-					angleRelativeToVehicle		= 360.0 + angleRelativeToVehicle
-				end
-				if (angleRelativeToVehicle >= 135.0 and angleRelativeToVehicle <= 215.0) or (angleRelativeToVehicle <= 45.0 and angleRelativeToVehicle >= -45.0) then
-					-- Land vehicles try to stay on the road and navigate a different direction. Otherwise try to go elsewhere. If all diversions are blocked then give up.
-					local offset 				= nil
-					local desiredPosition		= nil
-					if isLandUnit then
-						offset 				= 180.0
-						desiredPosition 		= GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offset, defaultSnapAngle)
-						if desiredPosition then
-							BeginMove(desiredPosition)
-							return true
-						end
-					end
-					offset 						= 90.0
-					if coinFlip() then
-						offset 					= -90.0
-					end
-					desiredPosition 			= GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offset, defaultSnapAngle / 3.0)
+	local targets 				= getTargetsInEntityRadius(vehicle, trafficRadius, EntityFlags(EntityType.Vehicle), TargetFlags(TargetType.Land, TargetType.Sea))
+	if not targets then return end
+	for t in targets do
+		local tempVehicle 				= entityToVehicle(t)
+		if tempVehicle then
+			local angleRelativeToVehicle 	= getFacingAngle(vehiclePosition, tempVehicle:getWorldPosition()) - vehicleWorldFacing
+			if angleRelativeToVehicle < 0 then
+				angleRelativeToVehicle		= 360.0 + angleRelativeToVehicle
+			end
+			if (angleRelativeToVehicle >= 135.0 and angleRelativeToVehicle <= 215.0) or (angleRelativeToVehicle <= 45.0 and angleRelativeToVehicle >= -45.0) then
+				-- Land vehicles try to stay on the road and navigate a different direction. Otherwise try to go elsewhere. If all diversions are blocked then give up.
+				local offset 				= nil
+				local desiredPosition		= nil
+				if isLandUnit then
+					offset 				= 180.0
+					desiredPosition 		= GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offset, defaultSnapAngle)
 					if desiredPosition then
-						ForceMove(desiredPosition)
+						BeginMove(desiredPosition)
 						return true
 					end
+				end
+				offset 						= 90.0
+				if coinFlip() then
+					offset 					= -90.0
+				end
+				desiredPosition 			= GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offset, defaultSnapAngle / 3.0)
+				if desiredPosition then
+					ForceMove(desiredPosition)
+					return true
 				end
 			end
 		end
@@ -227,6 +257,7 @@ function GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offse
 end
 
 function BeginMove(desiredPosition)
+	if not landUnit then return end
 	MoveSound()
 	desiredPosition = MapBounding(desiredPosition)
 	vehicleWorldFacing = SnapToFacing(getFacingAngle(vehiclePosition, desiredPosition), defaultSnapAngle)
@@ -234,6 +265,7 @@ function BeginMove(desiredPosition)
 end
 
 function ForceMove(desiredPosition)
+	if not landUnit then return end
 	MoveSound()
 	desiredPosition = MapBounding(desiredPosition)
 	vehicleWorldFacing = SnapToFacing(getFacingAngle(vehiclePosition, desiredPosition), defaultSnapAngle)
@@ -277,6 +309,7 @@ function MoveSound()
 end
 
 function StopMove(desiredFacing)
+	if not landUnit then return end
 	if idleSoundName and not idleSound and distanceFromTarget < weaponRange * soundRangeMultiplier then
 		idleSound = loopSound(idleSoundName)
 	end
@@ -294,7 +327,7 @@ function StopMove(desiredFacing)
 	isStopped = true
 	vehicleWorldFacing = SnapToFacing(desiredFacing, defaultSnapAngle / 4.0)
 	local fakeFacingPosition = getBeamEndWithFacing(vehiclePosition, 5, desiredFacing)
-	vehicleController:moveTo(fakeFacingPosition)
+	vehicleController:directMove(fakeFacingPosition)
 	vehicleController:stop()
 end
 

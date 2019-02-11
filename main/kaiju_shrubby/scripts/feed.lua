@@ -1,5 +1,6 @@
-local healpertarget = 1;
+local healpertarget = 1
+
 function onSet(a)
-	a:setPassive("heal_on_hit", healpertarget);
+	a:addPassive("heal_on_hit", healpertarget)
 end
 

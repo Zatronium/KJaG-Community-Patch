@@ -40,7 +40,7 @@ function onTick(aura)
 	local weaponRange = getWeaponRange(weaponAA)
 	local worldPosition = self:getWorldPosition()
 	
-	targetEnt = getTargetInEntityRadius(self, weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar), TargetFlags(TargetType.Air))
+	local targetEnt = getTargetInEntityRadius(self, weaponRange, EntityFlags(EntityType.Vehicle, EntityType.Avatar), TargetFlags(TargetType.Air))
 	if targetEnt then
 		fireWeaponWithTarget(self, targetEnt, weaponAA, 'onHit')
 		return

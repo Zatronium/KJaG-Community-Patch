@@ -1,18 +1,13 @@
-require 'scripts/common'
-
-local kaiju = nil;
-local hasUpdated = false;
-local bonusSpeed = 0.0;
-local bonusSpeedPct = 0.15;
-local bonusBaseRegen = 0.15;
-local durationtime = 10;
+local bonusSpeed = 0.0
+local bonusSpeedPct = 0.15
+local bonusBaseRegen = 0.15
 
 function onSet(a)
-	a:addPassive("base_heal_bonus", bonusBaseRegen);
+	a:addPassive("base_heal_bonus", bonusBaseRegen)
 end
 
 function bonusStats(s)
-	s:addStat("RepairRateMod", 0.05);
-	bonusSpeed = s:getStat("Speed") * bonusSpeedPct;
-	s:modStat("Speed", bonusSpeed);
+	s:addStat("RepairRateMod", 0.05)
+	bonusSpeed = s:getStat("Speed") * bonusSpeedPct
+	s:modStat("Speed", bonusSpeed)
 end

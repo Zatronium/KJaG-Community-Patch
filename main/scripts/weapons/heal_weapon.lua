@@ -34,7 +34,7 @@ function onHeartbeat(w)
 		
 	-- Check to see if we have an attack aura.
 	local attackAura = w:getAura('attack');
-	if not attackAura and not t and t:getStat("Health") > 0 then
+	if not attackAura and t and t:getStat("Health") > 0 then
 		if getDistance(owner, t) < weaponRange and isLineOfSight(owner, t) then
 			-- Avatar in range and LoS, stop movement and create attack aura.
 			local rof = w:getWeaponStat("ROF");
