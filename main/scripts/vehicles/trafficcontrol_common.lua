@@ -257,7 +257,7 @@ function GetUnobstructedTravelRoute(angleRelativeToVehicle, trafficRadius, offse
 end
 
 function BeginMove(desiredPosition)
-	if not landUnit then return end
+	if not isLandUnit then return end
 	MoveSound()
 	desiredPosition = MapBounding(desiredPosition)
 	vehicleWorldFacing = SnapToFacing(getFacingAngle(vehiclePosition, desiredPosition), defaultSnapAngle)
@@ -265,7 +265,7 @@ function BeginMove(desiredPosition)
 end
 
 function ForceMove(desiredPosition)
-	if not landUnit then return end
+	if not isLandUnit then return end
 	MoveSound()
 	desiredPosition = MapBounding(desiredPosition)
 	vehicleWorldFacing = SnapToFacing(getFacingAngle(vehiclePosition, desiredPosition), defaultSnapAngle)
@@ -309,7 +309,7 @@ function MoveSound()
 end
 
 function StopMove(desiredFacing)
-	if not landUnit then return end
+	if not isLandUnit then return end
 	if idleSoundName and not idleSound and distanceFromTarget < weaponRange * soundRangeMultiplier then
 		idleSound = loopSound(idleSoundName)
 	end
