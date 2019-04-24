@@ -487,15 +487,47 @@ function defaultStatChanged(e, stat, prev, val)
 		local maxHealth = e:getStat("MaxHealth")
 		if val > maxHealth then
 			e:setStat("Health", maxHealth)
-		elseif entityType == EntityType.Avatar and prev > 0 and val <= 0 then
-			e:getView():doDeathEffect()
-			print 'Kaiju Dead'
 		end
 	end
 end
 
+local isSameEntity = isSameEntity
+local getPlayerAvatar = getPlayerAvatar
+local getEntityType = getEntityType
+
 function onStatChanged(e, stat, prev, val)
-	defaultStatChanged(e, stat, prev, val)
+	if stat == signalChannel then
+		if not recieveAura then
+			recieveAura = Aura.create(this, e)
+			recieveAura:setTag('RecieveAura')
+			recieveAura:setTarget(e)
+		end
+		return
+	end
+	
+	local eType = getEntityType(e)
+	if eType == EntityType.Zone then
+		if stat == 'Health' and prev == e:getStat('MaxHealth') then
+		local randCivChance = 30
+		if math.random(1, 100) < randCivChance then
+			spawnCivilians(e:getWorldPosition())
+		end
+	elseif eType == EntityType.Vehicle then
+		defaultStatChanged(e, stat, prev, val)
+	elseif isSameEntity(getPlayerAvatar(), e) then
+		playerStatChanged(e, stat, prev, val)
+	end
+	
+	if stat == "Health" and prev > 0 then
+		local maxHealth = e:getStat("MaxHealth");
+		if val <= 0 and not eType == EntityType.Zone then
+			e:getView():doDeathEffect()
+			e:setEnablePhysicsBody(false);
+		end
+		if val > e:getStat("MaxHealth") then
+			e:setStat("Health", maxHealth);
+		end
+	end
 end
 
 -------------------------

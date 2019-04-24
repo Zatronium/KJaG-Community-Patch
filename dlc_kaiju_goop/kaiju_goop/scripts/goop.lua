@@ -96,10 +96,6 @@ function onAttack(a)
 	end
 end
 
-function onStatChanged(e, stat, prev, val)
-	playerStatChanged(e, stat, prev, val);
-end
-
 function onStomp(a, inwater)
 	if inwater then
 		playSound("gino_footfall_water");
