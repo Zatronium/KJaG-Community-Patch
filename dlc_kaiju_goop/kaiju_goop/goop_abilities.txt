@@ -8,13 +8,6 @@ Ability {
 
 	IsPassive: false
 	SkillIndex: -1
-	
-	SkillTier: -1
-	SkillQuad: -1
-	CostTime: 0
-	Cooldown: 1
-	
-	Description: Revert to Goop!
 
 	Kaiju: 8be22742653e30cb9b2f91f6f1e18573 
 }
@@ -29,13 +22,6 @@ Ability {
 
 	IsPassive: false
 	SkillIndex: -1
-	
-	SkillTier: -1
-	SkillQuad: -1
-	CostTime: 0
-	Cooldown: 1
-	
-	Description: Revert to Goop!
 
 	Kaiju: avatar_shrubby
 }
@@ -50,13 +36,6 @@ Ability {
 
 	IsPassive: false
 	SkillIndex: -1
-	
-	SkillTier: -1
-	SkillQuad: -1
-	CostTime: 0
-	Cooldown: 1
-	
-	Description: Revert to Goop!
 
 	Kaiju: avatar_gordon 
 }
@@ -1955,7 +1934,7 @@ Ability {
 	SkillIndex: 1
 	Requires: ability_goop_Solidity
 	
-	CostTime:    40
+	CCostTime:    40
 	CostMoney:   1400000
 	CostPower:   1300
 	CostKnow:    1300
