@@ -508,9 +508,10 @@ function onStatChanged(e, stat, prev, val)
 	local eType = getEntityType(e)
 	if eType == EntityType.Zone then
 		if stat == 'Health' and prev == e:getStat('MaxHealth') then
-		local randCivChance = 30
-		if math.random(1, 100) < randCivChance then
-			spawnCivilians(e:getWorldPosition())
+			local randCivChance = 30
+			if math.random(1, 100) < randCivChance then
+				spawnCivilians(e:getWorldPosition())
+			end
 		end
 	elseif eType == EntityType.Vehicle then
 		defaultStatChanged(e, stat, prev, val)

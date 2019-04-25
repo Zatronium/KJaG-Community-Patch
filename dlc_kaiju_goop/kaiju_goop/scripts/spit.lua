@@ -91,7 +91,7 @@ function onTick(aura)
 		end
 	else
 		if aura:getStat("Health") > 1 then
-			CreateBlob(owner:getWorldPosition(), minGoop, maxGoop);
+			CreateBlob(owner:getWorldPosition(), minGoop, maxGoop)
 		end
 		owner:detachAura(aura)
 		removeEntity(owner)

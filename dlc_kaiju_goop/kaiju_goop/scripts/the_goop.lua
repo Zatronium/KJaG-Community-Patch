@@ -40,7 +40,7 @@ function onTick(aura)
 	if not aura then return end
 	if aura:getElapsed() > dotTime then
 		local own = aura:getOwner()
-		if not owner then return end
+		if not own then return end
 		own:detachAura(aura)
 		removeEntity(own)
 	else
